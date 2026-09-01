@@ -1,0 +1,2519 @@
+{
+  "format_version": "1.10.0",
+  "render_controllers": {
+    "controller.render.treephysics.log_fragment.log_side": {
+      "arrays": {
+        "textures": {
+          "Array.log_side": [
+            "Texture.side_oak",
+            "Texture.side_spruce",
+            "Texture.side_birch",
+            "Texture.side_jungle",
+            "Texture.side_acacia",
+            "Texture.side_dark_oak",
+            "Texture.side_cherry",
+            "Texture.side_mangrove",
+            "Texture.side_pale_oak",
+            "Texture.side_azalea",
+            "Texture.side_flowering_azalea"
+          ]
+        }
+      },
+      "geometry": "Geometry.log_side",
+      "light_color_multiplier": 0.88,
+      "materials": [
+        {
+          "*": "Material.log"
+        }
+      ],
+      "textures": [
+        "Array.log_side[q.property('treephysics:family')]"
+      ],
+      "part_visibility": [
+        {
+          "*": false
+        },
+        {
+          "slot_0": "(math.mod(math.floor(v.s0 / 1), 8)) >= 2 && (math.mod(math.floor(v.s0 / 1), 8)) <= 4"
+        },
+        {
+          "slot_1": "(math.mod(math.floor(v.s0 / 8), 8)) >= 2 && (math.mod(math.floor(v.s0 / 8), 8)) <= 4"
+        },
+        {
+          "slot_2": "(math.mod(math.floor(v.s0 / 64), 8)) >= 2 && (math.mod(math.floor(v.s0 / 64), 8)) <= 4"
+        },
+        {
+          "slot_3": "(math.mod(math.floor(v.s0 / 512), 8)) >= 2 && (math.mod(math.floor(v.s0 / 512), 8)) <= 4"
+        },
+        {
+          "slot_4": "(math.mod(math.floor(v.s0 / 4096), 8)) >= 2 && (math.mod(math.floor(v.s0 / 4096), 8)) <= 4"
+        },
+        {
+          "slot_5": "(math.mod(math.floor(v.s0 / 32768), 8)) >= 2 && (math.mod(math.floor(v.s0 / 32768), 8)) <= 4"
+        },
+        {
+          "slot_6": "(math.mod(math.floor(v.s0 / 262144), 8)) >= 2 && (math.mod(math.floor(v.s0 / 262144), 8)) <= 4"
+        },
+        {
+          "slot_7": "(math.mod(math.floor(v.s0 / 2097152), 8)) >= 2 && (math.mod(math.floor(v.s0 / 2097152), 8)) <= 4"
+        },
+        {
+          "slot_8": "(math.mod(math.floor(v.s1 / 1), 8)) >= 2 && (math.mod(math.floor(v.s1 / 1), 8)) <= 4"
+        },
+        {
+          "slot_9": "(math.mod(math.floor(v.s1 / 8), 8)) >= 2 && (math.mod(math.floor(v.s1 / 8), 8)) <= 4"
+        },
+        {
+          "slot_10": "(math.mod(math.floor(v.s1 / 64), 8)) >= 2 && (math.mod(math.floor(v.s1 / 64), 8)) <= 4"
+        },
+        {
+          "slot_11": "(math.mod(math.floor(v.s1 / 512), 8)) >= 2 && (math.mod(math.floor(v.s1 / 512), 8)) <= 4"
+        },
+        {
+          "slot_12": "(math.mod(math.floor(v.s1 / 4096), 8)) >= 2 && (math.mod(math.floor(v.s1 / 4096), 8)) <= 4"
+        },
+        {
+          "slot_13": "(math.mod(math.floor(v.s1 / 32768), 8)) >= 2 && (math.mod(math.floor(v.s1 / 32768), 8)) <= 4"
+        },
+        {
+          "slot_14": "(math.mod(math.floor(v.s1 / 262144), 8)) >= 2 && (math.mod(math.floor(v.s1 / 262144), 8)) <= 4"
+        },
+        {
+          "slot_15": "(math.mod(math.floor(v.s1 / 2097152), 8)) >= 2 && (math.mod(math.floor(v.s1 / 2097152), 8)) <= 4"
+        },
+        {
+          "slot_16": "(math.mod(math.floor(v.s2 / 1), 8)) >= 2 && (math.mod(math.floor(v.s2 / 1), 8)) <= 4"
+        },
+        {
+          "slot_17": "(math.mod(math.floor(v.s2 / 8), 8)) >= 2 && (math.mod(math.floor(v.s2 / 8), 8)) <= 4"
+        },
+        {
+          "slot_18": "(math.mod(math.floor(v.s2 / 64), 8)) >= 2 && (math.mod(math.floor(v.s2 / 64), 8)) <= 4"
+        },
+        {
+          "slot_19": "(math.mod(math.floor(v.s2 / 512), 8)) >= 2 && (math.mod(math.floor(v.s2 / 512), 8)) <= 4"
+        },
+        {
+          "slot_20": "(math.mod(math.floor(v.s2 / 4096), 8)) >= 2 && (math.mod(math.floor(v.s2 / 4096), 8)) <= 4"
+        },
+        {
+          "slot_21": "(math.mod(math.floor(v.s2 / 32768), 8)) >= 2 && (math.mod(math.floor(v.s2 / 32768), 8)) <= 4"
+        },
+        {
+          "slot_22": "(math.mod(math.floor(v.s2 / 262144), 8)) >= 2 && (math.mod(math.floor(v.s2 / 262144), 8)) <= 4"
+        },
+        {
+          "slot_23": "(math.mod(math.floor(v.s2 / 2097152), 8)) >= 2 && (math.mod(math.floor(v.s2 / 2097152), 8)) <= 4"
+        },
+        {
+          "slot_24": "(math.mod(math.floor(v.s3 / 1), 8)) >= 2 && (math.mod(math.floor(v.s3 / 1), 8)) <= 4"
+        },
+        {
+          "slot_25": "(math.mod(math.floor(v.s3 / 8), 8)) >= 2 && (math.mod(math.floor(v.s3 / 8), 8)) <= 4"
+        },
+        {
+          "slot_26": "(math.mod(math.floor(v.s3 / 64), 8)) >= 2 && (math.mod(math.floor(v.s3 / 64), 8)) <= 4"
+        },
+        {
+          "slot_27": "(math.mod(math.floor(v.s3 / 512), 8)) >= 2 && (math.mod(math.floor(v.s3 / 512), 8)) <= 4"
+        },
+        {
+          "slot_28": "(math.mod(math.floor(v.s3 / 4096), 8)) >= 2 && (math.mod(math.floor(v.s3 / 4096), 8)) <= 4"
+        },
+        {
+          "slot_29": "(math.mod(math.floor(v.s3 / 32768), 8)) >= 2 && (math.mod(math.floor(v.s3 / 32768), 8)) <= 4"
+        },
+        {
+          "slot_30": "(math.mod(math.floor(v.s3 / 262144), 8)) >= 2 && (math.mod(math.floor(v.s3 / 262144), 8)) <= 4"
+        },
+        {
+          "slot_31": "(math.mod(math.floor(v.s3 / 2097152), 8)) >= 2 && (math.mod(math.floor(v.s3 / 2097152), 8)) <= 4"
+        },
+        {
+          "slot_32": "(math.mod(math.floor(v.s4 / 1), 8)) >= 2 && (math.mod(math.floor(v.s4 / 1), 8)) <= 4"
+        },
+        {
+          "slot_33": "(math.mod(math.floor(v.s4 / 8), 8)) >= 2 && (math.mod(math.floor(v.s4 / 8), 8)) <= 4"
+        },
+        {
+          "slot_34": "(math.mod(math.floor(v.s4 / 64), 8)) >= 2 && (math.mod(math.floor(v.s4 / 64), 8)) <= 4"
+        },
+        {
+          "slot_35": "(math.mod(math.floor(v.s4 / 512), 8)) >= 2 && (math.mod(math.floor(v.s4 / 512), 8)) <= 4"
+        },
+        {
+          "slot_36": "(math.mod(math.floor(v.s4 / 4096), 8)) >= 2 && (math.mod(math.floor(v.s4 / 4096), 8)) <= 4"
+        },
+        {
+          "slot_37": "(math.mod(math.floor(v.s4 / 32768), 8)) >= 2 && (math.mod(math.floor(v.s4 / 32768), 8)) <= 4"
+        },
+        {
+          "slot_38": "(math.mod(math.floor(v.s4 / 262144), 8)) >= 2 && (math.mod(math.floor(v.s4 / 262144), 8)) <= 4"
+        },
+        {
+          "slot_39": "(math.mod(math.floor(v.s4 / 2097152), 8)) >= 2 && (math.mod(math.floor(v.s4 / 2097152), 8)) <= 4"
+        },
+        {
+          "slot_40": "(math.mod(math.floor(v.s5 / 1), 8)) >= 2 && (math.mod(math.floor(v.s5 / 1), 8)) <= 4"
+        },
+        {
+          "slot_41": "(math.mod(math.floor(v.s5 / 8), 8)) >= 2 && (math.mod(math.floor(v.s5 / 8), 8)) <= 4"
+        },
+        {
+          "slot_42": "(math.mod(math.floor(v.s5 / 64), 8)) >= 2 && (math.mod(math.floor(v.s5 / 64), 8)) <= 4"
+        },
+        {
+          "slot_43": "(math.mod(math.floor(v.s5 / 512), 8)) >= 2 && (math.mod(math.floor(v.s5 / 512), 8)) <= 4"
+        },
+        {
+          "slot_44": "(math.mod(math.floor(v.s5 / 4096), 8)) >= 2 && (math.mod(math.floor(v.s5 / 4096), 8)) <= 4"
+        },
+        {
+          "slot_45": "(math.mod(math.floor(v.s5 / 32768), 8)) >= 2 && (math.mod(math.floor(v.s5 / 32768), 8)) <= 4"
+        },
+        {
+          "slot_46": "(math.mod(math.floor(v.s5 / 262144), 8)) >= 2 && (math.mod(math.floor(v.s5 / 262144), 8)) <= 4"
+        },
+        {
+          "slot_47": "(math.mod(math.floor(v.s5 / 2097152), 8)) >= 2 && (math.mod(math.floor(v.s5 / 2097152), 8)) <= 4"
+        },
+        {
+          "slot_48": "(math.mod(math.floor(v.s6 / 1), 8)) >= 2 && (math.mod(math.floor(v.s6 / 1), 8)) <= 4"
+        },
+        {
+          "slot_49": "(math.mod(math.floor(v.s6 / 8), 8)) >= 2 && (math.mod(math.floor(v.s6 / 8), 8)) <= 4"
+        },
+        {
+          "slot_50": "(math.mod(math.floor(v.s6 / 64), 8)) >= 2 && (math.mod(math.floor(v.s6 / 64), 8)) <= 4"
+        },
+        {
+          "slot_51": "(math.mod(math.floor(v.s6 / 512), 8)) >= 2 && (math.mod(math.floor(v.s6 / 512), 8)) <= 4"
+        },
+        {
+          "slot_52": "(math.mod(math.floor(v.s6 / 4096), 8)) >= 2 && (math.mod(math.floor(v.s6 / 4096), 8)) <= 4"
+        },
+        {
+          "slot_53": "(math.mod(math.floor(v.s6 / 32768), 8)) >= 2 && (math.mod(math.floor(v.s6 / 32768), 8)) <= 4"
+        },
+        {
+          "slot_54": "(math.mod(math.floor(v.s6 / 262144), 8)) >= 2 && (math.mod(math.floor(v.s6 / 262144), 8)) <= 4"
+        },
+        {
+          "slot_55": "(math.mod(math.floor(v.s6 / 2097152), 8)) >= 2 && (math.mod(math.floor(v.s6 / 2097152), 8)) <= 4"
+        },
+        {
+          "slot_56": "(math.mod(math.floor(v.s7 / 1), 8)) >= 2 && (math.mod(math.floor(v.s7 / 1), 8)) <= 4"
+        },
+        {
+          "slot_57": "(math.mod(math.floor(v.s7 / 8), 8)) >= 2 && (math.mod(math.floor(v.s7 / 8), 8)) <= 4"
+        },
+        {
+          "slot_58": "(math.mod(math.floor(v.s7 / 64), 8)) >= 2 && (math.mod(math.floor(v.s7 / 64), 8)) <= 4"
+        },
+        {
+          "slot_59": "(math.mod(math.floor(v.s7 / 512), 8)) >= 2 && (math.mod(math.floor(v.s7 / 512), 8)) <= 4"
+        },
+        {
+          "slot_60": "(math.mod(math.floor(v.s7 / 4096), 8)) >= 2 && (math.mod(math.floor(v.s7 / 4096), 8)) <= 4"
+        },
+        {
+          "slot_61": "(math.mod(math.floor(v.s7 / 32768), 8)) >= 2 && (math.mod(math.floor(v.s7 / 32768), 8)) <= 4"
+        },
+        {
+          "slot_62": "(math.mod(math.floor(v.s7 / 262144), 8)) >= 2 && (math.mod(math.floor(v.s7 / 262144), 8)) <= 4"
+        },
+        {
+          "slot_63": "(math.mod(math.floor(v.s7 / 2097152), 8)) >= 2 && (math.mod(math.floor(v.s7 / 2097152), 8)) <= 4"
+        },
+        {
+          "slot_64": "(math.mod(math.floor(v.s8 / 1), 8)) >= 2 && (math.mod(math.floor(v.s8 / 1), 8)) <= 4"
+        },
+        {
+          "slot_65": "(math.mod(math.floor(v.s8 / 8), 8)) >= 2 && (math.mod(math.floor(v.s8 / 8), 8)) <= 4"
+        },
+        {
+          "slot_66": "(math.mod(math.floor(v.s8 / 64), 8)) >= 2 && (math.mod(math.floor(v.s8 / 64), 8)) <= 4"
+        },
+        {
+          "slot_67": "(math.mod(math.floor(v.s8 / 512), 8)) >= 2 && (math.mod(math.floor(v.s8 / 512), 8)) <= 4"
+        },
+        {
+          "slot_68": "(math.mod(math.floor(v.s8 / 4096), 8)) >= 2 && (math.mod(math.floor(v.s8 / 4096), 8)) <= 4"
+        },
+        {
+          "slot_69": "(math.mod(math.floor(v.s8 / 32768), 8)) >= 2 && (math.mod(math.floor(v.s8 / 32768), 8)) <= 4"
+        },
+        {
+          "slot_70": "(math.mod(math.floor(v.s8 / 262144), 8)) >= 2 && (math.mod(math.floor(v.s8 / 262144), 8)) <= 4"
+        },
+        {
+          "slot_71": "(math.mod(math.floor(v.s8 / 2097152), 8)) >= 2 && (math.mod(math.floor(v.s8 / 2097152), 8)) <= 4"
+        },
+        {
+          "slot_72": "(math.mod(math.floor(v.s9 / 1), 8)) >= 2 && (math.mod(math.floor(v.s9 / 1), 8)) <= 4"
+        },
+        {
+          "slot_73": "(math.mod(math.floor(v.s9 / 8), 8)) >= 2 && (math.mod(math.floor(v.s9 / 8), 8)) <= 4"
+        },
+        {
+          "slot_74": "(math.mod(math.floor(v.s9 / 64), 8)) >= 2 && (math.mod(math.floor(v.s9 / 64), 8)) <= 4"
+        },
+        {
+          "slot_75": "(math.mod(math.floor(v.s9 / 512), 8)) >= 2 && (math.mod(math.floor(v.s9 / 512), 8)) <= 4"
+        },
+        {
+          "slot_76": "(math.mod(math.floor(v.s9 / 4096), 8)) >= 2 && (math.mod(math.floor(v.s9 / 4096), 8)) <= 4"
+        },
+        {
+          "slot_77": "(math.mod(math.floor(v.s9 / 32768), 8)) >= 2 && (math.mod(math.floor(v.s9 / 32768), 8)) <= 4"
+        },
+        {
+          "slot_78": "(math.mod(math.floor(v.s9 / 262144), 8)) >= 2 && (math.mod(math.floor(v.s9 / 262144), 8)) <= 4"
+        },
+        {
+          "slot_79": "(math.mod(math.floor(v.s9 / 2097152), 8)) >= 2 && (math.mod(math.floor(v.s9 / 2097152), 8)) <= 4"
+        },
+        {
+          "slot_80": "(math.mod(math.floor(v.s10 / 1), 8)) >= 2 && (math.mod(math.floor(v.s10 / 1), 8)) <= 4"
+        },
+        {
+          "slot_81": "(math.mod(math.floor(v.s10 / 8), 8)) >= 2 && (math.mod(math.floor(v.s10 / 8), 8)) <= 4"
+        },
+        {
+          "slot_82": "(math.mod(math.floor(v.s10 / 64), 8)) >= 2 && (math.mod(math.floor(v.s10 / 64), 8)) <= 4"
+        },
+        {
+          "slot_83": "(math.mod(math.floor(v.s10 / 512), 8)) >= 2 && (math.mod(math.floor(v.s10 / 512), 8)) <= 4"
+        },
+        {
+          "slot_84": "(math.mod(math.floor(v.s10 / 4096), 8)) >= 2 && (math.mod(math.floor(v.s10 / 4096), 8)) <= 4"
+        },
+        {
+          "slot_85": "(math.mod(math.floor(v.s10 / 32768), 8)) >= 2 && (math.mod(math.floor(v.s10 / 32768), 8)) <= 4"
+        },
+        {
+          "slot_86": "(math.mod(math.floor(v.s10 / 262144), 8)) >= 2 && (math.mod(math.floor(v.s10 / 262144), 8)) <= 4"
+        },
+        {
+          "slot_87": "(math.mod(math.floor(v.s10 / 2097152), 8)) >= 2 && (math.mod(math.floor(v.s10 / 2097152), 8)) <= 4"
+        },
+        {
+          "slot_88": "(math.mod(math.floor(v.s11 / 1), 8)) >= 2 && (math.mod(math.floor(v.s11 / 1), 8)) <= 4"
+        },
+        {
+          "slot_89": "(math.mod(math.floor(v.s11 / 8), 8)) >= 2 && (math.mod(math.floor(v.s11 / 8), 8)) <= 4"
+        },
+        {
+          "slot_90": "(math.mod(math.floor(v.s11 / 64), 8)) >= 2 && (math.mod(math.floor(v.s11 / 64), 8)) <= 4"
+        },
+        {
+          "slot_91": "(math.mod(math.floor(v.s11 / 512), 8)) >= 2 && (math.mod(math.floor(v.s11 / 512), 8)) <= 4"
+        },
+        {
+          "slot_92": "(math.mod(math.floor(v.s11 / 4096), 8)) >= 2 && (math.mod(math.floor(v.s11 / 4096), 8)) <= 4"
+        },
+        {
+          "slot_93": "(math.mod(math.floor(v.s11 / 32768), 8)) >= 2 && (math.mod(math.floor(v.s11 / 32768), 8)) <= 4"
+        },
+        {
+          "slot_94": "(math.mod(math.floor(v.s11 / 262144), 8)) >= 2 && (math.mod(math.floor(v.s11 / 262144), 8)) <= 4"
+        },
+        {
+          "slot_95": "(math.mod(math.floor(v.s11 / 2097152), 8)) >= 2 && (math.mod(math.floor(v.s11 / 2097152), 8)) <= 4"
+        },
+        {
+          "slot_96": "(math.mod(math.floor(v.s12 / 1), 8)) >= 2 && (math.mod(math.floor(v.s12 / 1), 8)) <= 4"
+        },
+        {
+          "slot_97": "(math.mod(math.floor(v.s12 / 8), 8)) >= 2 && (math.mod(math.floor(v.s12 / 8), 8)) <= 4"
+        },
+        {
+          "slot_98": "(math.mod(math.floor(v.s12 / 64), 8)) >= 2 && (math.mod(math.floor(v.s12 / 64), 8)) <= 4"
+        },
+        {
+          "slot_99": "(math.mod(math.floor(v.s12 / 512), 8)) >= 2 && (math.mod(math.floor(v.s12 / 512), 8)) <= 4"
+        },
+        {
+          "slot_100": "(math.mod(math.floor(v.s12 / 4096), 8)) >= 2 && (math.mod(math.floor(v.s12 / 4096), 8)) <= 4"
+        },
+        {
+          "slot_101": "(math.mod(math.floor(v.s12 / 32768), 8)) >= 2 && (math.mod(math.floor(v.s12 / 32768), 8)) <= 4"
+        },
+        {
+          "slot_102": "(math.mod(math.floor(v.s12 / 262144), 8)) >= 2 && (math.mod(math.floor(v.s12 / 262144), 8)) <= 4"
+        },
+        {
+          "slot_103": "(math.mod(math.floor(v.s12 / 2097152), 8)) >= 2 && (math.mod(math.floor(v.s12 / 2097152), 8)) <= 4"
+        },
+        {
+          "slot_104": "(math.mod(math.floor(v.s13 / 1), 8)) >= 2 && (math.mod(math.floor(v.s13 / 1), 8)) <= 4"
+        },
+        {
+          "slot_105": "(math.mod(math.floor(v.s13 / 8), 8)) >= 2 && (math.mod(math.floor(v.s13 / 8), 8)) <= 4"
+        },
+        {
+          "slot_106": "(math.mod(math.floor(v.s13 / 64), 8)) >= 2 && (math.mod(math.floor(v.s13 / 64), 8)) <= 4"
+        },
+        {
+          "slot_107": "(math.mod(math.floor(v.s13 / 512), 8)) >= 2 && (math.mod(math.floor(v.s13 / 512), 8)) <= 4"
+        },
+        {
+          "slot_108": "(math.mod(math.floor(v.s13 / 4096), 8)) >= 2 && (math.mod(math.floor(v.s13 / 4096), 8)) <= 4"
+        },
+        {
+          "slot_109": "(math.mod(math.floor(v.s13 / 32768), 8)) >= 2 && (math.mod(math.floor(v.s13 / 32768), 8)) <= 4"
+        },
+        {
+          "slot_110": "(math.mod(math.floor(v.s13 / 262144), 8)) >= 2 && (math.mod(math.floor(v.s13 / 262144), 8)) <= 4"
+        },
+        {
+          "slot_111": "(math.mod(math.floor(v.s13 / 2097152), 8)) >= 2 && (math.mod(math.floor(v.s13 / 2097152), 8)) <= 4"
+        },
+        {
+          "slot_112": "(math.mod(math.floor(v.s14 / 1), 8)) >= 2 && (math.mod(math.floor(v.s14 / 1), 8)) <= 4"
+        },
+        {
+          "slot_113": "(math.mod(math.floor(v.s14 / 8), 8)) >= 2 && (math.mod(math.floor(v.s14 / 8), 8)) <= 4"
+        },
+        {
+          "slot_114": "(math.mod(math.floor(v.s14 / 64), 8)) >= 2 && (math.mod(math.floor(v.s14 / 64), 8)) <= 4"
+        },
+        {
+          "slot_115": "(math.mod(math.floor(v.s14 / 512), 8)) >= 2 && (math.mod(math.floor(v.s14 / 512), 8)) <= 4"
+        },
+        {
+          "slot_116": "(math.mod(math.floor(v.s14 / 4096), 8)) >= 2 && (math.mod(math.floor(v.s14 / 4096), 8)) <= 4"
+        },
+        {
+          "slot_117": "(math.mod(math.floor(v.s14 / 32768), 8)) >= 2 && (math.mod(math.floor(v.s14 / 32768), 8)) <= 4"
+        },
+        {
+          "slot_118": "(math.mod(math.floor(v.s14 / 262144), 8)) >= 2 && (math.mod(math.floor(v.s14 / 262144), 8)) <= 4"
+        },
+        {
+          "slot_119": "(math.mod(math.floor(v.s14 / 2097152), 8)) >= 2 && (math.mod(math.floor(v.s14 / 2097152), 8)) <= 4"
+        },
+        {
+          "slot_120": "(math.mod(math.floor(v.s15 / 1), 8)) >= 2 && (math.mod(math.floor(v.s15 / 1), 8)) <= 4"
+        },
+        {
+          "slot_121": "(math.mod(math.floor(v.s15 / 8), 8)) >= 2 && (math.mod(math.floor(v.s15 / 8), 8)) <= 4"
+        },
+        {
+          "slot_122": "(math.mod(math.floor(v.s15 / 64), 8)) >= 2 && (math.mod(math.floor(v.s15 / 64), 8)) <= 4"
+        },
+        {
+          "slot_123": "(math.mod(math.floor(v.s15 / 512), 8)) >= 2 && (math.mod(math.floor(v.s15 / 512), 8)) <= 4"
+        },
+        {
+          "slot_124": "(math.mod(math.floor(v.s15 / 4096), 8)) >= 2 && (math.mod(math.floor(v.s15 / 4096), 8)) <= 4"
+        },
+        {
+          "slot_125": "(math.mod(math.floor(v.s15 / 32768), 8)) >= 2 && (math.mod(math.floor(v.s15 / 32768), 8)) <= 4"
+        },
+        {
+          "slot_126": "(math.mod(math.floor(v.s15 / 262144), 8)) >= 2 && (math.mod(math.floor(v.s15 / 262144), 8)) <= 4"
+        },
+        {
+          "slot_127": "(math.mod(math.floor(v.s15 / 2097152), 8)) >= 2 && (math.mod(math.floor(v.s15 / 2097152), 8)) <= 4"
+        },
+        {
+          "slot_128": "(math.mod(math.floor(v.s16 / 1), 8)) >= 2 && (math.mod(math.floor(v.s16 / 1), 8)) <= 4"
+        },
+        {
+          "slot_129": "(math.mod(math.floor(v.s16 / 8), 8)) >= 2 && (math.mod(math.floor(v.s16 / 8), 8)) <= 4"
+        },
+        {
+          "slot_130": "(math.mod(math.floor(v.s16 / 64), 8)) >= 2 && (math.mod(math.floor(v.s16 / 64), 8)) <= 4"
+        },
+        {
+          "slot_131": "(math.mod(math.floor(v.s16 / 512), 8)) >= 2 && (math.mod(math.floor(v.s16 / 512), 8)) <= 4"
+        },
+        {
+          "slot_132": "(math.mod(math.floor(v.s16 / 4096), 8)) >= 2 && (math.mod(math.floor(v.s16 / 4096), 8)) <= 4"
+        },
+        {
+          "slot_133": "(math.mod(math.floor(v.s16 / 32768), 8)) >= 2 && (math.mod(math.floor(v.s16 / 32768), 8)) <= 4"
+        },
+        {
+          "slot_134": "(math.mod(math.floor(v.s16 / 262144), 8)) >= 2 && (math.mod(math.floor(v.s16 / 262144), 8)) <= 4"
+        },
+        {
+          "slot_135": "(math.mod(math.floor(v.s16 / 2097152), 8)) >= 2 && (math.mod(math.floor(v.s16 / 2097152), 8)) <= 4"
+        },
+        {
+          "slot_136": "(math.mod(math.floor(v.s17 / 1), 8)) >= 2 && (math.mod(math.floor(v.s17 / 1), 8)) <= 4"
+        },
+        {
+          "slot_137": "(math.mod(math.floor(v.s17 / 8), 8)) >= 2 && (math.mod(math.floor(v.s17 / 8), 8)) <= 4"
+        },
+        {
+          "slot_138": "(math.mod(math.floor(v.s17 / 64), 8)) >= 2 && (math.mod(math.floor(v.s17 / 64), 8)) <= 4"
+        },
+        {
+          "slot_139": "(math.mod(math.floor(v.s17 / 512), 8)) >= 2 && (math.mod(math.floor(v.s17 / 512), 8)) <= 4"
+        },
+        {
+          "slot_140": "(math.mod(math.floor(v.s17 / 4096), 8)) >= 2 && (math.mod(math.floor(v.s17 / 4096), 8)) <= 4"
+        },
+        {
+          "slot_141": "(math.mod(math.floor(v.s17 / 32768), 8)) >= 2 && (math.mod(math.floor(v.s17 / 32768), 8)) <= 4"
+        },
+        {
+          "slot_142": "(math.mod(math.floor(v.s17 / 262144), 8)) >= 2 && (math.mod(math.floor(v.s17 / 262144), 8)) <= 4"
+        },
+        {
+          "slot_143": "(math.mod(math.floor(v.s17 / 2097152), 8)) >= 2 && (math.mod(math.floor(v.s17 / 2097152), 8)) <= 4"
+        },
+        {
+          "slot_144": "(math.mod(math.floor(v.s18 / 1), 8)) >= 2 && (math.mod(math.floor(v.s18 / 1), 8)) <= 4"
+        },
+        {
+          "slot_145": "(math.mod(math.floor(v.s18 / 8), 8)) >= 2 && (math.mod(math.floor(v.s18 / 8), 8)) <= 4"
+        },
+        {
+          "slot_146": "(math.mod(math.floor(v.s18 / 64), 8)) >= 2 && (math.mod(math.floor(v.s18 / 64), 8)) <= 4"
+        },
+        {
+          "slot_147": "(math.mod(math.floor(v.s18 / 512), 8)) >= 2 && (math.mod(math.floor(v.s18 / 512), 8)) <= 4"
+        },
+        {
+          "slot_148": "(math.mod(math.floor(v.s18 / 4096), 8)) >= 2 && (math.mod(math.floor(v.s18 / 4096), 8)) <= 4"
+        },
+        {
+          "slot_149": "(math.mod(math.floor(v.s18 / 32768), 8)) >= 2 && (math.mod(math.floor(v.s18 / 32768), 8)) <= 4"
+        },
+        {
+          "slot_150": "(math.mod(math.floor(v.s18 / 262144), 8)) >= 2 && (math.mod(math.floor(v.s18 / 262144), 8)) <= 4"
+        },
+        {
+          "slot_151": "(math.mod(math.floor(v.s18 / 2097152), 8)) >= 2 && (math.mod(math.floor(v.s18 / 2097152), 8)) <= 4"
+        },
+        {
+          "slot_152": "(math.mod(math.floor(v.s19 / 1), 8)) >= 2 && (math.mod(math.floor(v.s19 / 1), 8)) <= 4"
+        },
+        {
+          "slot_153": "(math.mod(math.floor(v.s19 / 8), 8)) >= 2 && (math.mod(math.floor(v.s19 / 8), 8)) <= 4"
+        },
+        {
+          "slot_154": "(math.mod(math.floor(v.s19 / 64), 8)) >= 2 && (math.mod(math.floor(v.s19 / 64), 8)) <= 4"
+        },
+        {
+          "slot_155": "(math.mod(math.floor(v.s19 / 512), 8)) >= 2 && (math.mod(math.floor(v.s19 / 512), 8)) <= 4"
+        },
+        {
+          "slot_156": "(math.mod(math.floor(v.s19 / 4096), 8)) >= 2 && (math.mod(math.floor(v.s19 / 4096), 8)) <= 4"
+        },
+        {
+          "slot_157": "(math.mod(math.floor(v.s19 / 32768), 8)) >= 2 && (math.mod(math.floor(v.s19 / 32768), 8)) <= 4"
+        },
+        {
+          "slot_158": "(math.mod(math.floor(v.s19 / 262144), 8)) >= 2 && (math.mod(math.floor(v.s19 / 262144), 8)) <= 4"
+        },
+        {
+          "slot_159": "(math.mod(math.floor(v.s19 / 2097152), 8)) >= 2 && (math.mod(math.floor(v.s19 / 2097152), 8)) <= 4"
+        },
+        {
+          "slot_160": "(math.mod(math.floor(v.s20 / 1), 8)) >= 2 && (math.mod(math.floor(v.s20 / 1), 8)) <= 4"
+        },
+        {
+          "slot_161": "(math.mod(math.floor(v.s20 / 8), 8)) >= 2 && (math.mod(math.floor(v.s20 / 8), 8)) <= 4"
+        },
+        {
+          "slot_162": "(math.mod(math.floor(v.s20 / 64), 8)) >= 2 && (math.mod(math.floor(v.s20 / 64), 8)) <= 4"
+        },
+        {
+          "slot_163": "(math.mod(math.floor(v.s20 / 512), 8)) >= 2 && (math.mod(math.floor(v.s20 / 512), 8)) <= 4"
+        },
+        {
+          "slot_164": "(math.mod(math.floor(v.s20 / 4096), 8)) >= 2 && (math.mod(math.floor(v.s20 / 4096), 8)) <= 4"
+        },
+        {
+          "slot_165": "(math.mod(math.floor(v.s20 / 32768), 8)) >= 2 && (math.mod(math.floor(v.s20 / 32768), 8)) <= 4"
+        },
+        {
+          "slot_166": "(math.mod(math.floor(v.s20 / 262144), 8)) >= 2 && (math.mod(math.floor(v.s20 / 262144), 8)) <= 4"
+        },
+        {
+          "slot_167": "(math.mod(math.floor(v.s20 / 2097152), 8)) >= 2 && (math.mod(math.floor(v.s20 / 2097152), 8)) <= 4"
+        },
+        {
+          "slot_168": "(math.mod(math.floor(v.s21 / 1), 8)) >= 2 && (math.mod(math.floor(v.s21 / 1), 8)) <= 4"
+        },
+        {
+          "slot_169": "(math.mod(math.floor(v.s21 / 8), 8)) >= 2 && (math.mod(math.floor(v.s21 / 8), 8)) <= 4"
+        },
+        {
+          "slot_170": "(math.mod(math.floor(v.s21 / 64), 8)) >= 2 && (math.mod(math.floor(v.s21 / 64), 8)) <= 4"
+        },
+        {
+          "slot_171": "(math.mod(math.floor(v.s21 / 512), 8)) >= 2 && (math.mod(math.floor(v.s21 / 512), 8)) <= 4"
+        },
+        {
+          "slot_172": "(math.mod(math.floor(v.s21 / 4096), 8)) >= 2 && (math.mod(math.floor(v.s21 / 4096), 8)) <= 4"
+        },
+        {
+          "slot_173": "(math.mod(math.floor(v.s21 / 32768), 8)) >= 2 && (math.mod(math.floor(v.s21 / 32768), 8)) <= 4"
+        },
+        {
+          "slot_174": "(math.mod(math.floor(v.s21 / 262144), 8)) >= 2 && (math.mod(math.floor(v.s21 / 262144), 8)) <= 4"
+        },
+        {
+          "slot_175": "(math.mod(math.floor(v.s21 / 2097152), 8)) >= 2 && (math.mod(math.floor(v.s21 / 2097152), 8)) <= 4"
+        },
+        {
+          "slot_176": "(math.mod(math.floor(v.s22 / 1), 8)) >= 2 && (math.mod(math.floor(v.s22 / 1), 8)) <= 4"
+        },
+        {
+          "slot_177": "(math.mod(math.floor(v.s22 / 8), 8)) >= 2 && (math.mod(math.floor(v.s22 / 8), 8)) <= 4"
+        },
+        {
+          "slot_178": "(math.mod(math.floor(v.s22 / 64), 8)) >= 2 && (math.mod(math.floor(v.s22 / 64), 8)) <= 4"
+        },
+        {
+          "slot_179": "(math.mod(math.floor(v.s22 / 512), 8)) >= 2 && (math.mod(math.floor(v.s22 / 512), 8)) <= 4"
+        },
+        {
+          "slot_180": "(math.mod(math.floor(v.s22 / 4096), 8)) >= 2 && (math.mod(math.floor(v.s22 / 4096), 8)) <= 4"
+        },
+        {
+          "slot_181": "(math.mod(math.floor(v.s22 / 32768), 8)) >= 2 && (math.mod(math.floor(v.s22 / 32768), 8)) <= 4"
+        },
+        {
+          "slot_182": "(math.mod(math.floor(v.s22 / 262144), 8)) >= 2 && (math.mod(math.floor(v.s22 / 262144), 8)) <= 4"
+        },
+        {
+          "slot_183": "(math.mod(math.floor(v.s22 / 2097152), 8)) >= 2 && (math.mod(math.floor(v.s22 / 2097152), 8)) <= 4"
+        },
+        {
+          "slot_184": "(math.mod(math.floor(v.s23 / 1), 8)) >= 2 && (math.mod(math.floor(v.s23 / 1), 8)) <= 4"
+        },
+        {
+          "slot_185": "(math.mod(math.floor(v.s23 / 8), 8)) >= 2 && (math.mod(math.floor(v.s23 / 8), 8)) <= 4"
+        },
+        {
+          "slot_186": "(math.mod(math.floor(v.s23 / 64), 8)) >= 2 && (math.mod(math.floor(v.s23 / 64), 8)) <= 4"
+        },
+        {
+          "slot_187": "(math.mod(math.floor(v.s23 / 512), 8)) >= 2 && (math.mod(math.floor(v.s23 / 512), 8)) <= 4"
+        },
+        {
+          "slot_188": "(math.mod(math.floor(v.s23 / 4096), 8)) >= 2 && (math.mod(math.floor(v.s23 / 4096), 8)) <= 4"
+        },
+        {
+          "slot_189": "(math.mod(math.floor(v.s23 / 32768), 8)) >= 2 && (math.mod(math.floor(v.s23 / 32768), 8)) <= 4"
+        },
+        {
+          "slot_190": "(math.mod(math.floor(v.s23 / 262144), 8)) >= 2 && (math.mod(math.floor(v.s23 / 262144), 8)) <= 4"
+        },
+        {
+          "slot_191": "(math.mod(math.floor(v.s23 / 2097152), 8)) >= 2 && (math.mod(math.floor(v.s23 / 2097152), 8)) <= 4"
+        },
+        {
+          "slot_192": "(math.mod(math.floor(v.s24 / 1), 8)) >= 2 && (math.mod(math.floor(v.s24 / 1), 8)) <= 4"
+        },
+        {
+          "slot_193": "(math.mod(math.floor(v.s24 / 8), 8)) >= 2 && (math.mod(math.floor(v.s24 / 8), 8)) <= 4"
+        },
+        {
+          "slot_194": "(math.mod(math.floor(v.s24 / 64), 8)) >= 2 && (math.mod(math.floor(v.s24 / 64), 8)) <= 4"
+        },
+        {
+          "slot_195": "(math.mod(math.floor(v.s24 / 512), 8)) >= 2 && (math.mod(math.floor(v.s24 / 512), 8)) <= 4"
+        }
+      ]
+    },
+    "controller.render.treephysics.log_fragment.log_top": {
+      "arrays": {
+        "textures": {
+          "Array.log_top": [
+            "Texture.top_oak",
+            "Texture.top_spruce",
+            "Texture.top_birch",
+            "Texture.top_jungle",
+            "Texture.top_acacia",
+            "Texture.top_dark_oak",
+            "Texture.top_cherry",
+            "Texture.top_mangrove",
+            "Texture.top_pale_oak",
+            "Texture.top_azalea",
+            "Texture.top_flowering_azalea"
+          ],
+          "Array.log_side": [
+            "Texture.side_oak",
+            "Texture.side_spruce",
+            "Texture.side_birch",
+            "Texture.side_jungle",
+            "Texture.side_acacia",
+            "Texture.side_dark_oak",
+            "Texture.side_cherry",
+            "Texture.side_mangrove",
+            "Texture.side_pale_oak",
+            "Texture.side_azalea",
+            "Texture.side_flowering_azalea"
+          ]
+        }
+      },
+      "geometry": "Geometry.log_top",
+      "light_color_multiplier": 0.88,
+      "materials": [
+        {
+          "*": "Material.log"
+        }
+      ],
+      "textures": [
+        "math.mod(q.property('treephysics:modes'), 16) >= 4 ? Array.log_side[q.property('treephysics:family')] : Array.log_top[q.property('treephysics:family')]"
+      ],
+      "part_visibility": [
+        {
+          "*": false
+        },
+        {
+          "slot_0": "(math.mod(math.floor(v.s0 / 1), 8)) >= 2 && (math.mod(math.floor(v.s0 / 1), 8)) <= 4"
+        },
+        {
+          "slot_1": "(math.mod(math.floor(v.s0 / 8), 8)) >= 2 && (math.mod(math.floor(v.s0 / 8), 8)) <= 4"
+        },
+        {
+          "slot_2": "(math.mod(math.floor(v.s0 / 64), 8)) >= 2 && (math.mod(math.floor(v.s0 / 64), 8)) <= 4"
+        },
+        {
+          "slot_3": "(math.mod(math.floor(v.s0 / 512), 8)) >= 2 && (math.mod(math.floor(v.s0 / 512), 8)) <= 4"
+        },
+        {
+          "slot_4": "(math.mod(math.floor(v.s0 / 4096), 8)) >= 2 && (math.mod(math.floor(v.s0 / 4096), 8)) <= 4"
+        },
+        {
+          "slot_5": "(math.mod(math.floor(v.s0 / 32768), 8)) >= 2 && (math.mod(math.floor(v.s0 / 32768), 8)) <= 4"
+        },
+        {
+          "slot_6": "(math.mod(math.floor(v.s0 / 262144), 8)) >= 2 && (math.mod(math.floor(v.s0 / 262144), 8)) <= 4"
+        },
+        {
+          "slot_7": "(math.mod(math.floor(v.s0 / 2097152), 8)) >= 2 && (math.mod(math.floor(v.s0 / 2097152), 8)) <= 4"
+        },
+        {
+          "slot_8": "(math.mod(math.floor(v.s1 / 1), 8)) >= 2 && (math.mod(math.floor(v.s1 / 1), 8)) <= 4"
+        },
+        {
+          "slot_9": "(math.mod(math.floor(v.s1 / 8), 8)) >= 2 && (math.mod(math.floor(v.s1 / 8), 8)) <= 4"
+        },
+        {
+          "slot_10": "(math.mod(math.floor(v.s1 / 64), 8)) >= 2 && (math.mod(math.floor(v.s1 / 64), 8)) <= 4"
+        },
+        {
+          "slot_11": "(math.mod(math.floor(v.s1 / 512), 8)) >= 2 && (math.mod(math.floor(v.s1 / 512), 8)) <= 4"
+        },
+        {
+          "slot_12": "(math.mod(math.floor(v.s1 / 4096), 8)) >= 2 && (math.mod(math.floor(v.s1 / 4096), 8)) <= 4"
+        },
+        {
+          "slot_13": "(math.mod(math.floor(v.s1 / 32768), 8)) >= 2 && (math.mod(math.floor(v.s1 / 32768), 8)) <= 4"
+        },
+        {
+          "slot_14": "(math.mod(math.floor(v.s1 / 262144), 8)) >= 2 && (math.mod(math.floor(v.s1 / 262144), 8)) <= 4"
+        },
+        {
+          "slot_15": "(math.mod(math.floor(v.s1 / 2097152), 8)) >= 2 && (math.mod(math.floor(v.s1 / 2097152), 8)) <= 4"
+        },
+        {
+          "slot_16": "(math.mod(math.floor(v.s2 / 1), 8)) >= 2 && (math.mod(math.floor(v.s2 / 1), 8)) <= 4"
+        },
+        {
+          "slot_17": "(math.mod(math.floor(v.s2 / 8), 8)) >= 2 && (math.mod(math.floor(v.s2 / 8), 8)) <= 4"
+        },
+        {
+          "slot_18": "(math.mod(math.floor(v.s2 / 64), 8)) >= 2 && (math.mod(math.floor(v.s2 / 64), 8)) <= 4"
+        },
+        {
+          "slot_19": "(math.mod(math.floor(v.s2 / 512), 8)) >= 2 && (math.mod(math.floor(v.s2 / 512), 8)) <= 4"
+        },
+        {
+          "slot_20": "(math.mod(math.floor(v.s2 / 4096), 8)) >= 2 && (math.mod(math.floor(v.s2 / 4096), 8)) <= 4"
+        },
+        {
+          "slot_21": "(math.mod(math.floor(v.s2 / 32768), 8)) >= 2 && (math.mod(math.floor(v.s2 / 32768), 8)) <= 4"
+        },
+        {
+          "slot_22": "(math.mod(math.floor(v.s2 / 262144), 8)) >= 2 && (math.mod(math.floor(v.s2 / 262144), 8)) <= 4"
+        },
+        {
+          "slot_23": "(math.mod(math.floor(v.s2 / 2097152), 8)) >= 2 && (math.mod(math.floor(v.s2 / 2097152), 8)) <= 4"
+        },
+        {
+          "slot_24": "(math.mod(math.floor(v.s3 / 1), 8)) >= 2 && (math.mod(math.floor(v.s3 / 1), 8)) <= 4"
+        },
+        {
+          "slot_25": "(math.mod(math.floor(v.s3 / 8), 8)) >= 2 && (math.mod(math.floor(v.s3 / 8), 8)) <= 4"
+        },
+        {
+          "slot_26": "(math.mod(math.floor(v.s3 / 64), 8)) >= 2 && (math.mod(math.floor(v.s3 / 64), 8)) <= 4"
+        },
+        {
+          "slot_27": "(math.mod(math.floor(v.s3 / 512), 8)) >= 2 && (math.mod(math.floor(v.s3 / 512), 8)) <= 4"
+        },
+        {
+          "slot_28": "(math.mod(math.floor(v.s3 / 4096), 8)) >= 2 && (math.mod(math.floor(v.s3 / 4096), 8)) <= 4"
+        },
+        {
+          "slot_29": "(math.mod(math.floor(v.s3 / 32768), 8)) >= 2 && (math.mod(math.floor(v.s3 / 32768), 8)) <= 4"
+        },
+        {
+          "slot_30": "(math.mod(math.floor(v.s3 / 262144), 8)) >= 2 && (math.mod(math.floor(v.s3 / 262144), 8)) <= 4"
+        },
+        {
+          "slot_31": "(math.mod(math.floor(v.s3 / 2097152), 8)) >= 2 && (math.mod(math.floor(v.s3 / 2097152), 8)) <= 4"
+        },
+        {
+          "slot_32": "(math.mod(math.floor(v.s4 / 1), 8)) >= 2 && (math.mod(math.floor(v.s4 / 1), 8)) <= 4"
+        },
+        {
+          "slot_33": "(math.mod(math.floor(v.s4 / 8), 8)) >= 2 && (math.mod(math.floor(v.s4 / 8), 8)) <= 4"
+        },
+        {
+          "slot_34": "(math.mod(math.floor(v.s4 / 64), 8)) >= 2 && (math.mod(math.floor(v.s4 / 64), 8)) <= 4"
+        },
+        {
+          "slot_35": "(math.mod(math.floor(v.s4 / 512), 8)) >= 2 && (math.mod(math.floor(v.s4 / 512), 8)) <= 4"
+        },
+        {
+          "slot_36": "(math.mod(math.floor(v.s4 / 4096), 8)) >= 2 && (math.mod(math.floor(v.s4 / 4096), 8)) <= 4"
+        },
+        {
+          "slot_37": "(math.mod(math.floor(v.s4 / 32768), 8)) >= 2 && (math.mod(math.floor(v.s4 / 32768), 8)) <= 4"
+        },
+        {
+          "slot_38": "(math.mod(math.floor(v.s4 / 262144), 8)) >= 2 && (math.mod(math.floor(v.s4 / 262144), 8)) <= 4"
+        },
+        {
+          "slot_39": "(math.mod(math.floor(v.s4 / 2097152), 8)) >= 2 && (math.mod(math.floor(v.s4 / 2097152), 8)) <= 4"
+        },
+        {
+          "slot_40": "(math.mod(math.floor(v.s5 / 1), 8)) >= 2 && (math.mod(math.floor(v.s5 / 1), 8)) <= 4"
+        },
+        {
+          "slot_41": "(math.mod(math.floor(v.s5 / 8), 8)) >= 2 && (math.mod(math.floor(v.s5 / 8), 8)) <= 4"
+        },
+        {
+          "slot_42": "(math.mod(math.floor(v.s5 / 64), 8)) >= 2 && (math.mod(math.floor(v.s5 / 64), 8)) <= 4"
+        },
+        {
+          "slot_43": "(math.mod(math.floor(v.s5 / 512), 8)) >= 2 && (math.mod(math.floor(v.s5 / 512), 8)) <= 4"
+        },
+        {
+          "slot_44": "(math.mod(math.floor(v.s5 / 4096), 8)) >= 2 && (math.mod(math.floor(v.s5 / 4096), 8)) <= 4"
+        },
+        {
+          "slot_45": "(math.mod(math.floor(v.s5 / 32768), 8)) >= 2 && (math.mod(math.floor(v.s5 / 32768), 8)) <= 4"
+        },
+        {
+          "slot_46": "(math.mod(math.floor(v.s5 / 262144), 8)) >= 2 && (math.mod(math.floor(v.s5 / 262144), 8)) <= 4"
+        },
+        {
+          "slot_47": "(math.mod(math.floor(v.s5 / 2097152), 8)) >= 2 && (math.mod(math.floor(v.s5 / 2097152), 8)) <= 4"
+        },
+        {
+          "slot_48": "(math.mod(math.floor(v.s6 / 1), 8)) >= 2 && (math.mod(math.floor(v.s6 / 1), 8)) <= 4"
+        },
+        {
+          "slot_49": "(math.mod(math.floor(v.s6 / 8), 8)) >= 2 && (math.mod(math.floor(v.s6 / 8), 8)) <= 4"
+        },
+        {
+          "slot_50": "(math.mod(math.floor(v.s6 / 64), 8)) >= 2 && (math.mod(math.floor(v.s6 / 64), 8)) <= 4"
+        },
+        {
+          "slot_51": "(math.mod(math.floor(v.s6 / 512), 8)) >= 2 && (math.mod(math.floor(v.s6 / 512), 8)) <= 4"
+        },
+        {
+          "slot_52": "(math.mod(math.floor(v.s6 / 4096), 8)) >= 2 && (math.mod(math.floor(v.s6 / 4096), 8)) <= 4"
+        },
+        {
+          "slot_53": "(math.mod(math.floor(v.s6 / 32768), 8)) >= 2 && (math.mod(math.floor(v.s6 / 32768), 8)) <= 4"
+        },
+        {
+          "slot_54": "(math.mod(math.floor(v.s6 / 262144), 8)) >= 2 && (math.mod(math.floor(v.s6 / 262144), 8)) <= 4"
+        },
+        {
+          "slot_55": "(math.mod(math.floor(v.s6 / 2097152), 8)) >= 2 && (math.mod(math.floor(v.s6 / 2097152), 8)) <= 4"
+        },
+        {
+          "slot_56": "(math.mod(math.floor(v.s7 / 1), 8)) >= 2 && (math.mod(math.floor(v.s7 / 1), 8)) <= 4"
+        },
+        {
+          "slot_57": "(math.mod(math.floor(v.s7 / 8), 8)) >= 2 && (math.mod(math.floor(v.s7 / 8), 8)) <= 4"
+        },
+        {
+          "slot_58": "(math.mod(math.floor(v.s7 / 64), 8)) >= 2 && (math.mod(math.floor(v.s7 / 64), 8)) <= 4"
+        },
+        {
+          "slot_59": "(math.mod(math.floor(v.s7 / 512), 8)) >= 2 && (math.mod(math.floor(v.s7 / 512), 8)) <= 4"
+        },
+        {
+          "slot_60": "(math.mod(math.floor(v.s7 / 4096), 8)) >= 2 && (math.mod(math.floor(v.s7 / 4096), 8)) <= 4"
+        },
+        {
+          "slot_61": "(math.mod(math.floor(v.s7 / 32768), 8)) >= 2 && (math.mod(math.floor(v.s7 / 32768), 8)) <= 4"
+        },
+        {
+          "slot_62": "(math.mod(math.floor(v.s7 / 262144), 8)) >= 2 && (math.mod(math.floor(v.s7 / 262144), 8)) <= 4"
+        },
+        {
+          "slot_63": "(math.mod(math.floor(v.s7 / 2097152), 8)) >= 2 && (math.mod(math.floor(v.s7 / 2097152), 8)) <= 4"
+        },
+        {
+          "slot_64": "(math.mod(math.floor(v.s8 / 1), 8)) >= 2 && (math.mod(math.floor(v.s8 / 1), 8)) <= 4"
+        },
+        {
+          "slot_65": "(math.mod(math.floor(v.s8 / 8), 8)) >= 2 && (math.mod(math.floor(v.s8 / 8), 8)) <= 4"
+        },
+        {
+          "slot_66": "(math.mod(math.floor(v.s8 / 64), 8)) >= 2 && (math.mod(math.floor(v.s8 / 64), 8)) <= 4"
+        },
+        {
+          "slot_67": "(math.mod(math.floor(v.s8 / 512), 8)) >= 2 && (math.mod(math.floor(v.s8 / 512), 8)) <= 4"
+        },
+        {
+          "slot_68": "(math.mod(math.floor(v.s8 / 4096), 8)) >= 2 && (math.mod(math.floor(v.s8 / 4096), 8)) <= 4"
+        },
+        {
+          "slot_69": "(math.mod(math.floor(v.s8 / 32768), 8)) >= 2 && (math.mod(math.floor(v.s8 / 32768), 8)) <= 4"
+        },
+        {
+          "slot_70": "(math.mod(math.floor(v.s8 / 262144), 8)) >= 2 && (math.mod(math.floor(v.s8 / 262144), 8)) <= 4"
+        },
+        {
+          "slot_71": "(math.mod(math.floor(v.s8 / 2097152), 8)) >= 2 && (math.mod(math.floor(v.s8 / 2097152), 8)) <= 4"
+        },
+        {
+          "slot_72": "(math.mod(math.floor(v.s9 / 1), 8)) >= 2 && (math.mod(math.floor(v.s9 / 1), 8)) <= 4"
+        },
+        {
+          "slot_73": "(math.mod(math.floor(v.s9 / 8), 8)) >= 2 && (math.mod(math.floor(v.s9 / 8), 8)) <= 4"
+        },
+        {
+          "slot_74": "(math.mod(math.floor(v.s9 / 64), 8)) >= 2 && (math.mod(math.floor(v.s9 / 64), 8)) <= 4"
+        },
+        {
+          "slot_75": "(math.mod(math.floor(v.s9 / 512), 8)) >= 2 && (math.mod(math.floor(v.s9 / 512), 8)) <= 4"
+        },
+        {
+          "slot_76": "(math.mod(math.floor(v.s9 / 4096), 8)) >= 2 && (math.mod(math.floor(v.s9 / 4096), 8)) <= 4"
+        },
+        {
+          "slot_77": "(math.mod(math.floor(v.s9 / 32768), 8)) >= 2 && (math.mod(math.floor(v.s9 / 32768), 8)) <= 4"
+        },
+        {
+          "slot_78": "(math.mod(math.floor(v.s9 / 262144), 8)) >= 2 && (math.mod(math.floor(v.s9 / 262144), 8)) <= 4"
+        },
+        {
+          "slot_79": "(math.mod(math.floor(v.s9 / 2097152), 8)) >= 2 && (math.mod(math.floor(v.s9 / 2097152), 8)) <= 4"
+        },
+        {
+          "slot_80": "(math.mod(math.floor(v.s10 / 1), 8)) >= 2 && (math.mod(math.floor(v.s10 / 1), 8)) <= 4"
+        },
+        {
+          "slot_81": "(math.mod(math.floor(v.s10 / 8), 8)) >= 2 && (math.mod(math.floor(v.s10 / 8), 8)) <= 4"
+        },
+        {
+          "slot_82": "(math.mod(math.floor(v.s10 / 64), 8)) >= 2 && (math.mod(math.floor(v.s10 / 64), 8)) <= 4"
+        },
+        {
+          "slot_83": "(math.mod(math.floor(v.s10 / 512), 8)) >= 2 && (math.mod(math.floor(v.s10 / 512), 8)) <= 4"
+        },
+        {
+          "slot_84": "(math.mod(math.floor(v.s10 / 4096), 8)) >= 2 && (math.mod(math.floor(v.s10 / 4096), 8)) <= 4"
+        },
+        {
+          "slot_85": "(math.mod(math.floor(v.s10 / 32768), 8)) >= 2 && (math.mod(math.floor(v.s10 / 32768), 8)) <= 4"
+        },
+        {
+          "slot_86": "(math.mod(math.floor(v.s10 / 262144), 8)) >= 2 && (math.mod(math.floor(v.s10 / 262144), 8)) <= 4"
+        },
+        {
+          "slot_87": "(math.mod(math.floor(v.s10 / 2097152), 8)) >= 2 && (math.mod(math.floor(v.s10 / 2097152), 8)) <= 4"
+        },
+        {
+          "slot_88": "(math.mod(math.floor(v.s11 / 1), 8)) >= 2 && (math.mod(math.floor(v.s11 / 1), 8)) <= 4"
+        },
+        {
+          "slot_89": "(math.mod(math.floor(v.s11 / 8), 8)) >= 2 && (math.mod(math.floor(v.s11 / 8), 8)) <= 4"
+        },
+        {
+          "slot_90": "(math.mod(math.floor(v.s11 / 64), 8)) >= 2 && (math.mod(math.floor(v.s11 / 64), 8)) <= 4"
+        },
+        {
+          "slot_91": "(math.mod(math.floor(v.s11 / 512), 8)) >= 2 && (math.mod(math.floor(v.s11 / 512), 8)) <= 4"
+        },
+        {
+          "slot_92": "(math.mod(math.floor(v.s11 / 4096), 8)) >= 2 && (math.mod(math.floor(v.s11 / 4096), 8)) <= 4"
+        },
+        {
+          "slot_93": "(math.mod(math.floor(v.s11 / 32768), 8)) >= 2 && (math.mod(math.floor(v.s11 / 32768), 8)) <= 4"
+        },
+        {
+          "slot_94": "(math.mod(math.floor(v.s11 / 262144), 8)) >= 2 && (math.mod(math.floor(v.s11 / 262144), 8)) <= 4"
+        },
+        {
+          "slot_95": "(math.mod(math.floor(v.s11 / 2097152), 8)) >= 2 && (math.mod(math.floor(v.s11 / 2097152), 8)) <= 4"
+        },
+        {
+          "slot_96": "(math.mod(math.floor(v.s12 / 1), 8)) >= 2 && (math.mod(math.floor(v.s12 / 1), 8)) <= 4"
+        },
+        {
+          "slot_97": "(math.mod(math.floor(v.s12 / 8), 8)) >= 2 && (math.mod(math.floor(v.s12 / 8), 8)) <= 4"
+        },
+        {
+          "slot_98": "(math.mod(math.floor(v.s12 / 64), 8)) >= 2 && (math.mod(math.floor(v.s12 / 64), 8)) <= 4"
+        },
+        {
+          "slot_99": "(math.mod(math.floor(v.s12 / 512), 8)) >= 2 && (math.mod(math.floor(v.s12 / 512), 8)) <= 4"
+        },
+        {
+          "slot_100": "(math.mod(math.floor(v.s12 / 4096), 8)) >= 2 && (math.mod(math.floor(v.s12 / 4096), 8)) <= 4"
+        },
+        {
+          "slot_101": "(math.mod(math.floor(v.s12 / 32768), 8)) >= 2 && (math.mod(math.floor(v.s12 / 32768), 8)) <= 4"
+        },
+        {
+          "slot_102": "(math.mod(math.floor(v.s12 / 262144), 8)) >= 2 && (math.mod(math.floor(v.s12 / 262144), 8)) <= 4"
+        },
+        {
+          "slot_103": "(math.mod(math.floor(v.s12 / 2097152), 8)) >= 2 && (math.mod(math.floor(v.s12 / 2097152), 8)) <= 4"
+        },
+        {
+          "slot_104": "(math.mod(math.floor(v.s13 / 1), 8)) >= 2 && (math.mod(math.floor(v.s13 / 1), 8)) <= 4"
+        },
+        {
+          "slot_105": "(math.mod(math.floor(v.s13 / 8), 8)) >= 2 && (math.mod(math.floor(v.s13 / 8), 8)) <= 4"
+        },
+        {
+          "slot_106": "(math.mod(math.floor(v.s13 / 64), 8)) >= 2 && (math.mod(math.floor(v.s13 / 64), 8)) <= 4"
+        },
+        {
+          "slot_107": "(math.mod(math.floor(v.s13 / 512), 8)) >= 2 && (math.mod(math.floor(v.s13 / 512), 8)) <= 4"
+        },
+        {
+          "slot_108": "(math.mod(math.floor(v.s13 / 4096), 8)) >= 2 && (math.mod(math.floor(v.s13 / 4096), 8)) <= 4"
+        },
+        {
+          "slot_109": "(math.mod(math.floor(v.s13 / 32768), 8)) >= 2 && (math.mod(math.floor(v.s13 / 32768), 8)) <= 4"
+        },
+        {
+          "slot_110": "(math.mod(math.floor(v.s13 / 262144), 8)) >= 2 && (math.mod(math.floor(v.s13 / 262144), 8)) <= 4"
+        },
+        {
+          "slot_111": "(math.mod(math.floor(v.s13 / 2097152), 8)) >= 2 && (math.mod(math.floor(v.s13 / 2097152), 8)) <= 4"
+        },
+        {
+          "slot_112": "(math.mod(math.floor(v.s14 / 1), 8)) >= 2 && (math.mod(math.floor(v.s14 / 1), 8)) <= 4"
+        },
+        {
+          "slot_113": "(math.mod(math.floor(v.s14 / 8), 8)) >= 2 && (math.mod(math.floor(v.s14 / 8), 8)) <= 4"
+        },
+        {
+          "slot_114": "(math.mod(math.floor(v.s14 / 64), 8)) >= 2 && (math.mod(math.floor(v.s14 / 64), 8)) <= 4"
+        },
+        {
+          "slot_115": "(math.mod(math.floor(v.s14 / 512), 8)) >= 2 && (math.mod(math.floor(v.s14 / 512), 8)) <= 4"
+        },
+        {
+          "slot_116": "(math.mod(math.floor(v.s14 / 4096), 8)) >= 2 && (math.mod(math.floor(v.s14 / 4096), 8)) <= 4"
+        },
+        {
+          "slot_117": "(math.mod(math.floor(v.s14 / 32768), 8)) >= 2 && (math.mod(math.floor(v.s14 / 32768), 8)) <= 4"
+        },
+        {
+          "slot_118": "(math.mod(math.floor(v.s14 / 262144), 8)) >= 2 && (math.mod(math.floor(v.s14 / 262144), 8)) <= 4"
+        },
+        {
+          "slot_119": "(math.mod(math.floor(v.s14 / 2097152), 8)) >= 2 && (math.mod(math.floor(v.s14 / 2097152), 8)) <= 4"
+        },
+        {
+          "slot_120": "(math.mod(math.floor(v.s15 / 1), 8)) >= 2 && (math.mod(math.floor(v.s15 / 1), 8)) <= 4"
+        },
+        {
+          "slot_121": "(math.mod(math.floor(v.s15 / 8), 8)) >= 2 && (math.mod(math.floor(v.s15 / 8), 8)) <= 4"
+        },
+        {
+          "slot_122": "(math.mod(math.floor(v.s15 / 64), 8)) >= 2 && (math.mod(math.floor(v.s15 / 64), 8)) <= 4"
+        },
+        {
+          "slot_123": "(math.mod(math.floor(v.s15 / 512), 8)) >= 2 && (math.mod(math.floor(v.s15 / 512), 8)) <= 4"
+        },
+        {
+          "slot_124": "(math.mod(math.floor(v.s15 / 4096), 8)) >= 2 && (math.mod(math.floor(v.s15 / 4096), 8)) <= 4"
+        },
+        {
+          "slot_125": "(math.mod(math.floor(v.s15 / 32768), 8)) >= 2 && (math.mod(math.floor(v.s15 / 32768), 8)) <= 4"
+        },
+        {
+          "slot_126": "(math.mod(math.floor(v.s15 / 262144), 8)) >= 2 && (math.mod(math.floor(v.s15 / 262144), 8)) <= 4"
+        },
+        {
+          "slot_127": "(math.mod(math.floor(v.s15 / 2097152), 8)) >= 2 && (math.mod(math.floor(v.s15 / 2097152), 8)) <= 4"
+        },
+        {
+          "slot_128": "(math.mod(math.floor(v.s16 / 1), 8)) >= 2 && (math.mod(math.floor(v.s16 / 1), 8)) <= 4"
+        },
+        {
+          "slot_129": "(math.mod(math.floor(v.s16 / 8), 8)) >= 2 && (math.mod(math.floor(v.s16 / 8), 8)) <= 4"
+        },
+        {
+          "slot_130": "(math.mod(math.floor(v.s16 / 64), 8)) >= 2 && (math.mod(math.floor(v.s16 / 64), 8)) <= 4"
+        },
+        {
+          "slot_131": "(math.mod(math.floor(v.s16 / 512), 8)) >= 2 && (math.mod(math.floor(v.s16 / 512), 8)) <= 4"
+        },
+        {
+          "slot_132": "(math.mod(math.floor(v.s16 / 4096), 8)) >= 2 && (math.mod(math.floor(v.s16 / 4096), 8)) <= 4"
+        },
+        {
+          "slot_133": "(math.mod(math.floor(v.s16 / 32768), 8)) >= 2 && (math.mod(math.floor(v.s16 / 32768), 8)) <= 4"
+        },
+        {
+          "slot_134": "(math.mod(math.floor(v.s16 / 262144), 8)) >= 2 && (math.mod(math.floor(v.s16 / 262144), 8)) <= 4"
+        },
+        {
+          "slot_135": "(math.mod(math.floor(v.s16 / 2097152), 8)) >= 2 && (math.mod(math.floor(v.s16 / 2097152), 8)) <= 4"
+        },
+        {
+          "slot_136": "(math.mod(math.floor(v.s17 / 1), 8)) >= 2 && (math.mod(math.floor(v.s17 / 1), 8)) <= 4"
+        },
+        {
+          "slot_137": "(math.mod(math.floor(v.s17 / 8), 8)) >= 2 && (math.mod(math.floor(v.s17 / 8), 8)) <= 4"
+        },
+        {
+          "slot_138": "(math.mod(math.floor(v.s17 / 64), 8)) >= 2 && (math.mod(math.floor(v.s17 / 64), 8)) <= 4"
+        },
+        {
+          "slot_139": "(math.mod(math.floor(v.s17 / 512), 8)) >= 2 && (math.mod(math.floor(v.s17 / 512), 8)) <= 4"
+        },
+        {
+          "slot_140": "(math.mod(math.floor(v.s17 / 4096), 8)) >= 2 && (math.mod(math.floor(v.s17 / 4096), 8)) <= 4"
+        },
+        {
+          "slot_141": "(math.mod(math.floor(v.s17 / 32768), 8)) >= 2 && (math.mod(math.floor(v.s17 / 32768), 8)) <= 4"
+        },
+        {
+          "slot_142": "(math.mod(math.floor(v.s17 / 262144), 8)) >= 2 && (math.mod(math.floor(v.s17 / 262144), 8)) <= 4"
+        },
+        {
+          "slot_143": "(math.mod(math.floor(v.s17 / 2097152), 8)) >= 2 && (math.mod(math.floor(v.s17 / 2097152), 8)) <= 4"
+        },
+        {
+          "slot_144": "(math.mod(math.floor(v.s18 / 1), 8)) >= 2 && (math.mod(math.floor(v.s18 / 1), 8)) <= 4"
+        },
+        {
+          "slot_145": "(math.mod(math.floor(v.s18 / 8), 8)) >= 2 && (math.mod(math.floor(v.s18 / 8), 8)) <= 4"
+        },
+        {
+          "slot_146": "(math.mod(math.floor(v.s18 / 64), 8)) >= 2 && (math.mod(math.floor(v.s18 / 64), 8)) <= 4"
+        },
+        {
+          "slot_147": "(math.mod(math.floor(v.s18 / 512), 8)) >= 2 && (math.mod(math.floor(v.s18 / 512), 8)) <= 4"
+        },
+        {
+          "slot_148": "(math.mod(math.floor(v.s18 / 4096), 8)) >= 2 && (math.mod(math.floor(v.s18 / 4096), 8)) <= 4"
+        },
+        {
+          "slot_149": "(math.mod(math.floor(v.s18 / 32768), 8)) >= 2 && (math.mod(math.floor(v.s18 / 32768), 8)) <= 4"
+        },
+        {
+          "slot_150": "(math.mod(math.floor(v.s18 / 262144), 8)) >= 2 && (math.mod(math.floor(v.s18 / 262144), 8)) <= 4"
+        },
+        {
+          "slot_151": "(math.mod(math.floor(v.s18 / 2097152), 8)) >= 2 && (math.mod(math.floor(v.s18 / 2097152), 8)) <= 4"
+        },
+        {
+          "slot_152": "(math.mod(math.floor(v.s19 / 1), 8)) >= 2 && (math.mod(math.floor(v.s19 / 1), 8)) <= 4"
+        },
+        {
+          "slot_153": "(math.mod(math.floor(v.s19 / 8), 8)) >= 2 && (math.mod(math.floor(v.s19 / 8), 8)) <= 4"
+        },
+        {
+          "slot_154": "(math.mod(math.floor(v.s19 / 64), 8)) >= 2 && (math.mod(math.floor(v.s19 / 64), 8)) <= 4"
+        },
+        {
+          "slot_155": "(math.mod(math.floor(v.s19 / 512), 8)) >= 2 && (math.mod(math.floor(v.s19 / 512), 8)) <= 4"
+        },
+        {
+          "slot_156": "(math.mod(math.floor(v.s19 / 4096), 8)) >= 2 && (math.mod(math.floor(v.s19 / 4096), 8)) <= 4"
+        },
+        {
+          "slot_157": "(math.mod(math.floor(v.s19 / 32768), 8)) >= 2 && (math.mod(math.floor(v.s19 / 32768), 8)) <= 4"
+        },
+        {
+          "slot_158": "(math.mod(math.floor(v.s19 / 262144), 8)) >= 2 && (math.mod(math.floor(v.s19 / 262144), 8)) <= 4"
+        },
+        {
+          "slot_159": "(math.mod(math.floor(v.s19 / 2097152), 8)) >= 2 && (math.mod(math.floor(v.s19 / 2097152), 8)) <= 4"
+        },
+        {
+          "slot_160": "(math.mod(math.floor(v.s20 / 1), 8)) >= 2 && (math.mod(math.floor(v.s20 / 1), 8)) <= 4"
+        },
+        {
+          "slot_161": "(math.mod(math.floor(v.s20 / 8), 8)) >= 2 && (math.mod(math.floor(v.s20 / 8), 8)) <= 4"
+        },
+        {
+          "slot_162": "(math.mod(math.floor(v.s20 / 64), 8)) >= 2 && (math.mod(math.floor(v.s20 / 64), 8)) <= 4"
+        },
+        {
+          "slot_163": "(math.mod(math.floor(v.s20 / 512), 8)) >= 2 && (math.mod(math.floor(v.s20 / 512), 8)) <= 4"
+        },
+        {
+          "slot_164": "(math.mod(math.floor(v.s20 / 4096), 8)) >= 2 && (math.mod(math.floor(v.s20 / 4096), 8)) <= 4"
+        },
+        {
+          "slot_165": "(math.mod(math.floor(v.s20 / 32768), 8)) >= 2 && (math.mod(math.floor(v.s20 / 32768), 8)) <= 4"
+        },
+        {
+          "slot_166": "(math.mod(math.floor(v.s20 / 262144), 8)) >= 2 && (math.mod(math.floor(v.s20 / 262144), 8)) <= 4"
+        },
+        {
+          "slot_167": "(math.mod(math.floor(v.s20 / 2097152), 8)) >= 2 && (math.mod(math.floor(v.s20 / 2097152), 8)) <= 4"
+        },
+        {
+          "slot_168": "(math.mod(math.floor(v.s21 / 1), 8)) >= 2 && (math.mod(math.floor(v.s21 / 1), 8)) <= 4"
+        },
+        {
+          "slot_169": "(math.mod(math.floor(v.s21 / 8), 8)) >= 2 && (math.mod(math.floor(v.s21 / 8), 8)) <= 4"
+        },
+        {
+          "slot_170": "(math.mod(math.floor(v.s21 / 64), 8)) >= 2 && (math.mod(math.floor(v.s21 / 64), 8)) <= 4"
+        },
+        {
+          "slot_171": "(math.mod(math.floor(v.s21 / 512), 8)) >= 2 && (math.mod(math.floor(v.s21 / 512), 8)) <= 4"
+        },
+        {
+          "slot_172": "(math.mod(math.floor(v.s21 / 4096), 8)) >= 2 && (math.mod(math.floor(v.s21 / 4096), 8)) <= 4"
+        },
+        {
+          "slot_173": "(math.mod(math.floor(v.s21 / 32768), 8)) >= 2 && (math.mod(math.floor(v.s21 / 32768), 8)) <= 4"
+        },
+        {
+          "slot_174": "(math.mod(math.floor(v.s21 / 262144), 8)) >= 2 && (math.mod(math.floor(v.s21 / 262144), 8)) <= 4"
+        },
+        {
+          "slot_175": "(math.mod(math.floor(v.s21 / 2097152), 8)) >= 2 && (math.mod(math.floor(v.s21 / 2097152), 8)) <= 4"
+        },
+        {
+          "slot_176": "(math.mod(math.floor(v.s22 / 1), 8)) >= 2 && (math.mod(math.floor(v.s22 / 1), 8)) <= 4"
+        },
+        {
+          "slot_177": "(math.mod(math.floor(v.s22 / 8), 8)) >= 2 && (math.mod(math.floor(v.s22 / 8), 8)) <= 4"
+        },
+        {
+          "slot_178": "(math.mod(math.floor(v.s22 / 64), 8)) >= 2 && (math.mod(math.floor(v.s22 / 64), 8)) <= 4"
+        },
+        {
+          "slot_179": "(math.mod(math.floor(v.s22 / 512), 8)) >= 2 && (math.mod(math.floor(v.s22 / 512), 8)) <= 4"
+        },
+        {
+          "slot_180": "(math.mod(math.floor(v.s22 / 4096), 8)) >= 2 && (math.mod(math.floor(v.s22 / 4096), 8)) <= 4"
+        },
+        {
+          "slot_181": "(math.mod(math.floor(v.s22 / 32768), 8)) >= 2 && (math.mod(math.floor(v.s22 / 32768), 8)) <= 4"
+        },
+        {
+          "slot_182": "(math.mod(math.floor(v.s22 / 262144), 8)) >= 2 && (math.mod(math.floor(v.s22 / 262144), 8)) <= 4"
+        },
+        {
+          "slot_183": "(math.mod(math.floor(v.s22 / 2097152), 8)) >= 2 && (math.mod(math.floor(v.s22 / 2097152), 8)) <= 4"
+        },
+        {
+          "slot_184": "(math.mod(math.floor(v.s23 / 1), 8)) >= 2 && (math.mod(math.floor(v.s23 / 1), 8)) <= 4"
+        },
+        {
+          "slot_185": "(math.mod(math.floor(v.s23 / 8), 8)) >= 2 && (math.mod(math.floor(v.s23 / 8), 8)) <= 4"
+        },
+        {
+          "slot_186": "(math.mod(math.floor(v.s23 / 64), 8)) >= 2 && (math.mod(math.floor(v.s23 / 64), 8)) <= 4"
+        },
+        {
+          "slot_187": "(math.mod(math.floor(v.s23 / 512), 8)) >= 2 && (math.mod(math.floor(v.s23 / 512), 8)) <= 4"
+        },
+        {
+          "slot_188": "(math.mod(math.floor(v.s23 / 4096), 8)) >= 2 && (math.mod(math.floor(v.s23 / 4096), 8)) <= 4"
+        },
+        {
+          "slot_189": "(math.mod(math.floor(v.s23 / 32768), 8)) >= 2 && (math.mod(math.floor(v.s23 / 32768), 8)) <= 4"
+        },
+        {
+          "slot_190": "(math.mod(math.floor(v.s23 / 262144), 8)) >= 2 && (math.mod(math.floor(v.s23 / 262144), 8)) <= 4"
+        },
+        {
+          "slot_191": "(math.mod(math.floor(v.s23 / 2097152), 8)) >= 2 && (math.mod(math.floor(v.s23 / 2097152), 8)) <= 4"
+        },
+        {
+          "slot_192": "(math.mod(math.floor(v.s24 / 1), 8)) >= 2 && (math.mod(math.floor(v.s24 / 1), 8)) <= 4"
+        },
+        {
+          "slot_193": "(math.mod(math.floor(v.s24 / 8), 8)) >= 2 && (math.mod(math.floor(v.s24 / 8), 8)) <= 4"
+        },
+        {
+          "slot_194": "(math.mod(math.floor(v.s24 / 64), 8)) >= 2 && (math.mod(math.floor(v.s24 / 64), 8)) <= 4"
+        },
+        {
+          "slot_195": "(math.mod(math.floor(v.s24 / 512), 8)) >= 2 && (math.mod(math.floor(v.s24 / 512), 8)) <= 4"
+        }
+      ]
+    },
+    "controller.render.treephysics.log_fragment.stripped_log_side": {
+      "arrays": {
+        "textures": {
+          "Array.stripped_log_side": [
+            "Texture.stripped_side_oak",
+            "Texture.stripped_side_spruce",
+            "Texture.stripped_side_birch",
+            "Texture.stripped_side_jungle",
+            "Texture.stripped_side_acacia",
+            "Texture.stripped_side_dark_oak",
+            "Texture.stripped_side_cherry",
+            "Texture.stripped_side_mangrove",
+            "Texture.stripped_side_pale_oak",
+            "Texture.stripped_side_azalea",
+            "Texture.stripped_side_flowering_azalea"
+          ]
+        }
+      },
+      "geometry": "Geometry.log_side",
+      "light_color_multiplier": 0.88,
+      "materials": [
+        {
+          "*": "Material.log"
+        }
+      ],
+      "textures": [
+        "Array.stripped_log_side[q.property('treephysics:family')]"
+      ],
+      "part_visibility": [
+        {
+          "*": false
+        },
+        {
+          "slot_0": "(math.mod(math.floor(v.s0 / 1), 8)) >= 5"
+        },
+        {
+          "slot_1": "(math.mod(math.floor(v.s0 / 8), 8)) >= 5"
+        },
+        {
+          "slot_2": "(math.mod(math.floor(v.s0 / 64), 8)) >= 5"
+        },
+        {
+          "slot_3": "(math.mod(math.floor(v.s0 / 512), 8)) >= 5"
+        },
+        {
+          "slot_4": "(math.mod(math.floor(v.s0 / 4096), 8)) >= 5"
+        },
+        {
+          "slot_5": "(math.mod(math.floor(v.s0 / 32768), 8)) >= 5"
+        },
+        {
+          "slot_6": "(math.mod(math.floor(v.s0 / 262144), 8)) >= 5"
+        },
+        {
+          "slot_7": "(math.mod(math.floor(v.s0 / 2097152), 8)) >= 5"
+        },
+        {
+          "slot_8": "(math.mod(math.floor(v.s1 / 1), 8)) >= 5"
+        },
+        {
+          "slot_9": "(math.mod(math.floor(v.s1 / 8), 8)) >= 5"
+        },
+        {
+          "slot_10": "(math.mod(math.floor(v.s1 / 64), 8)) >= 5"
+        },
+        {
+          "slot_11": "(math.mod(math.floor(v.s1 / 512), 8)) >= 5"
+        },
+        {
+          "slot_12": "(math.mod(math.floor(v.s1 / 4096), 8)) >= 5"
+        },
+        {
+          "slot_13": "(math.mod(math.floor(v.s1 / 32768), 8)) >= 5"
+        },
+        {
+          "slot_14": "(math.mod(math.floor(v.s1 / 262144), 8)) >= 5"
+        },
+        {
+          "slot_15": "(math.mod(math.floor(v.s1 / 2097152), 8)) >= 5"
+        },
+        {
+          "slot_16": "(math.mod(math.floor(v.s2 / 1), 8)) >= 5"
+        },
+        {
+          "slot_17": "(math.mod(math.floor(v.s2 / 8), 8)) >= 5"
+        },
+        {
+          "slot_18": "(math.mod(math.floor(v.s2 / 64), 8)) >= 5"
+        },
+        {
+          "slot_19": "(math.mod(math.floor(v.s2 / 512), 8)) >= 5"
+        },
+        {
+          "slot_20": "(math.mod(math.floor(v.s2 / 4096), 8)) >= 5"
+        },
+        {
+          "slot_21": "(math.mod(math.floor(v.s2 / 32768), 8)) >= 5"
+        },
+        {
+          "slot_22": "(math.mod(math.floor(v.s2 / 262144), 8)) >= 5"
+        },
+        {
+          "slot_23": "(math.mod(math.floor(v.s2 / 2097152), 8)) >= 5"
+        },
+        {
+          "slot_24": "(math.mod(math.floor(v.s3 / 1), 8)) >= 5"
+        },
+        {
+          "slot_25": "(math.mod(math.floor(v.s3 / 8), 8)) >= 5"
+        },
+        {
+          "slot_26": "(math.mod(math.floor(v.s3 / 64), 8)) >= 5"
+        },
+        {
+          "slot_27": "(math.mod(math.floor(v.s3 / 512), 8)) >= 5"
+        },
+        {
+          "slot_28": "(math.mod(math.floor(v.s3 / 4096), 8)) >= 5"
+        },
+        {
+          "slot_29": "(math.mod(math.floor(v.s3 / 32768), 8)) >= 5"
+        },
+        {
+          "slot_30": "(math.mod(math.floor(v.s3 / 262144), 8)) >= 5"
+        },
+        {
+          "slot_31": "(math.mod(math.floor(v.s3 / 2097152), 8)) >= 5"
+        },
+        {
+          "slot_32": "(math.mod(math.floor(v.s4 / 1), 8)) >= 5"
+        },
+        {
+          "slot_33": "(math.mod(math.floor(v.s4 / 8), 8)) >= 5"
+        },
+        {
+          "slot_34": "(math.mod(math.floor(v.s4 / 64), 8)) >= 5"
+        },
+        {
+          "slot_35": "(math.mod(math.floor(v.s4 / 512), 8)) >= 5"
+        },
+        {
+          "slot_36": "(math.mod(math.floor(v.s4 / 4096), 8)) >= 5"
+        },
+        {
+          "slot_37": "(math.mod(math.floor(v.s4 / 32768), 8)) >= 5"
+        },
+        {
+          "slot_38": "(math.mod(math.floor(v.s4 / 262144), 8)) >= 5"
+        },
+        {
+          "slot_39": "(math.mod(math.floor(v.s4 / 2097152), 8)) >= 5"
+        },
+        {
+          "slot_40": "(math.mod(math.floor(v.s5 / 1), 8)) >= 5"
+        },
+        {
+          "slot_41": "(math.mod(math.floor(v.s5 / 8), 8)) >= 5"
+        },
+        {
+          "slot_42": "(math.mod(math.floor(v.s5 / 64), 8)) >= 5"
+        },
+        {
+          "slot_43": "(math.mod(math.floor(v.s5 / 512), 8)) >= 5"
+        },
+        {
+          "slot_44": "(math.mod(math.floor(v.s5 / 4096), 8)) >= 5"
+        },
+        {
+          "slot_45": "(math.mod(math.floor(v.s5 / 32768), 8)) >= 5"
+        },
+        {
+          "slot_46": "(math.mod(math.floor(v.s5 / 262144), 8)) >= 5"
+        },
+        {
+          "slot_47": "(math.mod(math.floor(v.s5 / 2097152), 8)) >= 5"
+        },
+        {
+          "slot_48": "(math.mod(math.floor(v.s6 / 1), 8)) >= 5"
+        },
+        {
+          "slot_49": "(math.mod(math.floor(v.s6 / 8), 8)) >= 5"
+        },
+        {
+          "slot_50": "(math.mod(math.floor(v.s6 / 64), 8)) >= 5"
+        },
+        {
+          "slot_51": "(math.mod(math.floor(v.s6 / 512), 8)) >= 5"
+        },
+        {
+          "slot_52": "(math.mod(math.floor(v.s6 / 4096), 8)) >= 5"
+        },
+        {
+          "slot_53": "(math.mod(math.floor(v.s6 / 32768), 8)) >= 5"
+        },
+        {
+          "slot_54": "(math.mod(math.floor(v.s6 / 262144), 8)) >= 5"
+        },
+        {
+          "slot_55": "(math.mod(math.floor(v.s6 / 2097152), 8)) >= 5"
+        },
+        {
+          "slot_56": "(math.mod(math.floor(v.s7 / 1), 8)) >= 5"
+        },
+        {
+          "slot_57": "(math.mod(math.floor(v.s7 / 8), 8)) >= 5"
+        },
+        {
+          "slot_58": "(math.mod(math.floor(v.s7 / 64), 8)) >= 5"
+        },
+        {
+          "slot_59": "(math.mod(math.floor(v.s7 / 512), 8)) >= 5"
+        },
+        {
+          "slot_60": "(math.mod(math.floor(v.s7 / 4096), 8)) >= 5"
+        },
+        {
+          "slot_61": "(math.mod(math.floor(v.s7 / 32768), 8)) >= 5"
+        },
+        {
+          "slot_62": "(math.mod(math.floor(v.s7 / 262144), 8)) >= 5"
+        },
+        {
+          "slot_63": "(math.mod(math.floor(v.s7 / 2097152), 8)) >= 5"
+        },
+        {
+          "slot_64": "(math.mod(math.floor(v.s8 / 1), 8)) >= 5"
+        },
+        {
+          "slot_65": "(math.mod(math.floor(v.s8 / 8), 8)) >= 5"
+        },
+        {
+          "slot_66": "(math.mod(math.floor(v.s8 / 64), 8)) >= 5"
+        },
+        {
+          "slot_67": "(math.mod(math.floor(v.s8 / 512), 8)) >= 5"
+        },
+        {
+          "slot_68": "(math.mod(math.floor(v.s8 / 4096), 8)) >= 5"
+        },
+        {
+          "slot_69": "(math.mod(math.floor(v.s8 / 32768), 8)) >= 5"
+        },
+        {
+          "slot_70": "(math.mod(math.floor(v.s8 / 262144), 8)) >= 5"
+        },
+        {
+          "slot_71": "(math.mod(math.floor(v.s8 / 2097152), 8)) >= 5"
+        },
+        {
+          "slot_72": "(math.mod(math.floor(v.s9 / 1), 8)) >= 5"
+        },
+        {
+          "slot_73": "(math.mod(math.floor(v.s9 / 8), 8)) >= 5"
+        },
+        {
+          "slot_74": "(math.mod(math.floor(v.s9 / 64), 8)) >= 5"
+        },
+        {
+          "slot_75": "(math.mod(math.floor(v.s9 / 512), 8)) >= 5"
+        },
+        {
+          "slot_76": "(math.mod(math.floor(v.s9 / 4096), 8)) >= 5"
+        },
+        {
+          "slot_77": "(math.mod(math.floor(v.s9 / 32768), 8)) >= 5"
+        },
+        {
+          "slot_78": "(math.mod(math.floor(v.s9 / 262144), 8)) >= 5"
+        },
+        {
+          "slot_79": "(math.mod(math.floor(v.s9 / 2097152), 8)) >= 5"
+        },
+        {
+          "slot_80": "(math.mod(math.floor(v.s10 / 1), 8)) >= 5"
+        },
+        {
+          "slot_81": "(math.mod(math.floor(v.s10 / 8), 8)) >= 5"
+        },
+        {
+          "slot_82": "(math.mod(math.floor(v.s10 / 64), 8)) >= 5"
+        },
+        {
+          "slot_83": "(math.mod(math.floor(v.s10 / 512), 8)) >= 5"
+        },
+        {
+          "slot_84": "(math.mod(math.floor(v.s10 / 4096), 8)) >= 5"
+        },
+        {
+          "slot_85": "(math.mod(math.floor(v.s10 / 32768), 8)) >= 5"
+        },
+        {
+          "slot_86": "(math.mod(math.floor(v.s10 / 262144), 8)) >= 5"
+        },
+        {
+          "slot_87": "(math.mod(math.floor(v.s10 / 2097152), 8)) >= 5"
+        },
+        {
+          "slot_88": "(math.mod(math.floor(v.s11 / 1), 8)) >= 5"
+        },
+        {
+          "slot_89": "(math.mod(math.floor(v.s11 / 8), 8)) >= 5"
+        },
+        {
+          "slot_90": "(math.mod(math.floor(v.s11 / 64), 8)) >= 5"
+        },
+        {
+          "slot_91": "(math.mod(math.floor(v.s11 / 512), 8)) >= 5"
+        },
+        {
+          "slot_92": "(math.mod(math.floor(v.s11 / 4096), 8)) >= 5"
+        },
+        {
+          "slot_93": "(math.mod(math.floor(v.s11 / 32768), 8)) >= 5"
+        },
+        {
+          "slot_94": "(math.mod(math.floor(v.s11 / 262144), 8)) >= 5"
+        },
+        {
+          "slot_95": "(math.mod(math.floor(v.s11 / 2097152), 8)) >= 5"
+        },
+        {
+          "slot_96": "(math.mod(math.floor(v.s12 / 1), 8)) >= 5"
+        },
+        {
+          "slot_97": "(math.mod(math.floor(v.s12 / 8), 8)) >= 5"
+        },
+        {
+          "slot_98": "(math.mod(math.floor(v.s12 / 64), 8)) >= 5"
+        },
+        {
+          "slot_99": "(math.mod(math.floor(v.s12 / 512), 8)) >= 5"
+        },
+        {
+          "slot_100": "(math.mod(math.floor(v.s12 / 4096), 8)) >= 5"
+        },
+        {
+          "slot_101": "(math.mod(math.floor(v.s12 / 32768), 8)) >= 5"
+        },
+        {
+          "slot_102": "(math.mod(math.floor(v.s12 / 262144), 8)) >= 5"
+        },
+        {
+          "slot_103": "(math.mod(math.floor(v.s12 / 2097152), 8)) >= 5"
+        },
+        {
+          "slot_104": "(math.mod(math.floor(v.s13 / 1), 8)) >= 5"
+        },
+        {
+          "slot_105": "(math.mod(math.floor(v.s13 / 8), 8)) >= 5"
+        },
+        {
+          "slot_106": "(math.mod(math.floor(v.s13 / 64), 8)) >= 5"
+        },
+        {
+          "slot_107": "(math.mod(math.floor(v.s13 / 512), 8)) >= 5"
+        },
+        {
+          "slot_108": "(math.mod(math.floor(v.s13 / 4096), 8)) >= 5"
+        },
+        {
+          "slot_109": "(math.mod(math.floor(v.s13 / 32768), 8)) >= 5"
+        },
+        {
+          "slot_110": "(math.mod(math.floor(v.s13 / 262144), 8)) >= 5"
+        },
+        {
+          "slot_111": "(math.mod(math.floor(v.s13 / 2097152), 8)) >= 5"
+        },
+        {
+          "slot_112": "(math.mod(math.floor(v.s14 / 1), 8)) >= 5"
+        },
+        {
+          "slot_113": "(math.mod(math.floor(v.s14 / 8), 8)) >= 5"
+        },
+        {
+          "slot_114": "(math.mod(math.floor(v.s14 / 64), 8)) >= 5"
+        },
+        {
+          "slot_115": "(math.mod(math.floor(v.s14 / 512), 8)) >= 5"
+        },
+        {
+          "slot_116": "(math.mod(math.floor(v.s14 / 4096), 8)) >= 5"
+        },
+        {
+          "slot_117": "(math.mod(math.floor(v.s14 / 32768), 8)) >= 5"
+        },
+        {
+          "slot_118": "(math.mod(math.floor(v.s14 / 262144), 8)) >= 5"
+        },
+        {
+          "slot_119": "(math.mod(math.floor(v.s14 / 2097152), 8)) >= 5"
+        },
+        {
+          "slot_120": "(math.mod(math.floor(v.s15 / 1), 8)) >= 5"
+        },
+        {
+          "slot_121": "(math.mod(math.floor(v.s15 / 8), 8)) >= 5"
+        },
+        {
+          "slot_122": "(math.mod(math.floor(v.s15 / 64), 8)) >= 5"
+        },
+        {
+          "slot_123": "(math.mod(math.floor(v.s15 / 512), 8)) >= 5"
+        },
+        {
+          "slot_124": "(math.mod(math.floor(v.s15 / 4096), 8)) >= 5"
+        },
+        {
+          "slot_125": "(math.mod(math.floor(v.s15 / 32768), 8)) >= 5"
+        },
+        {
+          "slot_126": "(math.mod(math.floor(v.s15 / 262144), 8)) >= 5"
+        },
+        {
+          "slot_127": "(math.mod(math.floor(v.s15 / 2097152), 8)) >= 5"
+        },
+        {
+          "slot_128": "(math.mod(math.floor(v.s16 / 1), 8)) >= 5"
+        },
+        {
+          "slot_129": "(math.mod(math.floor(v.s16 / 8), 8)) >= 5"
+        },
+        {
+          "slot_130": "(math.mod(math.floor(v.s16 / 64), 8)) >= 5"
+        },
+        {
+          "slot_131": "(math.mod(math.floor(v.s16 / 512), 8)) >= 5"
+        },
+        {
+          "slot_132": "(math.mod(math.floor(v.s16 / 4096), 8)) >= 5"
+        },
+        {
+          "slot_133": "(math.mod(math.floor(v.s16 / 32768), 8)) >= 5"
+        },
+        {
+          "slot_134": "(math.mod(math.floor(v.s16 / 262144), 8)) >= 5"
+        },
+        {
+          "slot_135": "(math.mod(math.floor(v.s16 / 2097152), 8)) >= 5"
+        },
+        {
+          "slot_136": "(math.mod(math.floor(v.s17 / 1), 8)) >= 5"
+        },
+        {
+          "slot_137": "(math.mod(math.floor(v.s17 / 8), 8)) >= 5"
+        },
+        {
+          "slot_138": "(math.mod(math.floor(v.s17 / 64), 8)) >= 5"
+        },
+        {
+          "slot_139": "(math.mod(math.floor(v.s17 / 512), 8)) >= 5"
+        },
+        {
+          "slot_140": "(math.mod(math.floor(v.s17 / 4096), 8)) >= 5"
+        },
+        {
+          "slot_141": "(math.mod(math.floor(v.s17 / 32768), 8)) >= 5"
+        },
+        {
+          "slot_142": "(math.mod(math.floor(v.s17 / 262144), 8)) >= 5"
+        },
+        {
+          "slot_143": "(math.mod(math.floor(v.s17 / 2097152), 8)) >= 5"
+        },
+        {
+          "slot_144": "(math.mod(math.floor(v.s18 / 1), 8)) >= 5"
+        },
+        {
+          "slot_145": "(math.mod(math.floor(v.s18 / 8), 8)) >= 5"
+        },
+        {
+          "slot_146": "(math.mod(math.floor(v.s18 / 64), 8)) >= 5"
+        },
+        {
+          "slot_147": "(math.mod(math.floor(v.s18 / 512), 8)) >= 5"
+        },
+        {
+          "slot_148": "(math.mod(math.floor(v.s18 / 4096), 8)) >= 5"
+        },
+        {
+          "slot_149": "(math.mod(math.floor(v.s18 / 32768), 8)) >= 5"
+        },
+        {
+          "slot_150": "(math.mod(math.floor(v.s18 / 262144), 8)) >= 5"
+        },
+        {
+          "slot_151": "(math.mod(math.floor(v.s18 / 2097152), 8)) >= 5"
+        },
+        {
+          "slot_152": "(math.mod(math.floor(v.s19 / 1), 8)) >= 5"
+        },
+        {
+          "slot_153": "(math.mod(math.floor(v.s19 / 8), 8)) >= 5"
+        },
+        {
+          "slot_154": "(math.mod(math.floor(v.s19 / 64), 8)) >= 5"
+        },
+        {
+          "slot_155": "(math.mod(math.floor(v.s19 / 512), 8)) >= 5"
+        },
+        {
+          "slot_156": "(math.mod(math.floor(v.s19 / 4096), 8)) >= 5"
+        },
+        {
+          "slot_157": "(math.mod(math.floor(v.s19 / 32768), 8)) >= 5"
+        },
+        {
+          "slot_158": "(math.mod(math.floor(v.s19 / 262144), 8)) >= 5"
+        },
+        {
+          "slot_159": "(math.mod(math.floor(v.s19 / 2097152), 8)) >= 5"
+        },
+        {
+          "slot_160": "(math.mod(math.floor(v.s20 / 1), 8)) >= 5"
+        },
+        {
+          "slot_161": "(math.mod(math.floor(v.s20 / 8), 8)) >= 5"
+        },
+        {
+          "slot_162": "(math.mod(math.floor(v.s20 / 64), 8)) >= 5"
+        },
+        {
+          "slot_163": "(math.mod(math.floor(v.s20 / 512), 8)) >= 5"
+        },
+        {
+          "slot_164": "(math.mod(math.floor(v.s20 / 4096), 8)) >= 5"
+        },
+        {
+          "slot_165": "(math.mod(math.floor(v.s20 / 32768), 8)) >= 5"
+        },
+        {
+          "slot_166": "(math.mod(math.floor(v.s20 / 262144), 8)) >= 5"
+        },
+        {
+          "slot_167": "(math.mod(math.floor(v.s20 / 2097152), 8)) >= 5"
+        },
+        {
+          "slot_168": "(math.mod(math.floor(v.s21 / 1), 8)) >= 5"
+        },
+        {
+          "slot_169": "(math.mod(math.floor(v.s21 / 8), 8)) >= 5"
+        },
+        {
+          "slot_170": "(math.mod(math.floor(v.s21 / 64), 8)) >= 5"
+        },
+        {
+          "slot_171": "(math.mod(math.floor(v.s21 / 512), 8)) >= 5"
+        },
+        {
+          "slot_172": "(math.mod(math.floor(v.s21 / 4096), 8)) >= 5"
+        },
+        {
+          "slot_173": "(math.mod(math.floor(v.s21 / 32768), 8)) >= 5"
+        },
+        {
+          "slot_174": "(math.mod(math.floor(v.s21 / 262144), 8)) >= 5"
+        },
+        {
+          "slot_175": "(math.mod(math.floor(v.s21 / 2097152), 8)) >= 5"
+        },
+        {
+          "slot_176": "(math.mod(math.floor(v.s22 / 1), 8)) >= 5"
+        },
+        {
+          "slot_177": "(math.mod(math.floor(v.s22 / 8), 8)) >= 5"
+        },
+        {
+          "slot_178": "(math.mod(math.floor(v.s22 / 64), 8)) >= 5"
+        },
+        {
+          "slot_179": "(math.mod(math.floor(v.s22 / 512), 8)) >= 5"
+        },
+        {
+          "slot_180": "(math.mod(math.floor(v.s22 / 4096), 8)) >= 5"
+        },
+        {
+          "slot_181": "(math.mod(math.floor(v.s22 / 32768), 8)) >= 5"
+        },
+        {
+          "slot_182": "(math.mod(math.floor(v.s22 / 262144), 8)) >= 5"
+        },
+        {
+          "slot_183": "(math.mod(math.floor(v.s22 / 2097152), 8)) >= 5"
+        },
+        {
+          "slot_184": "(math.mod(math.floor(v.s23 / 1), 8)) >= 5"
+        },
+        {
+          "slot_185": "(math.mod(math.floor(v.s23 / 8), 8)) >= 5"
+        },
+        {
+          "slot_186": "(math.mod(math.floor(v.s23 / 64), 8)) >= 5"
+        },
+        {
+          "slot_187": "(math.mod(math.floor(v.s23 / 512), 8)) >= 5"
+        },
+        {
+          "slot_188": "(math.mod(math.floor(v.s23 / 4096), 8)) >= 5"
+        },
+        {
+          "slot_189": "(math.mod(math.floor(v.s23 / 32768), 8)) >= 5"
+        },
+        {
+          "slot_190": "(math.mod(math.floor(v.s23 / 262144), 8)) >= 5"
+        },
+        {
+          "slot_191": "(math.mod(math.floor(v.s23 / 2097152), 8)) >= 5"
+        },
+        {
+          "slot_192": "(math.mod(math.floor(v.s24 / 1), 8)) >= 5"
+        },
+        {
+          "slot_193": "(math.mod(math.floor(v.s24 / 8), 8)) >= 5"
+        },
+        {
+          "slot_194": "(math.mod(math.floor(v.s24 / 64), 8)) >= 5"
+        },
+        {
+          "slot_195": "(math.mod(math.floor(v.s24 / 512), 8)) >= 5"
+        }
+      ]
+    },
+    "controller.render.treephysics.log_fragment.stripped_log_top": {
+      "arrays": {
+        "textures": {
+          "Array.stripped_log_top": [
+            "Texture.stripped_top_oak",
+            "Texture.stripped_top_spruce",
+            "Texture.stripped_top_birch",
+            "Texture.stripped_top_jungle",
+            "Texture.stripped_top_acacia",
+            "Texture.stripped_top_dark_oak",
+            "Texture.stripped_top_cherry",
+            "Texture.stripped_top_mangrove",
+            "Texture.stripped_top_pale_oak",
+            "Texture.stripped_top_azalea",
+            "Texture.stripped_top_flowering_azalea"
+          ],
+          "Array.stripped_log_side": [
+            "Texture.stripped_side_oak",
+            "Texture.stripped_side_spruce",
+            "Texture.stripped_side_birch",
+            "Texture.stripped_side_jungle",
+            "Texture.stripped_side_acacia",
+            "Texture.stripped_side_dark_oak",
+            "Texture.stripped_side_cherry",
+            "Texture.stripped_side_mangrove",
+            "Texture.stripped_side_pale_oak",
+            "Texture.stripped_side_azalea",
+            "Texture.stripped_side_flowering_azalea"
+          ]
+        }
+      },
+      "geometry": "Geometry.log_top",
+      "light_color_multiplier": 0.88,
+      "materials": [
+        {
+          "*": "Material.log"
+        }
+      ],
+      "textures": [
+        "math.mod(q.property('treephysics:modes'), 16) >= 4 ? Array.stripped_log_side[q.property('treephysics:family')] : Array.stripped_log_top[q.property('treephysics:family')]"
+      ],
+      "part_visibility": [
+        {
+          "*": false
+        },
+        {
+          "slot_0": "(math.mod(math.floor(v.s0 / 1), 8)) >= 5"
+        },
+        {
+          "slot_1": "(math.mod(math.floor(v.s0 / 8), 8)) >= 5"
+        },
+        {
+          "slot_2": "(math.mod(math.floor(v.s0 / 64), 8)) >= 5"
+        },
+        {
+          "slot_3": "(math.mod(math.floor(v.s0 / 512), 8)) >= 5"
+        },
+        {
+          "slot_4": "(math.mod(math.floor(v.s0 / 4096), 8)) >= 5"
+        },
+        {
+          "slot_5": "(math.mod(math.floor(v.s0 / 32768), 8)) >= 5"
+        },
+        {
+          "slot_6": "(math.mod(math.floor(v.s0 / 262144), 8)) >= 5"
+        },
+        {
+          "slot_7": "(math.mod(math.floor(v.s0 / 2097152), 8)) >= 5"
+        },
+        {
+          "slot_8": "(math.mod(math.floor(v.s1 / 1), 8)) >= 5"
+        },
+        {
+          "slot_9": "(math.mod(math.floor(v.s1 / 8), 8)) >= 5"
+        },
+        {
+          "slot_10": "(math.mod(math.floor(v.s1 / 64), 8)) >= 5"
+        },
+        {
+          "slot_11": "(math.mod(math.floor(v.s1 / 512), 8)) >= 5"
+        },
+        {
+          "slot_12": "(math.mod(math.floor(v.s1 / 4096), 8)) >= 5"
+        },
+        {
+          "slot_13": "(math.mod(math.floor(v.s1 / 32768), 8)) >= 5"
+        },
+        {
+          "slot_14": "(math.mod(math.floor(v.s1 / 262144), 8)) >= 5"
+        },
+        {
+          "slot_15": "(math.mod(math.floor(v.s1 / 2097152), 8)) >= 5"
+        },
+        {
+          "slot_16": "(math.mod(math.floor(v.s2 / 1), 8)) >= 5"
+        },
+        {
+          "slot_17": "(math.mod(math.floor(v.s2 / 8), 8)) >= 5"
+        },
+        {
+          "slot_18": "(math.mod(math.floor(v.s2 / 64), 8)) >= 5"
+        },
+        {
+          "slot_19": "(math.mod(math.floor(v.s2 / 512), 8)) >= 5"
+        },
+        {
+          "slot_20": "(math.mod(math.floor(v.s2 / 4096), 8)) >= 5"
+        },
+        {
+          "slot_21": "(math.mod(math.floor(v.s2 / 32768), 8)) >= 5"
+        },
+        {
+          "slot_22": "(math.mod(math.floor(v.s2 / 262144), 8)) >= 5"
+        },
+        {
+          "slot_23": "(math.mod(math.floor(v.s2 / 2097152), 8)) >= 5"
+        },
+        {
+          "slot_24": "(math.mod(math.floor(v.s3 / 1), 8)) >= 5"
+        },
+        {
+          "slot_25": "(math.mod(math.floor(v.s3 / 8), 8)) >= 5"
+        },
+        {
+          "slot_26": "(math.mod(math.floor(v.s3 / 64), 8)) >= 5"
+        },
+        {
+          "slot_27": "(math.mod(math.floor(v.s3 / 512), 8)) >= 5"
+        },
+        {
+          "slot_28": "(math.mod(math.floor(v.s3 / 4096), 8)) >= 5"
+        },
+        {
+          "slot_29": "(math.mod(math.floor(v.s3 / 32768), 8)) >= 5"
+        },
+        {
+          "slot_30": "(math.mod(math.floor(v.s3 / 262144), 8)) >= 5"
+        },
+        {
+          "slot_31": "(math.mod(math.floor(v.s3 / 2097152), 8)) >= 5"
+        },
+        {
+          "slot_32": "(math.mod(math.floor(v.s4 / 1), 8)) >= 5"
+        },
+        {
+          "slot_33": "(math.mod(math.floor(v.s4 / 8), 8)) >= 5"
+        },
+        {
+          "slot_34": "(math.mod(math.floor(v.s4 / 64), 8)) >= 5"
+        },
+        {
+          "slot_35": "(math.mod(math.floor(v.s4 / 512), 8)) >= 5"
+        },
+        {
+          "slot_36": "(math.mod(math.floor(v.s4 / 4096), 8)) >= 5"
+        },
+        {
+          "slot_37": "(math.mod(math.floor(v.s4 / 32768), 8)) >= 5"
+        },
+        {
+          "slot_38": "(math.mod(math.floor(v.s4 / 262144), 8)) >= 5"
+        },
+        {
+          "slot_39": "(math.mod(math.floor(v.s4 / 2097152), 8)) >= 5"
+        },
+        {
+          "slot_40": "(math.mod(math.floor(v.s5 / 1), 8)) >= 5"
+        },
+        {
+          "slot_41": "(math.mod(math.floor(v.s5 / 8), 8)) >= 5"
+        },
+        {
+          "slot_42": "(math.mod(math.floor(v.s5 / 64), 8)) >= 5"
+        },
+        {
+          "slot_43": "(math.mod(math.floor(v.s5 / 512), 8)) >= 5"
+        },
+        {
+          "slot_44": "(math.mod(math.floor(v.s5 / 4096), 8)) >= 5"
+        },
+        {
+          "slot_45": "(math.mod(math.floor(v.s5 / 32768), 8)) >= 5"
+        },
+        {
+          "slot_46": "(math.mod(math.floor(v.s5 / 262144), 8)) >= 5"
+        },
+        {
+          "slot_47": "(math.mod(math.floor(v.s5 / 2097152), 8)) >= 5"
+        },
+        {
+          "slot_48": "(math.mod(math.floor(v.s6 / 1), 8)) >= 5"
+        },
+        {
+          "slot_49": "(math.mod(math.floor(v.s6 / 8), 8)) >= 5"
+        },
+        {
+          "slot_50": "(math.mod(math.floor(v.s6 / 64), 8)) >= 5"
+        },
+        {
+          "slot_51": "(math.mod(math.floor(v.s6 / 512), 8)) >= 5"
+        },
+        {
+          "slot_52": "(math.mod(math.floor(v.s6 / 4096), 8)) >= 5"
+        },
+        {
+          "slot_53": "(math.mod(math.floor(v.s6 / 32768), 8)) >= 5"
+        },
+        {
+          "slot_54": "(math.mod(math.floor(v.s6 / 262144), 8)) >= 5"
+        },
+        {
+          "slot_55": "(math.mod(math.floor(v.s6 / 2097152), 8)) >= 5"
+        },
+        {
+          "slot_56": "(math.mod(math.floor(v.s7 / 1), 8)) >= 5"
+        },
+        {
+          "slot_57": "(math.mod(math.floor(v.s7 / 8), 8)) >= 5"
+        },
+        {
+          "slot_58": "(math.mod(math.floor(v.s7 / 64), 8)) >= 5"
+        },
+        {
+          "slot_59": "(math.mod(math.floor(v.s7 / 512), 8)) >= 5"
+        },
+        {
+          "slot_60": "(math.mod(math.floor(v.s7 / 4096), 8)) >= 5"
+        },
+        {
+          "slot_61": "(math.mod(math.floor(v.s7 / 32768), 8)) >= 5"
+        },
+        {
+          "slot_62": "(math.mod(math.floor(v.s7 / 262144), 8)) >= 5"
+        },
+        {
+          "slot_63": "(math.mod(math.floor(v.s7 / 2097152), 8)) >= 5"
+        },
+        {
+          "slot_64": "(math.mod(math.floor(v.s8 / 1), 8)) >= 5"
+        },
+        {
+          "slot_65": "(math.mod(math.floor(v.s8 / 8), 8)) >= 5"
+        },
+        {
+          "slot_66": "(math.mod(math.floor(v.s8 / 64), 8)) >= 5"
+        },
+        {
+          "slot_67": "(math.mod(math.floor(v.s8 / 512), 8)) >= 5"
+        },
+        {
+          "slot_68": "(math.mod(math.floor(v.s8 / 4096), 8)) >= 5"
+        },
+        {
+          "slot_69": "(math.mod(math.floor(v.s8 / 32768), 8)) >= 5"
+        },
+        {
+          "slot_70": "(math.mod(math.floor(v.s8 / 262144), 8)) >= 5"
+        },
+        {
+          "slot_71": "(math.mod(math.floor(v.s8 / 2097152), 8)) >= 5"
+        },
+        {
+          "slot_72": "(math.mod(math.floor(v.s9 / 1), 8)) >= 5"
+        },
+        {
+          "slot_73": "(math.mod(math.floor(v.s9 / 8), 8)) >= 5"
+        },
+        {
+          "slot_74": "(math.mod(math.floor(v.s9 / 64), 8)) >= 5"
+        },
+        {
+          "slot_75": "(math.mod(math.floor(v.s9 / 512), 8)) >= 5"
+        },
+        {
+          "slot_76": "(math.mod(math.floor(v.s9 / 4096), 8)) >= 5"
+        },
+        {
+          "slot_77": "(math.mod(math.floor(v.s9 / 32768), 8)) >= 5"
+        },
+        {
+          "slot_78": "(math.mod(math.floor(v.s9 / 262144), 8)) >= 5"
+        },
+        {
+          "slot_79": "(math.mod(math.floor(v.s9 / 2097152), 8)) >= 5"
+        },
+        {
+          "slot_80": "(math.mod(math.floor(v.s10 / 1), 8)) >= 5"
+        },
+        {
+          "slot_81": "(math.mod(math.floor(v.s10 / 8), 8)) >= 5"
+        },
+        {
+          "slot_82": "(math.mod(math.floor(v.s10 / 64), 8)) >= 5"
+        },
+        {
+          "slot_83": "(math.mod(math.floor(v.s10 / 512), 8)) >= 5"
+        },
+        {
+          "slot_84": "(math.mod(math.floor(v.s10 / 4096), 8)) >= 5"
+        },
+        {
+          "slot_85": "(math.mod(math.floor(v.s10 / 32768), 8)) >= 5"
+        },
+        {
+          "slot_86": "(math.mod(math.floor(v.s10 / 262144), 8)) >= 5"
+        },
+        {
+          "slot_87": "(math.mod(math.floor(v.s10 / 2097152), 8)) >= 5"
+        },
+        {
+          "slot_88": "(math.mod(math.floor(v.s11 / 1), 8)) >= 5"
+        },
+        {
+          "slot_89": "(math.mod(math.floor(v.s11 / 8), 8)) >= 5"
+        },
+        {
+          "slot_90": "(math.mod(math.floor(v.s11 / 64), 8)) >= 5"
+        },
+        {
+          "slot_91": "(math.mod(math.floor(v.s11 / 512), 8)) >= 5"
+        },
+        {
+          "slot_92": "(math.mod(math.floor(v.s11 / 4096), 8)) >= 5"
+        },
+        {
+          "slot_93": "(math.mod(math.floor(v.s11 / 32768), 8)) >= 5"
+        },
+        {
+          "slot_94": "(math.mod(math.floor(v.s11 / 262144), 8)) >= 5"
+        },
+        {
+          "slot_95": "(math.mod(math.floor(v.s11 / 2097152), 8)) >= 5"
+        },
+        {
+          "slot_96": "(math.mod(math.floor(v.s12 / 1), 8)) >= 5"
+        },
+        {
+          "slot_97": "(math.mod(math.floor(v.s12 / 8), 8)) >= 5"
+        },
+        {
+          "slot_98": "(math.mod(math.floor(v.s12 / 64), 8)) >= 5"
+        },
+        {
+          "slot_99": "(math.mod(math.floor(v.s12 / 512), 8)) >= 5"
+        },
+        {
+          "slot_100": "(math.mod(math.floor(v.s12 / 4096), 8)) >= 5"
+        },
+        {
+          "slot_101": "(math.mod(math.floor(v.s12 / 32768), 8)) >= 5"
+        },
+        {
+          "slot_102": "(math.mod(math.floor(v.s12 / 262144), 8)) >= 5"
+        },
+        {
+          "slot_103": "(math.mod(math.floor(v.s12 / 2097152), 8)) >= 5"
+        },
+        {
+          "slot_104": "(math.mod(math.floor(v.s13 / 1), 8)) >= 5"
+        },
+        {
+          "slot_105": "(math.mod(math.floor(v.s13 / 8), 8)) >= 5"
+        },
+        {
+          "slot_106": "(math.mod(math.floor(v.s13 / 64), 8)) >= 5"
+        },
+        {
+          "slot_107": "(math.mod(math.floor(v.s13 / 512), 8)) >= 5"
+        },
+        {
+          "slot_108": "(math.mod(math.floor(v.s13 / 4096), 8)) >= 5"
+        },
+        {
+          "slot_109": "(math.mod(math.floor(v.s13 / 32768), 8)) >= 5"
+        },
+        {
+          "slot_110": "(math.mod(math.floor(v.s13 / 262144), 8)) >= 5"
+        },
+        {
+          "slot_111": "(math.mod(math.floor(v.s13 / 2097152), 8)) >= 5"
+        },
+        {
+          "slot_112": "(math.mod(math.floor(v.s14 / 1), 8)) >= 5"
+        },
+        {
+          "slot_113": "(math.mod(math.floor(v.s14 / 8), 8)) >= 5"
+        },
+        {
+          "slot_114": "(math.mod(math.floor(v.s14 / 64), 8)) >= 5"
+        },
+        {
+          "slot_115": "(math.mod(math.floor(v.s14 / 512), 8)) >= 5"
+        },
+        {
+          "slot_116": "(math.mod(math.floor(v.s14 / 4096), 8)) >= 5"
+        },
+        {
+          "slot_117": "(math.mod(math.floor(v.s14 / 32768), 8)) >= 5"
+        },
+        {
+          "slot_118": "(math.mod(math.floor(v.s14 / 262144), 8)) >= 5"
+        },
+        {
+          "slot_119": "(math.mod(math.floor(v.s14 / 2097152), 8)) >= 5"
+        },
+        {
+          "slot_120": "(math.mod(math.floor(v.s15 / 1), 8)) >= 5"
+        },
+        {
+          "slot_121": "(math.mod(math.floor(v.s15 / 8), 8)) >= 5"
+        },
+        {
+          "slot_122": "(math.mod(math.floor(v.s15 / 64), 8)) >= 5"
+        },
+        {
+          "slot_123": "(math.mod(math.floor(v.s15 / 512), 8)) >= 5"
+        },
+        {
+          "slot_124": "(math.mod(math.floor(v.s15 / 4096), 8)) >= 5"
+        },
+        {
+          "slot_125": "(math.mod(math.floor(v.s15 / 32768), 8)) >= 5"
+        },
+        {
+          "slot_126": "(math.mod(math.floor(v.s15 / 262144), 8)) >= 5"
+        },
+        {
+          "slot_127": "(math.mod(math.floor(v.s15 / 2097152), 8)) >= 5"
+        },
+        {
+          "slot_128": "(math.mod(math.floor(v.s16 / 1), 8)) >= 5"
+        },
+        {
+          "slot_129": "(math.mod(math.floor(v.s16 / 8), 8)) >= 5"
+        },
+        {
+          "slot_130": "(math.mod(math.floor(v.s16 / 64), 8)) >= 5"
+        },
+        {
+          "slot_131": "(math.mod(math.floor(v.s16 / 512), 8)) >= 5"
+        },
+        {
+          "slot_132": "(math.mod(math.floor(v.s16 / 4096), 8)) >= 5"
+        },
+        {
+          "slot_133": "(math.mod(math.floor(v.s16 / 32768), 8)) >= 5"
+        },
+        {
+          "slot_134": "(math.mod(math.floor(v.s16 / 262144), 8)) >= 5"
+        },
+        {
+          "slot_135": "(math.mod(math.floor(v.s16 / 2097152), 8)) >= 5"
+        },
+        {
+          "slot_136": "(math.mod(math.floor(v.s17 / 1), 8)) >= 5"
+        },
+        {
+          "slot_137": "(math.mod(math.floor(v.s17 / 8), 8)) >= 5"
+        },
+        {
+          "slot_138": "(math.mod(math.floor(v.s17 / 64), 8)) >= 5"
+        },
+        {
+          "slot_139": "(math.mod(math.floor(v.s17 / 512), 8)) >= 5"
+        },
+        {
+          "slot_140": "(math.mod(math.floor(v.s17 / 4096), 8)) >= 5"
+        },
+        {
+          "slot_141": "(math.mod(math.floor(v.s17 / 32768), 8)) >= 5"
+        },
+        {
+          "slot_142": "(math.mod(math.floor(v.s17 / 262144), 8)) >= 5"
+        },
+        {
+          "slot_143": "(math.mod(math.floor(v.s17 / 2097152), 8)) >= 5"
+        },
+        {
+          "slot_144": "(math.mod(math.floor(v.s18 / 1), 8)) >= 5"
+        },
+        {
+          "slot_145": "(math.mod(math.floor(v.s18 / 8), 8)) >= 5"
+        },
+        {
+          "slot_146": "(math.mod(math.floor(v.s18 / 64), 8)) >= 5"
+        },
+        {
+          "slot_147": "(math.mod(math.floor(v.s18 / 512), 8)) >= 5"
+        },
+        {
+          "slot_148": "(math.mod(math.floor(v.s18 / 4096), 8)) >= 5"
+        },
+        {
+          "slot_149": "(math.mod(math.floor(v.s18 / 32768), 8)) >= 5"
+        },
+        {
+          "slot_150": "(math.mod(math.floor(v.s18 / 262144), 8)) >= 5"
+        },
+        {
+          "slot_151": "(math.mod(math.floor(v.s18 / 2097152), 8)) >= 5"
+        },
+        {
+          "slot_152": "(math.mod(math.floor(v.s19 / 1), 8)) >= 5"
+        },
+        {
+          "slot_153": "(math.mod(math.floor(v.s19 / 8), 8)) >= 5"
+        },
+        {
+          "slot_154": "(math.mod(math.floor(v.s19 / 64), 8)) >= 5"
+        },
+        {
+          "slot_155": "(math.mod(math.floor(v.s19 / 512), 8)) >= 5"
+        },
+        {
+          "slot_156": "(math.mod(math.floor(v.s19 / 4096), 8)) >= 5"
+        },
+        {
+          "slot_157": "(math.mod(math.floor(v.s19 / 32768), 8)) >= 5"
+        },
+        {
+          "slot_158": "(math.mod(math.floor(v.s19 / 262144), 8)) >= 5"
+        },
+        {
+          "slot_159": "(math.mod(math.floor(v.s19 / 2097152), 8)) >= 5"
+        },
+        {
+          "slot_160": "(math.mod(math.floor(v.s20 / 1), 8)) >= 5"
+        },
+        {
+          "slot_161": "(math.mod(math.floor(v.s20 / 8), 8)) >= 5"
+        },
+        {
+          "slot_162": "(math.mod(math.floor(v.s20 / 64), 8)) >= 5"
+        },
+        {
+          "slot_163": "(math.mod(math.floor(v.s20 / 512), 8)) >= 5"
+        },
+        {
+          "slot_164": "(math.mod(math.floor(v.s20 / 4096), 8)) >= 5"
+        },
+        {
+          "slot_165": "(math.mod(math.floor(v.s20 / 32768), 8)) >= 5"
+        },
+        {
+          "slot_166": "(math.mod(math.floor(v.s20 / 262144), 8)) >= 5"
+        },
+        {
+          "slot_167": "(math.mod(math.floor(v.s20 / 2097152), 8)) >= 5"
+        },
+        {
+          "slot_168": "(math.mod(math.floor(v.s21 / 1), 8)) >= 5"
+        },
+        {
+          "slot_169": "(math.mod(math.floor(v.s21 / 8), 8)) >= 5"
+        },
+        {
+          "slot_170": "(math.mod(math.floor(v.s21 / 64), 8)) >= 5"
+        },
+        {
+          "slot_171": "(math.mod(math.floor(v.s21 / 512), 8)) >= 5"
+        },
+        {
+          "slot_172": "(math.mod(math.floor(v.s21 / 4096), 8)) >= 5"
+        },
+        {
+          "slot_173": "(math.mod(math.floor(v.s21 / 32768), 8)) >= 5"
+        },
+        {
+          "slot_174": "(math.mod(math.floor(v.s21 / 262144), 8)) >= 5"
+        },
+        {
+          "slot_175": "(math.mod(math.floor(v.s21 / 2097152), 8)) >= 5"
+        },
+        {
+          "slot_176": "(math.mod(math.floor(v.s22 / 1), 8)) >= 5"
+        },
+        {
+          "slot_177": "(math.mod(math.floor(v.s22 / 8), 8)) >= 5"
+        },
+        {
+          "slot_178": "(math.mod(math.floor(v.s22 / 64), 8)) >= 5"
+        },
+        {
+          "slot_179": "(math.mod(math.floor(v.s22 / 512), 8)) >= 5"
+        },
+        {
+          "slot_180": "(math.mod(math.floor(v.s22 / 4096), 8)) >= 5"
+        },
+        {
+          "slot_181": "(math.mod(math.floor(v.s22 / 32768), 8)) >= 5"
+        },
+        {
+          "slot_182": "(math.mod(math.floor(v.s22 / 262144), 8)) >= 5"
+        },
+        {
+          "slot_183": "(math.mod(math.floor(v.s22 / 2097152), 8)) >= 5"
+        },
+        {
+          "slot_184": "(math.mod(math.floor(v.s23 / 1), 8)) >= 5"
+        },
+        {
+          "slot_185": "(math.mod(math.floor(v.s23 / 8), 8)) >= 5"
+        },
+        {
+          "slot_186": "(math.mod(math.floor(v.s23 / 64), 8)) >= 5"
+        },
+        {
+          "slot_187": "(math.mod(math.floor(v.s23 / 512), 8)) >= 5"
+        },
+        {
+          "slot_188": "(math.mod(math.floor(v.s23 / 4096), 8)) >= 5"
+        },
+        {
+          "slot_189": "(math.mod(math.floor(v.s23 / 32768), 8)) >= 5"
+        },
+        {
+          "slot_190": "(math.mod(math.floor(v.s23 / 262144), 8)) >= 5"
+        },
+        {
+          "slot_191": "(math.mod(math.floor(v.s23 / 2097152), 8)) >= 5"
+        },
+        {
+          "slot_192": "(math.mod(math.floor(v.s24 / 1), 8)) >= 5"
+        },
+        {
+          "slot_193": "(math.mod(math.floor(v.s24 / 8), 8)) >= 5"
+        },
+        {
+          "slot_194": "(math.mod(math.floor(v.s24 / 64), 8)) >= 5"
+        },
+        {
+          "slot_195": "(math.mod(math.floor(v.s24 / 512), 8)) >= 5"
+        }
+      ]
+    }
+  }
+}

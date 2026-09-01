@@ -1,0 +1,119 @@
+{
+  "format_version": "1.20.30",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "treephysics:log_fragment",
+      "materials": {
+        "log": "opaque_block"
+      },
+      "textures": {
+        "side_oak": "textures/blocks/log_oak",
+        "top_oak": "textures/blocks/log_oak_top",
+        "stripped_side_oak": "textures/blocks/stripped_oak_log",
+        "stripped_top_oak": "textures/blocks/stripped_oak_log_top",
+        "side_spruce": "textures/blocks/log_spruce",
+        "top_spruce": "textures/blocks/log_spruce_top",
+        "stripped_side_spruce": "textures/blocks/stripped_spruce_log",
+        "stripped_top_spruce": "textures/blocks/stripped_spruce_log_top",
+        "side_birch": "textures/blocks/log_birch",
+        "top_birch": "textures/blocks/log_birch_top",
+        "stripped_side_birch": "textures/blocks/stripped_birch_log",
+        "stripped_top_birch": "textures/blocks/stripped_birch_log_top",
+        "side_jungle": "textures/blocks/log_jungle",
+        "top_jungle": "textures/blocks/log_jungle_top",
+        "stripped_side_jungle": "textures/blocks/stripped_jungle_log",
+        "stripped_top_jungle": "textures/blocks/stripped_jungle_log_top",
+        "side_acacia": "textures/blocks/log_acacia",
+        "top_acacia": "textures/blocks/log_acacia_top",
+        "stripped_side_acacia": "textures/blocks/stripped_acacia_log",
+        "stripped_top_acacia": "textures/blocks/stripped_acacia_log_top",
+        "side_dark_oak": "textures/blocks/log_big_oak",
+        "top_dark_oak": "textures/blocks/log_big_oak_top",
+        "stripped_side_dark_oak": "textures/blocks/stripped_dark_oak_log",
+        "stripped_top_dark_oak": "textures/blocks/stripped_dark_oak_log_top",
+        "side_cherry": "textures/blocks/cherry_log_side",
+        "top_cherry": "textures/blocks/cherry_log_top",
+        "stripped_side_cherry": "textures/blocks/stripped_cherry_log_side",
+        "stripped_top_cherry": "textures/blocks/stripped_cherry_log_top",
+        "side_mangrove": "textures/blocks/mangrove_log_side",
+        "top_mangrove": "textures/blocks/mangrove_log_top",
+        "stripped_side_mangrove": "textures/blocks/stripped_mangrove_log_side",
+        "stripped_top_mangrove": "textures/blocks/stripped_mangrove_log_top",
+        "side_pale_oak": "textures/blocks/pale_oak_log_side",
+        "top_pale_oak": "textures/blocks/pale_oak_log_top",
+        "stripped_side_pale_oak": "textures/blocks/stripped_pale_oak_log_side",
+        "stripped_top_pale_oak": "textures/blocks/stripped_pale_oak_log_top",
+        "side_azalea": "textures/blocks/log_oak",
+        "top_azalea": "textures/blocks/log_oak_top",
+        "stripped_side_azalea": "textures/blocks/stripped_oak_log",
+        "stripped_top_azalea": "textures/blocks/stripped_oak_log_top",
+        "side_flowering_azalea": "textures/blocks/log_oak",
+        "top_flowering_azalea": "textures/blocks/log_oak_top",
+        "stripped_side_flowering_azalea": "textures/blocks/stripped_oak_log",
+        "stripped_top_flowering_azalea": "textures/blocks/stripped_oak_log_top"
+      },
+      "geometry": {
+        "log_side": "geometry.treephysics.log_fragment.log_side",
+        "log_top": "geometry.treephysics.log_fragment.log_top"
+      },
+      "render_controllers": [
+        {
+          "controller.render.treephysics.log_fragment.log_side": "math.mod(q.property('treephysics:modes'), 2) >= 1 || math.mod(math.floor(q.property('treephysics:modes') / 4), 2) >= 1"
+        },
+        {
+          "controller.render.treephysics.log_fragment.log_top": "math.mod(q.property('treephysics:modes'), 2) >= 1 || math.mod(math.floor(q.property('treephysics:modes') / 4), 2) >= 1"
+        },
+        {
+          "controller.render.treephysics.log_fragment.stripped_log_side": "math.mod(math.floor(q.property('treephysics:modes') / 2), 2) >= 1 || math.mod(math.floor(q.property('treephysics:modes') / 8), 2) >= 1"
+        },
+        {
+          "controller.render.treephysics.log_fragment.stripped_log_top": "math.mod(math.floor(q.property('treephysics:modes') / 2), 2) >= 1 || math.mod(math.floor(q.property('treephysics:modes') / 8), 2) >= 1"
+        }
+      ],
+      "animations": {
+        "transform": "animation.treephysics.log_fragment.transform"
+      },
+      "scripts": {
+        "initialize": [
+          "v.pose_initialized = 0;",
+          "v.pose_ready = 0;"
+        ],
+        "animate": [
+          "transform"
+        ],
+        "pre_animation": [
+          "v.pose_ready = q.property('treephysics:modes') >= 16;",
+          "v.pitch = v.pose_ready ? (v.pose_initialized ? math.lerprotate(v.pitch, q.property('treephysics:pitch'), q.delta_time/0.05) : q.property('treephysics:pitch')) : 0;",
+          "v.yaw = v.pose_ready ? (v.pose_initialized ? math.lerprotate(v.yaw, q.property('treephysics:yaw'), q.delta_time/0.05) : q.property('treephysics:yaw')) : 0;",
+          "v.roll = v.pose_ready ? (v.pose_initialized ? math.lerprotate(v.roll, q.property('treephysics:roll'), q.delta_time/0.05) : q.property('treephysics:roll')) : 0;",
+          "v.pose_initialized = v.pose_ready;",
+          "v.s0 = q.property('treephysics:s0');",
+          "v.s1 = q.property('treephysics:s1');",
+          "v.s2 = q.property('treephysics:s2');",
+          "v.s3 = q.property('treephysics:s3');",
+          "v.s4 = q.property('treephysics:s4');",
+          "v.s5 = q.property('treephysics:s5');",
+          "v.s6 = q.property('treephysics:s6');",
+          "v.s7 = q.property('treephysics:s7');",
+          "v.s8 = q.property('treephysics:s8');",
+          "v.s9 = q.property('treephysics:s9');",
+          "v.s10 = q.property('treephysics:s10');",
+          "v.s11 = q.property('treephysics:s11');",
+          "v.s12 = q.property('treephysics:s12');",
+          "v.s13 = q.property('treephysics:s13');",
+          "v.s14 = q.property('treephysics:s14');",
+          "v.s15 = q.property('treephysics:s15');",
+          "v.s16 = q.property('treephysics:s16');",
+          "v.s17 = q.property('treephysics:s17');",
+          "v.s18 = q.property('treephysics:s18');",
+          "v.s19 = q.property('treephysics:s19');",
+          "v.s20 = q.property('treephysics:s20');",
+          "v.s21 = q.property('treephysics:s21');",
+          "v.s22 = q.property('treephysics:s22');",
+          "v.s23 = q.property('treephysics:s23');",
+          "v.s24 = q.property('treephysics:s24');"
+        ]
+      }
+    }
+  }
+}

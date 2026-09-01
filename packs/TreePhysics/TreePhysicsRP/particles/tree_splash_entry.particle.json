@@ -1,0 +1,70 @@
+{
+	"format_version": "1.10.0",
+	"particle_effect": {
+		"description": {
+			"identifier": "treephysics:tree_splash_entry",
+			"basic_render_parameters": {
+				"material": "particles_blend",
+				"texture": "textures/particle/particles"
+			}
+		},
+		"events": {
+			"spawn_water_layers": {
+				"sequence": [
+					{
+						"expression": "t.water_impact=Math.max(0,v.water_impulse??0);t.water_scale_x=Math.max(1,v.water_scale_x??1);t.water_scale_z=Math.max(1,v.water_scale_z??1);t.water_area=t.water_scale_x*t.water_scale_z;t.water_scatter_x=0.3*t.water_scale_x;t.water_scatter_z=0.3*t.water_scale_z;t.water_depth_scale=Math.min(2,Math.max(0.5,t.water_impact));t.water_enabled=t.water_impact>=0.25;t.water_progress=(t.water_impact-0.1)/1.9;t.water_strength=0.075+0.425*t.water_progress;t.water_radius_x=0.25*t.water_scale_x;t.water_radius_z=0.25*t.water_scale_z;t.water_count=Math.floor(Math.min(400,Math.max(0,10+65*t.water_progress)*t.water_area));t.water_up_speed=3.62;t.water_explosion_progress=Math.max(0,(t.water_impact-0.5)/0.5);t.water_impulse_strength=0.5*t.water_explosion_progress;t.water_impulse_radius_x=0.1*t.water_scale_x;t.water_impulse_radius_z=0.1*t.water_scale_z;t.water_impulse_count=Math.max(1,Math.floor(Math.min(400,400*t.water_explosion_progress*t.water_area)));t.water_impulse_up_speed=3.62*t.water_explosion_progress;t.water_bubble_impact=Math.min(2,t.water_impact);t.water_bubble_impulse_progress=Math.min(3,t.water_explosion_progress);t.water_bubble_impulse_response=Math.pow(t.water_bubble_impulse_progress,0.65);t.water_bubble_count_response=Math.pow(10,t.water_bubble_impact-1);t.water_bubble_lifetime_response=Math.pow(3,t.water_bubble_impact-1);t.water_bubble_speed_base=2*Math.sqrt(Math.pow(3,t.water_bubble_impact-1));t.water_bubble_speed_spread=6*Math.sqrt(Math.pow(40/6,t.water_bubble_impact-1));t.water_bubble_impulse_rate=720*t.water_bubble_impulse_progress;t.water_bubble_impulse_max_particles=Math.max(1,90*t.water_bubble_impulse_progress);t.water_bubble_impulse_speed_base=4.5*t.water_bubble_impulse_response;t.water_bubble_impulse_speed_spread=13.5*t.water_bubble_impulse_response;"
+					},
+					{
+						"particle_effect": {
+							"effect": "treephysics:tree_splash",
+							"type": "emitter",
+							"pre_effect_expression": "v.activation_flag=t.water_enabled;v.water_count=t.water_count;v.water_radius_x=t.water_radius_x;v.water_radius_z=t.water_radius_z;v.water_scatter_x=t.water_scatter_x;v.water_scatter_z=t.water_scatter_z;v.water_strength=t.water_strength;v.water_up_speed=t.water_up_speed;"
+						}
+					},
+					{
+						"particle_effect": {
+							"effect": "treephysics:tree_bubbles",
+							"type": "emitter",
+							"pre_effect_expression": "v.activation_flag=1;v.water_area=t.water_area;v.water_count_response=t.water_bubble_count_response;v.water_depth_scale=t.water_depth_scale;v.water_lifetime_response=t.water_bubble_lifetime_response;v.water_scale_x=t.water_scale_x;v.water_scale_z=t.water_scale_z;v.water_speed_base=t.water_bubble_speed_base;v.water_speed_spread=t.water_bubble_speed_spread;"
+						}
+					},
+					{
+						"particle_effect": {
+							"effect": "treephysics:tree_splash_impulse",
+							"type": "emitter",
+							"pre_effect_expression": "v.activation_flag=t.water_explosion_progress>0;v.water_count=t.water_impulse_count;v.water_explosion_progress=t.water_explosion_progress;v.water_radius_x=t.water_impulse_radius_x;v.water_radius_z=t.water_impulse_radius_z;v.water_scatter_x=t.water_scatter_x;v.water_scatter_z=t.water_scatter_z;v.water_strength=t.water_impulse_strength;v.water_up_speed=t.water_impulse_up_speed;"
+						}
+					},
+					{
+						"particle_effect": {
+							"effect": "treephysics:tree_bubbles_impulse",
+							"type": "emitter",
+							"pre_effect_expression": "v.activation_flag=t.water_bubble_impulse_progress>0;v.water_area=t.water_area;v.water_depth_scale=t.water_depth_scale;v.water_explosion_progress=t.water_bubble_impulse_progress;v.water_max_particles=t.water_bubble_impulse_max_particles;v.water_rate=t.water_bubble_impulse_rate;v.water_scale_x=t.water_scale_x;v.water_scale_z=t.water_scale_z;v.water_speed_base=t.water_bubble_impulse_speed_base;v.water_speed_spread=t.water_bubble_impulse_speed_spread;"
+						}
+					}
+				]
+			}
+		},
+		"components": {
+			"minecraft:emitter_rate_instant": {
+				"num_particles": 0
+			},
+			"minecraft:emitter_lifetime_once": {
+				"active_time": 1
+			},
+			"minecraft:emitter_lifetime_events": {
+				"creation_event": "spawn_water_layers"
+			},
+			"minecraft:emitter_shape_point": {},
+			"minecraft:particle_lifetime_expression": {
+				"max_lifetime": 1
+			},
+			"minecraft:particle_appearance_billboard": {
+				"size": [
+					0,
+					0
+				]
+			}
+		}
+	}
+}

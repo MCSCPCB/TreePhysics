@@ -1,0 +1,17 @@
+{
+  "format_version": "1.10.0",
+  "render_controllers": {
+    "controller.render.treephysics.block_crack": {
+      "geometry": "Geometry.default",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "v.break_stage==0?Texture.stage_0:v.break_stage==1?Texture.stage_1:v.break_stage==2?Texture.stage_2:v.break_stage==3?Texture.stage_3:v.break_stage==4?Texture.stage_4:v.break_stage==5?Texture.stage_5:v.break_stage==6?Texture.stage_6:v.break_stage==7?Texture.stage_7:v.break_stage==8?Texture.stage_8:Texture.stage_9"
+      ],
+      "ignore_lighting": true
+    }
+  }
+}

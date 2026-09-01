@@ -1,0 +1,84 @@
+{
+  "format_version": "1.20.30",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "treephysics:block_crack",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "runtime_identifier": "minecraft:arrow",
+      "properties": {
+        "treephysics:pitch": {
+          "type": "float",
+          "range": [
+            -400.0,
+            400.0
+          ],
+          "client_sync": true,
+          "default": "0"
+        },
+        "treephysics:yaw": {
+          "type": "float",
+          "range": [
+            -400.0,
+            400.0
+          ],
+          "client_sync": true,
+          "default": "0"
+        },
+        "treephysics:roll": {
+          "type": "float",
+          "range": [
+            -400.0,
+            400.0
+          ],
+          "client_sync": true,
+          "default": "0"
+        },
+        "treephysics:break_stage": {
+          "type": "int",
+          "range": [
+            -1,
+            9
+          ],
+          "client_sync": true,
+          "default": -1
+        }
+      }
+    },
+    "components": {
+      "minecraft:type_family": {
+        "family": [
+          "block_crack",
+          "inanimate"
+        ]
+      },
+      // A zero-sized AABB suppresses the shadow from the entity's first client frame.
+      "minecraft:collision_box": {
+        "height": 0,
+        "width": 0
+      },
+      "minecraft:damage_sensor": {
+        "triggers": [
+          {
+            "cause": "all",
+            "deals_damage": false
+          }
+        ]
+      },
+      "minecraft:fire_immune": {},
+      "minecraft:persistent": {},
+      "minecraft:physics": {
+        "has_collision": false,
+        "has_gravity": false
+      },
+      "minecraft:pushable": {
+        "is_pushable": false,
+        "is_pushable_by_piston": false
+      },
+      "minecraft:conditional_bandwidth_optimization": {
+        "conditional_values": [],
+        "default_values": {}
+      }
+    }
+  }
+}

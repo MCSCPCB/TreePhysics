@@ -1,0 +1,334 @@
+{
+  "format_version": "1.20.30",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "treephysics:attachment_fragment",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "runtime_identifier": "minecraft:arrow",
+      "properties": {
+        "treephysics:pitch": {
+          "type": "float",
+          "range": [
+            -400.0,
+            400.0
+          ],
+          "client_sync": true,
+          "default": "0"
+        },
+        "treephysics:yaw": {
+          "type": "float",
+          "range": [
+            -400.0,
+            400.0
+          ],
+          "client_sync": true,
+          "default": "0"
+        },
+        "treephysics:roll": {
+          "type": "float",
+          "range": [
+            -400.0,
+            400.0
+          ],
+          "client_sync": true,
+          "default": "0"
+        },
+        "treephysics:origin_xz": {
+          "type": "int",
+          "range": [
+            0,
+            4194303
+          ],
+          "client_sync": true,
+          "default": 0
+        },
+        "treephysics:origin_y": {
+          "type": "int",
+          "range": [
+            0,
+            2097151
+          ],
+          "client_sync": true,
+          "default": 0
+        },
+        "treephysics:tint": {
+          "type": "int",
+          "range": [
+            0,
+            16777215
+          ],
+          "client_sync": true,
+          "default": 0
+        },
+        "treephysics:a0": {
+          "type": "int",
+          "range": [
+            0,
+            131071
+          ],
+          "client_sync": true,
+          "default": 0
+        },
+        "treephysics:a1": {
+          "type": "int",
+          "range": [
+            0,
+            131071
+          ],
+          "client_sync": true,
+          "default": 0
+        },
+        "treephysics:a2": {
+          "type": "int",
+          "range": [
+            0,
+            131071
+          ],
+          "client_sync": true,
+          "default": 0
+        },
+        "treephysics:a3": {
+          "type": "int",
+          "range": [
+            0,
+            131071
+          ],
+          "client_sync": true,
+          "default": 0
+        },
+        "treephysics:a4": {
+          "type": "int",
+          "range": [
+            0,
+            131071
+          ],
+          "client_sync": true,
+          "default": 0
+        },
+        "treephysics:a5": {
+          "type": "int",
+          "range": [
+            0,
+            131071
+          ],
+          "client_sync": true,
+          "default": 0
+        },
+        "treephysics:a6": {
+          "type": "int",
+          "range": [
+            0,
+            131071
+          ],
+          "client_sync": true,
+          "default": 0
+        },
+        "treephysics:a7": {
+          "type": "int",
+          "range": [
+            0,
+            131071
+          ],
+          "client_sync": true,
+          "default": 0
+        },
+        "treephysics:a8": {
+          "type": "int",
+          "range": [
+            0,
+            131071
+          ],
+          "client_sync": true,
+          "default": 0
+        },
+        "treephysics:a9": {
+          "type": "int",
+          "range": [
+            0,
+            131071
+          ],
+          "client_sync": true,
+          "default": 0
+        },
+        "treephysics:a10": {
+          "type": "int",
+          "range": [
+            0,
+            131071
+          ],
+          "client_sync": true,
+          "default": 0
+        },
+        "treephysics:a11": {
+          "type": "int",
+          "range": [
+            0,
+            131071
+          ],
+          "client_sync": true,
+          "default": 0
+        },
+        "treephysics:a12": {
+          "type": "int",
+          "range": [
+            0,
+            131071
+          ],
+          "client_sync": true,
+          "default": 0
+        },
+        "treephysics:a13": {
+          "type": "int",
+          "range": [
+            0,
+            131071
+          ],
+          "client_sync": true,
+          "default": 0
+        },
+        "treephysics:a14": {
+          "type": "int",
+          "range": [
+            0,
+            131071
+          ],
+          "client_sync": true,
+          "default": 0
+        },
+        "treephysics:a15": {
+          "type": "int",
+          "range": [
+            0,
+            131071
+          ],
+          "client_sync": true,
+          "default": 0
+        },
+        "treephysics:a16": {
+          "type": "int",
+          "range": [
+            0,
+            131071
+          ],
+          "client_sync": true,
+          "default": 0
+        },
+        "treephysics:a17": {
+          "type": "int",
+          "range": [
+            0,
+            131071
+          ],
+          "client_sync": true,
+          "default": 0
+        },
+        "treephysics:a18": {
+          "type": "int",
+          "range": [
+            0,
+            131071
+          ],
+          "client_sync": true,
+          "default": 0
+        },
+        "treephysics:a19": {
+          "type": "int",
+          "range": [
+            0,
+            131071
+          ],
+          "client_sync": true,
+          "default": 0
+        },
+        "treephysics:a20": {
+          "type": "int",
+          "range": [
+            0,
+            131071
+          ],
+          "client_sync": true,
+          "default": 0
+        },
+        "treephysics:a21": {
+          "type": "int",
+          "range": [
+            0,
+            131071
+          ],
+          "client_sync": true,
+          "default": 0
+        },
+        "treephysics:a22": {
+          "type": "int",
+          "range": [
+            0,
+            131071
+          ],
+          "client_sync": true,
+          "default": 0
+        },
+        "treephysics:a23": {
+          "type": "int",
+          "range": [
+            0,
+            131071
+          ],
+          "client_sync": true,
+          "default": 0
+        },
+        "treephysics:a24": {
+          "type": "int",
+          "range": [
+            0,
+            131071
+          ],
+          "client_sync": true,
+          "default": 0
+        },
+        "treephysics:a25": {
+          "type": "int",
+          "range": [
+            0,
+            131071
+          ],
+          "client_sync": true,
+          "default": 0
+        }
+      }
+    },
+    "components": {
+      "minecraft:type_family": {
+        "family": [
+          "fragment",
+          "inanimate"
+        ]
+      },
+      "minecraft:damage_sensor": {
+        "triggers": [
+          {
+            "cause": "all",
+            "deals_damage": false
+          }
+        ]
+      },
+      "minecraft:collision_box": {
+        "height": 0,
+        "width": 0
+      },
+      "minecraft:pushable": {
+        "is_pushable": false,
+        "is_pushable_by_piston": false
+      },
+      "minecraft:persistent": {},
+      "minecraft:physics": {
+        "has_collision": false,
+        "has_gravity": false
+      },
+      "minecraft:conditional_bandwidth_optimization": {
+        "conditional_values": [],
+        "default_values": {}
+      }
+    }
+  }
+}

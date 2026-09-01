@@ -1,0 +1,13 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:aggregate_feature": {
+    "description": {
+      "identifier": "minecraft:mega_pine_tree_feature"
+    },
+    "early_out": "first_failure",
+    "features": [
+      "treephysics:mega_pine_tree_body",
+      "treephysics:mega_pine_trunk_roots"
+    ]
+  }
+}

@@ -1,0 +1,50 @@
+pack.name=Tree Physics Resource Pack 0.2.1
+pack.description=Made by: MINECRAFT-SCPCB
+
+subpack.treephysics.default=Default: Default
+subpack.treephysics.compatible=Compatible: Compatibility (No Configuration UI)
+
+tile.treephysics:natural_tree_root.name=Block
+tile.treephysics:interaction_target.name=Contraption
+
+entity.treephysics:block.name=Contraption
+entity.treephysics:block_carrier.name=Contraption
+entity.treephysics:fragment_carrier.name=Contraption
+entity.treephysics:block_collider.name=Contraption
+entity.treephysics:block_outline.name=Contraption
+entity.treephysics:block_crack.name=Contraption
+entity.treephysics:chest.name=Chest
+entity.treephysics:attachment_fragment.name=Contraption
+entity.treephysics:leaf_fragment.name=Contraption
+entity.treephysics:compact_leaf_fragment.name=Contraption
+entity.treephysics:log_fragment.name=Contraption
+entity.treephysics:tall_log_fragment.name=Contraption
+entity.treephysics:contraption_mount.name=Contraption
+entity.treephysics:cube_fragment_0.name=Contraption
+
+action.hint.exit.treephysics:contraption_mount=Now moving with: Contraption
+
+ui.treephysics.settings.button=Tree Physics Configuration
+ui.treephysics.settings.tooltip=Tree Physics
+ui.treephysics.settings.command.description=Open the Tree Physics Configuration Interface
+ui.treephysics.settings.title=Tree Physics Configuration
+ui.treephysics.settings.header=Felled Tree Behavior
+ui.treephysics.settings.physics_performance=Physics Simulation Quality
+ui.treephysics.settings.physics_performance.description=Control the accuracy and stability of physics simulation
+ui.treephysics.settings.physics_performance.low=Low
+ui.treephysics.settings.physics_performance.high=High
+ui.treephysics.settings.obb_collision=Player Collision Quality
+ui.treephysics.settings.obb_collision.description=Controls how accurately players collide with Simulated Contraptions
+ui.treephysics.settings.obb_collision.disabled=Off
+ui.treephysics.settings.obb_collision.low=Low
+ui.treephysics.settings.obb_collision.high=High
+ui.treephysics.settings.break_speed=Breakdown Rate
+ui.treephysics.settings.break_speed.description=Sets the breakdown rate of Simulated Contraptions
+ui.treephysics.settings.log_breakage=Impact Fracturing
+ui.treephysics.settings.log_breakage.description=Allows Simulated Contraptions to fracture on impact
+ui.treephysics.settings.count_motion_time=Count While Moving
+ui.treephysics.settings.count_motion_time.description=The breakdown timer continues while Simulated Contraptions are moving
+ui.treephysics.settings.player_carrying=Carry Players
+ui.treephysics.settings.player_carrying.description=Moves players standing on Simulated Contraptions along with them
+ui.treephysics.settings.smooth_player_carrying=Smooth Movement
+ui.treephysics.settings.smooth_player_carrying.description=Makes Simulated Contraptions carry players more smoothly. May limit some player actions or cause them to behave unexpectedly

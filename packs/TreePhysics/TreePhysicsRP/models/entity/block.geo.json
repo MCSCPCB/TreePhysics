@@ -1,0 +1,96 @@
+{
+  "format_version": "1.12.0",
+  "minecraft:geometry": [
+    {
+      "description": {
+        "identifier": "geometry.treephysics.block",
+        "texture_width": 16,
+        "texture_height": 16,
+        "visible_bounds_width": 128,
+        "visible_bounds_height": 128,
+        "visible_bounds_offset": [0, 0, 0]
+      },
+      "bones": [
+        {
+          "name": "root",
+          "pivot": [0, 0, 0]
+        },
+        {
+          "name": "yaw",
+          "parent": "root",
+          "pivot": [0, 0, 0]
+        },
+        {
+          "name": "roll",
+          "parent": "yaw",
+          "pivot": [0, 0, 0]
+        },
+        {
+          "name": "pitch",
+          "parent": "roll",
+          "pivot": [0, 0, 0]
+        },
+        {
+          "name": "local_offset",
+          "parent": "pitch",
+          "pivot": [0, 0, 0]
+        },
+        {
+          "name": "local_yaw",
+          "parent": "local_offset",
+          "pivot": [0, 0, 0]
+        },
+        {
+          "name": "local_roll",
+          "parent": "local_yaw",
+          "pivot": [0, 0, 0]
+        },
+        {
+          "name": "local_pitch",
+          "parent": "local_roll",
+          "pivot": [0, 0, 0]
+        },
+        {
+          "name": "model",
+          "parent": "local_pitch",
+          "pivot": [0, -8, 0]
+        },
+        {
+          "name": "rightitem",
+          "parent": "model",
+          "pivot": [0, -8, 0]
+        },
+        {
+          "name": "left_local_offset",
+          "parent": "pitch",
+          "pivot": [0, 0, 0]
+        },
+        {
+          "name": "left_local_yaw",
+          "parent": "left_local_offset",
+          "pivot": [0, 0, 0]
+        },
+        {
+          "name": "left_local_roll",
+          "parent": "left_local_yaw",
+          "pivot": [0, 0, 0]
+        },
+        {
+          "name": "left_local_pitch",
+          "parent": "left_local_roll",
+          "pivot": [0, 0, 0]
+        },
+        {
+          "name": "leftarm",
+          "parent": "left_local_pitch",
+          "pivot": [0, -8, 0]
+        },
+        {
+          "name": "leftitem",
+          "parent": "leftarm",
+          "pivot": [0, -8, 0]
+        }
+      ]
+    }
+  ]
+}

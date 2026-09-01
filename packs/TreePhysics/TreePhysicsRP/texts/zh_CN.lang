@@ -1,0 +1,50 @@
+pack.name=树木物理 资源包 0.2.1
+pack.description=作者：MINECRAFT-SCPCB
+
+subpack.treephysics.default=Default： 默认
+subpack.treephysics.compatible=Compatible： 兼容 （无树木物理配置 UI）
+
+tile.treephysics:natural_tree_root.name=方块
+tile.treephysics:interaction_target.name=结构
+
+entity.treephysics:block.name=结构
+entity.treephysics:block_carrier.name=结构
+entity.treephysics:fragment_carrier.name=结构
+entity.treephysics:block_collider.name=结构
+entity.treephysics:block_outline.name=结构
+entity.treephysics:block_crack.name=结构
+entity.treephysics:chest.name=箱子
+entity.treephysics:attachment_fragment.name=结构
+entity.treephysics:leaf_fragment.name=结构
+entity.treephysics:compact_leaf_fragment.name=结构
+entity.treephysics:log_fragment.name=结构
+entity.treephysics:tall_log_fragment.name=结构
+entity.treephysics:contraption_mount.name=结构
+entity.treephysics:cube_fragment_0.name=结构
+
+action.hint.exit.treephysics:contraption_mount=正在跟随：结构
+
+ui.treephysics.settings.button=树木物理配置
+ui.treephysics.settings.tooltip=树木物理 配置
+ui.treephysics.settings.command.description=打开树木物理配置界面
+ui.treephysics.settings.title=树木物理配置
+ui.treephysics.settings.header=倒伏树木行为
+ui.treephysics.settings.physics_performance=物理模拟质量
+ui.treephysics.settings.physics_performance.description=控制物理模拟的精度和稳定性
+ui.treephysics.settings.physics_performance.low=低
+ui.treephysics.settings.physics_performance.high=高
+ui.treephysics.settings.obb_collision=玩家碰撞质量
+ui.treephysics.settings.obb_collision.description=控制玩家与物理结构碰撞时的精度
+ui.treephysics.settings.obb_collision.disabled=关闭
+ui.treephysics.settings.obb_collision.low=低
+ui.treephysics.settings.obb_collision.high=高
+ui.treephysics.settings.break_speed=破碎速率
+ui.treephysics.settings.break_speed.description=设置物理结构的破碎速率
+ui.treephysics.settings.log_breakage=冲击断裂
+ui.treephysics.settings.log_breakage.description=允许物理结构在受到冲击时发生断裂
+ui.treephysics.settings.count_motion_time=运动时继续计时
+ui.treephysics.settings.count_motion_time.description=物理结构运动时，破碎计时仍会继续
+ui.treephysics.settings.player_carrying=玩家随动
+ui.treephysics.settings.player_carrying.description=使站在物理结构上的玩家随其一同移动
+ui.treephysics.settings.smooth_player_carrying=平稳随动
+ui.treephysics.settings.smooth_player_carrying.description=使物理结构更平稳地带动玩家。可能会限制玩家的部分操作，或使其表现异常

@@ -1,0 +1,358 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+    "animation.treephysics.attachment_fragment.transform": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "scale": "v.pose_ready",
+          "rotation": [
+            "-q.body_x_rotation",
+            "-q.body_y_rotation",
+            0
+          ]
+        },
+        "pitch": {
+          "rotation": [
+            "v.pitch",
+            0,
+            0
+          ]
+        },
+        "roll": {
+          "rotation": [
+            0,
+            0,
+            "-v.roll"
+          ]
+        },
+        "yaw": {
+          "rotation": [
+            0,
+            "-v.yaw",
+            0
+          ]
+        },
+        "attachment_offset": {
+          "position": [
+            "(math.mod(q.property('treephysics:origin_xz'), 2048) - 1024) * 16",
+            "(math.mod(q.property('treephysics:origin_y'), 2048) - 1024) * 16",
+            "-(math.floor(q.property('treephysics:origin_xz') / 2048) - 1024) * 16"
+          ]
+        },
+        "slot_0": {
+          "position": [
+            "math.mod(v.a0, 8) * 16",
+            "math.mod(math.floor(v.a0 / 8), 4) * 16",
+            "-math.mod(math.floor(v.a0 / 32), 8) * 16"
+          ],
+          "rotation": [
+            0,
+            "(v.af0) == 0 ? (math.mod(v.as0, 4) - 2) * 90 : ((v.af0) == 1 ? math.mod(v.as0, 4) * 90 : 0)",
+            0
+          ]
+        },
+        "slot_1": {
+          "position": [
+            "math.mod(v.a1, 8) * 16",
+            "math.mod(math.floor(v.a1 / 8), 4) * 16",
+            "-math.mod(math.floor(v.a1 / 32), 8) * 16"
+          ],
+          "rotation": [
+            0,
+            "(v.af1) == 0 ? (math.mod(v.as1, 4) - 2) * 90 : ((v.af1) == 1 ? math.mod(v.as1, 4) * 90 : 0)",
+            0
+          ]
+        },
+        "slot_2": {
+          "position": [
+            "math.mod(v.a2, 8) * 16",
+            "math.mod(math.floor(v.a2 / 8), 4) * 16",
+            "-math.mod(math.floor(v.a2 / 32), 8) * 16"
+          ],
+          "rotation": [
+            0,
+            "(v.af2) == 0 ? (math.mod(v.as2, 4) - 2) * 90 : ((v.af2) == 1 ? math.mod(v.as2, 4) * 90 : 0)",
+            0
+          ]
+        },
+        "slot_3": {
+          "position": [
+            "math.mod(v.a3, 8) * 16",
+            "math.mod(math.floor(v.a3 / 8), 4) * 16",
+            "-math.mod(math.floor(v.a3 / 32), 8) * 16"
+          ],
+          "rotation": [
+            0,
+            "(v.af3) == 0 ? (math.mod(v.as3, 4) - 2) * 90 : ((v.af3) == 1 ? math.mod(v.as3, 4) * 90 : 0)",
+            0
+          ]
+        },
+        "slot_4": {
+          "position": [
+            "math.mod(v.a4, 8) * 16",
+            "math.mod(math.floor(v.a4 / 8), 4) * 16",
+            "-math.mod(math.floor(v.a4 / 32), 8) * 16"
+          ],
+          "rotation": [
+            0,
+            "(v.af4) == 0 ? (math.mod(v.as4, 4) - 2) * 90 : ((v.af4) == 1 ? math.mod(v.as4, 4) * 90 : 0)",
+            0
+          ]
+        },
+        "slot_5": {
+          "position": [
+            "math.mod(v.a5, 8) * 16",
+            "math.mod(math.floor(v.a5 / 8), 4) * 16",
+            "-math.mod(math.floor(v.a5 / 32), 8) * 16"
+          ],
+          "rotation": [
+            0,
+            "(v.af5) == 0 ? (math.mod(v.as5, 4) - 2) * 90 : ((v.af5) == 1 ? math.mod(v.as5, 4) * 90 : 0)",
+            0
+          ]
+        },
+        "slot_6": {
+          "position": [
+            "math.mod(v.a6, 8) * 16",
+            "math.mod(math.floor(v.a6 / 8), 4) * 16",
+            "-math.mod(math.floor(v.a6 / 32), 8) * 16"
+          ],
+          "rotation": [
+            0,
+            "(v.af6) == 0 ? (math.mod(v.as6, 4) - 2) * 90 : ((v.af6) == 1 ? math.mod(v.as6, 4) * 90 : 0)",
+            0
+          ]
+        },
+        "slot_7": {
+          "position": [
+            "math.mod(v.a7, 8) * 16",
+            "math.mod(math.floor(v.a7 / 8), 4) * 16",
+            "-math.mod(math.floor(v.a7 / 32), 8) * 16"
+          ],
+          "rotation": [
+            0,
+            "(v.af7) == 0 ? (math.mod(v.as7, 4) - 2) * 90 : ((v.af7) == 1 ? math.mod(v.as7, 4) * 90 : 0)",
+            0
+          ]
+        },
+        "slot_8": {
+          "position": [
+            "math.mod(v.a8, 8) * 16",
+            "math.mod(math.floor(v.a8 / 8), 4) * 16",
+            "-math.mod(math.floor(v.a8 / 32), 8) * 16"
+          ],
+          "rotation": [
+            0,
+            "(v.af8) == 0 ? (math.mod(v.as8, 4) - 2) * 90 : ((v.af8) == 1 ? math.mod(v.as8, 4) * 90 : 0)",
+            0
+          ]
+        },
+        "slot_9": {
+          "position": [
+            "math.mod(v.a9, 8) * 16",
+            "math.mod(math.floor(v.a9 / 8), 4) * 16",
+            "-math.mod(math.floor(v.a9 / 32), 8) * 16"
+          ],
+          "rotation": [
+            0,
+            "(v.af9) == 0 ? (math.mod(v.as9, 4) - 2) * 90 : ((v.af9) == 1 ? math.mod(v.as9, 4) * 90 : 0)",
+            0
+          ]
+        },
+        "slot_10": {
+          "position": [
+            "math.mod(v.a10, 8) * 16",
+            "math.mod(math.floor(v.a10 / 8), 4) * 16",
+            "-math.mod(math.floor(v.a10 / 32), 8) * 16"
+          ],
+          "rotation": [
+            0,
+            "(v.af10) == 0 ? (math.mod(v.as10, 4) - 2) * 90 : ((v.af10) == 1 ? math.mod(v.as10, 4) * 90 : 0)",
+            0
+          ]
+        },
+        "slot_11": {
+          "position": [
+            "math.mod(v.a11, 8) * 16",
+            "math.mod(math.floor(v.a11 / 8), 4) * 16",
+            "-math.mod(math.floor(v.a11 / 32), 8) * 16"
+          ],
+          "rotation": [
+            0,
+            "(v.af11) == 0 ? (math.mod(v.as11, 4) - 2) * 90 : ((v.af11) == 1 ? math.mod(v.as11, 4) * 90 : 0)",
+            0
+          ]
+        },
+        "slot_12": {
+          "position": [
+            "math.mod(v.a12, 8) * 16",
+            "math.mod(math.floor(v.a12 / 8), 4) * 16",
+            "-math.mod(math.floor(v.a12 / 32), 8) * 16"
+          ],
+          "rotation": [
+            0,
+            "(v.af12) == 0 ? (math.mod(v.as12, 4) - 2) * 90 : ((v.af12) == 1 ? math.mod(v.as12, 4) * 90 : 0)",
+            0
+          ]
+        },
+        "slot_13": {
+          "position": [
+            "math.mod(v.a13, 8) * 16",
+            "math.mod(math.floor(v.a13 / 8), 4) * 16",
+            "-math.mod(math.floor(v.a13 / 32), 8) * 16"
+          ],
+          "rotation": [
+            0,
+            "(v.af13) == 0 ? (math.mod(v.as13, 4) - 2) * 90 : ((v.af13) == 1 ? math.mod(v.as13, 4) * 90 : 0)",
+            0
+          ]
+        },
+        "slot_14": {
+          "position": [
+            "math.mod(v.a14, 8) * 16",
+            "math.mod(math.floor(v.a14 / 8), 4) * 16",
+            "-math.mod(math.floor(v.a14 / 32), 8) * 16"
+          ],
+          "rotation": [
+            0,
+            "(v.af14) == 0 ? (math.mod(v.as14, 4) - 2) * 90 : ((v.af14) == 1 ? math.mod(v.as14, 4) * 90 : 0)",
+            0
+          ]
+        },
+        "slot_15": {
+          "position": [
+            "math.mod(v.a15, 8) * 16",
+            "math.mod(math.floor(v.a15 / 8), 4) * 16",
+            "-math.mod(math.floor(v.a15 / 32), 8) * 16"
+          ],
+          "rotation": [
+            0,
+            "(v.af15) == 0 ? (math.mod(v.as15, 4) - 2) * 90 : ((v.af15) == 1 ? math.mod(v.as15, 4) * 90 : 0)",
+            0
+          ]
+        },
+        "slot_16": {
+          "position": [
+            "math.mod(v.a16, 8) * 16",
+            "math.mod(math.floor(v.a16 / 8), 4) * 16",
+            "-math.mod(math.floor(v.a16 / 32), 8) * 16"
+          ],
+          "rotation": [
+            0,
+            "(v.af16) == 0 ? (math.mod(v.as16, 4) - 2) * 90 : ((v.af16) == 1 ? math.mod(v.as16, 4) * 90 : 0)",
+            0
+          ]
+        },
+        "slot_17": {
+          "position": [
+            "math.mod(v.a17, 8) * 16",
+            "math.mod(math.floor(v.a17 / 8), 4) * 16",
+            "-math.mod(math.floor(v.a17 / 32), 8) * 16"
+          ],
+          "rotation": [
+            0,
+            "(v.af17) == 0 ? (math.mod(v.as17, 4) - 2) * 90 : ((v.af17) == 1 ? math.mod(v.as17, 4) * 90 : 0)",
+            0
+          ]
+        },
+        "slot_18": {
+          "position": [
+            "math.mod(v.a18, 8) * 16",
+            "math.mod(math.floor(v.a18 / 8), 4) * 16",
+            "-math.mod(math.floor(v.a18 / 32), 8) * 16"
+          ],
+          "rotation": [
+            0,
+            "(v.af18) == 0 ? (math.mod(v.as18, 4) - 2) * 90 : ((v.af18) == 1 ? math.mod(v.as18, 4) * 90 : 0)",
+            0
+          ]
+        },
+        "slot_19": {
+          "position": [
+            "math.mod(v.a19, 8) * 16",
+            "math.mod(math.floor(v.a19 / 8), 4) * 16",
+            "-math.mod(math.floor(v.a19 / 32), 8) * 16"
+          ],
+          "rotation": [
+            0,
+            "(v.af19) == 0 ? (math.mod(v.as19, 4) - 2) * 90 : ((v.af19) == 1 ? math.mod(v.as19, 4) * 90 : 0)",
+            0
+          ]
+        },
+        "slot_20": {
+          "position": [
+            "math.mod(v.a20, 8) * 16",
+            "math.mod(math.floor(v.a20 / 8), 4) * 16",
+            "-math.mod(math.floor(v.a20 / 32), 8) * 16"
+          ],
+          "rotation": [
+            0,
+            "(v.af20) == 0 ? (math.mod(v.as20, 4) - 2) * 90 : ((v.af20) == 1 ? math.mod(v.as20, 4) * 90 : 0)",
+            0
+          ]
+        },
+        "slot_21": {
+          "position": [
+            "math.mod(v.a21, 8) * 16",
+            "math.mod(math.floor(v.a21 / 8), 4) * 16",
+            "-math.mod(math.floor(v.a21 / 32), 8) * 16"
+          ],
+          "rotation": [
+            0,
+            "(v.af21) == 0 ? (math.mod(v.as21, 4) - 2) * 90 : ((v.af21) == 1 ? math.mod(v.as21, 4) * 90 : 0)",
+            0
+          ]
+        },
+        "slot_22": {
+          "position": [
+            "math.mod(v.a22, 8) * 16",
+            "math.mod(math.floor(v.a22 / 8), 4) * 16",
+            "-math.mod(math.floor(v.a22 / 32), 8) * 16"
+          ],
+          "rotation": [
+            0,
+            "(v.af22) == 0 ? (math.mod(v.as22, 4) - 2) * 90 : ((v.af22) == 1 ? math.mod(v.as22, 4) * 90 : 0)",
+            0
+          ]
+        },
+        "slot_23": {
+          "position": [
+            "math.mod(v.a23, 8) * 16",
+            "math.mod(math.floor(v.a23 / 8), 4) * 16",
+            "-math.mod(math.floor(v.a23 / 32), 8) * 16"
+          ],
+          "rotation": [
+            0,
+            "(v.af23) == 0 ? (math.mod(v.as23, 4) - 2) * 90 : ((v.af23) == 1 ? math.mod(v.as23, 4) * 90 : 0)",
+            0
+          ]
+        },
+        "slot_24": {
+          "position": [
+            "math.mod(v.a24, 8) * 16",
+            "math.mod(math.floor(v.a24 / 8), 4) * 16",
+            "-math.mod(math.floor(v.a24 / 32), 8) * 16"
+          ],
+          "rotation": [
+            0,
+            "(v.af24) == 0 ? (math.mod(v.as24, 4) - 2) * 90 : ((v.af24) == 1 ? math.mod(v.as24, 4) * 90 : 0)",
+            0
+          ]
+        },
+        "slot_25": {
+          "position": [
+            "math.mod(v.a25, 8) * 16",
+            "math.mod(math.floor(v.a25 / 8), 4) * 16",
+            "-math.mod(math.floor(v.a25 / 32), 8) * 16"
+          ],
+          "rotation": [
+            0,
+            "(v.af25) == 0 ? (math.mod(v.as25, 4) - 2) * 90 : ((v.af25) == 1 ? math.mod(v.as25, 4) * 90 : 0)",
+            0
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "format_version": "1.21.60",
+  "minecraft:single_block_feature": {
+    "description": {
+      "identifier": "treephysics:external_natural_root_tag_gravel"
+    },
+    "places_block": {
+      "name": "treephysics:natural_tree_root",
+      "states": {
+        "treephysics:soil_variant": 6
+      }
+    },
+    "enforce_survivability_rules": false,
+    "enforce_placement_rules": false,
+    "may_replace": [
+      {
+        "tags": "query.any_tag('gravel')"
+      }
+    ],
+    "may_attach_to": {
+      "auto_rotate": false,
+      "min_sides_must_attach": 1,
+      "top": [
+        {
+          "tags": "query.any_tag('log', 'wood')"
+        }
+      ]
+    }
+  }
+}

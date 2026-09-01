@@ -1,0 +1,13 @@
+{
+  "format_version": "1.21.60",
+  "minecraft:aggregate_feature": {
+    "description": {
+      "identifier": "treephysics:external_natural_root_the_end_feature"
+    },
+    "early_out": "first_success",
+    "features": [
+      "treephysics:external_natural_root_bedrock",
+      "treephysics:external_natural_root_end_stone"
+    ]
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "format_version": "1.20.30",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "treephysics:block_crack",
+      "materials": {
+        "default": "block_crack_multiply"
+      },
+      "textures": {
+        "stage_0": "textures/environment/destroy_stage_0",
+        "stage_1": "textures/environment/destroy_stage_1",
+        "stage_2": "textures/environment/destroy_stage_2",
+        "stage_3": "textures/environment/destroy_stage_3",
+        "stage_4": "textures/environment/destroy_stage_4",
+        "stage_5": "textures/environment/destroy_stage_5",
+        "stage_6": "textures/environment/destroy_stage_6",
+        "stage_7": "textures/environment/destroy_stage_7",
+        "stage_8": "textures/environment/destroy_stage_8",
+        "stage_9": "textures/environment/destroy_stage_9"
+      },
+      "geometry": {
+        "default": "geometry.treephysics.block_crack"
+      },
+      "animations": {
+        "transform": "animation.treephysics.block_crack.transform"
+      },
+      "scripts": {
+        "initialize": [
+          "v.break_stage=-1;",
+          "v.break_stage_elapsed=0;",
+          "v.pose_initialized=0;"
+        ],
+        "pre_animation": [
+          "v.break_stage_target=q.property('treephysics:break_stage');",
+          "v.break_stage_started=0;",
+          "v.break_stage_target<0?{v.break_stage=-1;v.break_stage_elapsed=0;};",
+          "v.break_stage_target>=0&&v.break_stage<0?{v.break_stage=0;v.break_stage_elapsed=0;v.break_stage_started=1;};",
+          "v.break_stage_elapsed=v.break_stage_started==0&&v.break_stage>=0&&v.break_stage<v.break_stage_target?v.break_stage_elapsed+q.delta_time:0;",
+          "v.break_stage_elapsed>=0.025?{v.break_stage=v.break_stage+1;v.break_stage_elapsed=0;};",
+          "v.pose_ready=v.break_stage>=0;",
+          "v.pitch=v.pose_ready?(v.pose_initialized?math.lerprotate(v.pitch,q.property('treephysics:pitch'),q.delta_time/0.05):q.property('treephysics:pitch')):0;",
+          "v.yaw=v.pose_ready?(v.pose_initialized?math.lerprotate(v.yaw,q.property('treephysics:yaw'),q.delta_time/0.05):q.property('treephysics:yaw')):0;",
+          "v.roll=v.pose_ready?(v.pose_initialized?math.lerprotate(v.roll,q.property('treephysics:roll'),q.delta_time/0.05):q.property('treephysics:roll')):0;",
+          "v.pose_initialized=v.pose_ready;"
+        ],
+        "animate": [
+          "transform"
+        ]
+      },
+      "render_controllers": [
+        {
+          "controller.render.treephysics.block_crack": "v.break_stage>=0"
+        }
+      ]
+    }
+  }
+}

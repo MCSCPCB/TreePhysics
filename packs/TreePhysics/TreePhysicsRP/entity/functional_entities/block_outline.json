@@ -1,0 +1,74 @@
+{
+  "format_version": "1.20.30",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "treephysics:block_outline",
+      "materials": {
+        "default": "block_outline"
+      },
+      "textures": {
+        "default": "textures/ui/white"
+      },
+      "geometry": {
+        "default": "geometry.treephysics.block_outline"
+      },
+      "animations": {
+        "transform": "animation.treephysics.block_outline.transform"
+      },
+      "scripts": {
+        "initialize": [
+          "v.pose_initialized=0;",
+          "v.outline_visible_last=0;",
+          "v.outline_fading_out=0;",
+          "v.outline_fade_start=0;",
+          "v.outline_has_shown=0;",
+          "v.e0_x=0;v.e0_y=0;v.e0_z=0;v.e0_l=0;v.e0_a=0;",
+          "v.e1_x=0;v.e1_y=0;v.e1_z=0;v.e1_l=0;v.e1_a=0;",
+          "v.e2_x=0;v.e2_y=0;v.e2_z=0;v.e2_l=0;v.e2_a=0;",
+          "v.e3_x=0;v.e3_y=0;v.e3_z=0;v.e3_l=0;v.e3_a=0;",
+          "v.e4_x=0;v.e4_y=0;v.e4_z=0;v.e4_l=0;v.e4_a=0;",
+          "v.e5_x=0;v.e5_y=0;v.e5_z=0;v.e5_l=0;v.e5_a=0;",
+          "v.e6_x=0;v.e6_y=0;v.e6_z=0;v.e6_l=0;v.e6_a=0;",
+          "v.e7_x=0;v.e7_y=0;v.e7_z=0;v.e7_l=0;v.e7_a=0;",
+          "v.e8_x=0;v.e8_y=0;v.e8_z=0;v.e8_l=0;v.e8_a=0;",
+          "v.e9_x=0;v.e9_y=0;v.e9_z=0;v.e9_l=0;v.e9_a=0;",
+          "v.e10_x=0;v.e10_y=0;v.e10_z=0;v.e10_l=0;v.e10_a=0;",
+          "v.e11_x=0;v.e11_y=0;v.e11_z=0;v.e11_l=0;v.e11_a=0;",
+          "v.e12_x=0;v.e12_y=0;v.e12_z=0;v.e12_l=0;v.e12_a=0;",
+          "v.e13_x=0;v.e13_y=0;v.e13_z=0;v.e13_l=0;v.e13_a=0;",
+          "v.e14_x=0;v.e14_y=0;v.e14_z=0;v.e14_l=0;v.e14_a=0;",
+          "v.e15_x=0;v.e15_y=0;v.e15_z=0;v.e15_l=0;v.e15_a=0;",
+          "v.e16_x=0;v.e16_y=0;v.e16_z=0;v.e16_l=0;v.e16_a=0;",
+          "v.e17_x=0;v.e17_y=0;v.e17_z=0;v.e17_l=0;v.e17_a=0;",
+          "v.e18_x=0;v.e18_y=0;v.e18_z=0;v.e18_l=0;v.e18_a=0;",
+          "v.e19_x=0;v.e19_y=0;v.e19_z=0;v.e19_l=0;v.e19_a=0;",
+          "v.e20_x=0;v.e20_y=0;v.e20_z=0;v.e20_l=0;v.e20_a=0;",
+          "v.e21_x=0;v.e21_y=0;v.e21_z=0;v.e21_l=0;v.e21_a=0;",
+          "v.e22_x=0;v.e22_y=0;v.e22_z=0;v.e22_l=0;v.e22_a=0;",
+          "v.e23_x=0;v.e23_y=0;v.e23_z=0;v.e23_l=0;v.e23_a=0;",
+          "v.e24_x=0;v.e24_y=0;v.e24_z=0;v.e24_l=0;v.e24_a=0;",
+          "v.e25_x=0;v.e25_y=0;v.e25_z=0;v.e25_l=0;v.e25_a=0;",
+          "v.e26_x=0;v.e26_y=0;v.e26_z=0;v.e26_l=0;v.e26_a=0;",
+          "v.e27_x=0;v.e27_y=0;v.e27_z=0;v.e27_l=0;v.e27_a=0;"
+        ],
+        "pre_animation": [
+          "v.pitch=v.pose_initialized?math.lerprotate(v.pitch,q.property('treephysics:pitch'),q.delta_time/0.05):q.property('treephysics:pitch');",
+          "v.yaw=v.pose_initialized?math.lerprotate(v.yaw,q.property('treephysics:yaw'),q.delta_time/0.05):q.property('treephysics:yaw');",
+          "v.roll=v.pose_initialized?math.lerprotate(v.roll,q.property('treephysics:roll'),q.delta_time/0.05):q.property('treephysics:roll');",
+          "v.pose_initialized=1;",
+          "v.outline_visible=q.property('treephysics:visible');",
+          "q.property('treephysics:block_preview')?{v.preview_x=q.property('treephysics:preview_x');v.preview_y=q.property('treephysics:preview_y');v.preview_z=q.property('treephysics:preview_z');v.preview_side=q.property('treephysics:preview_side');v.preview_min_x=v.preview_x-0.5+(v.preview_side==-1?-1:0);v.preview_min_y=v.preview_y-0.5+(v.preview_side==-2?-1:0);v.preview_min_z=v.preview_z-0.5+(v.preview_side==-3?-1:0);v.preview_max_x=v.preview_x+0.5+(v.preview_side==1?1:0);v.preview_max_y=v.preview_y+0.5+(v.preview_side==2?1:0);v.preview_max_z=v.preview_z+0.5+(v.preview_side==3?1:0);v.preview_size_x=v.preview_max_x-v.preview_min_x;v.preview_size_y=v.preview_max_y-v.preview_min_y;v.preview_size_z=v.preview_max_z-v.preview_min_z;v.e0_x=v.preview_min_x;v.e0_y=v.preview_min_y;v.e0_z=v.preview_min_z;v.e0_l=v.preview_size_x;v.e0_a=0;v.e1_x=v.preview_min_x;v.e1_y=v.preview_min_y;v.e1_z=v.preview_max_z;v.e1_l=v.preview_size_x;v.e1_a=0;v.e2_x=v.preview_min_x;v.e2_y=v.preview_max_y;v.e2_z=v.preview_min_z;v.e2_l=v.preview_size_x;v.e2_a=0;v.e3_x=v.preview_min_x;v.e3_y=v.preview_max_y;v.e3_z=v.preview_max_z;v.e3_l=v.preview_size_x;v.e3_a=0;v.e4_x=v.preview_min_x;v.e4_y=v.preview_min_y;v.e4_z=v.preview_min_z;v.e4_l=v.preview_size_y;v.e4_a=1;v.e5_x=v.preview_min_x;v.e5_y=v.preview_min_y;v.e5_z=v.preview_max_z;v.e5_l=v.preview_size_y;v.e5_a=1;v.e6_x=v.preview_max_x;v.e6_y=v.preview_min_y;v.e6_z=v.preview_min_z;v.e6_l=v.preview_size_y;v.e6_a=1;v.e7_x=v.preview_max_x;v.e7_y=v.preview_min_y;v.e7_z=v.preview_max_z;v.e7_l=v.preview_size_y;v.e7_a=1;v.e8_x=v.preview_min_x;v.e8_y=v.preview_min_y;v.e8_z=v.preview_min_z;v.e8_l=v.preview_size_z;v.e8_a=2;v.e9_x=v.preview_min_x;v.e9_y=v.preview_max_y;v.e9_z=v.preview_min_z;v.e9_l=v.preview_size_z;v.e9_a=2;v.e10_x=v.preview_max_x;v.e10_y=v.preview_min_y;v.e10_z=v.preview_min_z;v.e10_l=v.preview_size_z;v.e10_a=2;v.e11_x=v.preview_max_x;v.e11_y=v.preview_max_y;v.e11_z=v.preview_min_z;v.e11_l=v.preview_size_z;v.e11_a=2;v.e12_l=0;v.e13_l=0;v.e14_l=0;v.e15_l=0;v.e16_l=0;v.e17_l=0;v.e18_l=0;v.e19_l=0;v.e20_l=0;v.e21_l=0;v.e22_l=0;v.e23_l=0;v.e24_l=0;v.e25_l=0;v.e26_l=0;v.e27_l=0;};",
+          "v.outline_visible!=v.outline_visible_last?{v.outline_fade_start=q.life_time;v.outline_fading_out=v.outline_visible?0:1;v.outline_visible_last=v.outline_visible;v.outline_visible?{v.outline_has_shown=1;};};"
+        ],
+        "animate": [
+          "transform"
+        ]
+      },
+      "render_controllers": [
+        {
+          "controller.render.treephysics.block_outline": "v.outline_has_shown==1"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,280 @@
+{
+  "format_version": "1.10.0",
+  "render_controllers": {
+    "controller.render.treephysics.block_outline": {
+      "geometry": "Geometry.default",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Texture.default"
+      ],
+      "ignore_lighting": true,
+      "overlay_color": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": "v.outline_has_shown==0?0:(v.outline_fading_out==1?1-math.hermite_blend(math.clamp((q.life_time-v.outline_fade_start)/0.25,0,1)):math.hermite_blend(math.clamp((q.life_time-v.outline_fade_start)/0.25,0,1)))"
+      },
+      "part_visibility": [
+        {
+          "*": false
+        },
+        {
+          "edge_0_x": "v.e0_l>0&&v.e0_a==0"
+        },
+        {
+          "edge_0_y": "v.e0_l>0&&v.e0_a==1"
+        },
+        {
+          "edge_0_z": "v.e0_l>0&&v.e0_a==2"
+        },
+        {
+          "edge_1_x": "v.e1_l>0&&v.e1_a==0"
+        },
+        {
+          "edge_1_y": "v.e1_l>0&&v.e1_a==1"
+        },
+        {
+          "edge_1_z": "v.e1_l>0&&v.e1_a==2"
+        },
+        {
+          "edge_2_x": "v.e2_l>0&&v.e2_a==0"
+        },
+        {
+          "edge_2_y": "v.e2_l>0&&v.e2_a==1"
+        },
+        {
+          "edge_2_z": "v.e2_l>0&&v.e2_a==2"
+        },
+        {
+          "edge_3_x": "v.e3_l>0&&v.e3_a==0"
+        },
+        {
+          "edge_3_y": "v.e3_l>0&&v.e3_a==1"
+        },
+        {
+          "edge_3_z": "v.e3_l>0&&v.e3_a==2"
+        },
+        {
+          "edge_4_x": "v.e4_l>0&&v.e4_a==0"
+        },
+        {
+          "edge_4_y": "v.e4_l>0&&v.e4_a==1"
+        },
+        {
+          "edge_4_z": "v.e4_l>0&&v.e4_a==2"
+        },
+        {
+          "edge_5_x": "v.e5_l>0&&v.e5_a==0"
+        },
+        {
+          "edge_5_y": "v.e5_l>0&&v.e5_a==1"
+        },
+        {
+          "edge_5_z": "v.e5_l>0&&v.e5_a==2"
+        },
+        {
+          "edge_6_x": "v.e6_l>0&&v.e6_a==0"
+        },
+        {
+          "edge_6_y": "v.e6_l>0&&v.e6_a==1"
+        },
+        {
+          "edge_6_z": "v.e6_l>0&&v.e6_a==2"
+        },
+        {
+          "edge_7_x": "v.e7_l>0&&v.e7_a==0"
+        },
+        {
+          "edge_7_y": "v.e7_l>0&&v.e7_a==1"
+        },
+        {
+          "edge_7_z": "v.e7_l>0&&v.e7_a==2"
+        },
+        {
+          "edge_8_x": "v.e8_l>0&&v.e8_a==0"
+        },
+        {
+          "edge_8_y": "v.e8_l>0&&v.e8_a==1"
+        },
+        {
+          "edge_8_z": "v.e8_l>0&&v.e8_a==2"
+        },
+        {
+          "edge_9_x": "v.e9_l>0&&v.e9_a==0"
+        },
+        {
+          "edge_9_y": "v.e9_l>0&&v.e9_a==1"
+        },
+        {
+          "edge_9_z": "v.e9_l>0&&v.e9_a==2"
+        },
+        {
+          "edge_10_x": "v.e10_l>0&&v.e10_a==0"
+        },
+        {
+          "edge_10_y": "v.e10_l>0&&v.e10_a==1"
+        },
+        {
+          "edge_10_z": "v.e10_l>0&&v.e10_a==2"
+        },
+        {
+          "edge_11_x": "v.e11_l>0&&v.e11_a==0"
+        },
+        {
+          "edge_11_y": "v.e11_l>0&&v.e11_a==1"
+        },
+        {
+          "edge_11_z": "v.e11_l>0&&v.e11_a==2"
+        },
+        {
+          "edge_12_x": "v.e12_l>0&&v.e12_a==0"
+        },
+        {
+          "edge_12_y": "v.e12_l>0&&v.e12_a==1"
+        },
+        {
+          "edge_12_z": "v.e12_l>0&&v.e12_a==2"
+        },
+        {
+          "edge_13_x": "v.e13_l>0&&v.e13_a==0"
+        },
+        {
+          "edge_13_y": "v.e13_l>0&&v.e13_a==1"
+        },
+        {
+          "edge_13_z": "v.e13_l>0&&v.e13_a==2"
+        },
+        {
+          "edge_14_x": "v.e14_l>0&&v.e14_a==0"
+        },
+        {
+          "edge_14_y": "v.e14_l>0&&v.e14_a==1"
+        },
+        {
+          "edge_14_z": "v.e14_l>0&&v.e14_a==2"
+        },
+        {
+          "edge_15_x": "v.e15_l>0&&v.e15_a==0"
+        },
+        {
+          "edge_15_y": "v.e15_l>0&&v.e15_a==1"
+        },
+        {
+          "edge_15_z": "v.e15_l>0&&v.e15_a==2"
+        },
+        {
+          "edge_16_x": "v.e16_l>0&&v.e16_a==0"
+        },
+        {
+          "edge_16_y": "v.e16_l>0&&v.e16_a==1"
+        },
+        {
+          "edge_16_z": "v.e16_l>0&&v.e16_a==2"
+        },
+        {
+          "edge_17_x": "v.e17_l>0&&v.e17_a==0"
+        },
+        {
+          "edge_17_y": "v.e17_l>0&&v.e17_a==1"
+        },
+        {
+          "edge_17_z": "v.e17_l>0&&v.e17_a==2"
+        },
+        {
+          "edge_18_x": "v.e18_l>0&&v.e18_a==0"
+        },
+        {
+          "edge_18_y": "v.e18_l>0&&v.e18_a==1"
+        },
+        {
+          "edge_18_z": "v.e18_l>0&&v.e18_a==2"
+        },
+        {
+          "edge_19_x": "v.e19_l>0&&v.e19_a==0"
+        },
+        {
+          "edge_19_y": "v.e19_l>0&&v.e19_a==1"
+        },
+        {
+          "edge_19_z": "v.e19_l>0&&v.e19_a==2"
+        },
+        {
+          "edge_20_x": "v.e20_l>0&&v.e20_a==0"
+        },
+        {
+          "edge_20_y": "v.e20_l>0&&v.e20_a==1"
+        },
+        {
+          "edge_20_z": "v.e20_l>0&&v.e20_a==2"
+        },
+        {
+          "edge_21_x": "v.e21_l>0&&v.e21_a==0"
+        },
+        {
+          "edge_21_y": "v.e21_l>0&&v.e21_a==1"
+        },
+        {
+          "edge_21_z": "v.e21_l>0&&v.e21_a==2"
+        },
+        {
+          "edge_22_x": "v.e22_l>0&&v.e22_a==0"
+        },
+        {
+          "edge_22_y": "v.e22_l>0&&v.e22_a==1"
+        },
+        {
+          "edge_22_z": "v.e22_l>0&&v.e22_a==2"
+        },
+        {
+          "edge_23_x": "v.e23_l>0&&v.e23_a==0"
+        },
+        {
+          "edge_23_y": "v.e23_l>0&&v.e23_a==1"
+        },
+        {
+          "edge_23_z": "v.e23_l>0&&v.e23_a==2"
+        },
+        {
+          "edge_24_x": "v.e24_l>0&&v.e24_a==0"
+        },
+        {
+          "edge_24_y": "v.e24_l>0&&v.e24_a==1"
+        },
+        {
+          "edge_24_z": "v.e24_l>0&&v.e24_a==2"
+        },
+        {
+          "edge_25_x": "v.e25_l>0&&v.e25_a==0"
+        },
+        {
+          "edge_25_y": "v.e25_l>0&&v.e25_a==1"
+        },
+        {
+          "edge_25_z": "v.e25_l>0&&v.e25_a==2"
+        },
+        {
+          "edge_26_x": "v.e26_l>0&&v.e26_a==0"
+        },
+        {
+          "edge_26_y": "v.e26_l>0&&v.e26_a==1"
+        },
+        {
+          "edge_26_z": "v.e26_l>0&&v.e26_a==2"
+        },
+        {
+          "edge_27_x": "v.e27_l>0&&v.e27_a==0"
+        },
+        {
+          "edge_27_y": "v.e27_l>0&&v.e27_a==1"
+        },
+        {
+          "edge_27_z": "v.e27_l>0&&v.e27_a==2"
+        }
+      ]
+    }
+  }
+}

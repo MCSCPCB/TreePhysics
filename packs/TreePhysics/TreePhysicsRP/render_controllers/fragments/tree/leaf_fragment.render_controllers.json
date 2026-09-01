@@ -1,0 +1,1552 @@
+{
+  "format_version": "1.10.0",
+  "render_controllers": {
+    "controller.render.treephysics.leaf_fragment.leaves": {
+      "arrays": {
+        "textures": {
+          "Array.leaves": [
+            "Texture.leaf_oak",
+            "Texture.leaf_spruce",
+            "Texture.leaf_birch",
+            "Texture.leaf_jungle",
+            "Texture.leaf_acacia",
+            "Texture.leaf_dark_oak",
+            "Texture.leaf_cherry",
+            "Texture.leaf_mangrove",
+            "Texture.leaf_pale_oak",
+            "Texture.leaf_azalea",
+            "Texture.leaf_flowering_azalea"
+          ]
+        }
+      },
+      "geometry": "Geometry.leaves",
+      "materials": [
+        {
+          "*": "Material.leaves"
+        }
+      ],
+      "textures": [
+        "Array.leaves[math.mod(q.property('treephysics:family'), 16)]"
+      ],
+      "part_visibility": [
+        {
+          "*": false
+        },
+        {
+          "slot_0": "(math.mod(math.floor(v.l0 / 1), 2)) >= 1"
+        },
+        {
+          "slot_1": "(math.mod(math.floor(v.l0 / 2), 2)) >= 1"
+        },
+        {
+          "slot_2": "(math.mod(math.floor(v.l0 / 4), 2)) >= 1"
+        },
+        {
+          "slot_3": "(math.mod(math.floor(v.l0 / 8), 2)) >= 1"
+        },
+        {
+          "slot_4": "(math.mod(math.floor(v.l0 / 16), 2)) >= 1"
+        },
+        {
+          "slot_5": "(math.mod(math.floor(v.l0 / 32), 2)) >= 1"
+        },
+        {
+          "slot_6": "(math.mod(math.floor(v.l0 / 64), 2)) >= 1"
+        },
+        {
+          "slot_7": "(math.mod(math.floor(v.l0 / 128), 2)) >= 1"
+        },
+        {
+          "slot_8": "(math.mod(math.floor(v.l0 / 256), 2)) >= 1"
+        },
+        {
+          "slot_9": "(math.mod(math.floor(v.l0 / 512), 2)) >= 1"
+        },
+        {
+          "slot_10": "(math.mod(math.floor(v.l0 / 1024), 2)) >= 1"
+        },
+        {
+          "slot_11": "(math.mod(math.floor(v.l0 / 2048), 2)) >= 1"
+        },
+        {
+          "slot_12": "(math.mod(math.floor(v.l0 / 4096), 2)) >= 1"
+        },
+        {
+          "slot_13": "(math.mod(math.floor(v.l0 / 8192), 2)) >= 1"
+        },
+        {
+          "slot_14": "(math.mod(math.floor(v.l0 / 16384), 2)) >= 1"
+        },
+        {
+          "slot_15": "(math.mod(math.floor(v.l0 / 32768), 2)) >= 1"
+        },
+        {
+          "slot_16": "(math.mod(math.floor(v.l0 / 65536), 2)) >= 1"
+        },
+        {
+          "slot_17": "(math.mod(math.floor(v.l0 / 131072), 2)) >= 1"
+        },
+        {
+          "slot_18": "(math.mod(math.floor(v.l0 / 262144), 2)) >= 1"
+        },
+        {
+          "slot_19": "(math.mod(math.floor(v.l0 / 524288), 2)) >= 1"
+        },
+        {
+          "slot_20": "(math.mod(math.floor(v.l0 / 1048576), 2)) >= 1"
+        },
+        {
+          "slot_21": "(math.mod(math.floor(v.l0 / 2097152), 2)) >= 1"
+        },
+        {
+          "slot_22": "(math.mod(math.floor(v.l0 / 4194304), 2)) >= 1"
+        },
+        {
+          "slot_23": "(math.mod(math.floor(v.l0 / 8388608), 2)) >= 1"
+        },
+        {
+          "slot_24": "(math.mod(math.floor(v.l1 / 1), 2)) >= 1"
+        },
+        {
+          "slot_25": "(math.mod(math.floor(v.l1 / 2), 2)) >= 1"
+        },
+        {
+          "slot_26": "(math.mod(math.floor(v.l1 / 4), 2)) >= 1"
+        },
+        {
+          "slot_27": "(math.mod(math.floor(v.l1 / 8), 2)) >= 1"
+        },
+        {
+          "slot_28": "(math.mod(math.floor(v.l1 / 16), 2)) >= 1"
+        },
+        {
+          "slot_29": "(math.mod(math.floor(v.l1 / 32), 2)) >= 1"
+        },
+        {
+          "slot_30": "(math.mod(math.floor(v.l1 / 64), 2)) >= 1"
+        },
+        {
+          "slot_31": "(math.mod(math.floor(v.l1 / 128), 2)) >= 1"
+        },
+        {
+          "slot_32": "(math.mod(math.floor(v.l1 / 256), 2)) >= 1"
+        },
+        {
+          "slot_33": "(math.mod(math.floor(v.l1 / 512), 2)) >= 1"
+        },
+        {
+          "slot_34": "(math.mod(math.floor(v.l1 / 1024), 2)) >= 1"
+        },
+        {
+          "slot_35": "(math.mod(math.floor(v.l1 / 2048), 2)) >= 1"
+        },
+        {
+          "slot_36": "(math.mod(math.floor(v.l1 / 4096), 2)) >= 1"
+        },
+        {
+          "slot_37": "(math.mod(math.floor(v.l1 / 8192), 2)) >= 1"
+        },
+        {
+          "slot_38": "(math.mod(math.floor(v.l1 / 16384), 2)) >= 1"
+        },
+        {
+          "slot_39": "(math.mod(math.floor(v.l1 / 32768), 2)) >= 1"
+        },
+        {
+          "slot_40": "(math.mod(math.floor(v.l1 / 65536), 2)) >= 1"
+        },
+        {
+          "slot_41": "(math.mod(math.floor(v.l1 / 131072), 2)) >= 1"
+        },
+        {
+          "slot_42": "(math.mod(math.floor(v.l1 / 262144), 2)) >= 1"
+        },
+        {
+          "slot_43": "(math.mod(math.floor(v.l1 / 524288), 2)) >= 1"
+        },
+        {
+          "slot_44": "(math.mod(math.floor(v.l1 / 1048576), 2)) >= 1"
+        },
+        {
+          "slot_45": "(math.mod(math.floor(v.l1 / 2097152), 2)) >= 1"
+        },
+        {
+          "slot_46": "(math.mod(math.floor(v.l1 / 4194304), 2)) >= 1"
+        },
+        {
+          "slot_47": "(math.mod(math.floor(v.l1 / 8388608), 2)) >= 1"
+        },
+        {
+          "slot_48": "(math.mod(math.floor(v.l2 / 1), 2)) >= 1"
+        },
+        {
+          "slot_49": "(math.mod(math.floor(v.l2 / 2), 2)) >= 1"
+        },
+        {
+          "slot_50": "(math.mod(math.floor(v.l2 / 4), 2)) >= 1"
+        },
+        {
+          "slot_51": "(math.mod(math.floor(v.l2 / 8), 2)) >= 1"
+        },
+        {
+          "slot_52": "(math.mod(math.floor(v.l2 / 16), 2)) >= 1"
+        },
+        {
+          "slot_53": "(math.mod(math.floor(v.l2 / 32), 2)) >= 1"
+        },
+        {
+          "slot_54": "(math.mod(math.floor(v.l2 / 64), 2)) >= 1"
+        },
+        {
+          "slot_55": "(math.mod(math.floor(v.l2 / 128), 2)) >= 1"
+        },
+        {
+          "slot_56": "(math.mod(math.floor(v.l2 / 256), 2)) >= 1"
+        },
+        {
+          "slot_57": "(math.mod(math.floor(v.l2 / 512), 2)) >= 1"
+        },
+        {
+          "slot_58": "(math.mod(math.floor(v.l2 / 1024), 2)) >= 1"
+        },
+        {
+          "slot_59": "(math.mod(math.floor(v.l2 / 2048), 2)) >= 1"
+        },
+        {
+          "slot_60": "(math.mod(math.floor(v.l2 / 4096), 2)) >= 1"
+        },
+        {
+          "slot_61": "(math.mod(math.floor(v.l2 / 8192), 2)) >= 1"
+        },
+        {
+          "slot_62": "(math.mod(math.floor(v.l2 / 16384), 2)) >= 1"
+        },
+        {
+          "slot_63": "(math.mod(math.floor(v.l2 / 32768), 2)) >= 1"
+        },
+        {
+          "slot_64": "(math.mod(math.floor(v.l2 / 65536), 2)) >= 1"
+        },
+        {
+          "slot_65": "(math.mod(math.floor(v.l2 / 131072), 2)) >= 1"
+        },
+        {
+          "slot_66": "(math.mod(math.floor(v.l2 / 262144), 2)) >= 1"
+        },
+        {
+          "slot_67": "(math.mod(math.floor(v.l2 / 524288), 2)) >= 1"
+        },
+        {
+          "slot_68": "(math.mod(math.floor(v.l2 / 1048576), 2)) >= 1"
+        },
+        {
+          "slot_69": "(math.mod(math.floor(v.l2 / 2097152), 2)) >= 1"
+        },
+        {
+          "slot_70": "(math.mod(math.floor(v.l2 / 4194304), 2)) >= 1"
+        },
+        {
+          "slot_71": "(math.mod(math.floor(v.l2 / 8388608), 2)) >= 1"
+        },
+        {
+          "slot_72": "(math.mod(math.floor(v.l3 / 1), 2)) >= 1"
+        },
+        {
+          "slot_73": "(math.mod(math.floor(v.l3 / 2), 2)) >= 1"
+        },
+        {
+          "slot_74": "(math.mod(math.floor(v.l3 / 4), 2)) >= 1"
+        },
+        {
+          "slot_75": "(math.mod(math.floor(v.l3 / 8), 2)) >= 1"
+        },
+        {
+          "slot_76": "(math.mod(math.floor(v.l3 / 16), 2)) >= 1"
+        },
+        {
+          "slot_77": "(math.mod(math.floor(v.l3 / 32), 2)) >= 1"
+        },
+        {
+          "slot_78": "(math.mod(math.floor(v.l3 / 64), 2)) >= 1"
+        },
+        {
+          "slot_79": "(math.mod(math.floor(v.l3 / 128), 2)) >= 1"
+        },
+        {
+          "slot_80": "(math.mod(math.floor(v.l3 / 256), 2)) >= 1"
+        },
+        {
+          "slot_81": "(math.mod(math.floor(v.l3 / 512), 2)) >= 1"
+        },
+        {
+          "slot_82": "(math.mod(math.floor(v.l3 / 1024), 2)) >= 1"
+        },
+        {
+          "slot_83": "(math.mod(math.floor(v.l3 / 2048), 2)) >= 1"
+        },
+        {
+          "slot_84": "(math.mod(math.floor(v.l3 / 4096), 2)) >= 1"
+        },
+        {
+          "slot_85": "(math.mod(math.floor(v.l3 / 8192), 2)) >= 1"
+        },
+        {
+          "slot_86": "(math.mod(math.floor(v.l3 / 16384), 2)) >= 1"
+        },
+        {
+          "slot_87": "(math.mod(math.floor(v.l3 / 32768), 2)) >= 1"
+        },
+        {
+          "slot_88": "(math.mod(math.floor(v.l3 / 65536), 2)) >= 1"
+        },
+        {
+          "slot_89": "(math.mod(math.floor(v.l3 / 131072), 2)) >= 1"
+        },
+        {
+          "slot_90": "(math.mod(math.floor(v.l3 / 262144), 2)) >= 1"
+        },
+        {
+          "slot_91": "(math.mod(math.floor(v.l3 / 524288), 2)) >= 1"
+        },
+        {
+          "slot_92": "(math.mod(math.floor(v.l3 / 1048576), 2)) >= 1"
+        },
+        {
+          "slot_93": "(math.mod(math.floor(v.l3 / 2097152), 2)) >= 1"
+        },
+        {
+          "slot_94": "(math.mod(math.floor(v.l3 / 4194304), 2)) >= 1"
+        },
+        {
+          "slot_95": "(math.mod(math.floor(v.l3 / 8388608), 2)) >= 1"
+        },
+        {
+          "slot_96": "(math.mod(math.floor(v.l4 / 1), 2)) >= 1"
+        },
+        {
+          "slot_97": "(math.mod(math.floor(v.l4 / 2), 2)) >= 1"
+        },
+        {
+          "slot_98": "(math.mod(math.floor(v.l4 / 4), 2)) >= 1"
+        },
+        {
+          "slot_99": "(math.mod(math.floor(v.l4 / 8), 2)) >= 1"
+        },
+        {
+          "slot_100": "(math.mod(math.floor(v.l4 / 16), 2)) >= 1"
+        },
+        {
+          "slot_101": "(math.mod(math.floor(v.l4 / 32), 2)) >= 1"
+        },
+        {
+          "slot_102": "(math.mod(math.floor(v.l4 / 64), 2)) >= 1"
+        },
+        {
+          "slot_103": "(math.mod(math.floor(v.l4 / 128), 2)) >= 1"
+        },
+        {
+          "slot_104": "(math.mod(math.floor(v.l4 / 256), 2)) >= 1"
+        },
+        {
+          "slot_105": "(math.mod(math.floor(v.l4 / 512), 2)) >= 1"
+        },
+        {
+          "slot_106": "(math.mod(math.floor(v.l4 / 1024), 2)) >= 1"
+        },
+        {
+          "slot_107": "(math.mod(math.floor(v.l4 / 2048), 2)) >= 1"
+        },
+        {
+          "slot_108": "(math.mod(math.floor(v.l4 / 4096), 2)) >= 1"
+        },
+        {
+          "slot_109": "(math.mod(math.floor(v.l4 / 8192), 2)) >= 1"
+        },
+        {
+          "slot_110": "(math.mod(math.floor(v.l4 / 16384), 2)) >= 1"
+        },
+        {
+          "slot_111": "(math.mod(math.floor(v.l4 / 32768), 2)) >= 1"
+        },
+        {
+          "slot_112": "(math.mod(math.floor(v.l4 / 65536), 2)) >= 1"
+        },
+        {
+          "slot_113": "(math.mod(math.floor(v.l4 / 131072), 2)) >= 1"
+        },
+        {
+          "slot_114": "(math.mod(math.floor(v.l4 / 262144), 2)) >= 1"
+        },
+        {
+          "slot_115": "(math.mod(math.floor(v.l4 / 524288), 2)) >= 1"
+        },
+        {
+          "slot_116": "(math.mod(math.floor(v.l4 / 1048576), 2)) >= 1"
+        },
+        {
+          "slot_117": "(math.mod(math.floor(v.l4 / 2097152), 2)) >= 1"
+        },
+        {
+          "slot_118": "(math.mod(math.floor(v.l4 / 4194304), 2)) >= 1"
+        },
+        {
+          "slot_119": "(math.mod(math.floor(v.l4 / 8388608), 2)) >= 1"
+        },
+        {
+          "slot_120": "(math.mod(math.floor(v.l5 / 1), 2)) >= 1"
+        },
+        {
+          "slot_121": "(math.mod(math.floor(v.l5 / 2), 2)) >= 1"
+        },
+        {
+          "slot_122": "(math.mod(math.floor(v.l5 / 4), 2)) >= 1"
+        },
+        {
+          "slot_123": "(math.mod(math.floor(v.l5 / 8), 2)) >= 1"
+        },
+        {
+          "slot_124": "(math.mod(math.floor(v.l5 / 16), 2)) >= 1"
+        },
+        {
+          "slot_125": "(math.mod(math.floor(v.l5 / 32), 2)) >= 1"
+        },
+        {
+          "slot_126": "(math.mod(math.floor(v.l5 / 64), 2)) >= 1"
+        },
+        {
+          "slot_127": "(math.mod(math.floor(v.l5 / 128), 2)) >= 1"
+        },
+        {
+          "slot_128": "(math.mod(math.floor(v.l5 / 256), 2)) >= 1"
+        },
+        {
+          "slot_129": "(math.mod(math.floor(v.l5 / 512), 2)) >= 1"
+        },
+        {
+          "slot_130": "(math.mod(math.floor(v.l5 / 1024), 2)) >= 1"
+        },
+        {
+          "slot_131": "(math.mod(math.floor(v.l5 / 2048), 2)) >= 1"
+        },
+        {
+          "slot_132": "(math.mod(math.floor(v.l5 / 4096), 2)) >= 1"
+        },
+        {
+          "slot_133": "(math.mod(math.floor(v.l5 / 8192), 2)) >= 1"
+        },
+        {
+          "slot_134": "(math.mod(math.floor(v.l5 / 16384), 2)) >= 1"
+        },
+        {
+          "slot_135": "(math.mod(math.floor(v.l5 / 32768), 2)) >= 1"
+        },
+        {
+          "slot_136": "(math.mod(math.floor(v.l5 / 65536), 2)) >= 1"
+        },
+        {
+          "slot_137": "(math.mod(math.floor(v.l5 / 131072), 2)) >= 1"
+        },
+        {
+          "slot_138": "(math.mod(math.floor(v.l5 / 262144), 2)) >= 1"
+        },
+        {
+          "slot_139": "(math.mod(math.floor(v.l5 / 524288), 2)) >= 1"
+        },
+        {
+          "slot_140": "(math.mod(math.floor(v.l5 / 1048576), 2)) >= 1"
+        },
+        {
+          "slot_141": "(math.mod(math.floor(v.l5 / 2097152), 2)) >= 1"
+        },
+        {
+          "slot_142": "(math.mod(math.floor(v.l5 / 4194304), 2)) >= 1"
+        },
+        {
+          "slot_143": "(math.mod(math.floor(v.l5 / 8388608), 2)) >= 1"
+        },
+        {
+          "slot_144": "(math.mod(math.floor(v.l6 / 1), 2)) >= 1"
+        },
+        {
+          "slot_145": "(math.mod(math.floor(v.l6 / 2), 2)) >= 1"
+        },
+        {
+          "slot_146": "(math.mod(math.floor(v.l6 / 4), 2)) >= 1"
+        },
+        {
+          "slot_147": "(math.mod(math.floor(v.l6 / 8), 2)) >= 1"
+        },
+        {
+          "slot_148": "(math.mod(math.floor(v.l6 / 16), 2)) >= 1"
+        },
+        {
+          "slot_149": "(math.mod(math.floor(v.l6 / 32), 2)) >= 1"
+        },
+        {
+          "slot_150": "(math.mod(math.floor(v.l6 / 64), 2)) >= 1"
+        },
+        {
+          "slot_151": "(math.mod(math.floor(v.l6 / 128), 2)) >= 1"
+        },
+        {
+          "slot_152": "(math.mod(math.floor(v.l6 / 256), 2)) >= 1"
+        },
+        {
+          "slot_153": "(math.mod(math.floor(v.l6 / 512), 2)) >= 1"
+        },
+        {
+          "slot_154": "(math.mod(math.floor(v.l6 / 1024), 2)) >= 1"
+        },
+        {
+          "slot_155": "(math.mod(math.floor(v.l6 / 2048), 2)) >= 1"
+        },
+        {
+          "slot_156": "(math.mod(math.floor(v.l6 / 4096), 2)) >= 1"
+        },
+        {
+          "slot_157": "(math.mod(math.floor(v.l6 / 8192), 2)) >= 1"
+        },
+        {
+          "slot_158": "(math.mod(math.floor(v.l6 / 16384), 2)) >= 1"
+        },
+        {
+          "slot_159": "(math.mod(math.floor(v.l6 / 32768), 2)) >= 1"
+        },
+        {
+          "slot_160": "(math.mod(math.floor(v.l6 / 65536), 2)) >= 1"
+        },
+        {
+          "slot_161": "(math.mod(math.floor(v.l6 / 131072), 2)) >= 1"
+        },
+        {
+          "slot_162": "(math.mod(math.floor(v.l6 / 262144), 2)) >= 1"
+        },
+        {
+          "slot_163": "(math.mod(math.floor(v.l6 / 524288), 2)) >= 1"
+        },
+        {
+          "slot_164": "(math.mod(math.floor(v.l6 / 1048576), 2)) >= 1"
+        },
+        {
+          "slot_165": "(math.mod(math.floor(v.l6 / 2097152), 2)) >= 1"
+        },
+        {
+          "slot_166": "(math.mod(math.floor(v.l6 / 4194304), 2)) >= 1"
+        },
+        {
+          "slot_167": "(math.mod(math.floor(v.l6 / 8388608), 2)) >= 1"
+        },
+        {
+          "slot_168": "(math.mod(math.floor(v.l7 / 1), 2)) >= 1"
+        },
+        {
+          "slot_169": "(math.mod(math.floor(v.l7 / 2), 2)) >= 1"
+        },
+        {
+          "slot_170": "(math.mod(math.floor(v.l7 / 4), 2)) >= 1"
+        },
+        {
+          "slot_171": "(math.mod(math.floor(v.l7 / 8), 2)) >= 1"
+        },
+        {
+          "slot_172": "(math.mod(math.floor(v.l7 / 16), 2)) >= 1"
+        },
+        {
+          "slot_173": "(math.mod(math.floor(v.l7 / 32), 2)) >= 1"
+        },
+        {
+          "slot_174": "(math.mod(math.floor(v.l7 / 64), 2)) >= 1"
+        },
+        {
+          "slot_175": "(math.mod(math.floor(v.l7 / 128), 2)) >= 1"
+        },
+        {
+          "slot_176": "(math.mod(math.floor(v.l7 / 256), 2)) >= 1"
+        },
+        {
+          "slot_177": "(math.mod(math.floor(v.l7 / 512), 2)) >= 1"
+        },
+        {
+          "slot_178": "(math.mod(math.floor(v.l7 / 1024), 2)) >= 1"
+        },
+        {
+          "slot_179": "(math.mod(math.floor(v.l7 / 2048), 2)) >= 1"
+        },
+        {
+          "slot_180": "(math.mod(math.floor(v.l7 / 4096), 2)) >= 1"
+        },
+        {
+          "slot_181": "(math.mod(math.floor(v.l7 / 8192), 2)) >= 1"
+        },
+        {
+          "slot_182": "(math.mod(math.floor(v.l7 / 16384), 2)) >= 1"
+        },
+        {
+          "slot_183": "(math.mod(math.floor(v.l7 / 32768), 2)) >= 1"
+        },
+        {
+          "slot_184": "(math.mod(math.floor(v.l7 / 65536), 2)) >= 1"
+        },
+        {
+          "slot_185": "(math.mod(math.floor(v.l7 / 131072), 2)) >= 1"
+        },
+        {
+          "slot_186": "(math.mod(math.floor(v.l7 / 262144), 2)) >= 1"
+        },
+        {
+          "slot_187": "(math.mod(math.floor(v.l7 / 524288), 2)) >= 1"
+        },
+        {
+          "slot_188": "(math.mod(math.floor(v.l7 / 1048576), 2)) >= 1"
+        },
+        {
+          "slot_189": "(math.mod(math.floor(v.l7 / 2097152), 2)) >= 1"
+        },
+        {
+          "slot_190": "(math.mod(math.floor(v.l7 / 4194304), 2)) >= 1"
+        },
+        {
+          "slot_191": "(math.mod(math.floor(v.l7 / 8388608), 2)) >= 1"
+        },
+        {
+          "slot_192": "(math.mod(math.floor(v.l8 / 1), 2)) >= 1"
+        },
+        {
+          "slot_193": "(math.mod(math.floor(v.l8 / 2), 2)) >= 1"
+        },
+        {
+          "slot_194": "(math.mod(math.floor(v.l8 / 4), 2)) >= 1"
+        },
+        {
+          "slot_195": "(math.mod(math.floor(v.l8 / 8), 2)) >= 1"
+        },
+        {
+          "slot_196": "(math.mod(math.floor(v.l8 / 16), 2)) >= 1"
+        },
+        {
+          "slot_197": "(math.mod(math.floor(v.l8 / 32), 2)) >= 1"
+        },
+        {
+          "slot_198": "(math.mod(math.floor(v.l8 / 64), 2)) >= 1"
+        },
+        {
+          "slot_199": "(math.mod(math.floor(v.l8 / 128), 2)) >= 1"
+        },
+        {
+          "slot_200": "(math.mod(math.floor(v.l8 / 256), 2)) >= 1"
+        },
+        {
+          "slot_201": "(math.mod(math.floor(v.l8 / 512), 2)) >= 1"
+        },
+        {
+          "slot_202": "(math.mod(math.floor(v.l8 / 1024), 2)) >= 1"
+        },
+        {
+          "slot_203": "(math.mod(math.floor(v.l8 / 2048), 2)) >= 1"
+        },
+        {
+          "slot_204": "(math.mod(math.floor(v.l8 / 4096), 2)) >= 1"
+        },
+        {
+          "slot_205": "(math.mod(math.floor(v.l8 / 8192), 2)) >= 1"
+        },
+        {
+          "slot_206": "(math.mod(math.floor(v.l8 / 16384), 2)) >= 1"
+        },
+        {
+          "slot_207": "(math.mod(math.floor(v.l8 / 32768), 2)) >= 1"
+        },
+        {
+          "slot_208": "(math.mod(math.floor(v.l8 / 65536), 2)) >= 1"
+        },
+        {
+          "slot_209": "(math.mod(math.floor(v.l8 / 131072), 2)) >= 1"
+        },
+        {
+          "slot_210": "(math.mod(math.floor(v.l8 / 262144), 2)) >= 1"
+        },
+        {
+          "slot_211": "(math.mod(math.floor(v.l8 / 524288), 2)) >= 1"
+        },
+        {
+          "slot_212": "(math.mod(math.floor(v.l8 / 1048576), 2)) >= 1"
+        },
+        {
+          "slot_213": "(math.mod(math.floor(v.l8 / 2097152), 2)) >= 1"
+        },
+        {
+          "slot_214": "(math.mod(math.floor(v.l8 / 4194304), 2)) >= 1"
+        },
+        {
+          "slot_215": "(math.mod(math.floor(v.l8 / 8388608), 2)) >= 1"
+        },
+        {
+          "slot_216": "(math.mod(math.floor(v.l9 / 1), 2)) >= 1"
+        },
+        {
+          "slot_217": "(math.mod(math.floor(v.l9 / 2), 2)) >= 1"
+        },
+        {
+          "slot_218": "(math.mod(math.floor(v.l9 / 4), 2)) >= 1"
+        },
+        {
+          "slot_219": "(math.mod(math.floor(v.l9 / 8), 2)) >= 1"
+        },
+        {
+          "slot_220": "(math.mod(math.floor(v.l9 / 16), 2)) >= 1"
+        },
+        {
+          "slot_221": "(math.mod(math.floor(v.l9 / 32), 2)) >= 1"
+        },
+        {
+          "slot_222": "(math.mod(math.floor(v.l9 / 64), 2)) >= 1"
+        },
+        {
+          "slot_223": "(math.mod(math.floor(v.l9 / 128), 2)) >= 1"
+        },
+        {
+          "slot_224": "(math.mod(math.floor(v.l9 / 256), 2)) >= 1"
+        },
+        {
+          "slot_225": "(math.mod(math.floor(v.l9 / 512), 2)) >= 1"
+        },
+        {
+          "slot_226": "(math.mod(math.floor(v.l9 / 1024), 2)) >= 1"
+        },
+        {
+          "slot_227": "(math.mod(math.floor(v.l9 / 2048), 2)) >= 1"
+        },
+        {
+          "slot_228": "(math.mod(math.floor(v.l9 / 4096), 2)) >= 1"
+        },
+        {
+          "slot_229": "(math.mod(math.floor(v.l9 / 8192), 2)) >= 1"
+        },
+        {
+          "slot_230": "(math.mod(math.floor(v.l9 / 16384), 2)) >= 1"
+        },
+        {
+          "slot_231": "(math.mod(math.floor(v.l9 / 32768), 2)) >= 1"
+        },
+        {
+          "slot_232": "(math.mod(math.floor(v.l9 / 65536), 2)) >= 1"
+        },
+        {
+          "slot_233": "(math.mod(math.floor(v.l9 / 131072), 2)) >= 1"
+        },
+        {
+          "slot_234": "(math.mod(math.floor(v.l9 / 262144), 2)) >= 1"
+        },
+        {
+          "slot_235": "(math.mod(math.floor(v.l9 / 524288), 2)) >= 1"
+        },
+        {
+          "slot_236": "(math.mod(math.floor(v.l9 / 1048576), 2)) >= 1"
+        },
+        {
+          "slot_237": "(math.mod(math.floor(v.l9 / 2097152), 2)) >= 1"
+        },
+        {
+          "slot_238": "(math.mod(math.floor(v.l9 / 4194304), 2)) >= 1"
+        },
+        {
+          "slot_239": "(math.mod(math.floor(v.l9 / 8388608), 2)) >= 1"
+        },
+        {
+          "slot_240": "(math.mod(math.floor(v.l10 / 1), 2)) >= 1"
+        },
+        {
+          "slot_241": "(math.mod(math.floor(v.l10 / 2), 2)) >= 1"
+        },
+        {
+          "slot_242": "(math.mod(math.floor(v.l10 / 4), 2)) >= 1"
+        },
+        {
+          "slot_243": "(math.mod(math.floor(v.l10 / 8), 2)) >= 1"
+        },
+        {
+          "slot_244": "(math.mod(math.floor(v.l10 / 16), 2)) >= 1"
+        }
+      ]
+    },
+    "controller.render.treephysics.leaf_fragment.foliage_colormap": {
+      "arrays": {
+        "geometries": {
+          "Array.foliage_colormap": [
+            "Geometry.foliage_colormap_x",
+            "Geometry.foliage_colormap_z"
+          ]
+        },
+        "textures": {
+          "Array.colormaps": [
+            "Texture.colormap_foliage",
+            "Texture.colormap_swamp_foliage",
+            "Texture.colormap_mangrove_swamp_foliage",
+            "Texture.colormap_birch",
+            "Texture.colormap_evergreen",
+            "Texture.colormap_foliage_fixed"
+          ]
+        }
+      },
+      "geometry": "Array.foliage_colormap[v.tint_axis_z]",
+      "materials": [
+        {
+          "*": "Material.foliage_colormap"
+        }
+      ],
+      "textures": [
+        "Array.colormaps[math.max(0, (v.tint_kind) - 1)]"
+      ],
+      "part_visibility": [
+        {
+          "*": false
+        },
+        {
+          "slot_0": "(math.mod(math.floor(v.l0 / 1), 2)) >= 1"
+        },
+        {
+          "slot_1": "(math.mod(math.floor(v.l0 / 2), 2)) >= 1"
+        },
+        {
+          "slot_2": "(math.mod(math.floor(v.l0 / 4), 2)) >= 1"
+        },
+        {
+          "slot_3": "(math.mod(math.floor(v.l0 / 8), 2)) >= 1"
+        },
+        {
+          "slot_4": "(math.mod(math.floor(v.l0 / 16), 2)) >= 1"
+        },
+        {
+          "slot_5": "(math.mod(math.floor(v.l0 / 32), 2)) >= 1"
+        },
+        {
+          "slot_6": "(math.mod(math.floor(v.l0 / 64), 2)) >= 1"
+        },
+        {
+          "slot_7": "(math.mod(math.floor(v.l0 / 128), 2)) >= 1"
+        },
+        {
+          "slot_8": "(math.mod(math.floor(v.l0 / 256), 2)) >= 1"
+        },
+        {
+          "slot_9": "(math.mod(math.floor(v.l0 / 512), 2)) >= 1"
+        },
+        {
+          "slot_10": "(math.mod(math.floor(v.l0 / 1024), 2)) >= 1"
+        },
+        {
+          "slot_11": "(math.mod(math.floor(v.l0 / 2048), 2)) >= 1"
+        },
+        {
+          "slot_12": "(math.mod(math.floor(v.l0 / 4096), 2)) >= 1"
+        },
+        {
+          "slot_13": "(math.mod(math.floor(v.l0 / 8192), 2)) >= 1"
+        },
+        {
+          "slot_14": "(math.mod(math.floor(v.l0 / 16384), 2)) >= 1"
+        },
+        {
+          "slot_15": "(math.mod(math.floor(v.l0 / 32768), 2)) >= 1"
+        },
+        {
+          "slot_16": "(math.mod(math.floor(v.l0 / 65536), 2)) >= 1"
+        },
+        {
+          "slot_17": "(math.mod(math.floor(v.l0 / 131072), 2)) >= 1"
+        },
+        {
+          "slot_18": "(math.mod(math.floor(v.l0 / 262144), 2)) >= 1"
+        },
+        {
+          "slot_19": "(math.mod(math.floor(v.l0 / 524288), 2)) >= 1"
+        },
+        {
+          "slot_20": "(math.mod(math.floor(v.l0 / 1048576), 2)) >= 1"
+        },
+        {
+          "slot_21": "(math.mod(math.floor(v.l0 / 2097152), 2)) >= 1"
+        },
+        {
+          "slot_22": "(math.mod(math.floor(v.l0 / 4194304), 2)) >= 1"
+        },
+        {
+          "slot_23": "(math.mod(math.floor(v.l0 / 8388608), 2)) >= 1"
+        },
+        {
+          "slot_24": "(math.mod(math.floor(v.l1 / 1), 2)) >= 1"
+        },
+        {
+          "slot_25": "(math.mod(math.floor(v.l1 / 2), 2)) >= 1"
+        },
+        {
+          "slot_26": "(math.mod(math.floor(v.l1 / 4), 2)) >= 1"
+        },
+        {
+          "slot_27": "(math.mod(math.floor(v.l1 / 8), 2)) >= 1"
+        },
+        {
+          "slot_28": "(math.mod(math.floor(v.l1 / 16), 2)) >= 1"
+        },
+        {
+          "slot_29": "(math.mod(math.floor(v.l1 / 32), 2)) >= 1"
+        },
+        {
+          "slot_30": "(math.mod(math.floor(v.l1 / 64), 2)) >= 1"
+        },
+        {
+          "slot_31": "(math.mod(math.floor(v.l1 / 128), 2)) >= 1"
+        },
+        {
+          "slot_32": "(math.mod(math.floor(v.l1 / 256), 2)) >= 1"
+        },
+        {
+          "slot_33": "(math.mod(math.floor(v.l1 / 512), 2)) >= 1"
+        },
+        {
+          "slot_34": "(math.mod(math.floor(v.l1 / 1024), 2)) >= 1"
+        },
+        {
+          "slot_35": "(math.mod(math.floor(v.l1 / 2048), 2)) >= 1"
+        },
+        {
+          "slot_36": "(math.mod(math.floor(v.l1 / 4096), 2)) >= 1"
+        },
+        {
+          "slot_37": "(math.mod(math.floor(v.l1 / 8192), 2)) >= 1"
+        },
+        {
+          "slot_38": "(math.mod(math.floor(v.l1 / 16384), 2)) >= 1"
+        },
+        {
+          "slot_39": "(math.mod(math.floor(v.l1 / 32768), 2)) >= 1"
+        },
+        {
+          "slot_40": "(math.mod(math.floor(v.l1 / 65536), 2)) >= 1"
+        },
+        {
+          "slot_41": "(math.mod(math.floor(v.l1 / 131072), 2)) >= 1"
+        },
+        {
+          "slot_42": "(math.mod(math.floor(v.l1 / 262144), 2)) >= 1"
+        },
+        {
+          "slot_43": "(math.mod(math.floor(v.l1 / 524288), 2)) >= 1"
+        },
+        {
+          "slot_44": "(math.mod(math.floor(v.l1 / 1048576), 2)) >= 1"
+        },
+        {
+          "slot_45": "(math.mod(math.floor(v.l1 / 2097152), 2)) >= 1"
+        },
+        {
+          "slot_46": "(math.mod(math.floor(v.l1 / 4194304), 2)) >= 1"
+        },
+        {
+          "slot_47": "(math.mod(math.floor(v.l1 / 8388608), 2)) >= 1"
+        },
+        {
+          "slot_48": "(math.mod(math.floor(v.l2 / 1), 2)) >= 1"
+        },
+        {
+          "slot_49": "(math.mod(math.floor(v.l2 / 2), 2)) >= 1"
+        },
+        {
+          "slot_50": "(math.mod(math.floor(v.l2 / 4), 2)) >= 1"
+        },
+        {
+          "slot_51": "(math.mod(math.floor(v.l2 / 8), 2)) >= 1"
+        },
+        {
+          "slot_52": "(math.mod(math.floor(v.l2 / 16), 2)) >= 1"
+        },
+        {
+          "slot_53": "(math.mod(math.floor(v.l2 / 32), 2)) >= 1"
+        },
+        {
+          "slot_54": "(math.mod(math.floor(v.l2 / 64), 2)) >= 1"
+        },
+        {
+          "slot_55": "(math.mod(math.floor(v.l2 / 128), 2)) >= 1"
+        },
+        {
+          "slot_56": "(math.mod(math.floor(v.l2 / 256), 2)) >= 1"
+        },
+        {
+          "slot_57": "(math.mod(math.floor(v.l2 / 512), 2)) >= 1"
+        },
+        {
+          "slot_58": "(math.mod(math.floor(v.l2 / 1024), 2)) >= 1"
+        },
+        {
+          "slot_59": "(math.mod(math.floor(v.l2 / 2048), 2)) >= 1"
+        },
+        {
+          "slot_60": "(math.mod(math.floor(v.l2 / 4096), 2)) >= 1"
+        },
+        {
+          "slot_61": "(math.mod(math.floor(v.l2 / 8192), 2)) >= 1"
+        },
+        {
+          "slot_62": "(math.mod(math.floor(v.l2 / 16384), 2)) >= 1"
+        },
+        {
+          "slot_63": "(math.mod(math.floor(v.l2 / 32768), 2)) >= 1"
+        },
+        {
+          "slot_64": "(math.mod(math.floor(v.l2 / 65536), 2)) >= 1"
+        },
+        {
+          "slot_65": "(math.mod(math.floor(v.l2 / 131072), 2)) >= 1"
+        },
+        {
+          "slot_66": "(math.mod(math.floor(v.l2 / 262144), 2)) >= 1"
+        },
+        {
+          "slot_67": "(math.mod(math.floor(v.l2 / 524288), 2)) >= 1"
+        },
+        {
+          "slot_68": "(math.mod(math.floor(v.l2 / 1048576), 2)) >= 1"
+        },
+        {
+          "slot_69": "(math.mod(math.floor(v.l2 / 2097152), 2)) >= 1"
+        },
+        {
+          "slot_70": "(math.mod(math.floor(v.l2 / 4194304), 2)) >= 1"
+        },
+        {
+          "slot_71": "(math.mod(math.floor(v.l2 / 8388608), 2)) >= 1"
+        },
+        {
+          "slot_72": "(math.mod(math.floor(v.l3 / 1), 2)) >= 1"
+        },
+        {
+          "slot_73": "(math.mod(math.floor(v.l3 / 2), 2)) >= 1"
+        },
+        {
+          "slot_74": "(math.mod(math.floor(v.l3 / 4), 2)) >= 1"
+        },
+        {
+          "slot_75": "(math.mod(math.floor(v.l3 / 8), 2)) >= 1"
+        },
+        {
+          "slot_76": "(math.mod(math.floor(v.l3 / 16), 2)) >= 1"
+        },
+        {
+          "slot_77": "(math.mod(math.floor(v.l3 / 32), 2)) >= 1"
+        },
+        {
+          "slot_78": "(math.mod(math.floor(v.l3 / 64), 2)) >= 1"
+        },
+        {
+          "slot_79": "(math.mod(math.floor(v.l3 / 128), 2)) >= 1"
+        },
+        {
+          "slot_80": "(math.mod(math.floor(v.l3 / 256), 2)) >= 1"
+        },
+        {
+          "slot_81": "(math.mod(math.floor(v.l3 / 512), 2)) >= 1"
+        },
+        {
+          "slot_82": "(math.mod(math.floor(v.l3 / 1024), 2)) >= 1"
+        },
+        {
+          "slot_83": "(math.mod(math.floor(v.l3 / 2048), 2)) >= 1"
+        },
+        {
+          "slot_84": "(math.mod(math.floor(v.l3 / 4096), 2)) >= 1"
+        },
+        {
+          "slot_85": "(math.mod(math.floor(v.l3 / 8192), 2)) >= 1"
+        },
+        {
+          "slot_86": "(math.mod(math.floor(v.l3 / 16384), 2)) >= 1"
+        },
+        {
+          "slot_87": "(math.mod(math.floor(v.l3 / 32768), 2)) >= 1"
+        },
+        {
+          "slot_88": "(math.mod(math.floor(v.l3 / 65536), 2)) >= 1"
+        },
+        {
+          "slot_89": "(math.mod(math.floor(v.l3 / 131072), 2)) >= 1"
+        },
+        {
+          "slot_90": "(math.mod(math.floor(v.l3 / 262144), 2)) >= 1"
+        },
+        {
+          "slot_91": "(math.mod(math.floor(v.l3 / 524288), 2)) >= 1"
+        },
+        {
+          "slot_92": "(math.mod(math.floor(v.l3 / 1048576), 2)) >= 1"
+        },
+        {
+          "slot_93": "(math.mod(math.floor(v.l3 / 2097152), 2)) >= 1"
+        },
+        {
+          "slot_94": "(math.mod(math.floor(v.l3 / 4194304), 2)) >= 1"
+        },
+        {
+          "slot_95": "(math.mod(math.floor(v.l3 / 8388608), 2)) >= 1"
+        },
+        {
+          "slot_96": "(math.mod(math.floor(v.l4 / 1), 2)) >= 1"
+        },
+        {
+          "slot_97": "(math.mod(math.floor(v.l4 / 2), 2)) >= 1"
+        },
+        {
+          "slot_98": "(math.mod(math.floor(v.l4 / 4), 2)) >= 1"
+        },
+        {
+          "slot_99": "(math.mod(math.floor(v.l4 / 8), 2)) >= 1"
+        },
+        {
+          "slot_100": "(math.mod(math.floor(v.l4 / 16), 2)) >= 1"
+        },
+        {
+          "slot_101": "(math.mod(math.floor(v.l4 / 32), 2)) >= 1"
+        },
+        {
+          "slot_102": "(math.mod(math.floor(v.l4 / 64), 2)) >= 1"
+        },
+        {
+          "slot_103": "(math.mod(math.floor(v.l4 / 128), 2)) >= 1"
+        },
+        {
+          "slot_104": "(math.mod(math.floor(v.l4 / 256), 2)) >= 1"
+        },
+        {
+          "slot_105": "(math.mod(math.floor(v.l4 / 512), 2)) >= 1"
+        },
+        {
+          "slot_106": "(math.mod(math.floor(v.l4 / 1024), 2)) >= 1"
+        },
+        {
+          "slot_107": "(math.mod(math.floor(v.l4 / 2048), 2)) >= 1"
+        },
+        {
+          "slot_108": "(math.mod(math.floor(v.l4 / 4096), 2)) >= 1"
+        },
+        {
+          "slot_109": "(math.mod(math.floor(v.l4 / 8192), 2)) >= 1"
+        },
+        {
+          "slot_110": "(math.mod(math.floor(v.l4 / 16384), 2)) >= 1"
+        },
+        {
+          "slot_111": "(math.mod(math.floor(v.l4 / 32768), 2)) >= 1"
+        },
+        {
+          "slot_112": "(math.mod(math.floor(v.l4 / 65536), 2)) >= 1"
+        },
+        {
+          "slot_113": "(math.mod(math.floor(v.l4 / 131072), 2)) >= 1"
+        },
+        {
+          "slot_114": "(math.mod(math.floor(v.l4 / 262144), 2)) >= 1"
+        },
+        {
+          "slot_115": "(math.mod(math.floor(v.l4 / 524288), 2)) >= 1"
+        },
+        {
+          "slot_116": "(math.mod(math.floor(v.l4 / 1048576), 2)) >= 1"
+        },
+        {
+          "slot_117": "(math.mod(math.floor(v.l4 / 2097152), 2)) >= 1"
+        },
+        {
+          "slot_118": "(math.mod(math.floor(v.l4 / 4194304), 2)) >= 1"
+        },
+        {
+          "slot_119": "(math.mod(math.floor(v.l4 / 8388608), 2)) >= 1"
+        },
+        {
+          "slot_120": "(math.mod(math.floor(v.l5 / 1), 2)) >= 1"
+        },
+        {
+          "slot_121": "(math.mod(math.floor(v.l5 / 2), 2)) >= 1"
+        },
+        {
+          "slot_122": "(math.mod(math.floor(v.l5 / 4), 2)) >= 1"
+        },
+        {
+          "slot_123": "(math.mod(math.floor(v.l5 / 8), 2)) >= 1"
+        },
+        {
+          "slot_124": "(math.mod(math.floor(v.l5 / 16), 2)) >= 1"
+        },
+        {
+          "slot_125": "(math.mod(math.floor(v.l5 / 32), 2)) >= 1"
+        },
+        {
+          "slot_126": "(math.mod(math.floor(v.l5 / 64), 2)) >= 1"
+        },
+        {
+          "slot_127": "(math.mod(math.floor(v.l5 / 128), 2)) >= 1"
+        },
+        {
+          "slot_128": "(math.mod(math.floor(v.l5 / 256), 2)) >= 1"
+        },
+        {
+          "slot_129": "(math.mod(math.floor(v.l5 / 512), 2)) >= 1"
+        },
+        {
+          "slot_130": "(math.mod(math.floor(v.l5 / 1024), 2)) >= 1"
+        },
+        {
+          "slot_131": "(math.mod(math.floor(v.l5 / 2048), 2)) >= 1"
+        },
+        {
+          "slot_132": "(math.mod(math.floor(v.l5 / 4096), 2)) >= 1"
+        },
+        {
+          "slot_133": "(math.mod(math.floor(v.l5 / 8192), 2)) >= 1"
+        },
+        {
+          "slot_134": "(math.mod(math.floor(v.l5 / 16384), 2)) >= 1"
+        },
+        {
+          "slot_135": "(math.mod(math.floor(v.l5 / 32768), 2)) >= 1"
+        },
+        {
+          "slot_136": "(math.mod(math.floor(v.l5 / 65536), 2)) >= 1"
+        },
+        {
+          "slot_137": "(math.mod(math.floor(v.l5 / 131072), 2)) >= 1"
+        },
+        {
+          "slot_138": "(math.mod(math.floor(v.l5 / 262144), 2)) >= 1"
+        },
+        {
+          "slot_139": "(math.mod(math.floor(v.l5 / 524288), 2)) >= 1"
+        },
+        {
+          "slot_140": "(math.mod(math.floor(v.l5 / 1048576), 2)) >= 1"
+        },
+        {
+          "slot_141": "(math.mod(math.floor(v.l5 / 2097152), 2)) >= 1"
+        },
+        {
+          "slot_142": "(math.mod(math.floor(v.l5 / 4194304), 2)) >= 1"
+        },
+        {
+          "slot_143": "(math.mod(math.floor(v.l5 / 8388608), 2)) >= 1"
+        },
+        {
+          "slot_144": "(math.mod(math.floor(v.l6 / 1), 2)) >= 1"
+        },
+        {
+          "slot_145": "(math.mod(math.floor(v.l6 / 2), 2)) >= 1"
+        },
+        {
+          "slot_146": "(math.mod(math.floor(v.l6 / 4), 2)) >= 1"
+        },
+        {
+          "slot_147": "(math.mod(math.floor(v.l6 / 8), 2)) >= 1"
+        },
+        {
+          "slot_148": "(math.mod(math.floor(v.l6 / 16), 2)) >= 1"
+        },
+        {
+          "slot_149": "(math.mod(math.floor(v.l6 / 32), 2)) >= 1"
+        },
+        {
+          "slot_150": "(math.mod(math.floor(v.l6 / 64), 2)) >= 1"
+        },
+        {
+          "slot_151": "(math.mod(math.floor(v.l6 / 128), 2)) >= 1"
+        },
+        {
+          "slot_152": "(math.mod(math.floor(v.l6 / 256), 2)) >= 1"
+        },
+        {
+          "slot_153": "(math.mod(math.floor(v.l6 / 512), 2)) >= 1"
+        },
+        {
+          "slot_154": "(math.mod(math.floor(v.l6 / 1024), 2)) >= 1"
+        },
+        {
+          "slot_155": "(math.mod(math.floor(v.l6 / 2048), 2)) >= 1"
+        },
+        {
+          "slot_156": "(math.mod(math.floor(v.l6 / 4096), 2)) >= 1"
+        },
+        {
+          "slot_157": "(math.mod(math.floor(v.l6 / 8192), 2)) >= 1"
+        },
+        {
+          "slot_158": "(math.mod(math.floor(v.l6 / 16384), 2)) >= 1"
+        },
+        {
+          "slot_159": "(math.mod(math.floor(v.l6 / 32768), 2)) >= 1"
+        },
+        {
+          "slot_160": "(math.mod(math.floor(v.l6 / 65536), 2)) >= 1"
+        },
+        {
+          "slot_161": "(math.mod(math.floor(v.l6 / 131072), 2)) >= 1"
+        },
+        {
+          "slot_162": "(math.mod(math.floor(v.l6 / 262144), 2)) >= 1"
+        },
+        {
+          "slot_163": "(math.mod(math.floor(v.l6 / 524288), 2)) >= 1"
+        },
+        {
+          "slot_164": "(math.mod(math.floor(v.l6 / 1048576), 2)) >= 1"
+        },
+        {
+          "slot_165": "(math.mod(math.floor(v.l6 / 2097152), 2)) >= 1"
+        },
+        {
+          "slot_166": "(math.mod(math.floor(v.l6 / 4194304), 2)) >= 1"
+        },
+        {
+          "slot_167": "(math.mod(math.floor(v.l6 / 8388608), 2)) >= 1"
+        },
+        {
+          "slot_168": "(math.mod(math.floor(v.l7 / 1), 2)) >= 1"
+        },
+        {
+          "slot_169": "(math.mod(math.floor(v.l7 / 2), 2)) >= 1"
+        },
+        {
+          "slot_170": "(math.mod(math.floor(v.l7 / 4), 2)) >= 1"
+        },
+        {
+          "slot_171": "(math.mod(math.floor(v.l7 / 8), 2)) >= 1"
+        },
+        {
+          "slot_172": "(math.mod(math.floor(v.l7 / 16), 2)) >= 1"
+        },
+        {
+          "slot_173": "(math.mod(math.floor(v.l7 / 32), 2)) >= 1"
+        },
+        {
+          "slot_174": "(math.mod(math.floor(v.l7 / 64), 2)) >= 1"
+        },
+        {
+          "slot_175": "(math.mod(math.floor(v.l7 / 128), 2)) >= 1"
+        },
+        {
+          "slot_176": "(math.mod(math.floor(v.l7 / 256), 2)) >= 1"
+        },
+        {
+          "slot_177": "(math.mod(math.floor(v.l7 / 512), 2)) >= 1"
+        },
+        {
+          "slot_178": "(math.mod(math.floor(v.l7 / 1024), 2)) >= 1"
+        },
+        {
+          "slot_179": "(math.mod(math.floor(v.l7 / 2048), 2)) >= 1"
+        },
+        {
+          "slot_180": "(math.mod(math.floor(v.l7 / 4096), 2)) >= 1"
+        },
+        {
+          "slot_181": "(math.mod(math.floor(v.l7 / 8192), 2)) >= 1"
+        },
+        {
+          "slot_182": "(math.mod(math.floor(v.l7 / 16384), 2)) >= 1"
+        },
+        {
+          "slot_183": "(math.mod(math.floor(v.l7 / 32768), 2)) >= 1"
+        },
+        {
+          "slot_184": "(math.mod(math.floor(v.l7 / 65536), 2)) >= 1"
+        },
+        {
+          "slot_185": "(math.mod(math.floor(v.l7 / 131072), 2)) >= 1"
+        },
+        {
+          "slot_186": "(math.mod(math.floor(v.l7 / 262144), 2)) >= 1"
+        },
+        {
+          "slot_187": "(math.mod(math.floor(v.l7 / 524288), 2)) >= 1"
+        },
+        {
+          "slot_188": "(math.mod(math.floor(v.l7 / 1048576), 2)) >= 1"
+        },
+        {
+          "slot_189": "(math.mod(math.floor(v.l7 / 2097152), 2)) >= 1"
+        },
+        {
+          "slot_190": "(math.mod(math.floor(v.l7 / 4194304), 2)) >= 1"
+        },
+        {
+          "slot_191": "(math.mod(math.floor(v.l7 / 8388608), 2)) >= 1"
+        },
+        {
+          "slot_192": "(math.mod(math.floor(v.l8 / 1), 2)) >= 1"
+        },
+        {
+          "slot_193": "(math.mod(math.floor(v.l8 / 2), 2)) >= 1"
+        },
+        {
+          "slot_194": "(math.mod(math.floor(v.l8 / 4), 2)) >= 1"
+        },
+        {
+          "slot_195": "(math.mod(math.floor(v.l8 / 8), 2)) >= 1"
+        },
+        {
+          "slot_196": "(math.mod(math.floor(v.l8 / 16), 2)) >= 1"
+        },
+        {
+          "slot_197": "(math.mod(math.floor(v.l8 / 32), 2)) >= 1"
+        },
+        {
+          "slot_198": "(math.mod(math.floor(v.l8 / 64), 2)) >= 1"
+        },
+        {
+          "slot_199": "(math.mod(math.floor(v.l8 / 128), 2)) >= 1"
+        },
+        {
+          "slot_200": "(math.mod(math.floor(v.l8 / 256), 2)) >= 1"
+        },
+        {
+          "slot_201": "(math.mod(math.floor(v.l8 / 512), 2)) >= 1"
+        },
+        {
+          "slot_202": "(math.mod(math.floor(v.l8 / 1024), 2)) >= 1"
+        },
+        {
+          "slot_203": "(math.mod(math.floor(v.l8 / 2048), 2)) >= 1"
+        },
+        {
+          "slot_204": "(math.mod(math.floor(v.l8 / 4096), 2)) >= 1"
+        },
+        {
+          "slot_205": "(math.mod(math.floor(v.l8 / 8192), 2)) >= 1"
+        },
+        {
+          "slot_206": "(math.mod(math.floor(v.l8 / 16384), 2)) >= 1"
+        },
+        {
+          "slot_207": "(math.mod(math.floor(v.l8 / 32768), 2)) >= 1"
+        },
+        {
+          "slot_208": "(math.mod(math.floor(v.l8 / 65536), 2)) >= 1"
+        },
+        {
+          "slot_209": "(math.mod(math.floor(v.l8 / 131072), 2)) >= 1"
+        },
+        {
+          "slot_210": "(math.mod(math.floor(v.l8 / 262144), 2)) >= 1"
+        },
+        {
+          "slot_211": "(math.mod(math.floor(v.l8 / 524288), 2)) >= 1"
+        },
+        {
+          "slot_212": "(math.mod(math.floor(v.l8 / 1048576), 2)) >= 1"
+        },
+        {
+          "slot_213": "(math.mod(math.floor(v.l8 / 2097152), 2)) >= 1"
+        },
+        {
+          "slot_214": "(math.mod(math.floor(v.l8 / 4194304), 2)) >= 1"
+        },
+        {
+          "slot_215": "(math.mod(math.floor(v.l8 / 8388608), 2)) >= 1"
+        },
+        {
+          "slot_216": "(math.mod(math.floor(v.l9 / 1), 2)) >= 1"
+        },
+        {
+          "slot_217": "(math.mod(math.floor(v.l9 / 2), 2)) >= 1"
+        },
+        {
+          "slot_218": "(math.mod(math.floor(v.l9 / 4), 2)) >= 1"
+        },
+        {
+          "slot_219": "(math.mod(math.floor(v.l9 / 8), 2)) >= 1"
+        },
+        {
+          "slot_220": "(math.mod(math.floor(v.l9 / 16), 2)) >= 1"
+        },
+        {
+          "slot_221": "(math.mod(math.floor(v.l9 / 32), 2)) >= 1"
+        },
+        {
+          "slot_222": "(math.mod(math.floor(v.l9 / 64), 2)) >= 1"
+        },
+        {
+          "slot_223": "(math.mod(math.floor(v.l9 / 128), 2)) >= 1"
+        },
+        {
+          "slot_224": "(math.mod(math.floor(v.l9 / 256), 2)) >= 1"
+        },
+        {
+          "slot_225": "(math.mod(math.floor(v.l9 / 512), 2)) >= 1"
+        },
+        {
+          "slot_226": "(math.mod(math.floor(v.l9 / 1024), 2)) >= 1"
+        },
+        {
+          "slot_227": "(math.mod(math.floor(v.l9 / 2048), 2)) >= 1"
+        },
+        {
+          "slot_228": "(math.mod(math.floor(v.l9 / 4096), 2)) >= 1"
+        },
+        {
+          "slot_229": "(math.mod(math.floor(v.l9 / 8192), 2)) >= 1"
+        },
+        {
+          "slot_230": "(math.mod(math.floor(v.l9 / 16384), 2)) >= 1"
+        },
+        {
+          "slot_231": "(math.mod(math.floor(v.l9 / 32768), 2)) >= 1"
+        },
+        {
+          "slot_232": "(math.mod(math.floor(v.l9 / 65536), 2)) >= 1"
+        },
+        {
+          "slot_233": "(math.mod(math.floor(v.l9 / 131072), 2)) >= 1"
+        },
+        {
+          "slot_234": "(math.mod(math.floor(v.l9 / 262144), 2)) >= 1"
+        },
+        {
+          "slot_235": "(math.mod(math.floor(v.l9 / 524288), 2)) >= 1"
+        },
+        {
+          "slot_236": "(math.mod(math.floor(v.l9 / 1048576), 2)) >= 1"
+        },
+        {
+          "slot_237": "(math.mod(math.floor(v.l9 / 2097152), 2)) >= 1"
+        },
+        {
+          "slot_238": "(math.mod(math.floor(v.l9 / 4194304), 2)) >= 1"
+        },
+        {
+          "slot_239": "(math.mod(math.floor(v.l9 / 8388608), 2)) >= 1"
+        },
+        {
+          "slot_240": "(math.mod(math.floor(v.l10 / 1), 2)) >= 1"
+        },
+        {
+          "slot_241": "(math.mod(math.floor(v.l10 / 2), 2)) >= 1"
+        },
+        {
+          "slot_242": "(math.mod(math.floor(v.l10 / 4), 2)) >= 1"
+        },
+        {
+          "slot_243": "(math.mod(math.floor(v.l10 / 8), 2)) >= 1"
+        },
+        {
+          "slot_244": "(math.mod(math.floor(v.l10 / 16), 2)) >= 1"
+        }
+      ],
+      "uv_anim": {
+        "offset": [
+          "v.tint_uniform ? (v.tint_pixel_u + 0.5) / 256 : (0.5 + (v.tint_0) * 255 / 31) / 256",
+          "v.tint_uniform ? (v.tint_pixel_v + 0.5) / 256 : (0.5 + (v.tint_1) * 255 / 31) / 256"
+        ],
+        "scale": [
+          "v.tint_uniform ? 0 : ((v.tint_2) - (v.tint_0)) * 255 / 7936",
+          "v.tint_uniform ? 0 : ((v.tint_3) - (v.tint_1)) * 255 / 7936"
+        ]
+      }
+    }
+  }
+}

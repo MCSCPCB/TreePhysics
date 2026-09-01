@@ -1,0 +1,33 @@
+{
+  "format_version": "1.21.60",
+  "minecraft:feature_rules": {
+    "description": {
+      "identifier": "treephysics:external_natural_root_feature",
+      "places_feature": "treephysics:external_natural_root_placement"
+    },
+    "conditions": {
+      "placement_pass": "final_pass",
+      "minecraft:biome_filter": {
+        "all_of": [
+          {
+            "test": "has_biome_tag",
+            "operator": "not",
+            "value": "nether"
+          },
+          {
+            "test": "has_biome_tag",
+            "operator": "not",
+            "value": "the_end"
+          }
+        ]
+      }
+    },
+    "distribution": {
+      "iterations": 1,
+      "coordinate_eval_order": "xzy",
+      "x": 0,
+      "y": 0,
+      "z": 0
+    }
+  }
+}

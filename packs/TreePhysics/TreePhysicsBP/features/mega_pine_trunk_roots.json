@@ -1,0 +1,27 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:scatter_feature": {
+    "description": {
+      "identifier": "treephysics:mega_pine_trunk_roots"
+    },
+    "iterations": 4,
+    "coordinate_eval_order": "xzy",
+    "x": {
+      "distribution": "fixed_grid",
+      "extent": [
+        0,
+        1
+      ]
+    },
+    "y": -1,
+    "z": {
+      "distribution": "fixed_grid",
+      "extent": [
+        0,
+        1
+      ]
+    },
+    "project_input_to_floor": false,
+    "places_feature": "treephysics:mega_pine_trunk_root"
+  }
+}

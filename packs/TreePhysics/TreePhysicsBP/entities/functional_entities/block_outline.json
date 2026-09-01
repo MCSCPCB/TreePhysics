@@ -1,0 +1,122 @@
+{
+  "format_version": "1.20.30",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "treephysics:block_outline",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "runtime_identifier": "minecraft:arrow",
+      "properties": {
+        "treephysics:pitch": {
+          "type": "float",
+          "range": [
+            -400.0,
+            400.0
+          ],
+          "client_sync": true,
+          "default": "0"
+        },
+        "treephysics:yaw": {
+          "type": "float",
+          "range": [
+            -400.0,
+            400.0
+          ],
+          "client_sync": true,
+          "default": "0"
+        },
+        "treephysics:roll": {
+          "type": "float",
+          "range": [
+            -400.0,
+            400.0
+          ],
+          "client_sync": true,
+          "default": "0"
+        },
+        "treephysics:block_preview": {
+          "type": "bool",
+          "client_sync": true,
+          "default": false
+        },
+        "treephysics:preview_x": {
+          "type": "float",
+          "range": [
+            -8192.0,
+            8192.0
+          ],
+          "client_sync": true,
+          "default": "0"
+        },
+        "treephysics:preview_y": {
+          "type": "float",
+          "range": [
+            -8192.0,
+            8192.0
+          ],
+          "client_sync": true,
+          "default": "0"
+        },
+        "treephysics:preview_z": {
+          "type": "float",
+          "range": [
+            -8192.0,
+            8192.0
+          ],
+          "client_sync": true,
+          "default": "0"
+        },
+        "treephysics:preview_side": {
+          "type": "int",
+          "range": [
+            -3,
+            3
+          ],
+          "client_sync": true,
+          "default": 0
+        },
+        "treephysics:visible": {
+          "type": "bool",
+          "client_sync": true,
+          "default": false
+        }
+      }
+    },
+    "components": {
+      "minecraft:type_family": {
+        "family": [
+          "fragment",
+          "block",
+          "block_outline",
+          "inanimate"
+        ]
+      },
+      "minecraft:collision_box": {
+        "height": 0,
+        "width": 0
+      },
+      "minecraft:damage_sensor": {
+        "triggers": [
+          {
+            "cause": "all",
+            "deals_damage": false
+          }
+        ]
+      },
+      "minecraft:fire_immune": {},
+      "minecraft:persistent": {},
+      "minecraft:physics": {
+        "has_collision": false,
+        "has_gravity": false
+      },
+      "minecraft:pushable": {
+        "is_pushable": false,
+        "is_pushable_by_piston": false
+      },
+      "minecraft:conditional_bandwidth_optimization": {
+        "conditional_values": [],
+        "default_values": {}
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "pools": [
+    {
+      "entries": [
+        {
+          "name": "minecraft:sand",
+          "type": "item"
+        }
+      ],
+      "rolls": 1
+    }
+  ]
+}

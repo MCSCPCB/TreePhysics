@@ -1,0 +1,13 @@
+{
+  "pools": [
+    {
+      "entries": [
+        {
+          "name": "minecraft:netherrack",
+          "type": "item"
+        }
+      ],
+      "rolls": 1
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "format_version": 3,
+  "metadata": {
+    "authors": [
+      "MINECRAFT-SCPCB"
+    ],
+    "product_type": "addon"
+  },
+  "header": {
+    "name": "pack.name",
+    "description": "pack.description",
+    "uuid": "b6228a4d-7118-4f75-9009-213fe0b8ef81",
+    "version": "0.2.1",
+    "min_engine_version": "1.26.30"
+  },
+  "modules": [
+    {
+      "type": "data",
+      "uuid": "7552c51d-b127-467d-af18-1838836ed0d7",
+      "version": "0.2.1"
+    },
+    {
+      "type": "script",
+      "language": "javascript",
+      "entry": "scripts/main.js",
+      "uuid": "d7262f84-f2c1-4c9e-9646-5d30d3bc9667",
+      "version": "0.2.1"
+    }
+  ],
+  "dependencies": [
+    {
+      "uuid": "2bb3c2a3-3fa9-4d6b-a6f0-747a437076c9",
+      "version": "0.2.1"
+    },
+    {
+      "module_name": "@minecraft/server",
+      "version": "2.8.0"
+    },
+    {
+      "module_name": "@minecraft/server-ui",
+      "version": "2.1.0"
+    }
+  ]
+}

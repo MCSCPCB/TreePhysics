@@ -1,0 +1,30 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:single_block_feature": {
+    "description": {
+      "identifier": "treephysics:natural_root_coarse_dirt"
+    },
+    "places_block": {
+      "name": "treephysics:natural_tree_root",
+      "states": {
+        "treephysics:soil_variant": 1
+      }
+    },
+    "enforce_survivability_rules": false,
+    "enforce_placement_rules": false,
+    "may_replace": [
+      {
+        "name": "minecraft:dirt",
+        "states": {
+          "dirt_type": "coarse"
+        }
+      },
+      {
+        "name": "treephysics:natural_tree_root",
+        "states": {
+          "treephysics:soil_variant": 1
+        }
+      }
+    ]
+  }
+}

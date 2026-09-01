@@ -1,0 +1,84 @@
+{
+  "entity_sounds": {
+    "entities": {
+      "treephysics:chest": {
+        "events": {
+          "hurt": "treephysics.empty",
+          "death": "treephysics.empty"
+        }
+      },
+      "treephysics:cube_fragment_0": {
+        "events": {
+          "hurt": "treephysics.empty",
+          "death": "treephysics.empty"
+        }
+      },
+      "treephysics:block": {
+        "events": {
+          "hurt": "treephysics.empty",
+          "death": "treephysics.empty"
+        }
+      },
+      "treephysics:block_crack": {
+        "events": {
+          "hurt": "treephysics.empty",
+          "death": "treephysics.empty"
+        }
+      },
+      "treephysics:block_carrier": {
+        "events": {
+          "hurt": "treephysics.empty",
+          "death": "treephysics.empty"
+        }
+      },
+      "treephysics:block_outline": {
+        "events": {
+          "hurt": "treephysics.empty",
+          "death": "treephysics.empty"
+        }
+      },
+      "treephysics:fragment_carrier": {
+        "events": {
+          "hurt": "treephysics.empty",
+          "death": "treephysics.empty"
+        }
+      },
+      "treephysics:attachment_fragment": {
+        "events": {
+          "hurt": "treephysics.empty",
+          "death": "treephysics.empty"
+        }
+      },
+      "treephysics:block_collider": {
+        "events": {
+          "hurt": "treephysics.empty",
+          "death": "treephysics.empty"
+        }
+      },
+      "treephysics:compact_leaf_fragment": {
+        "events": {
+          "hurt": "treephysics.empty",
+          "death": "treephysics.empty"
+        }
+      },
+      "treephysics:leaf_fragment": {
+        "events": {
+          "hurt": "treephysics.empty",
+          "death": "treephysics.empty"
+        }
+      },
+      "treephysics:log_fragment": {
+        "events": {
+          "hurt": "treephysics.empty",
+          "death": "treephysics.empty"
+        }
+      },
+      "treephysics:tall_log_fragment": {
+        "events": {
+          "hurt": "treephysics.empty",
+          "death": "treephysics.empty"
+        }
+      }
+    }
+  }
+}

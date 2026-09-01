@@ -1,0 +1,10 @@
+{
+  "format_version": [
+    1,
+    1,
+    0
+  ],
+  "treephysics:natural_tree_root": {
+    "sound": "gravel"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:single_block_feature": {
+    "description": {
+      "identifier": "treephysics:natural_root_mud"
+    },
+    "places_block": {
+      "name": "treephysics:natural_tree_root",
+      "states": {
+        "treephysics:soil_variant": 2
+      }
+    },
+    "enforce_survivability_rules": false,
+    "enforce_placement_rules": false,
+    "may_replace": [
+      "minecraft:mud",
+      "minecraft:clay",
+      "minecraft:dirt",
+      {
+        "name": "minecraft:dirt",
+        "states": {
+          "dirt_type": "coarse"
+        }
+      },
+      "minecraft:grass",
+      "minecraft:podzol",
+      "minecraft:dirt_with_roots",
+      "minecraft:mycelium",
+      {
+        "name": "treephysics:natural_tree_root",
+        "states": {
+          "treephysics:soil_variant": 0
+        }
+      },
+      {
+        "name": "treephysics:natural_tree_root",
+        "states": {
+          "treephysics:soil_variant": 1
+        }
+      },
+      {
+        "name": "treephysics:natural_tree_root",
+        "states": {
+          "treephysics:soil_variant": 2
+        }
+      },
+      {
+        "name": "treephysics:natural_tree_root",
+        "states": {
+          "treephysics:soil_variant": 3
+        }
+      },
+      {
+        "name": "treephysics:natural_tree_root",
+        "states": {
+          "treephysics:soil_variant": 4
+        }
+      }
+    ]
+  }
+}

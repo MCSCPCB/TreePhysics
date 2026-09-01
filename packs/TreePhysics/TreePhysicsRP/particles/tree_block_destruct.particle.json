@@ -1,0 +1,341 @@
+{
+	"format_version": "1.10.0",
+	"particle_effect": {
+		"description": {
+			"identifier": "treephysics:tree_block_destruct",
+			"basic_render_parameters": {
+				"material": "particles_alpha",
+				"texture": "textures/particle/particles"
+			}
+		},
+		"events": {
+			"route_tree_block_destruct": {
+				"sequence": [
+					{
+						"expression": "t.block_type_id=v.block_type_id??0;t.block_color_r=v.block_color.r;t.block_color_g=v.block_color.g;t.block_color_b=v.block_color.b;t.block_color_a=v.block_color.a;"
+					},
+					{
+						"particle_effect": {
+							"effect": "treephysics:tree_block_destruct_oak_log",
+							"type": "emitter",
+							"pre_effect_expression": "v.activation_flag=t.block_type_id==1;v.block_color_r=t.block_color_r;v.block_color_g=t.block_color_g;v.block_color_b=t.block_color_b;v.block_color_a=t.block_color_a;"
+						}
+					},
+					{
+						"particle_effect": {
+							"effect": "treephysics:tree_block_destruct_stripped_oak_log",
+							"type": "emitter",
+							"pre_effect_expression": "v.activation_flag=t.block_type_id==2;v.block_color_r=t.block_color_r;v.block_color_g=t.block_color_g;v.block_color_b=t.block_color_b;v.block_color_a=t.block_color_a;"
+						}
+					},
+					{
+						"particle_effect": {
+							"effect": "treephysics:tree_block_destruct_spruce_log",
+							"type": "emitter",
+							"pre_effect_expression": "v.activation_flag=t.block_type_id==3;v.block_color_r=t.block_color_r;v.block_color_g=t.block_color_g;v.block_color_b=t.block_color_b;v.block_color_a=t.block_color_a;"
+						}
+					},
+					{
+						"particle_effect": {
+							"effect": "treephysics:tree_block_destruct_stripped_spruce_log",
+							"type": "emitter",
+							"pre_effect_expression": "v.activation_flag=t.block_type_id==4;v.block_color_r=t.block_color_r;v.block_color_g=t.block_color_g;v.block_color_b=t.block_color_b;v.block_color_a=t.block_color_a;"
+						}
+					},
+					{
+						"particle_effect": {
+							"effect": "treephysics:tree_block_destruct_birch_log",
+							"type": "emitter",
+							"pre_effect_expression": "v.activation_flag=t.block_type_id==5;v.block_color_r=t.block_color_r;v.block_color_g=t.block_color_g;v.block_color_b=t.block_color_b;v.block_color_a=t.block_color_a;"
+						}
+					},
+					{
+						"particle_effect": {
+							"effect": "treephysics:tree_block_destruct_stripped_birch_log",
+							"type": "emitter",
+							"pre_effect_expression": "v.activation_flag=t.block_type_id==6;v.block_color_r=t.block_color_r;v.block_color_g=t.block_color_g;v.block_color_b=t.block_color_b;v.block_color_a=t.block_color_a;"
+						}
+					},
+					{
+						"particle_effect": {
+							"effect": "treephysics:tree_block_destruct_jungle_log",
+							"type": "emitter",
+							"pre_effect_expression": "v.activation_flag=t.block_type_id==7;v.block_color_r=t.block_color_r;v.block_color_g=t.block_color_g;v.block_color_b=t.block_color_b;v.block_color_a=t.block_color_a;"
+						}
+					},
+					{
+						"particle_effect": {
+							"effect": "treephysics:tree_block_destruct_stripped_jungle_log",
+							"type": "emitter",
+							"pre_effect_expression": "v.activation_flag=t.block_type_id==8;v.block_color_r=t.block_color_r;v.block_color_g=t.block_color_g;v.block_color_b=t.block_color_b;v.block_color_a=t.block_color_a;"
+						}
+					},
+					{
+						"particle_effect": {
+							"effect": "treephysics:tree_block_destruct_acacia_log",
+							"type": "emitter",
+							"pre_effect_expression": "v.activation_flag=t.block_type_id==9;v.block_color_r=t.block_color_r;v.block_color_g=t.block_color_g;v.block_color_b=t.block_color_b;v.block_color_a=t.block_color_a;"
+						}
+					},
+					{
+						"particle_effect": {
+							"effect": "treephysics:tree_block_destruct_stripped_acacia_log",
+							"type": "emitter",
+							"pre_effect_expression": "v.activation_flag=t.block_type_id==10;v.block_color_r=t.block_color_r;v.block_color_g=t.block_color_g;v.block_color_b=t.block_color_b;v.block_color_a=t.block_color_a;"
+						}
+					},
+					{
+						"particle_effect": {
+							"effect": "treephysics:tree_block_destruct_dark_oak_log",
+							"type": "emitter",
+							"pre_effect_expression": "v.activation_flag=t.block_type_id==11;v.block_color_r=t.block_color_r;v.block_color_g=t.block_color_g;v.block_color_b=t.block_color_b;v.block_color_a=t.block_color_a;"
+						}
+					},
+					{
+						"particle_effect": {
+							"effect": "treephysics:tree_block_destruct_stripped_dark_oak_log",
+							"type": "emitter",
+							"pre_effect_expression": "v.activation_flag=t.block_type_id==12;v.block_color_r=t.block_color_r;v.block_color_g=t.block_color_g;v.block_color_b=t.block_color_b;v.block_color_a=t.block_color_a;"
+						}
+					},
+					{
+						"particle_effect": {
+							"effect": "treephysics:tree_block_destruct_cherry_log",
+							"type": "emitter",
+							"pre_effect_expression": "v.activation_flag=t.block_type_id==13;v.block_color_r=t.block_color_r;v.block_color_g=t.block_color_g;v.block_color_b=t.block_color_b;v.block_color_a=t.block_color_a;"
+						}
+					},
+					{
+						"particle_effect": {
+							"effect": "treephysics:tree_block_destruct_stripped_cherry_log",
+							"type": "emitter",
+							"pre_effect_expression": "v.activation_flag=t.block_type_id==14;v.block_color_r=t.block_color_r;v.block_color_g=t.block_color_g;v.block_color_b=t.block_color_b;v.block_color_a=t.block_color_a;"
+						}
+					},
+					{
+						"particle_effect": {
+							"effect": "treephysics:tree_block_destruct_mangrove_log",
+							"type": "emitter",
+							"pre_effect_expression": "v.activation_flag=t.block_type_id==15;v.block_color_r=t.block_color_r;v.block_color_g=t.block_color_g;v.block_color_b=t.block_color_b;v.block_color_a=t.block_color_a;"
+						}
+					},
+					{
+						"particle_effect": {
+							"effect": "treephysics:tree_block_destruct_stripped_mangrove_log",
+							"type": "emitter",
+							"pre_effect_expression": "v.activation_flag=t.block_type_id==16;v.block_color_r=t.block_color_r;v.block_color_g=t.block_color_g;v.block_color_b=t.block_color_b;v.block_color_a=t.block_color_a;"
+						}
+					},
+					{
+						"particle_effect": {
+							"effect": "treephysics:tree_block_destruct_pale_oak_log",
+							"type": "emitter",
+							"pre_effect_expression": "v.activation_flag=t.block_type_id==17;v.block_color_r=t.block_color_r;v.block_color_g=t.block_color_g;v.block_color_b=t.block_color_b;v.block_color_a=t.block_color_a;"
+						}
+					},
+					{
+						"particle_effect": {
+							"effect": "treephysics:tree_block_destruct_stripped_pale_oak_log",
+							"type": "emitter",
+							"pre_effect_expression": "v.activation_flag=t.block_type_id==18;v.block_color_r=t.block_color_r;v.block_color_g=t.block_color_g;v.block_color_b=t.block_color_b;v.block_color_a=t.block_color_a;"
+						}
+					},
+					{
+						"particle_effect": {
+							"effect": "treephysics:tree_block_destruct_oak_leaves",
+							"type": "emitter",
+							"pre_effect_expression": "v.activation_flag=t.block_type_id==19;v.block_color_r=t.block_color_r;v.block_color_g=t.block_color_g;v.block_color_b=t.block_color_b;v.block_color_a=t.block_color_a;"
+						}
+					},
+					{
+						"particle_effect": {
+							"effect": "treephysics:tree_block_destruct_spruce_leaves",
+							"type": "emitter",
+							"pre_effect_expression": "v.activation_flag=t.block_type_id==20;v.block_color_r=t.block_color_r;v.block_color_g=t.block_color_g;v.block_color_b=t.block_color_b;v.block_color_a=t.block_color_a;"
+						}
+					},
+					{
+						"particle_effect": {
+							"effect": "treephysics:tree_block_destruct_birch_leaves",
+							"type": "emitter",
+							"pre_effect_expression": "v.activation_flag=t.block_type_id==21;v.block_color_r=t.block_color_r;v.block_color_g=t.block_color_g;v.block_color_b=t.block_color_b;v.block_color_a=t.block_color_a;"
+						}
+					},
+					{
+						"particle_effect": {
+							"effect": "treephysics:tree_block_destruct_jungle_leaves",
+							"type": "emitter",
+							"pre_effect_expression": "v.activation_flag=t.block_type_id==22;v.block_color_r=t.block_color_r;v.block_color_g=t.block_color_g;v.block_color_b=t.block_color_b;v.block_color_a=t.block_color_a;"
+						}
+					},
+					{
+						"particle_effect": {
+							"effect": "treephysics:tree_block_destruct_acacia_leaves",
+							"type": "emitter",
+							"pre_effect_expression": "v.activation_flag=t.block_type_id==23;v.block_color_r=t.block_color_r;v.block_color_g=t.block_color_g;v.block_color_b=t.block_color_b;v.block_color_a=t.block_color_a;"
+						}
+					},
+					{
+						"particle_effect": {
+							"effect": "treephysics:tree_block_destruct_dark_oak_leaves",
+							"type": "emitter",
+							"pre_effect_expression": "v.activation_flag=t.block_type_id==24;v.block_color_r=t.block_color_r;v.block_color_g=t.block_color_g;v.block_color_b=t.block_color_b;v.block_color_a=t.block_color_a;"
+						}
+					},
+					{
+						"particle_effect": {
+							"effect": "treephysics:tree_block_destruct_cherry_leaves",
+							"type": "emitter",
+							"pre_effect_expression": "v.activation_flag=t.block_type_id==25;v.block_color_r=t.block_color_r;v.block_color_g=t.block_color_g;v.block_color_b=t.block_color_b;v.block_color_a=t.block_color_a;"
+						}
+					},
+					{
+						"particle_effect": {
+							"effect": "treephysics:tree_block_destruct_mangrove_leaves",
+							"type": "emitter",
+							"pre_effect_expression": "v.activation_flag=t.block_type_id==26;v.block_color_r=t.block_color_r;v.block_color_g=t.block_color_g;v.block_color_b=t.block_color_b;v.block_color_a=t.block_color_a;"
+						}
+					},
+					{
+						"particle_effect": {
+							"effect": "treephysics:tree_block_destruct_pale_oak_leaves",
+							"type": "emitter",
+							"pre_effect_expression": "v.activation_flag=t.block_type_id==27;v.block_color_r=t.block_color_r;v.block_color_g=t.block_color_g;v.block_color_b=t.block_color_b;v.block_color_a=t.block_color_a;"
+						}
+					},
+					{
+						"particle_effect": {
+							"effect": "treephysics:tree_block_destruct_azalea_leaves",
+							"type": "emitter",
+							"pre_effect_expression": "v.activation_flag=t.block_type_id==28;v.block_color_r=t.block_color_r;v.block_color_g=t.block_color_g;v.block_color_b=t.block_color_b;v.block_color_a=t.block_color_a;"
+						}
+					},
+					{
+						"particle_effect": {
+							"effect": "treephysics:tree_block_destruct_flowering_azalea_leaves",
+							"type": "emitter",
+							"pre_effect_expression": "v.activation_flag=t.block_type_id==29;v.block_color_r=t.block_color_r;v.block_color_g=t.block_color_g;v.block_color_b=t.block_color_b;v.block_color_a=t.block_color_a;"
+						}
+					},
+					{
+						"particle_effect": {
+							"effect": "treephysics:tree_block_destruct_bee_nest_side",
+							"type": "emitter",
+							"pre_effect_expression": "v.activation_flag=t.block_type_id==30;v.block_color_r=t.block_color_r;v.block_color_g=t.block_color_g;v.block_color_b=t.block_color_b;v.block_color_a=t.block_color_a;"
+						}
+					},
+					{
+						"particle_effect": {
+							"effect": "treephysics:tree_block_destruct_cocoa_stage_0",
+							"type": "emitter",
+							"pre_effect_expression": "v.activation_flag=t.block_type_id==31;v.block_color_r=t.block_color_r;v.block_color_g=t.block_color_g;v.block_color_b=t.block_color_b;v.block_color_a=t.block_color_a;"
+						}
+					},
+					{
+						"particle_effect": {
+							"effect": "treephysics:tree_block_destruct_cocoa_stage_1",
+							"type": "emitter",
+							"pre_effect_expression": "v.activation_flag=t.block_type_id==32;v.block_color_r=t.block_color_r;v.block_color_g=t.block_color_g;v.block_color_b=t.block_color_b;v.block_color_a=t.block_color_a;"
+						}
+					},
+					{
+						"particle_effect": {
+							"effect": "treephysics:tree_block_destruct_cocoa_stage_2",
+							"type": "emitter",
+							"pre_effect_expression": "v.activation_flag=t.block_type_id==33;v.block_color_r=t.block_color_r;v.block_color_g=t.block_color_g;v.block_color_b=t.block_color_b;v.block_color_a=t.block_color_a;"
+						}
+					},
+					{
+						"particle_effect": {
+							"effect": "treephysics:tree_block_destruct_hanging_roots",
+							"type": "emitter",
+							"pre_effect_expression": "v.activation_flag=t.block_type_id==34;v.block_color_r=t.block_color_r;v.block_color_g=t.block_color_g;v.block_color_b=t.block_color_b;v.block_color_a=t.block_color_a;"
+						}
+					},
+					{
+						"particle_effect": {
+							"effect": "treephysics:tree_block_destruct_mangrove_propagule",
+							"type": "emitter",
+							"pre_effect_expression": "v.activation_flag=t.block_type_id==35;v.block_color_r=t.block_color_r;v.block_color_g=t.block_color_g;v.block_color_b=t.block_color_b;v.block_color_a=t.block_color_a;"
+						}
+					},
+					{
+						"particle_effect": {
+							"effect": "treephysics:tree_block_destruct_pale_hanging_moss_middle",
+							"type": "emitter",
+							"pre_effect_expression": "v.activation_flag=t.block_type_id==36;v.block_color_r=t.block_color_r;v.block_color_g=t.block_color_g;v.block_color_b=t.block_color_b;v.block_color_a=t.block_color_a;"
+						}
+					},
+					{
+						"particle_effect": {
+							"effect": "treephysics:tree_block_destruct_pale_hanging_moss_tip",
+							"type": "emitter",
+							"pre_effect_expression": "v.activation_flag=t.block_type_id==37;v.block_color_r=t.block_color_r;v.block_color_g=t.block_color_g;v.block_color_b=t.block_color_b;v.block_color_a=t.block_color_a;"
+						}
+					},
+					{
+						"particle_effect": {
+							"effect": "treephysics:tree_block_destruct_vine",
+							"type": "emitter",
+							"pre_effect_expression": "v.activation_flag=t.block_type_id==38;v.block_color_r=t.block_color_r;v.block_color_g=t.block_color_g;v.block_color_b=t.block_color_b;v.block_color_a=t.block_color_a;"
+						}
+					},
+					{
+						"particle_effect": {
+							"effect": "treephysics:tree_block_destruct_mangrove_roots_side",
+							"type": "emitter",
+							"pre_effect_expression": "v.activation_flag=t.block_type_id==39;v.block_color_r=t.block_color_r;v.block_color_g=t.block_color_g;v.block_color_b=t.block_color_b;v.block_color_a=t.block_color_a;"
+						}
+					},
+					{
+						"particle_effect": {
+							"effect": "treephysics:tree_block_destruct_muddy_mangrove_roots_side",
+							"type": "emitter",
+							"pre_effect_expression": "v.activation_flag=t.block_type_id==40;v.block_color_r=t.block_color_r;v.block_color_g=t.block_color_g;v.block_color_b=t.block_color_b;v.block_color_a=t.block_color_a;"
+						}
+					},
+					{
+						"particle_effect": {
+							"effect": "treephysics:tree_block_destruct_creaking_heart_inactive",
+							"type": "emitter",
+							"pre_effect_expression": "v.activation_flag=t.block_type_id==41;v.block_color_r=t.block_color_r;v.block_color_g=t.block_color_g;v.block_color_b=t.block_color_b;v.block_color_a=t.block_color_a;"
+						}
+					},
+					{
+						"particle_effect": {
+							"effect": "treephysics:tree_block_destruct_creaking_heart_dormant",
+							"type": "emitter",
+							"pre_effect_expression": "v.activation_flag=t.block_type_id==42;v.block_color_r=t.block_color_r;v.block_color_g=t.block_color_g;v.block_color_b=t.block_color_b;v.block_color_a=t.block_color_a;"
+						}
+					},
+					{
+						"particle_effect": {
+							"effect": "treephysics:tree_block_destruct_creaking_heart_active",
+							"type": "emitter",
+							"pre_effect_expression": "v.activation_flag=t.block_type_id==43;v.block_color_r=t.block_color_r;v.block_color_g=t.block_color_g;v.block_color_b=t.block_color_b;v.block_color_a=t.block_color_a;"
+						}
+					}
+				]
+			}
+		},
+		"components": {
+			"minecraft:emitter_rate_instant": {
+				"num_particles": 0
+			},
+			"minecraft:emitter_lifetime_once": {},
+			"minecraft:emitter_lifetime_events": {
+				"creation_event": "route_tree_block_destruct"
+			},
+			"minecraft:emitter_shape_point": {},
+			"minecraft:particle_lifetime_expression": {
+				"max_lifetime": 1
+			},
+			"minecraft:particle_appearance_billboard": {
+				"size": [
+					0,
+					0
+				]
+			}
+		}
+	}
+}

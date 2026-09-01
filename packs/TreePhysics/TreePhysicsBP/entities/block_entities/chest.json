@@ -1,0 +1,71 @@
+{
+  "format_version": "1.20.30",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "treephysics:chest",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+    "component_groups": {
+      "treephysics:chest_active": {
+        "minecraft:collision_box": {
+          "width": 1.25,
+          "height": 1.25
+        }
+      },
+      "treephysics:chest_inactive": {
+        "minecraft:collision_box": {
+          "width": 0.0,
+          "height": 0.0
+        }
+      }
+    },
+    "components": {
+      "minecraft:collision_box": {
+        "width": 0,
+        "height": 0
+      },
+      "minecraft:damage_sensor": {
+        "triggers": [
+          {
+            "cause": "all",
+            "deals_damage": false
+          }
+        ]
+      },
+      "minecraft:inventory": {
+        "inventory_size": 27,
+        "can_be_siphoned_from": true,
+        "container_type": "minecart_chest"
+      },
+      "minecraft:persistent": {},
+      "minecraft:physics": {
+        "has_collision": false,
+        "has_gravity": false
+      },
+      "minecraft:type_family": {
+        "family": [
+          "fragment",
+          "chest"
+        ]
+      }
+    },
+    "events": {
+      "treephysics:chest_activate": {
+        "add": {
+          "component_groups": [
+            "treephysics:chest_active"
+          ]
+        }
+      },
+      "treephysics:chest_deactivate": {
+        "add": {
+          "component_groups": [
+            "treephysics:chest_inactive"
+          ]
+        }
+      }
+    }
+  }
+}

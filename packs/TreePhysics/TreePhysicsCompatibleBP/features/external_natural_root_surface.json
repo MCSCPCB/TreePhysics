@@ -1,0 +1,28 @@
+{
+  "format_version": "1.21.60",
+  "minecraft:scatter_feature": {
+    "description": {
+      "identifier": "treephysics:external_natural_root_surface"
+    },
+    "places_feature": "treephysics:external_natural_root_column",
+    "distribution": {
+      "iterations": 256,
+      "coordinate_eval_order": "xzy",
+      "x": {
+        "distribution": "fixed_grid",
+        "extent": [
+          0,
+          15
+        ]
+      },
+      "y": "query.heightmap(variable.worldx, variable.worldz)",
+      "z": {
+        "distribution": "fixed_grid",
+        "extent": [
+          0,
+          15
+        ]
+      }
+    }
+  }
+}

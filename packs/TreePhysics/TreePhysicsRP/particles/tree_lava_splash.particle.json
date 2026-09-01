@@ -1,0 +1,60 @@
+{
+	"format_version": "1.10.0",
+	"particle_effect": {
+		"description": {
+			"identifier": "treephysics:tree_lava_splash",
+			"basic_render_parameters": {
+				"material": "particles_alpha",
+				"texture": "textures/particle/particles"
+			}
+		},
+		"events": {
+			"smoke": {
+				"particle_effect": {
+					"effect": "minecraft:basic_smoke_particle",
+					"type": "particle_with_velocity"
+				}
+			}
+		},
+		"components": {
+			"minecraft:emitter_rate_instant": {
+				"num_particles": "Math.min(400,Math.max(0,v.lava_count??0))"
+			},
+			"minecraft:emitter_lifetime_once": {
+				"active_time": 1
+			},
+			"minecraft:emitter_shape_box": {
+				"half_dimensions": ["Math.max(0.05,v.lava_radius_x??0.05)", 0.05, "Math.max(0.05,v.lava_radius_z??0.05)"],
+				"direction": ["Math.random(-0.35,0.35)", "Math.random(0.35,1.0)*Math.max(1,Math.min(2,v.lava_vertical_scale??1))", "Math.random(-0.35,0.35)"]
+			},
+			"minecraft:particle_lifetime_expression": {
+				"max_lifetime": "Math.min(6,(1.25+Math.floor(variable.particle_random_3*17)/20)*(1+Math.min(2,Math.max(0,v.lava_impulse??0))*0.5))"
+			},
+			"minecraft:particle_lifetime_events": {
+				"timeline": {
+					"0.0": "smoke"
+				}
+			},
+			"minecraft:particle_initial_speed": "Math.random(5.5,10.5)*Math.max(0.75,Math.min(1.6,v.lava_speed_scale??1))",
+			"minecraft:particle_motion_dynamic": {
+				"linear_acceleration": ["(variable.particle_random_1*5.0-2.5)", -15, "(variable.particle_random_2*5.0-2.5)"]
+			},
+			"minecraft:particle_appearance_billboard": {
+				"size": ["(variable.particle_random_3*0.15+0.025)*(1-Math.pow((variable.particle_age+query.frame_alpha)/variable.particle_lifetime,2))", "(variable.particle_random_3*0.15+0.025)*(1-Math.pow((variable.particle_age+query.frame_alpha)/variable.particle_lifetime,2))"],
+				"facing_camera_mode": "lookat_xyz",
+				"uv": {
+					"texture_width": 128,
+					"texture_height": 128,
+					"uv": [10, 26],
+					"uv_size": [4, 4]
+				}
+			},
+			"minecraft:particle_motion_collision": {
+				"collision_drag": 50,
+				"coefficient_of_restitution": 0.1,
+				"collision_radius": 0.1
+			},
+			"minecraft:particle_appearance_lighting": {}
+		}
+	}
+}

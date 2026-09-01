@@ -1,0 +1,50 @@
+{
+  "format_version": "1.20.30",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "treephysics:contraption_mount",
+      "is_spawnable": false,
+      "is_summonable": true
+    },
+    "components": {
+      "minecraft:type_family": {
+        "family": [
+          "contraption_mount",
+          "inanimate"
+        ]
+      },
+      "minecraft:health": {
+        "value": 1,
+        "max": 0
+      },
+      "minecraft:rideable": {
+        "seat_count": 1,
+        "dismount_mode": "on_top_center",
+        "seats": [
+          {
+            "position": [
+              0.0,
+              0.4,
+              0.0
+            ]
+          }
+        ]
+      },
+      "minecraft:damage_sensor": {
+        "triggers": {
+          "cause": "all",
+          "deals_damage": false
+        }
+      },
+      "minecraft:collision_box": {
+        "width": 0.6,
+        "height": 1.5
+      },
+      "minecraft:physics": {
+        "has_collision": true,
+        "has_gravity": false
+      },
+      "minecraft:conditional_bandwidth_optimization": {}
+    }
+  }
+}

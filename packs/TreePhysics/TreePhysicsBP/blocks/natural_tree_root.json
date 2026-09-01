@@ -1,0 +1,180 @@
+{
+  "format_version": "1.21.80",
+  "minecraft:block": {
+    "description": {
+      "identifier": "treephysics:natural_tree_root",
+      "states": {
+        "treephysics:soil_variant": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+      }
+    },
+    "components": {
+      "minecraft:destructible_by_explosion": {
+        "explosion_resistance": 0.5
+      },
+      "minecraft:destructible_by_mining": {
+        "seconds_to_destroy": 0.5
+      },
+      "minecraft:geometry": "minecraft:geometry.full_block",
+      "minecraft:loot": "loot_tables/blocks/natural_tree_root.json",
+      "minecraft:material_instances": {
+        "*": {
+          "render_method": "opaque",
+          "texture": "dirt"
+        }
+      }
+    },
+    "permutations": [
+      {
+        "condition": "query.block_state('treephysics:soil_variant') == 0",
+        "components": {
+          "minecraft:map_color": "#976D4D",
+          "tag:dirt": {},
+          "tag:minecraft:is_shovel_item_destructible": {}
+        }
+      },
+      {
+        "condition": "query.block_state('treephysics:soil_variant') == 1",
+        "components": {
+          "minecraft:loot": "loot_tables/blocks/natural_tree_root_coarse_dirt.json",
+          "minecraft:map_color": "#766143",
+          "minecraft:material_instances": {
+            "*": {
+              "render_method": "opaque",
+              "texture": "coarse_dirt"
+            }
+          },
+          "tag:dirt": {},
+          "tag:minecraft:is_shovel_item_destructible": {}
+        }
+      },
+      {
+        "condition": "query.block_state('treephysics:soil_variant') == 2",
+        "components": {
+          "minecraft:loot": "loot_tables/blocks/natural_tree_root_mud.json",
+          "minecraft:map_color": "#3C3C38",
+          "minecraft:material_instances": {
+            "*": {
+              "render_method": "opaque",
+              "texture": "mud"
+            }
+          },
+          "tag:dirt": {},
+          "tag:minecraft:is_shovel_item_destructible": {}
+        }
+      },
+      {
+        "condition": "query.block_state('treephysics:soil_variant') == 3",
+        "components": {
+          "minecraft:loot": "loot_tables/blocks/natural_tree_root_dirt_with_roots.json",
+          "minecraft:map_color": "#90674C",
+          "minecraft:material_instances": {
+            "*": {
+              "render_method": "opaque",
+              "texture": "dirt_with_roots"
+            }
+          },
+          "tag:dirt": {},
+          "tag:minecraft:is_shovel_item_destructible": {}
+        }
+      },
+      {
+        "condition": "query.block_state('treephysics:soil_variant') == 4",
+        "components": {
+          "minecraft:loot": "loot_tables/blocks/natural_tree_root_podzol.json",
+          "minecraft:map_color": "#815631",
+          "minecraft:material_instances": {
+            "*": {
+              "render_method": "opaque",
+              "texture": "dirt_podzol_side"
+            },
+            "down": {
+              "render_method": "opaque",
+              "texture": "dirt_podzol_bottom"
+            },
+            "up": {
+              "render_method": "opaque",
+              "texture": "dirt_podzol_top"
+            }
+          },
+          "tag:dirt": {},
+          "tag:minecraft:is_shovel_item_destructible": {}
+        }
+      },
+      {
+        "condition": "query.block_state('treephysics:soil_variant') == 5",
+        "components": {
+          "minecraft:loot": "loot_tables/blocks/natural_tree_root_sand.json",
+          "minecraft:map_color": "#F7E9A3",
+          "minecraft:material_instances": {
+            "*": {
+              "render_method": "opaque",
+              "texture": "sand"
+            }
+          },
+          "tag:sand": {},
+          "tag:minecraft:is_shovel_item_destructible": {}
+        }
+      },
+      {
+        "condition": "query.block_state('treephysics:soil_variant') == 6",
+        "components": {
+          "minecraft:loot": "loot_tables/blocks/natural_tree_root_gravel.json",
+          "minecraft:map_color": "#707070",
+          "minecraft:material_instances": {
+            "*": {
+              "render_method": "opaque",
+              "texture": "gravel"
+            }
+          },
+          "tag:gravel": {},
+          "tag:minecraft:is_shovel_item_destructible": {}
+        }
+      },
+      {
+        "condition": "query.block_state('treephysics:soil_variant') == 7",
+        "components": {
+          "minecraft:loot": "loot_tables/blocks/natural_tree_root_netherrack.json",
+          "minecraft:map_color": "#700200",
+          "minecraft:material_instances": {
+            "*": {
+              "render_method": "opaque",
+              "texture": "netherrack"
+            }
+          },
+          "tag:stone": {},
+          "tag:minecraft:is_pickaxe_item_destructible": {}
+        }
+      },
+      {
+        "condition": "query.block_state('treephysics:soil_variant') == 8",
+        "components": {
+          "minecraft:loot": "loot_tables/blocks/natural_tree_root_end_stone.json",
+          "minecraft:map_color": "#F7E9A3",
+          "minecraft:material_instances": {
+            "*": {
+              "render_method": "opaque",
+              "texture": "end_stone"
+            }
+          },
+          "tag:stone": {},
+          "tag:minecraft:is_pickaxe_item_destructible": {}
+        }
+      },
+      {
+        "condition": "query.block_state('treephysics:soil_variant') == 9",
+        "components": {
+          "minecraft:destructible_by_explosion": false,
+          "minecraft:destructible_by_mining": false,
+          "minecraft:loot": "loot_tables/blocks/natural_tree_root_bedrock.json",
+          "minecraft:map_color": "#545454",
+          "minecraft:material_instances": {
+            "*": {
+              "render_method": "opaque",
+              "texture": "bedrock"
+            }
+          }
+        }
+      }
+    ]
+  }
+}

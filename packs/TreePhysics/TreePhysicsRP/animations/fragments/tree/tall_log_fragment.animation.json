@@ -1,0 +1,1446 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+    "animation.treephysics.tall_log_fragment.transform": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "scale": "v.pose_ready",
+          "rotation": [
+            "-q.body_x_rotation",
+            "-q.body_y_rotation",
+            0
+          ]
+        },
+        "pitch": {
+          "rotation": [
+            "v.pitch",
+            0,
+            0
+          ]
+        },
+        "roll": {
+          "rotation": [
+            0,
+            0,
+            "-v.roll"
+          ]
+        },
+        "yaw": {
+          "rotation": [
+            0,
+            "-v.yaw",
+            0
+          ]
+        },
+        "fragment_offset": {
+          "position": [
+            "(math.mod(q.property('treephysics:origin_xz'), 2048) - 1024) * 16",
+            "(q.property('treephysics:origin_y') - 1024) * 16",
+            "-(math.floor(q.property('treephysics:origin_xz') / 2048) - 1024) * 16"
+          ]
+        },
+        "slot_0": {
+          "rotation": [
+            "((math.mod(math.floor(v.s0 / 1), 8)) == 4 || (math.mod(math.floor(v.s0 / 1), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s0 / 1), 8)) == 3 || (math.mod(math.floor(v.s0 / 1), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_1": {
+          "rotation": [
+            "((math.mod(math.floor(v.s0 / 8), 8)) == 4 || (math.mod(math.floor(v.s0 / 8), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s0 / 8), 8)) == 3 || (math.mod(math.floor(v.s0 / 8), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_2": {
+          "rotation": [
+            "((math.mod(math.floor(v.s0 / 64), 8)) == 4 || (math.mod(math.floor(v.s0 / 64), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s0 / 64), 8)) == 3 || (math.mod(math.floor(v.s0 / 64), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_3": {
+          "rotation": [
+            "((math.mod(math.floor(v.s0 / 512), 8)) == 4 || (math.mod(math.floor(v.s0 / 512), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s0 / 512), 8)) == 3 || (math.mod(math.floor(v.s0 / 512), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_4": {
+          "rotation": [
+            "((math.mod(math.floor(v.s0 / 4096), 8)) == 4 || (math.mod(math.floor(v.s0 / 4096), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s0 / 4096), 8)) == 3 || (math.mod(math.floor(v.s0 / 4096), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_5": {
+          "rotation": [
+            "((math.mod(math.floor(v.s0 / 32768), 8)) == 4 || (math.mod(math.floor(v.s0 / 32768), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s0 / 32768), 8)) == 3 || (math.mod(math.floor(v.s0 / 32768), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_6": {
+          "rotation": [
+            "((math.mod(math.floor(v.s0 / 262144), 8)) == 4 || (math.mod(math.floor(v.s0 / 262144), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s0 / 262144), 8)) == 3 || (math.mod(math.floor(v.s0 / 262144), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_7": {
+          "rotation": [
+            "((math.mod(math.floor(v.s0 / 2097152), 8)) == 4 || (math.mod(math.floor(v.s0 / 2097152), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s0 / 2097152), 8)) == 3 || (math.mod(math.floor(v.s0 / 2097152), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_8": {
+          "rotation": [
+            "((math.mod(math.floor(v.s1 / 1), 8)) == 4 || (math.mod(math.floor(v.s1 / 1), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s1 / 1), 8)) == 3 || (math.mod(math.floor(v.s1 / 1), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_9": {
+          "rotation": [
+            "((math.mod(math.floor(v.s1 / 8), 8)) == 4 || (math.mod(math.floor(v.s1 / 8), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s1 / 8), 8)) == 3 || (math.mod(math.floor(v.s1 / 8), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_10": {
+          "rotation": [
+            "((math.mod(math.floor(v.s1 / 64), 8)) == 4 || (math.mod(math.floor(v.s1 / 64), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s1 / 64), 8)) == 3 || (math.mod(math.floor(v.s1 / 64), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_11": {
+          "rotation": [
+            "((math.mod(math.floor(v.s1 / 512), 8)) == 4 || (math.mod(math.floor(v.s1 / 512), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s1 / 512), 8)) == 3 || (math.mod(math.floor(v.s1 / 512), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_12": {
+          "rotation": [
+            "((math.mod(math.floor(v.s1 / 4096), 8)) == 4 || (math.mod(math.floor(v.s1 / 4096), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s1 / 4096), 8)) == 3 || (math.mod(math.floor(v.s1 / 4096), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_13": {
+          "rotation": [
+            "((math.mod(math.floor(v.s1 / 32768), 8)) == 4 || (math.mod(math.floor(v.s1 / 32768), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s1 / 32768), 8)) == 3 || (math.mod(math.floor(v.s1 / 32768), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_14": {
+          "rotation": [
+            "((math.mod(math.floor(v.s1 / 262144), 8)) == 4 || (math.mod(math.floor(v.s1 / 262144), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s1 / 262144), 8)) == 3 || (math.mod(math.floor(v.s1 / 262144), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_15": {
+          "rotation": [
+            "((math.mod(math.floor(v.s1 / 2097152), 8)) == 4 || (math.mod(math.floor(v.s1 / 2097152), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s1 / 2097152), 8)) == 3 || (math.mod(math.floor(v.s1 / 2097152), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_16": {
+          "rotation": [
+            "((math.mod(math.floor(v.s2 / 1), 8)) == 4 || (math.mod(math.floor(v.s2 / 1), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s2 / 1), 8)) == 3 || (math.mod(math.floor(v.s2 / 1), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_17": {
+          "rotation": [
+            "((math.mod(math.floor(v.s2 / 8), 8)) == 4 || (math.mod(math.floor(v.s2 / 8), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s2 / 8), 8)) == 3 || (math.mod(math.floor(v.s2 / 8), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_18": {
+          "rotation": [
+            "((math.mod(math.floor(v.s2 / 64), 8)) == 4 || (math.mod(math.floor(v.s2 / 64), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s2 / 64), 8)) == 3 || (math.mod(math.floor(v.s2 / 64), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_19": {
+          "rotation": [
+            "((math.mod(math.floor(v.s2 / 512), 8)) == 4 || (math.mod(math.floor(v.s2 / 512), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s2 / 512), 8)) == 3 || (math.mod(math.floor(v.s2 / 512), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_20": {
+          "rotation": [
+            "((math.mod(math.floor(v.s2 / 4096), 8)) == 4 || (math.mod(math.floor(v.s2 / 4096), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s2 / 4096), 8)) == 3 || (math.mod(math.floor(v.s2 / 4096), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_21": {
+          "rotation": [
+            "((math.mod(math.floor(v.s2 / 32768), 8)) == 4 || (math.mod(math.floor(v.s2 / 32768), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s2 / 32768), 8)) == 3 || (math.mod(math.floor(v.s2 / 32768), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_22": {
+          "rotation": [
+            "((math.mod(math.floor(v.s2 / 262144), 8)) == 4 || (math.mod(math.floor(v.s2 / 262144), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s2 / 262144), 8)) == 3 || (math.mod(math.floor(v.s2 / 262144), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_23": {
+          "rotation": [
+            "((math.mod(math.floor(v.s2 / 2097152), 8)) == 4 || (math.mod(math.floor(v.s2 / 2097152), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s2 / 2097152), 8)) == 3 || (math.mod(math.floor(v.s2 / 2097152), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_24": {
+          "rotation": [
+            "((math.mod(math.floor(v.s3 / 1), 8)) == 4 || (math.mod(math.floor(v.s3 / 1), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s3 / 1), 8)) == 3 || (math.mod(math.floor(v.s3 / 1), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_25": {
+          "rotation": [
+            "((math.mod(math.floor(v.s3 / 8), 8)) == 4 || (math.mod(math.floor(v.s3 / 8), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s3 / 8), 8)) == 3 || (math.mod(math.floor(v.s3 / 8), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_26": {
+          "rotation": [
+            "((math.mod(math.floor(v.s3 / 64), 8)) == 4 || (math.mod(math.floor(v.s3 / 64), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s3 / 64), 8)) == 3 || (math.mod(math.floor(v.s3 / 64), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_27": {
+          "rotation": [
+            "((math.mod(math.floor(v.s3 / 512), 8)) == 4 || (math.mod(math.floor(v.s3 / 512), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s3 / 512), 8)) == 3 || (math.mod(math.floor(v.s3 / 512), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_28": {
+          "rotation": [
+            "((math.mod(math.floor(v.s3 / 4096), 8)) == 4 || (math.mod(math.floor(v.s3 / 4096), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s3 / 4096), 8)) == 3 || (math.mod(math.floor(v.s3 / 4096), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_29": {
+          "rotation": [
+            "((math.mod(math.floor(v.s3 / 32768), 8)) == 4 || (math.mod(math.floor(v.s3 / 32768), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s3 / 32768), 8)) == 3 || (math.mod(math.floor(v.s3 / 32768), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_30": {
+          "rotation": [
+            "((math.mod(math.floor(v.s3 / 262144), 8)) == 4 || (math.mod(math.floor(v.s3 / 262144), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s3 / 262144), 8)) == 3 || (math.mod(math.floor(v.s3 / 262144), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_31": {
+          "rotation": [
+            "((math.mod(math.floor(v.s3 / 2097152), 8)) == 4 || (math.mod(math.floor(v.s3 / 2097152), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s3 / 2097152), 8)) == 3 || (math.mod(math.floor(v.s3 / 2097152), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_32": {
+          "rotation": [
+            "((math.mod(math.floor(v.s4 / 1), 8)) == 4 || (math.mod(math.floor(v.s4 / 1), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s4 / 1), 8)) == 3 || (math.mod(math.floor(v.s4 / 1), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_33": {
+          "rotation": [
+            "((math.mod(math.floor(v.s4 / 8), 8)) == 4 || (math.mod(math.floor(v.s4 / 8), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s4 / 8), 8)) == 3 || (math.mod(math.floor(v.s4 / 8), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_34": {
+          "rotation": [
+            "((math.mod(math.floor(v.s4 / 64), 8)) == 4 || (math.mod(math.floor(v.s4 / 64), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s4 / 64), 8)) == 3 || (math.mod(math.floor(v.s4 / 64), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_35": {
+          "rotation": [
+            "((math.mod(math.floor(v.s4 / 512), 8)) == 4 || (math.mod(math.floor(v.s4 / 512), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s4 / 512), 8)) == 3 || (math.mod(math.floor(v.s4 / 512), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_36": {
+          "rotation": [
+            "((math.mod(math.floor(v.s4 / 4096), 8)) == 4 || (math.mod(math.floor(v.s4 / 4096), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s4 / 4096), 8)) == 3 || (math.mod(math.floor(v.s4 / 4096), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_37": {
+          "rotation": [
+            "((math.mod(math.floor(v.s4 / 32768), 8)) == 4 || (math.mod(math.floor(v.s4 / 32768), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s4 / 32768), 8)) == 3 || (math.mod(math.floor(v.s4 / 32768), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_38": {
+          "rotation": [
+            "((math.mod(math.floor(v.s4 / 262144), 8)) == 4 || (math.mod(math.floor(v.s4 / 262144), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s4 / 262144), 8)) == 3 || (math.mod(math.floor(v.s4 / 262144), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_39": {
+          "rotation": [
+            "((math.mod(math.floor(v.s4 / 2097152), 8)) == 4 || (math.mod(math.floor(v.s4 / 2097152), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s4 / 2097152), 8)) == 3 || (math.mod(math.floor(v.s4 / 2097152), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_40": {
+          "rotation": [
+            "((math.mod(math.floor(v.s5 / 1), 8)) == 4 || (math.mod(math.floor(v.s5 / 1), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s5 / 1), 8)) == 3 || (math.mod(math.floor(v.s5 / 1), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_41": {
+          "rotation": [
+            "((math.mod(math.floor(v.s5 / 8), 8)) == 4 || (math.mod(math.floor(v.s5 / 8), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s5 / 8), 8)) == 3 || (math.mod(math.floor(v.s5 / 8), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_42": {
+          "rotation": [
+            "((math.mod(math.floor(v.s5 / 64), 8)) == 4 || (math.mod(math.floor(v.s5 / 64), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s5 / 64), 8)) == 3 || (math.mod(math.floor(v.s5 / 64), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_43": {
+          "rotation": [
+            "((math.mod(math.floor(v.s5 / 512), 8)) == 4 || (math.mod(math.floor(v.s5 / 512), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s5 / 512), 8)) == 3 || (math.mod(math.floor(v.s5 / 512), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_44": {
+          "rotation": [
+            "((math.mod(math.floor(v.s5 / 4096), 8)) == 4 || (math.mod(math.floor(v.s5 / 4096), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s5 / 4096), 8)) == 3 || (math.mod(math.floor(v.s5 / 4096), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_45": {
+          "rotation": [
+            "((math.mod(math.floor(v.s5 / 32768), 8)) == 4 || (math.mod(math.floor(v.s5 / 32768), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s5 / 32768), 8)) == 3 || (math.mod(math.floor(v.s5 / 32768), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_46": {
+          "rotation": [
+            "((math.mod(math.floor(v.s5 / 262144), 8)) == 4 || (math.mod(math.floor(v.s5 / 262144), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s5 / 262144), 8)) == 3 || (math.mod(math.floor(v.s5 / 262144), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_47": {
+          "rotation": [
+            "((math.mod(math.floor(v.s5 / 2097152), 8)) == 4 || (math.mod(math.floor(v.s5 / 2097152), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s5 / 2097152), 8)) == 3 || (math.mod(math.floor(v.s5 / 2097152), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_48": {
+          "rotation": [
+            "((math.mod(math.floor(v.s6 / 1), 8)) == 4 || (math.mod(math.floor(v.s6 / 1), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s6 / 1), 8)) == 3 || (math.mod(math.floor(v.s6 / 1), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_49": {
+          "rotation": [
+            "((math.mod(math.floor(v.s6 / 8), 8)) == 4 || (math.mod(math.floor(v.s6 / 8), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s6 / 8), 8)) == 3 || (math.mod(math.floor(v.s6 / 8), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_50": {
+          "rotation": [
+            "((math.mod(math.floor(v.s6 / 64), 8)) == 4 || (math.mod(math.floor(v.s6 / 64), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s6 / 64), 8)) == 3 || (math.mod(math.floor(v.s6 / 64), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_51": {
+          "rotation": [
+            "((math.mod(math.floor(v.s6 / 512), 8)) == 4 || (math.mod(math.floor(v.s6 / 512), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s6 / 512), 8)) == 3 || (math.mod(math.floor(v.s6 / 512), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_52": {
+          "rotation": [
+            "((math.mod(math.floor(v.s6 / 4096), 8)) == 4 || (math.mod(math.floor(v.s6 / 4096), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s6 / 4096), 8)) == 3 || (math.mod(math.floor(v.s6 / 4096), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_53": {
+          "rotation": [
+            "((math.mod(math.floor(v.s6 / 32768), 8)) == 4 || (math.mod(math.floor(v.s6 / 32768), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s6 / 32768), 8)) == 3 || (math.mod(math.floor(v.s6 / 32768), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_54": {
+          "rotation": [
+            "((math.mod(math.floor(v.s6 / 262144), 8)) == 4 || (math.mod(math.floor(v.s6 / 262144), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s6 / 262144), 8)) == 3 || (math.mod(math.floor(v.s6 / 262144), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_55": {
+          "rotation": [
+            "((math.mod(math.floor(v.s6 / 2097152), 8)) == 4 || (math.mod(math.floor(v.s6 / 2097152), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s6 / 2097152), 8)) == 3 || (math.mod(math.floor(v.s6 / 2097152), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_56": {
+          "rotation": [
+            "((math.mod(math.floor(v.s7 / 1), 8)) == 4 || (math.mod(math.floor(v.s7 / 1), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s7 / 1), 8)) == 3 || (math.mod(math.floor(v.s7 / 1), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_57": {
+          "rotation": [
+            "((math.mod(math.floor(v.s7 / 8), 8)) == 4 || (math.mod(math.floor(v.s7 / 8), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s7 / 8), 8)) == 3 || (math.mod(math.floor(v.s7 / 8), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_58": {
+          "rotation": [
+            "((math.mod(math.floor(v.s7 / 64), 8)) == 4 || (math.mod(math.floor(v.s7 / 64), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s7 / 64), 8)) == 3 || (math.mod(math.floor(v.s7 / 64), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_59": {
+          "rotation": [
+            "((math.mod(math.floor(v.s7 / 512), 8)) == 4 || (math.mod(math.floor(v.s7 / 512), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s7 / 512), 8)) == 3 || (math.mod(math.floor(v.s7 / 512), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_60": {
+          "rotation": [
+            "((math.mod(math.floor(v.s7 / 4096), 8)) == 4 || (math.mod(math.floor(v.s7 / 4096), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s7 / 4096), 8)) == 3 || (math.mod(math.floor(v.s7 / 4096), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_61": {
+          "rotation": [
+            "((math.mod(math.floor(v.s7 / 32768), 8)) == 4 || (math.mod(math.floor(v.s7 / 32768), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s7 / 32768), 8)) == 3 || (math.mod(math.floor(v.s7 / 32768), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_62": {
+          "rotation": [
+            "((math.mod(math.floor(v.s7 / 262144), 8)) == 4 || (math.mod(math.floor(v.s7 / 262144), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s7 / 262144), 8)) == 3 || (math.mod(math.floor(v.s7 / 262144), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_63": {
+          "rotation": [
+            "((math.mod(math.floor(v.s7 / 2097152), 8)) == 4 || (math.mod(math.floor(v.s7 / 2097152), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s7 / 2097152), 8)) == 3 || (math.mod(math.floor(v.s7 / 2097152), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_64": {
+          "rotation": [
+            "((math.mod(math.floor(v.s8 / 1), 8)) == 4 || (math.mod(math.floor(v.s8 / 1), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s8 / 1), 8)) == 3 || (math.mod(math.floor(v.s8 / 1), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_65": {
+          "rotation": [
+            "((math.mod(math.floor(v.s8 / 8), 8)) == 4 || (math.mod(math.floor(v.s8 / 8), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s8 / 8), 8)) == 3 || (math.mod(math.floor(v.s8 / 8), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_66": {
+          "rotation": [
+            "((math.mod(math.floor(v.s8 / 64), 8)) == 4 || (math.mod(math.floor(v.s8 / 64), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s8 / 64), 8)) == 3 || (math.mod(math.floor(v.s8 / 64), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_67": {
+          "rotation": [
+            "((math.mod(math.floor(v.s8 / 512), 8)) == 4 || (math.mod(math.floor(v.s8 / 512), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s8 / 512), 8)) == 3 || (math.mod(math.floor(v.s8 / 512), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_68": {
+          "rotation": [
+            "((math.mod(math.floor(v.s8 / 4096), 8)) == 4 || (math.mod(math.floor(v.s8 / 4096), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s8 / 4096), 8)) == 3 || (math.mod(math.floor(v.s8 / 4096), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_69": {
+          "rotation": [
+            "((math.mod(math.floor(v.s8 / 32768), 8)) == 4 || (math.mod(math.floor(v.s8 / 32768), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s8 / 32768), 8)) == 3 || (math.mod(math.floor(v.s8 / 32768), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_70": {
+          "rotation": [
+            "((math.mod(math.floor(v.s8 / 262144), 8)) == 4 || (math.mod(math.floor(v.s8 / 262144), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s8 / 262144), 8)) == 3 || (math.mod(math.floor(v.s8 / 262144), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_71": {
+          "rotation": [
+            "((math.mod(math.floor(v.s8 / 2097152), 8)) == 4 || (math.mod(math.floor(v.s8 / 2097152), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s8 / 2097152), 8)) == 3 || (math.mod(math.floor(v.s8 / 2097152), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_72": {
+          "rotation": [
+            "((math.mod(math.floor(v.s9 / 1), 8)) == 4 || (math.mod(math.floor(v.s9 / 1), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s9 / 1), 8)) == 3 || (math.mod(math.floor(v.s9 / 1), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_73": {
+          "rotation": [
+            "((math.mod(math.floor(v.s9 / 8), 8)) == 4 || (math.mod(math.floor(v.s9 / 8), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s9 / 8), 8)) == 3 || (math.mod(math.floor(v.s9 / 8), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_74": {
+          "rotation": [
+            "((math.mod(math.floor(v.s9 / 64), 8)) == 4 || (math.mod(math.floor(v.s9 / 64), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s9 / 64), 8)) == 3 || (math.mod(math.floor(v.s9 / 64), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_75": {
+          "rotation": [
+            "((math.mod(math.floor(v.s9 / 512), 8)) == 4 || (math.mod(math.floor(v.s9 / 512), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s9 / 512), 8)) == 3 || (math.mod(math.floor(v.s9 / 512), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_76": {
+          "rotation": [
+            "((math.mod(math.floor(v.s9 / 4096), 8)) == 4 || (math.mod(math.floor(v.s9 / 4096), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s9 / 4096), 8)) == 3 || (math.mod(math.floor(v.s9 / 4096), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_77": {
+          "rotation": [
+            "((math.mod(math.floor(v.s9 / 32768), 8)) == 4 || (math.mod(math.floor(v.s9 / 32768), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s9 / 32768), 8)) == 3 || (math.mod(math.floor(v.s9 / 32768), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_78": {
+          "rotation": [
+            "((math.mod(math.floor(v.s9 / 262144), 8)) == 4 || (math.mod(math.floor(v.s9 / 262144), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s9 / 262144), 8)) == 3 || (math.mod(math.floor(v.s9 / 262144), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_79": {
+          "rotation": [
+            "((math.mod(math.floor(v.s9 / 2097152), 8)) == 4 || (math.mod(math.floor(v.s9 / 2097152), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s9 / 2097152), 8)) == 3 || (math.mod(math.floor(v.s9 / 2097152), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_80": {
+          "rotation": [
+            "((math.mod(math.floor(v.s10 / 1), 8)) == 4 || (math.mod(math.floor(v.s10 / 1), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s10 / 1), 8)) == 3 || (math.mod(math.floor(v.s10 / 1), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_81": {
+          "rotation": [
+            "((math.mod(math.floor(v.s10 / 8), 8)) == 4 || (math.mod(math.floor(v.s10 / 8), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s10 / 8), 8)) == 3 || (math.mod(math.floor(v.s10 / 8), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_82": {
+          "rotation": [
+            "((math.mod(math.floor(v.s10 / 64), 8)) == 4 || (math.mod(math.floor(v.s10 / 64), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s10 / 64), 8)) == 3 || (math.mod(math.floor(v.s10 / 64), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_83": {
+          "rotation": [
+            "((math.mod(math.floor(v.s10 / 512), 8)) == 4 || (math.mod(math.floor(v.s10 / 512), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s10 / 512), 8)) == 3 || (math.mod(math.floor(v.s10 / 512), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_84": {
+          "rotation": [
+            "((math.mod(math.floor(v.s10 / 4096), 8)) == 4 || (math.mod(math.floor(v.s10 / 4096), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s10 / 4096), 8)) == 3 || (math.mod(math.floor(v.s10 / 4096), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_85": {
+          "rotation": [
+            "((math.mod(math.floor(v.s10 / 32768), 8)) == 4 || (math.mod(math.floor(v.s10 / 32768), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s10 / 32768), 8)) == 3 || (math.mod(math.floor(v.s10 / 32768), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_86": {
+          "rotation": [
+            "((math.mod(math.floor(v.s10 / 262144), 8)) == 4 || (math.mod(math.floor(v.s10 / 262144), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s10 / 262144), 8)) == 3 || (math.mod(math.floor(v.s10 / 262144), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_87": {
+          "rotation": [
+            "((math.mod(math.floor(v.s10 / 2097152), 8)) == 4 || (math.mod(math.floor(v.s10 / 2097152), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s10 / 2097152), 8)) == 3 || (math.mod(math.floor(v.s10 / 2097152), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_88": {
+          "rotation": [
+            "((math.mod(math.floor(v.s11 / 1), 8)) == 4 || (math.mod(math.floor(v.s11 / 1), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s11 / 1), 8)) == 3 || (math.mod(math.floor(v.s11 / 1), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_89": {
+          "rotation": [
+            "((math.mod(math.floor(v.s11 / 8), 8)) == 4 || (math.mod(math.floor(v.s11 / 8), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s11 / 8), 8)) == 3 || (math.mod(math.floor(v.s11 / 8), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_90": {
+          "rotation": [
+            "((math.mod(math.floor(v.s11 / 64), 8)) == 4 || (math.mod(math.floor(v.s11 / 64), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s11 / 64), 8)) == 3 || (math.mod(math.floor(v.s11 / 64), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_91": {
+          "rotation": [
+            "((math.mod(math.floor(v.s11 / 512), 8)) == 4 || (math.mod(math.floor(v.s11 / 512), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s11 / 512), 8)) == 3 || (math.mod(math.floor(v.s11 / 512), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_92": {
+          "rotation": [
+            "((math.mod(math.floor(v.s11 / 4096), 8)) == 4 || (math.mod(math.floor(v.s11 / 4096), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s11 / 4096), 8)) == 3 || (math.mod(math.floor(v.s11 / 4096), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_93": {
+          "rotation": [
+            "((math.mod(math.floor(v.s11 / 32768), 8)) == 4 || (math.mod(math.floor(v.s11 / 32768), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s11 / 32768), 8)) == 3 || (math.mod(math.floor(v.s11 / 32768), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_94": {
+          "rotation": [
+            "((math.mod(math.floor(v.s11 / 262144), 8)) == 4 || (math.mod(math.floor(v.s11 / 262144), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s11 / 262144), 8)) == 3 || (math.mod(math.floor(v.s11 / 262144), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_95": {
+          "rotation": [
+            "((math.mod(math.floor(v.s11 / 2097152), 8)) == 4 || (math.mod(math.floor(v.s11 / 2097152), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s11 / 2097152), 8)) == 3 || (math.mod(math.floor(v.s11 / 2097152), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_96": {
+          "rotation": [
+            "((math.mod(math.floor(v.s12 / 1), 8)) == 4 || (math.mod(math.floor(v.s12 / 1), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s12 / 1), 8)) == 3 || (math.mod(math.floor(v.s12 / 1), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_97": {
+          "rotation": [
+            "((math.mod(math.floor(v.s12 / 8), 8)) == 4 || (math.mod(math.floor(v.s12 / 8), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s12 / 8), 8)) == 3 || (math.mod(math.floor(v.s12 / 8), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_98": {
+          "rotation": [
+            "((math.mod(math.floor(v.s12 / 64), 8)) == 4 || (math.mod(math.floor(v.s12 / 64), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s12 / 64), 8)) == 3 || (math.mod(math.floor(v.s12 / 64), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_99": {
+          "rotation": [
+            "((math.mod(math.floor(v.s12 / 512), 8)) == 4 || (math.mod(math.floor(v.s12 / 512), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s12 / 512), 8)) == 3 || (math.mod(math.floor(v.s12 / 512), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_100": {
+          "rotation": [
+            "((math.mod(math.floor(v.s12 / 4096), 8)) == 4 || (math.mod(math.floor(v.s12 / 4096), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s12 / 4096), 8)) == 3 || (math.mod(math.floor(v.s12 / 4096), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_101": {
+          "rotation": [
+            "((math.mod(math.floor(v.s12 / 32768), 8)) == 4 || (math.mod(math.floor(v.s12 / 32768), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s12 / 32768), 8)) == 3 || (math.mod(math.floor(v.s12 / 32768), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_102": {
+          "rotation": [
+            "((math.mod(math.floor(v.s12 / 262144), 8)) == 4 || (math.mod(math.floor(v.s12 / 262144), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s12 / 262144), 8)) == 3 || (math.mod(math.floor(v.s12 / 262144), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_103": {
+          "rotation": [
+            "((math.mod(math.floor(v.s12 / 2097152), 8)) == 4 || (math.mod(math.floor(v.s12 / 2097152), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s12 / 2097152), 8)) == 3 || (math.mod(math.floor(v.s12 / 2097152), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_104": {
+          "rotation": [
+            "((math.mod(math.floor(v.s13 / 1), 8)) == 4 || (math.mod(math.floor(v.s13 / 1), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s13 / 1), 8)) == 3 || (math.mod(math.floor(v.s13 / 1), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_105": {
+          "rotation": [
+            "((math.mod(math.floor(v.s13 / 8), 8)) == 4 || (math.mod(math.floor(v.s13 / 8), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s13 / 8), 8)) == 3 || (math.mod(math.floor(v.s13 / 8), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_106": {
+          "rotation": [
+            "((math.mod(math.floor(v.s13 / 64), 8)) == 4 || (math.mod(math.floor(v.s13 / 64), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s13 / 64), 8)) == 3 || (math.mod(math.floor(v.s13 / 64), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_107": {
+          "rotation": [
+            "((math.mod(math.floor(v.s13 / 512), 8)) == 4 || (math.mod(math.floor(v.s13 / 512), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s13 / 512), 8)) == 3 || (math.mod(math.floor(v.s13 / 512), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_108": {
+          "rotation": [
+            "((math.mod(math.floor(v.s13 / 4096), 8)) == 4 || (math.mod(math.floor(v.s13 / 4096), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s13 / 4096), 8)) == 3 || (math.mod(math.floor(v.s13 / 4096), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_109": {
+          "rotation": [
+            "((math.mod(math.floor(v.s13 / 32768), 8)) == 4 || (math.mod(math.floor(v.s13 / 32768), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s13 / 32768), 8)) == 3 || (math.mod(math.floor(v.s13 / 32768), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_110": {
+          "rotation": [
+            "((math.mod(math.floor(v.s13 / 262144), 8)) == 4 || (math.mod(math.floor(v.s13 / 262144), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s13 / 262144), 8)) == 3 || (math.mod(math.floor(v.s13 / 262144), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_111": {
+          "rotation": [
+            "((math.mod(math.floor(v.s13 / 2097152), 8)) == 4 || (math.mod(math.floor(v.s13 / 2097152), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s13 / 2097152), 8)) == 3 || (math.mod(math.floor(v.s13 / 2097152), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_112": {
+          "rotation": [
+            "((math.mod(math.floor(v.s14 / 1), 8)) == 4 || (math.mod(math.floor(v.s14 / 1), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s14 / 1), 8)) == 3 || (math.mod(math.floor(v.s14 / 1), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_113": {
+          "rotation": [
+            "((math.mod(math.floor(v.s14 / 8), 8)) == 4 || (math.mod(math.floor(v.s14 / 8), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s14 / 8), 8)) == 3 || (math.mod(math.floor(v.s14 / 8), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_114": {
+          "rotation": [
+            "((math.mod(math.floor(v.s14 / 64), 8)) == 4 || (math.mod(math.floor(v.s14 / 64), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s14 / 64), 8)) == 3 || (math.mod(math.floor(v.s14 / 64), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_115": {
+          "rotation": [
+            "((math.mod(math.floor(v.s14 / 512), 8)) == 4 || (math.mod(math.floor(v.s14 / 512), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s14 / 512), 8)) == 3 || (math.mod(math.floor(v.s14 / 512), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_116": {
+          "rotation": [
+            "((math.mod(math.floor(v.s14 / 4096), 8)) == 4 || (math.mod(math.floor(v.s14 / 4096), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s14 / 4096), 8)) == 3 || (math.mod(math.floor(v.s14 / 4096), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_117": {
+          "rotation": [
+            "((math.mod(math.floor(v.s14 / 32768), 8)) == 4 || (math.mod(math.floor(v.s14 / 32768), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s14 / 32768), 8)) == 3 || (math.mod(math.floor(v.s14 / 32768), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_118": {
+          "rotation": [
+            "((math.mod(math.floor(v.s14 / 262144), 8)) == 4 || (math.mod(math.floor(v.s14 / 262144), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s14 / 262144), 8)) == 3 || (math.mod(math.floor(v.s14 / 262144), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_119": {
+          "rotation": [
+            "((math.mod(math.floor(v.s14 / 2097152), 8)) == 4 || (math.mod(math.floor(v.s14 / 2097152), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s14 / 2097152), 8)) == 3 || (math.mod(math.floor(v.s14 / 2097152), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_120": {
+          "rotation": [
+            "((math.mod(math.floor(v.s15 / 1), 8)) == 4 || (math.mod(math.floor(v.s15 / 1), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s15 / 1), 8)) == 3 || (math.mod(math.floor(v.s15 / 1), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_121": {
+          "rotation": [
+            "((math.mod(math.floor(v.s15 / 8), 8)) == 4 || (math.mod(math.floor(v.s15 / 8), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s15 / 8), 8)) == 3 || (math.mod(math.floor(v.s15 / 8), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_122": {
+          "rotation": [
+            "((math.mod(math.floor(v.s15 / 64), 8)) == 4 || (math.mod(math.floor(v.s15 / 64), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s15 / 64), 8)) == 3 || (math.mod(math.floor(v.s15 / 64), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_123": {
+          "rotation": [
+            "((math.mod(math.floor(v.s15 / 512), 8)) == 4 || (math.mod(math.floor(v.s15 / 512), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s15 / 512), 8)) == 3 || (math.mod(math.floor(v.s15 / 512), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_124": {
+          "rotation": [
+            "((math.mod(math.floor(v.s15 / 4096), 8)) == 4 || (math.mod(math.floor(v.s15 / 4096), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s15 / 4096), 8)) == 3 || (math.mod(math.floor(v.s15 / 4096), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_125": {
+          "rotation": [
+            "((math.mod(math.floor(v.s15 / 32768), 8)) == 4 || (math.mod(math.floor(v.s15 / 32768), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s15 / 32768), 8)) == 3 || (math.mod(math.floor(v.s15 / 32768), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_126": {
+          "rotation": [
+            "((math.mod(math.floor(v.s15 / 262144), 8)) == 4 || (math.mod(math.floor(v.s15 / 262144), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s15 / 262144), 8)) == 3 || (math.mod(math.floor(v.s15 / 262144), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_127": {
+          "rotation": [
+            "((math.mod(math.floor(v.s15 / 2097152), 8)) == 4 || (math.mod(math.floor(v.s15 / 2097152), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s15 / 2097152), 8)) == 3 || (math.mod(math.floor(v.s15 / 2097152), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_128": {
+          "rotation": [
+            "((math.mod(math.floor(v.s16 / 1), 8)) == 4 || (math.mod(math.floor(v.s16 / 1), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s16 / 1), 8)) == 3 || (math.mod(math.floor(v.s16 / 1), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_129": {
+          "rotation": [
+            "((math.mod(math.floor(v.s16 / 8), 8)) == 4 || (math.mod(math.floor(v.s16 / 8), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s16 / 8), 8)) == 3 || (math.mod(math.floor(v.s16 / 8), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_130": {
+          "rotation": [
+            "((math.mod(math.floor(v.s16 / 64), 8)) == 4 || (math.mod(math.floor(v.s16 / 64), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s16 / 64), 8)) == 3 || (math.mod(math.floor(v.s16 / 64), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_131": {
+          "rotation": [
+            "((math.mod(math.floor(v.s16 / 512), 8)) == 4 || (math.mod(math.floor(v.s16 / 512), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s16 / 512), 8)) == 3 || (math.mod(math.floor(v.s16 / 512), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_132": {
+          "rotation": [
+            "((math.mod(math.floor(v.s16 / 4096), 8)) == 4 || (math.mod(math.floor(v.s16 / 4096), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s16 / 4096), 8)) == 3 || (math.mod(math.floor(v.s16 / 4096), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_133": {
+          "rotation": [
+            "((math.mod(math.floor(v.s16 / 32768), 8)) == 4 || (math.mod(math.floor(v.s16 / 32768), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s16 / 32768), 8)) == 3 || (math.mod(math.floor(v.s16 / 32768), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_134": {
+          "rotation": [
+            "((math.mod(math.floor(v.s16 / 262144), 8)) == 4 || (math.mod(math.floor(v.s16 / 262144), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s16 / 262144), 8)) == 3 || (math.mod(math.floor(v.s16 / 262144), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_135": {
+          "rotation": [
+            "((math.mod(math.floor(v.s16 / 2097152), 8)) == 4 || (math.mod(math.floor(v.s16 / 2097152), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s16 / 2097152), 8)) == 3 || (math.mod(math.floor(v.s16 / 2097152), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_136": {
+          "rotation": [
+            "((math.mod(math.floor(v.s17 / 1), 8)) == 4 || (math.mod(math.floor(v.s17 / 1), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s17 / 1), 8)) == 3 || (math.mod(math.floor(v.s17 / 1), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_137": {
+          "rotation": [
+            "((math.mod(math.floor(v.s17 / 8), 8)) == 4 || (math.mod(math.floor(v.s17 / 8), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s17 / 8), 8)) == 3 || (math.mod(math.floor(v.s17 / 8), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_138": {
+          "rotation": [
+            "((math.mod(math.floor(v.s17 / 64), 8)) == 4 || (math.mod(math.floor(v.s17 / 64), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s17 / 64), 8)) == 3 || (math.mod(math.floor(v.s17 / 64), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_139": {
+          "rotation": [
+            "((math.mod(math.floor(v.s17 / 512), 8)) == 4 || (math.mod(math.floor(v.s17 / 512), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s17 / 512), 8)) == 3 || (math.mod(math.floor(v.s17 / 512), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_140": {
+          "rotation": [
+            "((math.mod(math.floor(v.s17 / 4096), 8)) == 4 || (math.mod(math.floor(v.s17 / 4096), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s17 / 4096), 8)) == 3 || (math.mod(math.floor(v.s17 / 4096), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_141": {
+          "rotation": [
+            "((math.mod(math.floor(v.s17 / 32768), 8)) == 4 || (math.mod(math.floor(v.s17 / 32768), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s17 / 32768), 8)) == 3 || (math.mod(math.floor(v.s17 / 32768), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_142": {
+          "rotation": [
+            "((math.mod(math.floor(v.s17 / 262144), 8)) == 4 || (math.mod(math.floor(v.s17 / 262144), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s17 / 262144), 8)) == 3 || (math.mod(math.floor(v.s17 / 262144), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_143": {
+          "rotation": [
+            "((math.mod(math.floor(v.s17 / 2097152), 8)) == 4 || (math.mod(math.floor(v.s17 / 2097152), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s17 / 2097152), 8)) == 3 || (math.mod(math.floor(v.s17 / 2097152), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_144": {
+          "rotation": [
+            "((math.mod(math.floor(v.s18 / 1), 8)) == 4 || (math.mod(math.floor(v.s18 / 1), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s18 / 1), 8)) == 3 || (math.mod(math.floor(v.s18 / 1), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_145": {
+          "rotation": [
+            "((math.mod(math.floor(v.s18 / 8), 8)) == 4 || (math.mod(math.floor(v.s18 / 8), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s18 / 8), 8)) == 3 || (math.mod(math.floor(v.s18 / 8), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_146": {
+          "rotation": [
+            "((math.mod(math.floor(v.s18 / 64), 8)) == 4 || (math.mod(math.floor(v.s18 / 64), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s18 / 64), 8)) == 3 || (math.mod(math.floor(v.s18 / 64), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_147": {
+          "rotation": [
+            "((math.mod(math.floor(v.s18 / 512), 8)) == 4 || (math.mod(math.floor(v.s18 / 512), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s18 / 512), 8)) == 3 || (math.mod(math.floor(v.s18 / 512), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_148": {
+          "rotation": [
+            "((math.mod(math.floor(v.s18 / 4096), 8)) == 4 || (math.mod(math.floor(v.s18 / 4096), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s18 / 4096), 8)) == 3 || (math.mod(math.floor(v.s18 / 4096), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_149": {
+          "rotation": [
+            "((math.mod(math.floor(v.s18 / 32768), 8)) == 4 || (math.mod(math.floor(v.s18 / 32768), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s18 / 32768), 8)) == 3 || (math.mod(math.floor(v.s18 / 32768), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_150": {
+          "rotation": [
+            "((math.mod(math.floor(v.s18 / 262144), 8)) == 4 || (math.mod(math.floor(v.s18 / 262144), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s18 / 262144), 8)) == 3 || (math.mod(math.floor(v.s18 / 262144), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_151": {
+          "rotation": [
+            "((math.mod(math.floor(v.s18 / 2097152), 8)) == 4 || (math.mod(math.floor(v.s18 / 2097152), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s18 / 2097152), 8)) == 3 || (math.mod(math.floor(v.s18 / 2097152), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_152": {
+          "rotation": [
+            "((math.mod(math.floor(v.s19 / 1), 8)) == 4 || (math.mod(math.floor(v.s19 / 1), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s19 / 1), 8)) == 3 || (math.mod(math.floor(v.s19 / 1), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_153": {
+          "rotation": [
+            "((math.mod(math.floor(v.s19 / 8), 8)) == 4 || (math.mod(math.floor(v.s19 / 8), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s19 / 8), 8)) == 3 || (math.mod(math.floor(v.s19 / 8), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_154": {
+          "rotation": [
+            "((math.mod(math.floor(v.s19 / 64), 8)) == 4 || (math.mod(math.floor(v.s19 / 64), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s19 / 64), 8)) == 3 || (math.mod(math.floor(v.s19 / 64), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_155": {
+          "rotation": [
+            "((math.mod(math.floor(v.s19 / 512), 8)) == 4 || (math.mod(math.floor(v.s19 / 512), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s19 / 512), 8)) == 3 || (math.mod(math.floor(v.s19 / 512), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_156": {
+          "rotation": [
+            "((math.mod(math.floor(v.s19 / 4096), 8)) == 4 || (math.mod(math.floor(v.s19 / 4096), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s19 / 4096), 8)) == 3 || (math.mod(math.floor(v.s19 / 4096), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_157": {
+          "rotation": [
+            "((math.mod(math.floor(v.s19 / 32768), 8)) == 4 || (math.mod(math.floor(v.s19 / 32768), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s19 / 32768), 8)) == 3 || (math.mod(math.floor(v.s19 / 32768), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_158": {
+          "rotation": [
+            "((math.mod(math.floor(v.s19 / 262144), 8)) == 4 || (math.mod(math.floor(v.s19 / 262144), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s19 / 262144), 8)) == 3 || (math.mod(math.floor(v.s19 / 262144), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_159": {
+          "rotation": [
+            "((math.mod(math.floor(v.s19 / 2097152), 8)) == 4 || (math.mod(math.floor(v.s19 / 2097152), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s19 / 2097152), 8)) == 3 || (math.mod(math.floor(v.s19 / 2097152), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_160": {
+          "rotation": [
+            "((math.mod(math.floor(v.s20 / 1), 8)) == 4 || (math.mod(math.floor(v.s20 / 1), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s20 / 1), 8)) == 3 || (math.mod(math.floor(v.s20 / 1), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_161": {
+          "rotation": [
+            "((math.mod(math.floor(v.s20 / 8), 8)) == 4 || (math.mod(math.floor(v.s20 / 8), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s20 / 8), 8)) == 3 || (math.mod(math.floor(v.s20 / 8), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_162": {
+          "rotation": [
+            "((math.mod(math.floor(v.s20 / 64), 8)) == 4 || (math.mod(math.floor(v.s20 / 64), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s20 / 64), 8)) == 3 || (math.mod(math.floor(v.s20 / 64), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_163": {
+          "rotation": [
+            "((math.mod(math.floor(v.s20 / 512), 8)) == 4 || (math.mod(math.floor(v.s20 / 512), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s20 / 512), 8)) == 3 || (math.mod(math.floor(v.s20 / 512), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_164": {
+          "rotation": [
+            "((math.mod(math.floor(v.s20 / 4096), 8)) == 4 || (math.mod(math.floor(v.s20 / 4096), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s20 / 4096), 8)) == 3 || (math.mod(math.floor(v.s20 / 4096), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_165": {
+          "rotation": [
+            "((math.mod(math.floor(v.s20 / 32768), 8)) == 4 || (math.mod(math.floor(v.s20 / 32768), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s20 / 32768), 8)) == 3 || (math.mod(math.floor(v.s20 / 32768), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_166": {
+          "rotation": [
+            "((math.mod(math.floor(v.s20 / 262144), 8)) == 4 || (math.mod(math.floor(v.s20 / 262144), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s20 / 262144), 8)) == 3 || (math.mod(math.floor(v.s20 / 262144), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_167": {
+          "rotation": [
+            "((math.mod(math.floor(v.s20 / 2097152), 8)) == 4 || (math.mod(math.floor(v.s20 / 2097152), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s20 / 2097152), 8)) == 3 || (math.mod(math.floor(v.s20 / 2097152), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_168": {
+          "rotation": [
+            "((math.mod(math.floor(v.s21 / 1), 8)) == 4 || (math.mod(math.floor(v.s21 / 1), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s21 / 1), 8)) == 3 || (math.mod(math.floor(v.s21 / 1), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_169": {
+          "rotation": [
+            "((math.mod(math.floor(v.s21 / 8), 8)) == 4 || (math.mod(math.floor(v.s21 / 8), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s21 / 8), 8)) == 3 || (math.mod(math.floor(v.s21 / 8), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_170": {
+          "rotation": [
+            "((math.mod(math.floor(v.s21 / 64), 8)) == 4 || (math.mod(math.floor(v.s21 / 64), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s21 / 64), 8)) == 3 || (math.mod(math.floor(v.s21 / 64), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_171": {
+          "rotation": [
+            "((math.mod(math.floor(v.s21 / 512), 8)) == 4 || (math.mod(math.floor(v.s21 / 512), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s21 / 512), 8)) == 3 || (math.mod(math.floor(v.s21 / 512), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_172": {
+          "rotation": [
+            "((math.mod(math.floor(v.s21 / 4096), 8)) == 4 || (math.mod(math.floor(v.s21 / 4096), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s21 / 4096), 8)) == 3 || (math.mod(math.floor(v.s21 / 4096), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_173": {
+          "rotation": [
+            "((math.mod(math.floor(v.s21 / 32768), 8)) == 4 || (math.mod(math.floor(v.s21 / 32768), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s21 / 32768), 8)) == 3 || (math.mod(math.floor(v.s21 / 32768), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_174": {
+          "rotation": [
+            "((math.mod(math.floor(v.s21 / 262144), 8)) == 4 || (math.mod(math.floor(v.s21 / 262144), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s21 / 262144), 8)) == 3 || (math.mod(math.floor(v.s21 / 262144), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_175": {
+          "rotation": [
+            "((math.mod(math.floor(v.s21 / 2097152), 8)) == 4 || (math.mod(math.floor(v.s21 / 2097152), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s21 / 2097152), 8)) == 3 || (math.mod(math.floor(v.s21 / 2097152), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_176": {
+          "rotation": [
+            "((math.mod(math.floor(v.s22 / 1), 8)) == 4 || (math.mod(math.floor(v.s22 / 1), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s22 / 1), 8)) == 3 || (math.mod(math.floor(v.s22 / 1), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_177": {
+          "rotation": [
+            "((math.mod(math.floor(v.s22 / 8), 8)) == 4 || (math.mod(math.floor(v.s22 / 8), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s22 / 8), 8)) == 3 || (math.mod(math.floor(v.s22 / 8), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_178": {
+          "rotation": [
+            "((math.mod(math.floor(v.s22 / 64), 8)) == 4 || (math.mod(math.floor(v.s22 / 64), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s22 / 64), 8)) == 3 || (math.mod(math.floor(v.s22 / 64), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_179": {
+          "rotation": [
+            "((math.mod(math.floor(v.s22 / 512), 8)) == 4 || (math.mod(math.floor(v.s22 / 512), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s22 / 512), 8)) == 3 || (math.mod(math.floor(v.s22 / 512), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_180": {
+          "rotation": [
+            "((math.mod(math.floor(v.s22 / 4096), 8)) == 4 || (math.mod(math.floor(v.s22 / 4096), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s22 / 4096), 8)) == 3 || (math.mod(math.floor(v.s22 / 4096), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_181": {
+          "rotation": [
+            "((math.mod(math.floor(v.s22 / 32768), 8)) == 4 || (math.mod(math.floor(v.s22 / 32768), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s22 / 32768), 8)) == 3 || (math.mod(math.floor(v.s22 / 32768), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_182": {
+          "rotation": [
+            "((math.mod(math.floor(v.s22 / 262144), 8)) == 4 || (math.mod(math.floor(v.s22 / 262144), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s22 / 262144), 8)) == 3 || (math.mod(math.floor(v.s22 / 262144), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_183": {
+          "rotation": [
+            "((math.mod(math.floor(v.s22 / 2097152), 8)) == 4 || (math.mod(math.floor(v.s22 / 2097152), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s22 / 2097152), 8)) == 3 || (math.mod(math.floor(v.s22 / 2097152), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_184": {
+          "rotation": [
+            "((math.mod(math.floor(v.s23 / 1), 8)) == 4 || (math.mod(math.floor(v.s23 / 1), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s23 / 1), 8)) == 3 || (math.mod(math.floor(v.s23 / 1), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_185": {
+          "rotation": [
+            "((math.mod(math.floor(v.s23 / 8), 8)) == 4 || (math.mod(math.floor(v.s23 / 8), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s23 / 8), 8)) == 3 || (math.mod(math.floor(v.s23 / 8), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_186": {
+          "rotation": [
+            "((math.mod(math.floor(v.s23 / 64), 8)) == 4 || (math.mod(math.floor(v.s23 / 64), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s23 / 64), 8)) == 3 || (math.mod(math.floor(v.s23 / 64), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_187": {
+          "rotation": [
+            "((math.mod(math.floor(v.s23 / 512), 8)) == 4 || (math.mod(math.floor(v.s23 / 512), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s23 / 512), 8)) == 3 || (math.mod(math.floor(v.s23 / 512), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_188": {
+          "rotation": [
+            "((math.mod(math.floor(v.s23 / 4096), 8)) == 4 || (math.mod(math.floor(v.s23 / 4096), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s23 / 4096), 8)) == 3 || (math.mod(math.floor(v.s23 / 4096), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_189": {
+          "rotation": [
+            "((math.mod(math.floor(v.s23 / 32768), 8)) == 4 || (math.mod(math.floor(v.s23 / 32768), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s23 / 32768), 8)) == 3 || (math.mod(math.floor(v.s23 / 32768), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_190": {
+          "rotation": [
+            "((math.mod(math.floor(v.s23 / 262144), 8)) == 4 || (math.mod(math.floor(v.s23 / 262144), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s23 / 262144), 8)) == 3 || (math.mod(math.floor(v.s23 / 262144), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_191": {
+          "rotation": [
+            "((math.mod(math.floor(v.s23 / 2097152), 8)) == 4 || (math.mod(math.floor(v.s23 / 2097152), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s23 / 2097152), 8)) == 3 || (math.mod(math.floor(v.s23 / 2097152), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_192": {
+          "rotation": [
+            "((math.mod(math.floor(v.s24 / 1), 8)) == 4 || (math.mod(math.floor(v.s24 / 1), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s24 / 1), 8)) == 3 || (math.mod(math.floor(v.s24 / 1), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_193": {
+          "rotation": [
+            "((math.mod(math.floor(v.s24 / 8), 8)) == 4 || (math.mod(math.floor(v.s24 / 8), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s24 / 8), 8)) == 3 || (math.mod(math.floor(v.s24 / 8), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_194": {
+          "rotation": [
+            "((math.mod(math.floor(v.s24 / 64), 8)) == 4 || (math.mod(math.floor(v.s24 / 64), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s24 / 64), 8)) == 3 || (math.mod(math.floor(v.s24 / 64), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_195": {
+          "rotation": [
+            "((math.mod(math.floor(v.s24 / 512), 8)) == 4 || (math.mod(math.floor(v.s24 / 512), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s24 / 512), 8)) == 3 || (math.mod(math.floor(v.s24 / 512), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_196": {
+          "rotation": [
+            "((math.mod(math.floor(v.s24 / 4096), 8)) == 4 || (math.mod(math.floor(v.s24 / 4096), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s24 / 4096), 8)) == 3 || (math.mod(math.floor(v.s24 / 4096), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_197": {
+          "rotation": [
+            "((math.mod(math.floor(v.s24 / 32768), 8)) == 4 || (math.mod(math.floor(v.s24 / 32768), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s24 / 32768), 8)) == 3 || (math.mod(math.floor(v.s24 / 32768), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_198": {
+          "rotation": [
+            "((math.mod(math.floor(v.s24 / 262144), 8)) == 4 || (math.mod(math.floor(v.s24 / 262144), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s24 / 262144), 8)) == 3 || (math.mod(math.floor(v.s24 / 262144), 8)) == 6) ? 90 : 0"
+          ]
+        },
+        "slot_199": {
+          "rotation": [
+            "((math.mod(math.floor(v.s24 / 2097152), 8)) == 4 || (math.mod(math.floor(v.s24 / 2097152), 8)) == 7) ? 90 : 0",
+            0,
+            "((math.mod(math.floor(v.s24 / 2097152), 8)) == 3 || (math.mod(math.floor(v.s24 / 2097152), 8)) == 6) ? 90 : 0"
+          ]
+        }
+      }
+    }
+  }
+}

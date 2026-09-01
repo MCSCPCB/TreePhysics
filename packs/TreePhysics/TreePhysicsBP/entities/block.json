@@ -1,0 +1,140 @@
+{
+  "format_version": "1.20.30",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "treephysics:block",
+      "is_summonable": true,
+      "is_spawnable": false,
+      "properties": {
+        "treephysics:scale": {
+          "type": "float",
+          "range": [0.0, 16.0],
+          "client_sync": true,
+          "default": "0"
+        },
+        "treephysics:pitch": {
+          "type": "float",
+          "range": [-400.0, 400.0],
+          "client_sync": true,
+          "default": "0"
+        },
+        "treephysics:yaw": {
+          "type": "float",
+          "range": [-400.0, 400.0],
+          "client_sync": true,
+          "default": "0"
+        },
+        "treephysics:roll": {
+          "type": "float",
+          "range": [-400.0, 400.0],
+          "client_sync": true,
+          "default": "0"
+        },
+        "treephysics:local_pitch": {
+          "type": "float",
+          "range": [-400.0, 400.0],
+          "client_sync": true,
+          "default": "0"
+        },
+        "treephysics:local_yaw": {
+          "type": "float",
+          "range": [-400.0, 400.0],
+          "client_sync": true,
+          "default": "0"
+        },
+        "treephysics:local_roll": {
+          "type": "float",
+          "range": [-400.0, 400.0],
+          "client_sync": true,
+          "default": "0"
+        },
+        "treephysics:left_local_pitch": {
+          "type": "float",
+          "range": [-400.0, 400.0],
+          "client_sync": true,
+          "default": "0"
+        },
+        "treephysics:left_local_yaw": {
+          "type": "float",
+          "range": [-400.0, 400.0],
+          "client_sync": true,
+          "default": "0"
+        },
+        "treephysics:left_local_roll": {
+          "type": "float",
+          "range": [-400.0, 400.0],
+          "client_sync": true,
+          "default": "0"
+        },
+        "treephysics:local_x": {
+          "type": "float",
+          "range": [-512.0, 512.0],
+          "client_sync": true,
+          "default": "0"
+        },
+        "treephysics:local_y": {
+          "type": "float",
+          "range": [-512.0, 512.0],
+          "client_sync": true,
+          "default": "0"
+        },
+        "treephysics:local_z": {
+          "type": "float",
+          "range": [-512.0, 512.0],
+          "client_sync": true,
+          "default": "0"
+        },
+        "treephysics:left_local_x": {
+          "type": "float",
+          "range": [-512.0, 512.0],
+          "client_sync": true,
+          "default": "0"
+        },
+        "treephysics:left_local_y": {
+          "type": "float",
+          "range": [-512.0, 512.0],
+          "client_sync": true,
+          "default": "0"
+        },
+        "treephysics:left_local_z": {
+          "type": "float",
+          "range": [-512.0, 512.0],
+          "client_sync": true,
+          "default": "0"
+        },
+        "treephysics:left_item_offset": {
+          "type": "float",
+          "range": [-3.0, 3.0],
+          "client_sync": true,
+          "default": "0"
+        }
+      }
+    },
+    "components": {
+      "minecraft:type_family": {
+        "family": ["block", "inanimate"]
+      },
+      "minecraft:equipment": {},
+      "minecraft:damage_sensor": {
+        "triggers": [
+          {
+            "cause": "all",
+            "deals_damage": false
+          }
+        ]
+      },
+      "minecraft:collision_box": {
+        "height": 0,
+        "width": 0
+      },
+      "minecraft:physics": {
+        "has_collision": false,
+        "has_gravity": false
+      },
+      "minecraft:conditional_bandwidth_optimization": {
+        "conditional_values": [],
+        "default_values": {}
+      }
+    }
+  }
+}

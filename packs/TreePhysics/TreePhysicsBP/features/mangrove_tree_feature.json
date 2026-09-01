@@ -1,0 +1,13 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:aggregate_feature": {
+    "description": {
+      "identifier": "minecraft:mangrove_tree_feature"
+    },
+    "early_out": "first_failure",
+    "features": [
+      "treephysics:mangrove_tree",
+      "treephysics:mangrove_root_scatter"
+    ]
+  }
+}

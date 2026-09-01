@@ -1,0 +1,16 @@
+{
+  "format_version": "1.21.60",
+  "minecraft:scatter_feature": {
+    "description": {
+      "identifier": "treephysics:external_natural_root_the_end_cave_offset"
+    },
+    "places_feature": "treephysics:external_natural_root_the_end_feature",
+    "distribution": {
+      "iterations": 1,
+      "coordinate_eval_order": "xzy",
+      "x": 0,
+      "y": -2,
+      "z": 0
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+    "format_version": 3,
+    "metadata": {
+        "authors": [
+            "MINECRAFT-SCPCB"
+        ],
+        "product_type": "addon"
+    },
+    "header": {
+        "name": "pack.name",
+        "description": "pack.description",
+        "uuid": "2bb3c2a3-3fa9-4d6b-a6f0-747a437076c9",
+        "pack_scope": "world",
+        "version": "0.2.1",
+        "min_engine_version": "1.26.30"
+    },
+    "modules": [
+        {
+            "type": "resources",
+            "uuid": "8a747f47-6773-4c2b-ac81-b31815fce436",
+            "version": "0.2.1"
+        }
+    ],
+    "capabilities": [
+        "pbr"
+    ],
+    "subpacks": [
+        {
+            "folder_name": "compatible",
+            "memory_performance_tier": 1,
+            "name": "Compatible"
+        },
+        {
+            "folder_name": "default",
+            "memory_performance_tier": 1,
+            "name": "Default"
+        }
+    ],
+    "settings": [
+        {
+            "type": "label",
+            "text": "subpack.treephysics.default"
+        },
+        {
+            "type": "label",
+            "text": "subpack.treephysics.compatible"
+        }
+    ],
+    "dependencies": [
+        {
+            "uuid": "b6228a4d-7118-4f75-9009-213fe0b8ef81",
+            "version": "0.2.1"
+        }
+    ]
+}

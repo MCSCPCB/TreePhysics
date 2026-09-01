@@ -1,0 +1,7091 @@
+{
+  "format_version": "1.20.30",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "treephysics:block_collider",
+      "is_spawnable": false,
+      "is_summonable": true
+    },
+    "components": {
+      "minecraft:type_family": {
+        "family": [
+          "block_collider",
+          "inanimate"
+        ]
+      },
+      "minecraft:damage_sensor": {
+        "triggers": [
+          {
+            "cause": "all",
+            "deals_damage": false
+          }
+        ]
+      },
+      "minecraft:physics": {
+        "has_collision": false,
+        "has_gravity": false
+      },
+      "minecraft:knockback_resistance": {
+        "value": 1
+      },
+      "minecraft:conditional_bandwidth_optimization": {
+        "conditional_values": [],
+        "default_values": {}
+      },
+      "minecraft:is_collidable": {},
+      "minecraft:collision_box": {
+        "width": 0.33,
+        "height": 0.25
+      },
+      "minecraft:custom_hit_test": {
+        "hitboxes": [
+          {
+            "width": 0,
+            "height": 0,
+            "pivot": [
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      "minecraft:body_rotation_blocked": {},
+      "minecraft:rotation_axis_aligned": {},
+      "minecraft:renders_when_invisible": {},
+      "minecraft:spell_effects": {
+        "add_effects": [
+          {
+            "duration": "infinite",
+            "effect": "invisibility",
+            "visible": false
+          }
+        ]
+      }
+    },
+    "component_groups": {
+      "obb_support_w2_h1": {
+        "minecraft:collision_box": {
+          "width": 0.6720201433256687,
+          "height": 0.25
+        }
+      },
+      "obb_support_w3_h1": {
+        "minecraft:collision_box": {
+          "width": 1.0140402866513374,
+          "height": 0.25
+        }
+      },
+      "obb_support_w4_h1": {
+        "minecraft:collision_box": {
+          "width": 1.3560604299770063,
+          "height": 0.25
+        }
+      },
+      "obb_support_w5_h1": {
+        "minecraft:collision_box": {
+          "width": 1.698080573302675,
+          "height": 0.25
+        }
+      },
+      "obb_support_w6_h1": {
+        "minecraft:collision_box": {
+          "width": 2.0401007166283436,
+          "height": 0.25
+        }
+      },
+      "obb_support_w7_h1": {
+        "minecraft:collision_box": {
+          "width": 2.3821208599540125,
+          "height": 0.25
+        }
+      },
+      "obb_support_w8_h1": {
+        "minecraft:collision_box": {
+          "width": 2.724141003279681,
+          "height": 0.25
+        }
+      },
+      "obb_support_w9_h1": {
+        "minecraft:collision_box": {
+          "width": 3.0661611466053498,
+          "height": 0.25
+        }
+      },
+      "obb_support_w10_h1": {
+        "minecraft:collision_box": {
+          "width": 3.4081812899310187,
+          "height": 0.25
+        }
+      },
+      "obb_support_w11_h1": {
+        "minecraft:collision_box": {
+          "width": 3.750201433256687,
+          "height": 0.25
+        }
+      },
+      "obb_support_w12_h1": {
+        "minecraft:collision_box": {
+          "width": 4.0922215765823555,
+          "height": 0.25
+        }
+      },
+      "obb_support_w13_h1": {
+        "minecraft:collision_box": {
+          "width": 4.434241719908025,
+          "height": 0.25
+        }
+      },
+      "obb_support_w14_h1": {
+        "minecraft:collision_box": {
+          "width": 4.776261863233693,
+          "height": 0.25
+        }
+      },
+      "obb_support_w15_h1": {
+        "minecraft:collision_box": {
+          "width": 5.118282006559362,
+          "height": 0.25
+        }
+      },
+      "obb_support_w16_h1": {
+        "minecraft:collision_box": {
+          "width": 5.460302149885031,
+          "height": 0.25
+        }
+      },
+      "obb_support_w1_h2": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 0.5
+        }
+      },
+      "obb_support_w1_h3": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 0.75
+        }
+      },
+      "obb_support_w1_h4": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 1
+        }
+      },
+      "obb_support_w1_h5": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 1.25
+        }
+      },
+      "obb_support_w1_h6": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 1.5
+        }
+      },
+      "obb_support_w1_h7": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 1.75
+        }
+      },
+      "obb_support_w1_h8": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 2
+        }
+      },
+      "obb_support_w1_h9": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 2.25
+        }
+      },
+      "obb_support_w1_h10": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 2.5
+        }
+      },
+      "obb_support_w1_h11": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 2.75
+        }
+      },
+      "obb_support_w1_h12": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 3
+        }
+      },
+      "obb_support_w1_h13": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 3.25
+        }
+      },
+      "obb_support_w1_h14": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 3.5
+        }
+      },
+      "obb_support_w1_h15": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 3.75
+        }
+      },
+      "obb_support_w1_h16": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 4
+        }
+      },
+      "obb_support_w2_h2": {
+        "minecraft:collision_box": {
+          "width": 0.6720201433256687,
+          "height": 0.5
+        }
+      },
+      "obb_support_w2_h3": {
+        "minecraft:collision_box": {
+          "width": 0.6720201433256687,
+          "height": 0.75
+        }
+      },
+      "obb_support_w2_h4": {
+        "minecraft:collision_box": {
+          "width": 0.6720201433256687,
+          "height": 1
+        }
+      },
+      "obb_support_w2_h5": {
+        "minecraft:collision_box": {
+          "width": 0.6720201433256687,
+          "height": 1.25
+        }
+      },
+      "obb_support_w2_h6": {
+        "minecraft:collision_box": {
+          "width": 0.6720201433256687,
+          "height": 1.5
+        }
+      },
+      "obb_support_w2_h7": {
+        "minecraft:collision_box": {
+          "width": 0.6720201433256687,
+          "height": 1.75
+        }
+      },
+      "obb_support_w2_h8": {
+        "minecraft:collision_box": {
+          "width": 0.6720201433256687,
+          "height": 2
+        }
+      },
+      "obb_support_w2_h9": {
+        "minecraft:collision_box": {
+          "width": 0.6720201433256687,
+          "height": 2.25
+        }
+      },
+      "obb_support_w2_h10": {
+        "minecraft:collision_box": {
+          "width": 0.6720201433256687,
+          "height": 2.5
+        }
+      },
+      "obb_support_w2_h11": {
+        "minecraft:collision_box": {
+          "width": 0.6720201433256687,
+          "height": 2.75
+        }
+      },
+      "obb_support_w2_h12": {
+        "minecraft:collision_box": {
+          "width": 0.6720201433256687,
+          "height": 3
+        }
+      },
+      "obb_support_w2_h13": {
+        "minecraft:collision_box": {
+          "width": 0.6720201433256687,
+          "height": 3.25
+        }
+      },
+      "obb_support_w2_h14": {
+        "minecraft:collision_box": {
+          "width": 0.6720201433256687,
+          "height": 3.5
+        }
+      },
+      "obb_support_w2_h15": {
+        "minecraft:collision_box": {
+          "width": 0.6720201433256687,
+          "height": 3.75
+        }
+      },
+      "obb_support_w2_h16": {
+        "minecraft:collision_box": {
+          "width": 0.6720201433256687,
+          "height": 4
+        }
+      },
+      "obb_support_w3_h2": {
+        "minecraft:collision_box": {
+          "width": 1.0140402866513374,
+          "height": 0.5
+        }
+      },
+      "obb_support_w3_h3": {
+        "minecraft:collision_box": {
+          "width": 1.0140402866513374,
+          "height": 0.75
+        }
+      },
+      "obb_support_w3_h4": {
+        "minecraft:collision_box": {
+          "width": 1.0140402866513374,
+          "height": 1
+        }
+      },
+      "obb_support_w3_h5": {
+        "minecraft:collision_box": {
+          "width": 1.0140402866513374,
+          "height": 1.25
+        }
+      },
+      "obb_support_w3_h6": {
+        "minecraft:collision_box": {
+          "width": 1.0140402866513374,
+          "height": 1.5
+        }
+      },
+      "obb_support_w3_h7": {
+        "minecraft:collision_box": {
+          "width": 1.0140402866513374,
+          "height": 1.75
+        }
+      },
+      "obb_support_w3_h8": {
+        "minecraft:collision_box": {
+          "width": 1.0140402866513374,
+          "height": 2
+        }
+      },
+      "obb_support_w3_h9": {
+        "minecraft:collision_box": {
+          "width": 1.0140402866513374,
+          "height": 2.25
+        }
+      },
+      "obb_support_w3_h10": {
+        "minecraft:collision_box": {
+          "width": 1.0140402866513374,
+          "height": 2.5
+        }
+      },
+      "obb_support_w3_h11": {
+        "minecraft:collision_box": {
+          "width": 1.0140402866513374,
+          "height": 2.75
+        }
+      },
+      "obb_support_w3_h12": {
+        "minecraft:collision_box": {
+          "width": 1.0140402866513374,
+          "height": 3
+        }
+      },
+      "obb_support_w3_h13": {
+        "minecraft:collision_box": {
+          "width": 1.0140402866513374,
+          "height": 3.25
+        }
+      },
+      "obb_support_w3_h14": {
+        "minecraft:collision_box": {
+          "width": 1.0140402866513374,
+          "height": 3.5
+        }
+      },
+      "obb_support_w3_h15": {
+        "minecraft:collision_box": {
+          "width": 1.0140402866513374,
+          "height": 3.75
+        }
+      },
+      "obb_support_w3_h16": {
+        "minecraft:collision_box": {
+          "width": 1.0140402866513374,
+          "height": 4
+        }
+      },
+      "obb_support_w4_h2": {
+        "minecraft:collision_box": {
+          "width": 1.3560604299770063,
+          "height": 0.5
+        }
+      },
+      "obb_support_w4_h3": {
+        "minecraft:collision_box": {
+          "width": 1.3560604299770063,
+          "height": 0.75
+        }
+      },
+      "obb_support_w4_h4": {
+        "minecraft:collision_box": {
+          "width": 1.3560604299770063,
+          "height": 1
+        }
+      },
+      "obb_support_w4_h5": {
+        "minecraft:collision_box": {
+          "width": 1.3560604299770063,
+          "height": 1.25
+        }
+      },
+      "obb_support_w4_h6": {
+        "minecraft:collision_box": {
+          "width": 1.3560604299770063,
+          "height": 1.5
+        }
+      },
+      "obb_support_w4_h7": {
+        "minecraft:collision_box": {
+          "width": 1.3560604299770063,
+          "height": 1.75
+        }
+      },
+      "obb_support_w4_h8": {
+        "minecraft:collision_box": {
+          "width": 1.3560604299770063,
+          "height": 2
+        }
+      },
+      "obb_support_w4_h9": {
+        "minecraft:collision_box": {
+          "width": 1.3560604299770063,
+          "height": 2.25
+        }
+      },
+      "obb_support_w4_h10": {
+        "minecraft:collision_box": {
+          "width": 1.3560604299770063,
+          "height": 2.5
+        }
+      },
+      "obb_support_w4_h11": {
+        "minecraft:collision_box": {
+          "width": 1.3560604299770063,
+          "height": 2.75
+        }
+      },
+      "obb_support_w4_h12": {
+        "minecraft:collision_box": {
+          "width": 1.3560604299770063,
+          "height": 3
+        }
+      },
+      "obb_support_w4_h13": {
+        "minecraft:collision_box": {
+          "width": 1.3560604299770063,
+          "height": 3.25
+        }
+      },
+      "obb_support_w4_h14": {
+        "minecraft:collision_box": {
+          "width": 1.3560604299770063,
+          "height": 3.5
+        }
+      },
+      "obb_support_w4_h15": {
+        "minecraft:collision_box": {
+          "width": 1.3560604299770063,
+          "height": 3.75
+        }
+      },
+      "obb_support_w4_h16": {
+        "minecraft:collision_box": {
+          "width": 1.3560604299770063,
+          "height": 4
+        }
+      },
+      "obb_support_w5_h2": {
+        "minecraft:collision_box": {
+          "width": 1.698080573302675,
+          "height": 0.5
+        }
+      },
+      "obb_support_w5_h3": {
+        "minecraft:collision_box": {
+          "width": 1.698080573302675,
+          "height": 0.75
+        }
+      },
+      "obb_support_w5_h4": {
+        "minecraft:collision_box": {
+          "width": 1.698080573302675,
+          "height": 1
+        }
+      },
+      "obb_support_w5_h5": {
+        "minecraft:collision_box": {
+          "width": 1.698080573302675,
+          "height": 1.25
+        }
+      },
+      "obb_support_w5_h6": {
+        "minecraft:collision_box": {
+          "width": 1.698080573302675,
+          "height": 1.5
+        }
+      },
+      "obb_support_w5_h7": {
+        "minecraft:collision_box": {
+          "width": 1.698080573302675,
+          "height": 1.75
+        }
+      },
+      "obb_support_w5_h8": {
+        "minecraft:collision_box": {
+          "width": 1.698080573302675,
+          "height": 2
+        }
+      },
+      "obb_support_w5_h9": {
+        "minecraft:collision_box": {
+          "width": 1.698080573302675,
+          "height": 2.25
+        }
+      },
+      "obb_support_w5_h10": {
+        "minecraft:collision_box": {
+          "width": 1.698080573302675,
+          "height": 2.5
+        }
+      },
+      "obb_support_w5_h11": {
+        "minecraft:collision_box": {
+          "width": 1.698080573302675,
+          "height": 2.75
+        }
+      },
+      "obb_support_w5_h12": {
+        "minecraft:collision_box": {
+          "width": 1.698080573302675,
+          "height": 3
+        }
+      },
+      "obb_support_w5_h13": {
+        "minecraft:collision_box": {
+          "width": 1.698080573302675,
+          "height": 3.25
+        }
+      },
+      "obb_support_w5_h14": {
+        "minecraft:collision_box": {
+          "width": 1.698080573302675,
+          "height": 3.5
+        }
+      },
+      "obb_support_w5_h15": {
+        "minecraft:collision_box": {
+          "width": 1.698080573302675,
+          "height": 3.75
+        }
+      },
+      "obb_support_w5_h16": {
+        "minecraft:collision_box": {
+          "width": 1.698080573302675,
+          "height": 4
+        }
+      },
+      "obb_support_w6_h2": {
+        "minecraft:collision_box": {
+          "width": 2.0401007166283436,
+          "height": 0.5
+        }
+      },
+      "obb_support_w6_h3": {
+        "minecraft:collision_box": {
+          "width": 2.0401007166283436,
+          "height": 0.75
+        }
+      },
+      "obb_support_w6_h4": {
+        "minecraft:collision_box": {
+          "width": 2.0401007166283436,
+          "height": 1
+        }
+      },
+      "obb_support_w6_h5": {
+        "minecraft:collision_box": {
+          "width": 2.0401007166283436,
+          "height": 1.25
+        }
+      },
+      "obb_support_w6_h6": {
+        "minecraft:collision_box": {
+          "width": 2.0401007166283436,
+          "height": 1.5
+        }
+      },
+      "obb_support_w6_h7": {
+        "minecraft:collision_box": {
+          "width": 2.0401007166283436,
+          "height": 1.75
+        }
+      },
+      "obb_support_w6_h8": {
+        "minecraft:collision_box": {
+          "width": 2.0401007166283436,
+          "height": 2
+        }
+      },
+      "obb_support_w6_h9": {
+        "minecraft:collision_box": {
+          "width": 2.0401007166283436,
+          "height": 2.25
+        }
+      },
+      "obb_support_w6_h10": {
+        "minecraft:collision_box": {
+          "width": 2.0401007166283436,
+          "height": 2.5
+        }
+      },
+      "obb_support_w6_h11": {
+        "minecraft:collision_box": {
+          "width": 2.0401007166283436,
+          "height": 2.75
+        }
+      },
+      "obb_support_w6_h12": {
+        "minecraft:collision_box": {
+          "width": 2.0401007166283436,
+          "height": 3
+        }
+      },
+      "obb_support_w6_h13": {
+        "minecraft:collision_box": {
+          "width": 2.0401007166283436,
+          "height": 3.25
+        }
+      },
+      "obb_support_w6_h14": {
+        "minecraft:collision_box": {
+          "width": 2.0401007166283436,
+          "height": 3.5
+        }
+      },
+      "obb_support_w6_h15": {
+        "minecraft:collision_box": {
+          "width": 2.0401007166283436,
+          "height": 3.75
+        }
+      },
+      "obb_support_w6_h16": {
+        "minecraft:collision_box": {
+          "width": 2.0401007166283436,
+          "height": 4
+        }
+      },
+      "obb_support_w7_h2": {
+        "minecraft:collision_box": {
+          "width": 2.3821208599540125,
+          "height": 0.5
+        }
+      },
+      "obb_support_w7_h3": {
+        "minecraft:collision_box": {
+          "width": 2.3821208599540125,
+          "height": 0.75
+        }
+      },
+      "obb_support_w7_h4": {
+        "minecraft:collision_box": {
+          "width": 2.3821208599540125,
+          "height": 1
+        }
+      },
+      "obb_support_w7_h5": {
+        "minecraft:collision_box": {
+          "width": 2.3821208599540125,
+          "height": 1.25
+        }
+      },
+      "obb_support_w7_h6": {
+        "minecraft:collision_box": {
+          "width": 2.3821208599540125,
+          "height": 1.5
+        }
+      },
+      "obb_support_w7_h7": {
+        "minecraft:collision_box": {
+          "width": 2.3821208599540125,
+          "height": 1.75
+        }
+      },
+      "obb_support_w7_h8": {
+        "minecraft:collision_box": {
+          "width": 2.3821208599540125,
+          "height": 2
+        }
+      },
+      "obb_support_w7_h9": {
+        "minecraft:collision_box": {
+          "width": 2.3821208599540125,
+          "height": 2.25
+        }
+      },
+      "obb_support_w7_h10": {
+        "minecraft:collision_box": {
+          "width": 2.3821208599540125,
+          "height": 2.5
+        }
+      },
+      "obb_support_w7_h11": {
+        "minecraft:collision_box": {
+          "width": 2.3821208599540125,
+          "height": 2.75
+        }
+      },
+      "obb_support_w7_h12": {
+        "minecraft:collision_box": {
+          "width": 2.3821208599540125,
+          "height": 3
+        }
+      },
+      "obb_support_w7_h13": {
+        "minecraft:collision_box": {
+          "width": 2.3821208599540125,
+          "height": 3.25
+        }
+      },
+      "obb_support_w7_h14": {
+        "minecraft:collision_box": {
+          "width": 2.3821208599540125,
+          "height": 3.5
+        }
+      },
+      "obb_support_w7_h15": {
+        "minecraft:collision_box": {
+          "width": 2.3821208599540125,
+          "height": 3.75
+        }
+      },
+      "obb_support_w7_h16": {
+        "minecraft:collision_box": {
+          "width": 2.3821208599540125,
+          "height": 4
+        }
+      },
+      "obb_support_w8_h2": {
+        "minecraft:collision_box": {
+          "width": 2.724141003279681,
+          "height": 0.5
+        }
+      },
+      "obb_support_w8_h3": {
+        "minecraft:collision_box": {
+          "width": 2.724141003279681,
+          "height": 0.75
+        }
+      },
+      "obb_support_w8_h4": {
+        "minecraft:collision_box": {
+          "width": 2.724141003279681,
+          "height": 1
+        }
+      },
+      "obb_support_w8_h5": {
+        "minecraft:collision_box": {
+          "width": 2.724141003279681,
+          "height": 1.25
+        }
+      },
+      "obb_support_w8_h6": {
+        "minecraft:collision_box": {
+          "width": 2.724141003279681,
+          "height": 1.5
+        }
+      },
+      "obb_support_w8_h7": {
+        "minecraft:collision_box": {
+          "width": 2.724141003279681,
+          "height": 1.75
+        }
+      },
+      "obb_support_w8_h8": {
+        "minecraft:collision_box": {
+          "width": 2.724141003279681,
+          "height": 2
+        }
+      },
+      "obb_support_w8_h9": {
+        "minecraft:collision_box": {
+          "width": 2.724141003279681,
+          "height": 2.25
+        }
+      },
+      "obb_support_w8_h10": {
+        "minecraft:collision_box": {
+          "width": 2.724141003279681,
+          "height": 2.5
+        }
+      },
+      "obb_support_w8_h11": {
+        "minecraft:collision_box": {
+          "width": 2.724141003279681,
+          "height": 2.75
+        }
+      },
+      "obb_support_w8_h12": {
+        "minecraft:collision_box": {
+          "width": 2.724141003279681,
+          "height": 3
+        }
+      },
+      "obb_support_w8_h13": {
+        "minecraft:collision_box": {
+          "width": 2.724141003279681,
+          "height": 3.25
+        }
+      },
+      "obb_support_w8_h14": {
+        "minecraft:collision_box": {
+          "width": 2.724141003279681,
+          "height": 3.5
+        }
+      },
+      "obb_support_w8_h15": {
+        "minecraft:collision_box": {
+          "width": 2.724141003279681,
+          "height": 3.75
+        }
+      },
+      "obb_support_w8_h16": {
+        "minecraft:collision_box": {
+          "width": 2.724141003279681,
+          "height": 4
+        }
+      },
+      "obb_support_w9_h2": {
+        "minecraft:collision_box": {
+          "width": 3.0661611466053498,
+          "height": 0.5
+        }
+      },
+      "obb_support_w9_h3": {
+        "minecraft:collision_box": {
+          "width": 3.0661611466053498,
+          "height": 0.75
+        }
+      },
+      "obb_support_w9_h4": {
+        "minecraft:collision_box": {
+          "width": 3.0661611466053498,
+          "height": 1
+        }
+      },
+      "obb_support_w9_h5": {
+        "minecraft:collision_box": {
+          "width": 3.0661611466053498,
+          "height": 1.25
+        }
+      },
+      "obb_support_w9_h6": {
+        "minecraft:collision_box": {
+          "width": 3.0661611466053498,
+          "height": 1.5
+        }
+      },
+      "obb_support_w9_h7": {
+        "minecraft:collision_box": {
+          "width": 3.0661611466053498,
+          "height": 1.75
+        }
+      },
+      "obb_support_w9_h8": {
+        "minecraft:collision_box": {
+          "width": 3.0661611466053498,
+          "height": 2
+        }
+      },
+      "obb_support_w9_h9": {
+        "minecraft:collision_box": {
+          "width": 3.0661611466053498,
+          "height": 2.25
+        }
+      },
+      "obb_support_w9_h10": {
+        "minecraft:collision_box": {
+          "width": 3.0661611466053498,
+          "height": 2.5
+        }
+      },
+      "obb_support_w9_h11": {
+        "minecraft:collision_box": {
+          "width": 3.0661611466053498,
+          "height": 2.75
+        }
+      },
+      "obb_support_w9_h12": {
+        "minecraft:collision_box": {
+          "width": 3.0661611466053498,
+          "height": 3
+        }
+      },
+      "obb_support_w9_h13": {
+        "minecraft:collision_box": {
+          "width": 3.0661611466053498,
+          "height": 3.25
+        }
+      },
+      "obb_support_w9_h14": {
+        "minecraft:collision_box": {
+          "width": 3.0661611466053498,
+          "height": 3.5
+        }
+      },
+      "obb_support_w9_h15": {
+        "minecraft:collision_box": {
+          "width": 3.0661611466053498,
+          "height": 3.75
+        }
+      },
+      "obb_support_w9_h16": {
+        "minecraft:collision_box": {
+          "width": 3.0661611466053498,
+          "height": 4
+        }
+      },
+      "obb_support_w10_h2": {
+        "minecraft:collision_box": {
+          "width": 3.4081812899310187,
+          "height": 0.5
+        }
+      },
+      "obb_support_w10_h3": {
+        "minecraft:collision_box": {
+          "width": 3.4081812899310187,
+          "height": 0.75
+        }
+      },
+      "obb_support_w10_h4": {
+        "minecraft:collision_box": {
+          "width": 3.4081812899310187,
+          "height": 1
+        }
+      },
+      "obb_support_w10_h5": {
+        "minecraft:collision_box": {
+          "width": 3.4081812899310187,
+          "height": 1.25
+        }
+      },
+      "obb_support_w10_h6": {
+        "minecraft:collision_box": {
+          "width": 3.4081812899310187,
+          "height": 1.5
+        }
+      },
+      "obb_support_w10_h7": {
+        "minecraft:collision_box": {
+          "width": 3.4081812899310187,
+          "height": 1.75
+        }
+      },
+      "obb_support_w10_h8": {
+        "minecraft:collision_box": {
+          "width": 3.4081812899310187,
+          "height": 2
+        }
+      },
+      "obb_support_w10_h9": {
+        "minecraft:collision_box": {
+          "width": 3.4081812899310187,
+          "height": 2.25
+        }
+      },
+      "obb_support_w10_h10": {
+        "minecraft:collision_box": {
+          "width": 3.4081812899310187,
+          "height": 2.5
+        }
+      },
+      "obb_support_w10_h11": {
+        "minecraft:collision_box": {
+          "width": 3.4081812899310187,
+          "height": 2.75
+        }
+      },
+      "obb_support_w10_h12": {
+        "minecraft:collision_box": {
+          "width": 3.4081812899310187,
+          "height": 3
+        }
+      },
+      "obb_support_w10_h13": {
+        "minecraft:collision_box": {
+          "width": 3.4081812899310187,
+          "height": 3.25
+        }
+      },
+      "obb_support_w10_h14": {
+        "minecraft:collision_box": {
+          "width": 3.4081812899310187,
+          "height": 3.5
+        }
+      },
+      "obb_support_w10_h15": {
+        "minecraft:collision_box": {
+          "width": 3.4081812899310187,
+          "height": 3.75
+        }
+      },
+      "obb_support_w10_h16": {
+        "minecraft:collision_box": {
+          "width": 3.4081812899310187,
+          "height": 4
+        }
+      },
+      "obb_support_w11_h2": {
+        "minecraft:collision_box": {
+          "width": 3.750201433256687,
+          "height": 0.5
+        }
+      },
+      "obb_support_w11_h3": {
+        "minecraft:collision_box": {
+          "width": 3.750201433256687,
+          "height": 0.75
+        }
+      },
+      "obb_support_w11_h4": {
+        "minecraft:collision_box": {
+          "width": 3.750201433256687,
+          "height": 1
+        }
+      },
+      "obb_support_w11_h5": {
+        "minecraft:collision_box": {
+          "width": 3.750201433256687,
+          "height": 1.25
+        }
+      },
+      "obb_support_w11_h6": {
+        "minecraft:collision_box": {
+          "width": 3.750201433256687,
+          "height": 1.5
+        }
+      },
+      "obb_support_w11_h7": {
+        "minecraft:collision_box": {
+          "width": 3.750201433256687,
+          "height": 1.75
+        }
+      },
+      "obb_support_w11_h8": {
+        "minecraft:collision_box": {
+          "width": 3.750201433256687,
+          "height": 2
+        }
+      },
+      "obb_support_w11_h9": {
+        "minecraft:collision_box": {
+          "width": 3.750201433256687,
+          "height": 2.25
+        }
+      },
+      "obb_support_w11_h10": {
+        "minecraft:collision_box": {
+          "width": 3.750201433256687,
+          "height": 2.5
+        }
+      },
+      "obb_support_w11_h11": {
+        "minecraft:collision_box": {
+          "width": 3.750201433256687,
+          "height": 2.75
+        }
+      },
+      "obb_support_w11_h12": {
+        "minecraft:collision_box": {
+          "width": 3.750201433256687,
+          "height": 3
+        }
+      },
+      "obb_support_w11_h13": {
+        "minecraft:collision_box": {
+          "width": 3.750201433256687,
+          "height": 3.25
+        }
+      },
+      "obb_support_w11_h14": {
+        "minecraft:collision_box": {
+          "width": 3.750201433256687,
+          "height": 3.5
+        }
+      },
+      "obb_support_w11_h15": {
+        "minecraft:collision_box": {
+          "width": 3.750201433256687,
+          "height": 3.75
+        }
+      },
+      "obb_support_w11_h16": {
+        "minecraft:collision_box": {
+          "width": 3.750201433256687,
+          "height": 4
+        }
+      },
+      "obb_support_w12_h2": {
+        "minecraft:collision_box": {
+          "width": 4.0922215765823555,
+          "height": 0.5
+        }
+      },
+      "obb_support_w12_h3": {
+        "minecraft:collision_box": {
+          "width": 4.0922215765823555,
+          "height": 0.75
+        }
+      },
+      "obb_support_w12_h4": {
+        "minecraft:collision_box": {
+          "width": 4.0922215765823555,
+          "height": 1
+        }
+      },
+      "obb_support_w12_h5": {
+        "minecraft:collision_box": {
+          "width": 4.0922215765823555,
+          "height": 1.25
+        }
+      },
+      "obb_support_w12_h6": {
+        "minecraft:collision_box": {
+          "width": 4.0922215765823555,
+          "height": 1.5
+        }
+      },
+      "obb_support_w12_h7": {
+        "minecraft:collision_box": {
+          "width": 4.0922215765823555,
+          "height": 1.75
+        }
+      },
+      "obb_support_w12_h8": {
+        "minecraft:collision_box": {
+          "width": 4.0922215765823555,
+          "height": 2
+        }
+      },
+      "obb_support_w12_h9": {
+        "minecraft:collision_box": {
+          "width": 4.0922215765823555,
+          "height": 2.25
+        }
+      },
+      "obb_support_w12_h10": {
+        "minecraft:collision_box": {
+          "width": 4.0922215765823555,
+          "height": 2.5
+        }
+      },
+      "obb_support_w12_h11": {
+        "minecraft:collision_box": {
+          "width": 4.0922215765823555,
+          "height": 2.75
+        }
+      },
+      "obb_support_w12_h12": {
+        "minecraft:collision_box": {
+          "width": 4.0922215765823555,
+          "height": 3
+        }
+      },
+      "obb_support_w12_h13": {
+        "minecraft:collision_box": {
+          "width": 4.0922215765823555,
+          "height": 3.25
+        }
+      },
+      "obb_support_w12_h14": {
+        "minecraft:collision_box": {
+          "width": 4.0922215765823555,
+          "height": 3.5
+        }
+      },
+      "obb_support_w12_h15": {
+        "minecraft:collision_box": {
+          "width": 4.0922215765823555,
+          "height": 3.75
+        }
+      },
+      "obb_support_w12_h16": {
+        "minecraft:collision_box": {
+          "width": 4.0922215765823555,
+          "height": 4
+        }
+      },
+      "obb_support_w13_h2": {
+        "minecraft:collision_box": {
+          "width": 4.434241719908025,
+          "height": 0.5
+        }
+      },
+      "obb_support_w13_h3": {
+        "minecraft:collision_box": {
+          "width": 4.434241719908025,
+          "height": 0.75
+        }
+      },
+      "obb_support_w13_h4": {
+        "minecraft:collision_box": {
+          "width": 4.434241719908025,
+          "height": 1
+        }
+      },
+      "obb_support_w13_h5": {
+        "minecraft:collision_box": {
+          "width": 4.434241719908025,
+          "height": 1.25
+        }
+      },
+      "obb_support_w13_h6": {
+        "minecraft:collision_box": {
+          "width": 4.434241719908025,
+          "height": 1.5
+        }
+      },
+      "obb_support_w13_h7": {
+        "minecraft:collision_box": {
+          "width": 4.434241719908025,
+          "height": 1.75
+        }
+      },
+      "obb_support_w13_h8": {
+        "minecraft:collision_box": {
+          "width": 4.434241719908025,
+          "height": 2
+        }
+      },
+      "obb_support_w13_h9": {
+        "minecraft:collision_box": {
+          "width": 4.434241719908025,
+          "height": 2.25
+        }
+      },
+      "obb_support_w13_h10": {
+        "minecraft:collision_box": {
+          "width": 4.434241719908025,
+          "height": 2.5
+        }
+      },
+      "obb_support_w13_h11": {
+        "minecraft:collision_box": {
+          "width": 4.434241719908025,
+          "height": 2.75
+        }
+      },
+      "obb_support_w13_h12": {
+        "minecraft:collision_box": {
+          "width": 4.434241719908025,
+          "height": 3
+        }
+      },
+      "obb_support_w13_h13": {
+        "minecraft:collision_box": {
+          "width": 4.434241719908025,
+          "height": 3.25
+        }
+      },
+      "obb_support_w13_h14": {
+        "minecraft:collision_box": {
+          "width": 4.434241719908025,
+          "height": 3.5
+        }
+      },
+      "obb_support_w13_h15": {
+        "minecraft:collision_box": {
+          "width": 4.434241719908025,
+          "height": 3.75
+        }
+      },
+      "obb_support_w13_h16": {
+        "minecraft:collision_box": {
+          "width": 4.434241719908025,
+          "height": 4
+        }
+      },
+      "obb_support_w14_h2": {
+        "minecraft:collision_box": {
+          "width": 4.776261863233693,
+          "height": 0.5
+        }
+      },
+      "obb_support_w14_h3": {
+        "minecraft:collision_box": {
+          "width": 4.776261863233693,
+          "height": 0.75
+        }
+      },
+      "obb_support_w14_h4": {
+        "minecraft:collision_box": {
+          "width": 4.776261863233693,
+          "height": 1
+        }
+      },
+      "obb_support_w14_h5": {
+        "minecraft:collision_box": {
+          "width": 4.776261863233693,
+          "height": 1.25
+        }
+      },
+      "obb_support_w14_h6": {
+        "minecraft:collision_box": {
+          "width": 4.776261863233693,
+          "height": 1.5
+        }
+      },
+      "obb_support_w14_h7": {
+        "minecraft:collision_box": {
+          "width": 4.776261863233693,
+          "height": 1.75
+        }
+      },
+      "obb_support_w14_h8": {
+        "minecraft:collision_box": {
+          "width": 4.776261863233693,
+          "height": 2
+        }
+      },
+      "obb_support_w14_h9": {
+        "minecraft:collision_box": {
+          "width": 4.776261863233693,
+          "height": 2.25
+        }
+      },
+      "obb_support_w14_h10": {
+        "minecraft:collision_box": {
+          "width": 4.776261863233693,
+          "height": 2.5
+        }
+      },
+      "obb_support_w14_h11": {
+        "minecraft:collision_box": {
+          "width": 4.776261863233693,
+          "height": 2.75
+        }
+      },
+      "obb_support_w14_h12": {
+        "minecraft:collision_box": {
+          "width": 4.776261863233693,
+          "height": 3
+        }
+      },
+      "obb_support_w14_h13": {
+        "minecraft:collision_box": {
+          "width": 4.776261863233693,
+          "height": 3.25
+        }
+      },
+      "obb_support_w14_h14": {
+        "minecraft:collision_box": {
+          "width": 4.776261863233693,
+          "height": 3.5
+        }
+      },
+      "obb_support_w14_h15": {
+        "minecraft:collision_box": {
+          "width": 4.776261863233693,
+          "height": 3.75
+        }
+      },
+      "obb_support_w14_h16": {
+        "minecraft:collision_box": {
+          "width": 4.776261863233693,
+          "height": 4
+        }
+      },
+      "obb_support_w15_h2": {
+        "minecraft:collision_box": {
+          "width": 5.118282006559362,
+          "height": 0.5
+        }
+      },
+      "obb_support_w15_h3": {
+        "minecraft:collision_box": {
+          "width": 5.118282006559362,
+          "height": 0.75
+        }
+      },
+      "obb_support_w15_h4": {
+        "minecraft:collision_box": {
+          "width": 5.118282006559362,
+          "height": 1
+        }
+      },
+      "obb_support_w15_h5": {
+        "minecraft:collision_box": {
+          "width": 5.118282006559362,
+          "height": 1.25
+        }
+      },
+      "obb_support_w15_h6": {
+        "minecraft:collision_box": {
+          "width": 5.118282006559362,
+          "height": 1.5
+        }
+      },
+      "obb_support_w15_h7": {
+        "minecraft:collision_box": {
+          "width": 5.118282006559362,
+          "height": 1.75
+        }
+      },
+      "obb_support_w15_h8": {
+        "minecraft:collision_box": {
+          "width": 5.118282006559362,
+          "height": 2
+        }
+      },
+      "obb_support_w15_h9": {
+        "minecraft:collision_box": {
+          "width": 5.118282006559362,
+          "height": 2.25
+        }
+      },
+      "obb_support_w15_h10": {
+        "minecraft:collision_box": {
+          "width": 5.118282006559362,
+          "height": 2.5
+        }
+      },
+      "obb_support_w15_h11": {
+        "minecraft:collision_box": {
+          "width": 5.118282006559362,
+          "height": 2.75
+        }
+      },
+      "obb_support_w15_h12": {
+        "minecraft:collision_box": {
+          "width": 5.118282006559362,
+          "height": 3
+        }
+      },
+      "obb_support_w15_h13": {
+        "minecraft:collision_box": {
+          "width": 5.118282006559362,
+          "height": 3.25
+        }
+      },
+      "obb_support_w15_h14": {
+        "minecraft:collision_box": {
+          "width": 5.118282006559362,
+          "height": 3.5
+        }
+      },
+      "obb_support_w15_h15": {
+        "minecraft:collision_box": {
+          "width": 5.118282006559362,
+          "height": 3.75
+        }
+      },
+      "obb_support_w15_h16": {
+        "minecraft:collision_box": {
+          "width": 5.118282006559362,
+          "height": 4
+        }
+      },
+      "obb_support_w16_h2": {
+        "minecraft:collision_box": {
+          "width": 5.460302149885031,
+          "height": 0.5
+        }
+      },
+      "obb_support_w16_h3": {
+        "minecraft:collision_box": {
+          "width": 5.460302149885031,
+          "height": 0.75
+        }
+      },
+      "obb_support_w16_h4": {
+        "minecraft:collision_box": {
+          "width": 5.460302149885031,
+          "height": 1
+        }
+      },
+      "obb_support_w16_h5": {
+        "minecraft:collision_box": {
+          "width": 5.460302149885031,
+          "height": 1.25
+        }
+      },
+      "obb_support_w16_h6": {
+        "minecraft:collision_box": {
+          "width": 5.460302149885031,
+          "height": 1.5
+        }
+      },
+      "obb_support_w16_h7": {
+        "minecraft:collision_box": {
+          "width": 5.460302149885031,
+          "height": 1.75
+        }
+      },
+      "obb_support_w16_h8": {
+        "minecraft:collision_box": {
+          "width": 5.460302149885031,
+          "height": 2
+        }
+      },
+      "obb_support_w16_h9": {
+        "minecraft:collision_box": {
+          "width": 5.460302149885031,
+          "height": 2.25
+        }
+      },
+      "obb_support_w16_h10": {
+        "minecraft:collision_box": {
+          "width": 5.460302149885031,
+          "height": 2.5
+        }
+      },
+      "obb_support_w16_h11": {
+        "minecraft:collision_box": {
+          "width": 5.460302149885031,
+          "height": 2.75
+        }
+      },
+      "obb_support_w16_h12": {
+        "minecraft:collision_box": {
+          "width": 5.460302149885031,
+          "height": 3
+        }
+      },
+      "obb_support_w16_h13": {
+        "minecraft:collision_box": {
+          "width": 5.460302149885031,
+          "height": 3.25
+        }
+      },
+      "obb_support_w16_h14": {
+        "minecraft:collision_box": {
+          "width": 5.460302149885031,
+          "height": 3.5
+        }
+      },
+      "obb_support_w16_h15": {
+        "minecraft:collision_box": {
+          "width": 5.460302149885031,
+          "height": 3.75
+        }
+      },
+      "obb_support_w16_h16": {
+        "minecraft:collision_box": {
+          "width": 5.460302149885031,
+          "height": 4
+        }
+      },
+      "obb_support_v_w1_q1": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 0.04
+        }
+      },
+      "obb_support_v_w1_q2": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 0.08
+        }
+      },
+      "obb_support_v_w1_q3": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 0.12
+        }
+      },
+      "obb_support_v_w1_q4": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 0.16
+        }
+      },
+      "obb_support_v_w1_q5": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 0.2
+        }
+      },
+      "obb_support_v_w1_q6": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 0.24
+        }
+      },
+      "obb_support_v_w1_q7": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 0.28
+        }
+      },
+      "obb_support_v_w1_q8": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 0.32
+        }
+      },
+      "obb_support_v_w1_q9": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 0.36
+        }
+      },
+      "obb_support_v_w1_q10": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 0.4
+        }
+      },
+      "obb_support_v_w1_q11": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 0.44
+        }
+      },
+      "obb_support_v_w1_q12": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 0.48
+        }
+      },
+      "obb_support_v_w1_q13": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 0.52
+        }
+      },
+      "obb_support_v_w1_q14": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 0.56
+        }
+      },
+      "obb_support_v_w1_q15": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 0.6
+        }
+      },
+      "obb_support_v_w1_q16": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 0.64
+        }
+      },
+      "obb_support_v_w1_q17": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 0.68
+        }
+      },
+      "obb_support_v_w1_q18": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 0.72
+        }
+      },
+      "obb_support_v_w1_q19": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 0.76
+        }
+      },
+      "obb_support_v_w1_q20": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 0.8
+        }
+      },
+      "obb_support_v_w1_q21": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 0.84
+        }
+      },
+      "obb_support_v_w1_q22": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 0.88
+        }
+      },
+      "obb_support_v_w1_q23": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 0.92
+        }
+      },
+      "obb_support_v_w1_q24": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 0.96
+        }
+      },
+      "obb_support_v_w1_q26": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 1.04
+        }
+      },
+      "obb_support_v_w1_q27": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 1.08
+        }
+      },
+      "obb_support_v_w1_q28": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 1.12
+        }
+      },
+      "obb_support_v_w1_q29": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 1.16
+        }
+      },
+      "obb_support_v_w1_q30": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 1.2
+        }
+      },
+      "obb_support_v_w1_q31": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 1.24
+        }
+      },
+      "obb_support_v_w1_q32": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 1.28
+        }
+      },
+      "obb_support_v_w1_q33": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 1.32
+        }
+      },
+      "obb_support_v_w1_q34": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 1.36
+        }
+      },
+      "obb_support_v_w1_q35": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 1.4000000000000001
+        }
+      },
+      "obb_support_v_w1_q36": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 1.44
+        }
+      },
+      "obb_support_v_w1_q37": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 1.48
+        }
+      },
+      "obb_support_v_w1_q38": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 1.52
+        }
+      },
+      "obb_support_v_w1_q39": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 1.56
+        }
+      },
+      "obb_support_v_w1_q40": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 1.6
+        }
+      },
+      "obb_support_v_w1_q41": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 1.6400000000000001
+        }
+      },
+      "obb_support_v_w1_q42": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 1.68
+        }
+      },
+      "obb_support_v_w1_q43": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 1.72
+        }
+      },
+      "obb_support_v_w1_q44": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 1.76
+        }
+      },
+      "obb_support_v_w1_q45": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 1.8
+        }
+      },
+      "obb_support_v_w1_q46": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 1.84
+        }
+      },
+      "obb_support_v_w1_q47": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 1.8800000000000001
+        }
+      },
+      "obb_support_v_w1_q48": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 1.92
+        }
+      },
+      "obb_support_v_w1_q49": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 1.96
+        }
+      },
+      "obb_support_v_w1_q51": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 2.04
+        }
+      },
+      "obb_support_v_w1_q52": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 2.08
+        }
+      },
+      "obb_support_v_w1_q53": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 2.12
+        }
+      },
+      "obb_support_v_w1_q54": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 2.16
+        }
+      },
+      "obb_support_v_w1_q55": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 2.2
+        }
+      },
+      "obb_support_v_w1_q56": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 2.24
+        }
+      },
+      "obb_support_v_w1_q57": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 2.2800000000000002
+        }
+      },
+      "obb_support_v_w1_q58": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 2.32
+        }
+      },
+      "obb_support_v_w1_q59": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 2.36
+        }
+      },
+      "obb_support_v_w1_q60": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 2.4
+        }
+      },
+      "obb_support_v_w1_q61": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 2.44
+        }
+      },
+      "obb_support_v_w1_q62": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 2.48
+        }
+      },
+      "obb_support_v_w1_q63": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 2.52
+        }
+      },
+      "obb_support_v_w1_q64": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 2.56
+        }
+      },
+      "obb_support_v_w1_q65": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 2.6
+        }
+      },
+      "obb_support_v_w1_q66": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 2.64
+        }
+      },
+      "obb_support_v_w1_q67": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 2.68
+        }
+      },
+      "obb_support_v_w1_q68": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 2.72
+        }
+      },
+      "obb_support_v_w1_q69": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 2.7600000000000002
+        }
+      },
+      "obb_support_v_w1_q70": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 2.8000000000000003
+        }
+      },
+      "obb_support_v_w1_q71": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 2.84
+        }
+      },
+      "obb_support_v_w1_q72": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 2.88
+        }
+      },
+      "obb_support_v_w1_q73": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 2.92
+        }
+      },
+      "obb_support_v_w1_q74": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 2.96
+        }
+      },
+      "obb_support_v_w1_q76": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 3.04
+        }
+      },
+      "obb_support_v_w1_q77": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 3.08
+        }
+      },
+      "obb_support_v_w1_q78": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 3.12
+        }
+      },
+      "obb_support_v_w1_q79": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 3.16
+        }
+      },
+      "obb_support_v_w1_q80": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 3.2
+        }
+      },
+      "obb_support_v_w1_q81": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 3.24
+        }
+      },
+      "obb_support_v_w1_q82": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 3.2800000000000002
+        }
+      },
+      "obb_support_v_w1_q83": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 3.3200000000000003
+        }
+      },
+      "obb_support_v_w1_q84": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 3.36
+        }
+      },
+      "obb_support_v_w1_q85": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 3.4
+        }
+      },
+      "obb_support_v_w1_q86": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 3.44
+        }
+      },
+      "obb_support_v_w1_q87": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 3.48
+        }
+      },
+      "obb_support_v_w1_q88": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 3.52
+        }
+      },
+      "obb_support_v_w1_q89": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 3.56
+        }
+      },
+      "obb_support_v_w1_q90": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 3.6
+        }
+      },
+      "obb_support_v_w1_q91": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 3.64
+        }
+      },
+      "obb_support_v_w1_q92": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 3.68
+        }
+      },
+      "obb_support_v_w1_q93": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 3.72
+        }
+      },
+      "obb_support_v_w1_q94": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 3.7600000000000002
+        }
+      },
+      "obb_support_v_w1_q95": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 3.8000000000000003
+        }
+      },
+      "obb_support_v_w1_q96": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 3.84
+        }
+      },
+      "obb_support_v_w1_q97": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 3.88
+        }
+      },
+      "obb_support_v_w1_q98": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 3.92
+        }
+      },
+      "obb_support_v_w1_q99": {
+        "minecraft:collision_box": {
+          "width": 0.33,
+          "height": 3.96
+        }
+      }
+    },
+    "events": {
+      "obb:support_w2_h1": {
+        "add": {
+          "component_groups": [
+            "obb_support_w2_h1"
+          ]
+        }
+      },
+      "obb:clear_w2_h1": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w2_h1"
+          ]
+        }
+      },
+      "obb:support_w3_h1": {
+        "add": {
+          "component_groups": [
+            "obb_support_w3_h1"
+          ]
+        }
+      },
+      "obb:clear_w3_h1": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w3_h1"
+          ]
+        }
+      },
+      "obb:support_w4_h1": {
+        "add": {
+          "component_groups": [
+            "obb_support_w4_h1"
+          ]
+        }
+      },
+      "obb:clear_w4_h1": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w4_h1"
+          ]
+        }
+      },
+      "obb:support_w5_h1": {
+        "add": {
+          "component_groups": [
+            "obb_support_w5_h1"
+          ]
+        }
+      },
+      "obb:clear_w5_h1": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w5_h1"
+          ]
+        }
+      },
+      "obb:support_w6_h1": {
+        "add": {
+          "component_groups": [
+            "obb_support_w6_h1"
+          ]
+        }
+      },
+      "obb:clear_w6_h1": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w6_h1"
+          ]
+        }
+      },
+      "obb:support_w7_h1": {
+        "add": {
+          "component_groups": [
+            "obb_support_w7_h1"
+          ]
+        }
+      },
+      "obb:clear_w7_h1": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w7_h1"
+          ]
+        }
+      },
+      "obb:support_w8_h1": {
+        "add": {
+          "component_groups": [
+            "obb_support_w8_h1"
+          ]
+        }
+      },
+      "obb:clear_w8_h1": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w8_h1"
+          ]
+        }
+      },
+      "obb:support_w9_h1": {
+        "add": {
+          "component_groups": [
+            "obb_support_w9_h1"
+          ]
+        }
+      },
+      "obb:clear_w9_h1": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w9_h1"
+          ]
+        }
+      },
+      "obb:support_w10_h1": {
+        "add": {
+          "component_groups": [
+            "obb_support_w10_h1"
+          ]
+        }
+      },
+      "obb:clear_w10_h1": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w10_h1"
+          ]
+        }
+      },
+      "obb:support_w11_h1": {
+        "add": {
+          "component_groups": [
+            "obb_support_w11_h1"
+          ]
+        }
+      },
+      "obb:clear_w11_h1": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w11_h1"
+          ]
+        }
+      },
+      "obb:support_w12_h1": {
+        "add": {
+          "component_groups": [
+            "obb_support_w12_h1"
+          ]
+        }
+      },
+      "obb:clear_w12_h1": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w12_h1"
+          ]
+        }
+      },
+      "obb:support_w13_h1": {
+        "add": {
+          "component_groups": [
+            "obb_support_w13_h1"
+          ]
+        }
+      },
+      "obb:clear_w13_h1": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w13_h1"
+          ]
+        }
+      },
+      "obb:support_w14_h1": {
+        "add": {
+          "component_groups": [
+            "obb_support_w14_h1"
+          ]
+        }
+      },
+      "obb:clear_w14_h1": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w14_h1"
+          ]
+        }
+      },
+      "obb:support_w15_h1": {
+        "add": {
+          "component_groups": [
+            "obb_support_w15_h1"
+          ]
+        }
+      },
+      "obb:clear_w15_h1": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w15_h1"
+          ]
+        }
+      },
+      "obb:support_w16_h1": {
+        "add": {
+          "component_groups": [
+            "obb_support_w16_h1"
+          ]
+        }
+      },
+      "obb:clear_w16_h1": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w16_h1"
+          ]
+        }
+      },
+      "obb:support_w1_h2": {
+        "add": {
+          "component_groups": [
+            "obb_support_w1_h2"
+          ]
+        }
+      },
+      "obb:clear_w1_h2": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w1_h2"
+          ]
+        }
+      },
+      "obb:support_w1_h3": {
+        "add": {
+          "component_groups": [
+            "obb_support_w1_h3"
+          ]
+        }
+      },
+      "obb:clear_w1_h3": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w1_h3"
+          ]
+        }
+      },
+      "obb:support_w1_h4": {
+        "add": {
+          "component_groups": [
+            "obb_support_w1_h4"
+          ]
+        }
+      },
+      "obb:clear_w1_h4": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w1_h4"
+          ]
+        }
+      },
+      "obb:support_w1_h5": {
+        "add": {
+          "component_groups": [
+            "obb_support_w1_h5"
+          ]
+        }
+      },
+      "obb:clear_w1_h5": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w1_h5"
+          ]
+        }
+      },
+      "obb:support_w1_h6": {
+        "add": {
+          "component_groups": [
+            "obb_support_w1_h6"
+          ]
+        }
+      },
+      "obb:clear_w1_h6": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w1_h6"
+          ]
+        }
+      },
+      "obb:support_w1_h7": {
+        "add": {
+          "component_groups": [
+            "obb_support_w1_h7"
+          ]
+        }
+      },
+      "obb:clear_w1_h7": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w1_h7"
+          ]
+        }
+      },
+      "obb:support_w1_h8": {
+        "add": {
+          "component_groups": [
+            "obb_support_w1_h8"
+          ]
+        }
+      },
+      "obb:clear_w1_h8": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w1_h8"
+          ]
+        }
+      },
+      "obb:support_w1_h9": {
+        "add": {
+          "component_groups": [
+            "obb_support_w1_h9"
+          ]
+        }
+      },
+      "obb:clear_w1_h9": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w1_h9"
+          ]
+        }
+      },
+      "obb:support_w1_h10": {
+        "add": {
+          "component_groups": [
+            "obb_support_w1_h10"
+          ]
+        }
+      },
+      "obb:clear_w1_h10": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w1_h10"
+          ]
+        }
+      },
+      "obb:support_w1_h11": {
+        "add": {
+          "component_groups": [
+            "obb_support_w1_h11"
+          ]
+        }
+      },
+      "obb:clear_w1_h11": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w1_h11"
+          ]
+        }
+      },
+      "obb:support_w1_h12": {
+        "add": {
+          "component_groups": [
+            "obb_support_w1_h12"
+          ]
+        }
+      },
+      "obb:clear_w1_h12": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w1_h12"
+          ]
+        }
+      },
+      "obb:support_w1_h13": {
+        "add": {
+          "component_groups": [
+            "obb_support_w1_h13"
+          ]
+        }
+      },
+      "obb:clear_w1_h13": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w1_h13"
+          ]
+        }
+      },
+      "obb:support_w1_h14": {
+        "add": {
+          "component_groups": [
+            "obb_support_w1_h14"
+          ]
+        }
+      },
+      "obb:clear_w1_h14": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w1_h14"
+          ]
+        }
+      },
+      "obb:support_w1_h15": {
+        "add": {
+          "component_groups": [
+            "obb_support_w1_h15"
+          ]
+        }
+      },
+      "obb:clear_w1_h15": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w1_h15"
+          ]
+        }
+      },
+      "obb:support_w1_h16": {
+        "add": {
+          "component_groups": [
+            "obb_support_w1_h16"
+          ]
+        }
+      },
+      "obb:clear_w1_h16": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w1_h16"
+          ]
+        }
+      },
+      "obb:support_w2_h2": {
+        "add": {
+          "component_groups": [
+            "obb_support_w2_h2"
+          ]
+        }
+      },
+      "obb:clear_w2_h2": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w2_h2"
+          ]
+        }
+      },
+      "obb:support_w2_h3": {
+        "add": {
+          "component_groups": [
+            "obb_support_w2_h3"
+          ]
+        }
+      },
+      "obb:clear_w2_h3": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w2_h3"
+          ]
+        }
+      },
+      "obb:support_w2_h4": {
+        "add": {
+          "component_groups": [
+            "obb_support_w2_h4"
+          ]
+        }
+      },
+      "obb:clear_w2_h4": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w2_h4"
+          ]
+        }
+      },
+      "obb:support_w2_h5": {
+        "add": {
+          "component_groups": [
+            "obb_support_w2_h5"
+          ]
+        }
+      },
+      "obb:clear_w2_h5": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w2_h5"
+          ]
+        }
+      },
+      "obb:support_w2_h6": {
+        "add": {
+          "component_groups": [
+            "obb_support_w2_h6"
+          ]
+        }
+      },
+      "obb:clear_w2_h6": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w2_h6"
+          ]
+        }
+      },
+      "obb:support_w2_h7": {
+        "add": {
+          "component_groups": [
+            "obb_support_w2_h7"
+          ]
+        }
+      },
+      "obb:clear_w2_h7": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w2_h7"
+          ]
+        }
+      },
+      "obb:support_w2_h8": {
+        "add": {
+          "component_groups": [
+            "obb_support_w2_h8"
+          ]
+        }
+      },
+      "obb:clear_w2_h8": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w2_h8"
+          ]
+        }
+      },
+      "obb:support_w2_h9": {
+        "add": {
+          "component_groups": [
+            "obb_support_w2_h9"
+          ]
+        }
+      },
+      "obb:clear_w2_h9": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w2_h9"
+          ]
+        }
+      },
+      "obb:support_w2_h10": {
+        "add": {
+          "component_groups": [
+            "obb_support_w2_h10"
+          ]
+        }
+      },
+      "obb:clear_w2_h10": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w2_h10"
+          ]
+        }
+      },
+      "obb:support_w2_h11": {
+        "add": {
+          "component_groups": [
+            "obb_support_w2_h11"
+          ]
+        }
+      },
+      "obb:clear_w2_h11": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w2_h11"
+          ]
+        }
+      },
+      "obb:support_w2_h12": {
+        "add": {
+          "component_groups": [
+            "obb_support_w2_h12"
+          ]
+        }
+      },
+      "obb:clear_w2_h12": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w2_h12"
+          ]
+        }
+      },
+      "obb:support_w2_h13": {
+        "add": {
+          "component_groups": [
+            "obb_support_w2_h13"
+          ]
+        }
+      },
+      "obb:clear_w2_h13": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w2_h13"
+          ]
+        }
+      },
+      "obb:support_w2_h14": {
+        "add": {
+          "component_groups": [
+            "obb_support_w2_h14"
+          ]
+        }
+      },
+      "obb:clear_w2_h14": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w2_h14"
+          ]
+        }
+      },
+      "obb:support_w2_h15": {
+        "add": {
+          "component_groups": [
+            "obb_support_w2_h15"
+          ]
+        }
+      },
+      "obb:clear_w2_h15": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w2_h15"
+          ]
+        }
+      },
+      "obb:support_w2_h16": {
+        "add": {
+          "component_groups": [
+            "obb_support_w2_h16"
+          ]
+        }
+      },
+      "obb:clear_w2_h16": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w2_h16"
+          ]
+        }
+      },
+      "obb:support_w3_h2": {
+        "add": {
+          "component_groups": [
+            "obb_support_w3_h2"
+          ]
+        }
+      },
+      "obb:clear_w3_h2": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w3_h2"
+          ]
+        }
+      },
+      "obb:support_w3_h3": {
+        "add": {
+          "component_groups": [
+            "obb_support_w3_h3"
+          ]
+        }
+      },
+      "obb:clear_w3_h3": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w3_h3"
+          ]
+        }
+      },
+      "obb:support_w3_h4": {
+        "add": {
+          "component_groups": [
+            "obb_support_w3_h4"
+          ]
+        }
+      },
+      "obb:clear_w3_h4": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w3_h4"
+          ]
+        }
+      },
+      "obb:support_w3_h5": {
+        "add": {
+          "component_groups": [
+            "obb_support_w3_h5"
+          ]
+        }
+      },
+      "obb:clear_w3_h5": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w3_h5"
+          ]
+        }
+      },
+      "obb:support_w3_h6": {
+        "add": {
+          "component_groups": [
+            "obb_support_w3_h6"
+          ]
+        }
+      },
+      "obb:clear_w3_h6": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w3_h6"
+          ]
+        }
+      },
+      "obb:support_w3_h7": {
+        "add": {
+          "component_groups": [
+            "obb_support_w3_h7"
+          ]
+        }
+      },
+      "obb:clear_w3_h7": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w3_h7"
+          ]
+        }
+      },
+      "obb:support_w3_h8": {
+        "add": {
+          "component_groups": [
+            "obb_support_w3_h8"
+          ]
+        }
+      },
+      "obb:clear_w3_h8": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w3_h8"
+          ]
+        }
+      },
+      "obb:support_w3_h9": {
+        "add": {
+          "component_groups": [
+            "obb_support_w3_h9"
+          ]
+        }
+      },
+      "obb:clear_w3_h9": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w3_h9"
+          ]
+        }
+      },
+      "obb:support_w3_h10": {
+        "add": {
+          "component_groups": [
+            "obb_support_w3_h10"
+          ]
+        }
+      },
+      "obb:clear_w3_h10": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w3_h10"
+          ]
+        }
+      },
+      "obb:support_w3_h11": {
+        "add": {
+          "component_groups": [
+            "obb_support_w3_h11"
+          ]
+        }
+      },
+      "obb:clear_w3_h11": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w3_h11"
+          ]
+        }
+      },
+      "obb:support_w3_h12": {
+        "add": {
+          "component_groups": [
+            "obb_support_w3_h12"
+          ]
+        }
+      },
+      "obb:clear_w3_h12": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w3_h12"
+          ]
+        }
+      },
+      "obb:support_w3_h13": {
+        "add": {
+          "component_groups": [
+            "obb_support_w3_h13"
+          ]
+        }
+      },
+      "obb:clear_w3_h13": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w3_h13"
+          ]
+        }
+      },
+      "obb:support_w3_h14": {
+        "add": {
+          "component_groups": [
+            "obb_support_w3_h14"
+          ]
+        }
+      },
+      "obb:clear_w3_h14": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w3_h14"
+          ]
+        }
+      },
+      "obb:support_w3_h15": {
+        "add": {
+          "component_groups": [
+            "obb_support_w3_h15"
+          ]
+        }
+      },
+      "obb:clear_w3_h15": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w3_h15"
+          ]
+        }
+      },
+      "obb:support_w3_h16": {
+        "add": {
+          "component_groups": [
+            "obb_support_w3_h16"
+          ]
+        }
+      },
+      "obb:clear_w3_h16": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w3_h16"
+          ]
+        }
+      },
+      "obb:support_w4_h2": {
+        "add": {
+          "component_groups": [
+            "obb_support_w4_h2"
+          ]
+        }
+      },
+      "obb:clear_w4_h2": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w4_h2"
+          ]
+        }
+      },
+      "obb:support_w4_h3": {
+        "add": {
+          "component_groups": [
+            "obb_support_w4_h3"
+          ]
+        }
+      },
+      "obb:clear_w4_h3": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w4_h3"
+          ]
+        }
+      },
+      "obb:support_w4_h4": {
+        "add": {
+          "component_groups": [
+            "obb_support_w4_h4"
+          ]
+        }
+      },
+      "obb:clear_w4_h4": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w4_h4"
+          ]
+        }
+      },
+      "obb:support_w4_h5": {
+        "add": {
+          "component_groups": [
+            "obb_support_w4_h5"
+          ]
+        }
+      },
+      "obb:clear_w4_h5": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w4_h5"
+          ]
+        }
+      },
+      "obb:support_w4_h6": {
+        "add": {
+          "component_groups": [
+            "obb_support_w4_h6"
+          ]
+        }
+      },
+      "obb:clear_w4_h6": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w4_h6"
+          ]
+        }
+      },
+      "obb:support_w4_h7": {
+        "add": {
+          "component_groups": [
+            "obb_support_w4_h7"
+          ]
+        }
+      },
+      "obb:clear_w4_h7": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w4_h7"
+          ]
+        }
+      },
+      "obb:support_w4_h8": {
+        "add": {
+          "component_groups": [
+            "obb_support_w4_h8"
+          ]
+        }
+      },
+      "obb:clear_w4_h8": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w4_h8"
+          ]
+        }
+      },
+      "obb:support_w4_h9": {
+        "add": {
+          "component_groups": [
+            "obb_support_w4_h9"
+          ]
+        }
+      },
+      "obb:clear_w4_h9": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w4_h9"
+          ]
+        }
+      },
+      "obb:support_w4_h10": {
+        "add": {
+          "component_groups": [
+            "obb_support_w4_h10"
+          ]
+        }
+      },
+      "obb:clear_w4_h10": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w4_h10"
+          ]
+        }
+      },
+      "obb:support_w4_h11": {
+        "add": {
+          "component_groups": [
+            "obb_support_w4_h11"
+          ]
+        }
+      },
+      "obb:clear_w4_h11": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w4_h11"
+          ]
+        }
+      },
+      "obb:support_w4_h12": {
+        "add": {
+          "component_groups": [
+            "obb_support_w4_h12"
+          ]
+        }
+      },
+      "obb:clear_w4_h12": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w4_h12"
+          ]
+        }
+      },
+      "obb:support_w4_h13": {
+        "add": {
+          "component_groups": [
+            "obb_support_w4_h13"
+          ]
+        }
+      },
+      "obb:clear_w4_h13": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w4_h13"
+          ]
+        }
+      },
+      "obb:support_w4_h14": {
+        "add": {
+          "component_groups": [
+            "obb_support_w4_h14"
+          ]
+        }
+      },
+      "obb:clear_w4_h14": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w4_h14"
+          ]
+        }
+      },
+      "obb:support_w4_h15": {
+        "add": {
+          "component_groups": [
+            "obb_support_w4_h15"
+          ]
+        }
+      },
+      "obb:clear_w4_h15": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w4_h15"
+          ]
+        }
+      },
+      "obb:support_w4_h16": {
+        "add": {
+          "component_groups": [
+            "obb_support_w4_h16"
+          ]
+        }
+      },
+      "obb:clear_w4_h16": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w4_h16"
+          ]
+        }
+      },
+      "obb:support_w5_h2": {
+        "add": {
+          "component_groups": [
+            "obb_support_w5_h2"
+          ]
+        }
+      },
+      "obb:clear_w5_h2": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w5_h2"
+          ]
+        }
+      },
+      "obb:support_w5_h3": {
+        "add": {
+          "component_groups": [
+            "obb_support_w5_h3"
+          ]
+        }
+      },
+      "obb:clear_w5_h3": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w5_h3"
+          ]
+        }
+      },
+      "obb:support_w5_h4": {
+        "add": {
+          "component_groups": [
+            "obb_support_w5_h4"
+          ]
+        }
+      },
+      "obb:clear_w5_h4": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w5_h4"
+          ]
+        }
+      },
+      "obb:support_w5_h5": {
+        "add": {
+          "component_groups": [
+            "obb_support_w5_h5"
+          ]
+        }
+      },
+      "obb:clear_w5_h5": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w5_h5"
+          ]
+        }
+      },
+      "obb:support_w5_h6": {
+        "add": {
+          "component_groups": [
+            "obb_support_w5_h6"
+          ]
+        }
+      },
+      "obb:clear_w5_h6": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w5_h6"
+          ]
+        }
+      },
+      "obb:support_w5_h7": {
+        "add": {
+          "component_groups": [
+            "obb_support_w5_h7"
+          ]
+        }
+      },
+      "obb:clear_w5_h7": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w5_h7"
+          ]
+        }
+      },
+      "obb:support_w5_h8": {
+        "add": {
+          "component_groups": [
+            "obb_support_w5_h8"
+          ]
+        }
+      },
+      "obb:clear_w5_h8": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w5_h8"
+          ]
+        }
+      },
+      "obb:support_w5_h9": {
+        "add": {
+          "component_groups": [
+            "obb_support_w5_h9"
+          ]
+        }
+      },
+      "obb:clear_w5_h9": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w5_h9"
+          ]
+        }
+      },
+      "obb:support_w5_h10": {
+        "add": {
+          "component_groups": [
+            "obb_support_w5_h10"
+          ]
+        }
+      },
+      "obb:clear_w5_h10": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w5_h10"
+          ]
+        }
+      },
+      "obb:support_w5_h11": {
+        "add": {
+          "component_groups": [
+            "obb_support_w5_h11"
+          ]
+        }
+      },
+      "obb:clear_w5_h11": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w5_h11"
+          ]
+        }
+      },
+      "obb:support_w5_h12": {
+        "add": {
+          "component_groups": [
+            "obb_support_w5_h12"
+          ]
+        }
+      },
+      "obb:clear_w5_h12": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w5_h12"
+          ]
+        }
+      },
+      "obb:support_w5_h13": {
+        "add": {
+          "component_groups": [
+            "obb_support_w5_h13"
+          ]
+        }
+      },
+      "obb:clear_w5_h13": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w5_h13"
+          ]
+        }
+      },
+      "obb:support_w5_h14": {
+        "add": {
+          "component_groups": [
+            "obb_support_w5_h14"
+          ]
+        }
+      },
+      "obb:clear_w5_h14": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w5_h14"
+          ]
+        }
+      },
+      "obb:support_w5_h15": {
+        "add": {
+          "component_groups": [
+            "obb_support_w5_h15"
+          ]
+        }
+      },
+      "obb:clear_w5_h15": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w5_h15"
+          ]
+        }
+      },
+      "obb:support_w5_h16": {
+        "add": {
+          "component_groups": [
+            "obb_support_w5_h16"
+          ]
+        }
+      },
+      "obb:clear_w5_h16": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w5_h16"
+          ]
+        }
+      },
+      "obb:support_w6_h2": {
+        "add": {
+          "component_groups": [
+            "obb_support_w6_h2"
+          ]
+        }
+      },
+      "obb:clear_w6_h2": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w6_h2"
+          ]
+        }
+      },
+      "obb:support_w6_h3": {
+        "add": {
+          "component_groups": [
+            "obb_support_w6_h3"
+          ]
+        }
+      },
+      "obb:clear_w6_h3": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w6_h3"
+          ]
+        }
+      },
+      "obb:support_w6_h4": {
+        "add": {
+          "component_groups": [
+            "obb_support_w6_h4"
+          ]
+        }
+      },
+      "obb:clear_w6_h4": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w6_h4"
+          ]
+        }
+      },
+      "obb:support_w6_h5": {
+        "add": {
+          "component_groups": [
+            "obb_support_w6_h5"
+          ]
+        }
+      },
+      "obb:clear_w6_h5": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w6_h5"
+          ]
+        }
+      },
+      "obb:support_w6_h6": {
+        "add": {
+          "component_groups": [
+            "obb_support_w6_h6"
+          ]
+        }
+      },
+      "obb:clear_w6_h6": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w6_h6"
+          ]
+        }
+      },
+      "obb:support_w6_h7": {
+        "add": {
+          "component_groups": [
+            "obb_support_w6_h7"
+          ]
+        }
+      },
+      "obb:clear_w6_h7": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w6_h7"
+          ]
+        }
+      },
+      "obb:support_w6_h8": {
+        "add": {
+          "component_groups": [
+            "obb_support_w6_h8"
+          ]
+        }
+      },
+      "obb:clear_w6_h8": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w6_h8"
+          ]
+        }
+      },
+      "obb:support_w6_h9": {
+        "add": {
+          "component_groups": [
+            "obb_support_w6_h9"
+          ]
+        }
+      },
+      "obb:clear_w6_h9": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w6_h9"
+          ]
+        }
+      },
+      "obb:support_w6_h10": {
+        "add": {
+          "component_groups": [
+            "obb_support_w6_h10"
+          ]
+        }
+      },
+      "obb:clear_w6_h10": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w6_h10"
+          ]
+        }
+      },
+      "obb:support_w6_h11": {
+        "add": {
+          "component_groups": [
+            "obb_support_w6_h11"
+          ]
+        }
+      },
+      "obb:clear_w6_h11": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w6_h11"
+          ]
+        }
+      },
+      "obb:support_w6_h12": {
+        "add": {
+          "component_groups": [
+            "obb_support_w6_h12"
+          ]
+        }
+      },
+      "obb:clear_w6_h12": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w6_h12"
+          ]
+        }
+      },
+      "obb:support_w6_h13": {
+        "add": {
+          "component_groups": [
+            "obb_support_w6_h13"
+          ]
+        }
+      },
+      "obb:clear_w6_h13": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w6_h13"
+          ]
+        }
+      },
+      "obb:support_w6_h14": {
+        "add": {
+          "component_groups": [
+            "obb_support_w6_h14"
+          ]
+        }
+      },
+      "obb:clear_w6_h14": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w6_h14"
+          ]
+        }
+      },
+      "obb:support_w6_h15": {
+        "add": {
+          "component_groups": [
+            "obb_support_w6_h15"
+          ]
+        }
+      },
+      "obb:clear_w6_h15": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w6_h15"
+          ]
+        }
+      },
+      "obb:support_w6_h16": {
+        "add": {
+          "component_groups": [
+            "obb_support_w6_h16"
+          ]
+        }
+      },
+      "obb:clear_w6_h16": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w6_h16"
+          ]
+        }
+      },
+      "obb:support_w7_h2": {
+        "add": {
+          "component_groups": [
+            "obb_support_w7_h2"
+          ]
+        }
+      },
+      "obb:clear_w7_h2": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w7_h2"
+          ]
+        }
+      },
+      "obb:support_w7_h3": {
+        "add": {
+          "component_groups": [
+            "obb_support_w7_h3"
+          ]
+        }
+      },
+      "obb:clear_w7_h3": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w7_h3"
+          ]
+        }
+      },
+      "obb:support_w7_h4": {
+        "add": {
+          "component_groups": [
+            "obb_support_w7_h4"
+          ]
+        }
+      },
+      "obb:clear_w7_h4": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w7_h4"
+          ]
+        }
+      },
+      "obb:support_w7_h5": {
+        "add": {
+          "component_groups": [
+            "obb_support_w7_h5"
+          ]
+        }
+      },
+      "obb:clear_w7_h5": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w7_h5"
+          ]
+        }
+      },
+      "obb:support_w7_h6": {
+        "add": {
+          "component_groups": [
+            "obb_support_w7_h6"
+          ]
+        }
+      },
+      "obb:clear_w7_h6": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w7_h6"
+          ]
+        }
+      },
+      "obb:support_w7_h7": {
+        "add": {
+          "component_groups": [
+            "obb_support_w7_h7"
+          ]
+        }
+      },
+      "obb:clear_w7_h7": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w7_h7"
+          ]
+        }
+      },
+      "obb:support_w7_h8": {
+        "add": {
+          "component_groups": [
+            "obb_support_w7_h8"
+          ]
+        }
+      },
+      "obb:clear_w7_h8": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w7_h8"
+          ]
+        }
+      },
+      "obb:support_w7_h9": {
+        "add": {
+          "component_groups": [
+            "obb_support_w7_h9"
+          ]
+        }
+      },
+      "obb:clear_w7_h9": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w7_h9"
+          ]
+        }
+      },
+      "obb:support_w7_h10": {
+        "add": {
+          "component_groups": [
+            "obb_support_w7_h10"
+          ]
+        }
+      },
+      "obb:clear_w7_h10": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w7_h10"
+          ]
+        }
+      },
+      "obb:support_w7_h11": {
+        "add": {
+          "component_groups": [
+            "obb_support_w7_h11"
+          ]
+        }
+      },
+      "obb:clear_w7_h11": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w7_h11"
+          ]
+        }
+      },
+      "obb:support_w7_h12": {
+        "add": {
+          "component_groups": [
+            "obb_support_w7_h12"
+          ]
+        }
+      },
+      "obb:clear_w7_h12": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w7_h12"
+          ]
+        }
+      },
+      "obb:support_w7_h13": {
+        "add": {
+          "component_groups": [
+            "obb_support_w7_h13"
+          ]
+        }
+      },
+      "obb:clear_w7_h13": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w7_h13"
+          ]
+        }
+      },
+      "obb:support_w7_h14": {
+        "add": {
+          "component_groups": [
+            "obb_support_w7_h14"
+          ]
+        }
+      },
+      "obb:clear_w7_h14": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w7_h14"
+          ]
+        }
+      },
+      "obb:support_w7_h15": {
+        "add": {
+          "component_groups": [
+            "obb_support_w7_h15"
+          ]
+        }
+      },
+      "obb:clear_w7_h15": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w7_h15"
+          ]
+        }
+      },
+      "obb:support_w7_h16": {
+        "add": {
+          "component_groups": [
+            "obb_support_w7_h16"
+          ]
+        }
+      },
+      "obb:clear_w7_h16": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w7_h16"
+          ]
+        }
+      },
+      "obb:support_w8_h2": {
+        "add": {
+          "component_groups": [
+            "obb_support_w8_h2"
+          ]
+        }
+      },
+      "obb:clear_w8_h2": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w8_h2"
+          ]
+        }
+      },
+      "obb:support_w8_h3": {
+        "add": {
+          "component_groups": [
+            "obb_support_w8_h3"
+          ]
+        }
+      },
+      "obb:clear_w8_h3": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w8_h3"
+          ]
+        }
+      },
+      "obb:support_w8_h4": {
+        "add": {
+          "component_groups": [
+            "obb_support_w8_h4"
+          ]
+        }
+      },
+      "obb:clear_w8_h4": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w8_h4"
+          ]
+        }
+      },
+      "obb:support_w8_h5": {
+        "add": {
+          "component_groups": [
+            "obb_support_w8_h5"
+          ]
+        }
+      },
+      "obb:clear_w8_h5": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w8_h5"
+          ]
+        }
+      },
+      "obb:support_w8_h6": {
+        "add": {
+          "component_groups": [
+            "obb_support_w8_h6"
+          ]
+        }
+      },
+      "obb:clear_w8_h6": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w8_h6"
+          ]
+        }
+      },
+      "obb:support_w8_h7": {
+        "add": {
+          "component_groups": [
+            "obb_support_w8_h7"
+          ]
+        }
+      },
+      "obb:clear_w8_h7": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w8_h7"
+          ]
+        }
+      },
+      "obb:support_w8_h8": {
+        "add": {
+          "component_groups": [
+            "obb_support_w8_h8"
+          ]
+        }
+      },
+      "obb:clear_w8_h8": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w8_h8"
+          ]
+        }
+      },
+      "obb:support_w8_h9": {
+        "add": {
+          "component_groups": [
+            "obb_support_w8_h9"
+          ]
+        }
+      },
+      "obb:clear_w8_h9": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w8_h9"
+          ]
+        }
+      },
+      "obb:support_w8_h10": {
+        "add": {
+          "component_groups": [
+            "obb_support_w8_h10"
+          ]
+        }
+      },
+      "obb:clear_w8_h10": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w8_h10"
+          ]
+        }
+      },
+      "obb:support_w8_h11": {
+        "add": {
+          "component_groups": [
+            "obb_support_w8_h11"
+          ]
+        }
+      },
+      "obb:clear_w8_h11": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w8_h11"
+          ]
+        }
+      },
+      "obb:support_w8_h12": {
+        "add": {
+          "component_groups": [
+            "obb_support_w8_h12"
+          ]
+        }
+      },
+      "obb:clear_w8_h12": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w8_h12"
+          ]
+        }
+      },
+      "obb:support_w8_h13": {
+        "add": {
+          "component_groups": [
+            "obb_support_w8_h13"
+          ]
+        }
+      },
+      "obb:clear_w8_h13": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w8_h13"
+          ]
+        }
+      },
+      "obb:support_w8_h14": {
+        "add": {
+          "component_groups": [
+            "obb_support_w8_h14"
+          ]
+        }
+      },
+      "obb:clear_w8_h14": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w8_h14"
+          ]
+        }
+      },
+      "obb:support_w8_h15": {
+        "add": {
+          "component_groups": [
+            "obb_support_w8_h15"
+          ]
+        }
+      },
+      "obb:clear_w8_h15": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w8_h15"
+          ]
+        }
+      },
+      "obb:support_w8_h16": {
+        "add": {
+          "component_groups": [
+            "obb_support_w8_h16"
+          ]
+        }
+      },
+      "obb:clear_w8_h16": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w8_h16"
+          ]
+        }
+      },
+      "obb:support_w9_h2": {
+        "add": {
+          "component_groups": [
+            "obb_support_w9_h2"
+          ]
+        }
+      },
+      "obb:clear_w9_h2": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w9_h2"
+          ]
+        }
+      },
+      "obb:support_w9_h3": {
+        "add": {
+          "component_groups": [
+            "obb_support_w9_h3"
+          ]
+        }
+      },
+      "obb:clear_w9_h3": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w9_h3"
+          ]
+        }
+      },
+      "obb:support_w9_h4": {
+        "add": {
+          "component_groups": [
+            "obb_support_w9_h4"
+          ]
+        }
+      },
+      "obb:clear_w9_h4": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w9_h4"
+          ]
+        }
+      },
+      "obb:support_w9_h5": {
+        "add": {
+          "component_groups": [
+            "obb_support_w9_h5"
+          ]
+        }
+      },
+      "obb:clear_w9_h5": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w9_h5"
+          ]
+        }
+      },
+      "obb:support_w9_h6": {
+        "add": {
+          "component_groups": [
+            "obb_support_w9_h6"
+          ]
+        }
+      },
+      "obb:clear_w9_h6": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w9_h6"
+          ]
+        }
+      },
+      "obb:support_w9_h7": {
+        "add": {
+          "component_groups": [
+            "obb_support_w9_h7"
+          ]
+        }
+      },
+      "obb:clear_w9_h7": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w9_h7"
+          ]
+        }
+      },
+      "obb:support_w9_h8": {
+        "add": {
+          "component_groups": [
+            "obb_support_w9_h8"
+          ]
+        }
+      },
+      "obb:clear_w9_h8": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w9_h8"
+          ]
+        }
+      },
+      "obb:support_w9_h9": {
+        "add": {
+          "component_groups": [
+            "obb_support_w9_h9"
+          ]
+        }
+      },
+      "obb:clear_w9_h9": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w9_h9"
+          ]
+        }
+      },
+      "obb:support_w9_h10": {
+        "add": {
+          "component_groups": [
+            "obb_support_w9_h10"
+          ]
+        }
+      },
+      "obb:clear_w9_h10": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w9_h10"
+          ]
+        }
+      },
+      "obb:support_w9_h11": {
+        "add": {
+          "component_groups": [
+            "obb_support_w9_h11"
+          ]
+        }
+      },
+      "obb:clear_w9_h11": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w9_h11"
+          ]
+        }
+      },
+      "obb:support_w9_h12": {
+        "add": {
+          "component_groups": [
+            "obb_support_w9_h12"
+          ]
+        }
+      },
+      "obb:clear_w9_h12": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w9_h12"
+          ]
+        }
+      },
+      "obb:support_w9_h13": {
+        "add": {
+          "component_groups": [
+            "obb_support_w9_h13"
+          ]
+        }
+      },
+      "obb:clear_w9_h13": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w9_h13"
+          ]
+        }
+      },
+      "obb:support_w9_h14": {
+        "add": {
+          "component_groups": [
+            "obb_support_w9_h14"
+          ]
+        }
+      },
+      "obb:clear_w9_h14": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w9_h14"
+          ]
+        }
+      },
+      "obb:support_w9_h15": {
+        "add": {
+          "component_groups": [
+            "obb_support_w9_h15"
+          ]
+        }
+      },
+      "obb:clear_w9_h15": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w9_h15"
+          ]
+        }
+      },
+      "obb:support_w9_h16": {
+        "add": {
+          "component_groups": [
+            "obb_support_w9_h16"
+          ]
+        }
+      },
+      "obb:clear_w9_h16": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w9_h16"
+          ]
+        }
+      },
+      "obb:support_w10_h2": {
+        "add": {
+          "component_groups": [
+            "obb_support_w10_h2"
+          ]
+        }
+      },
+      "obb:clear_w10_h2": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w10_h2"
+          ]
+        }
+      },
+      "obb:support_w10_h3": {
+        "add": {
+          "component_groups": [
+            "obb_support_w10_h3"
+          ]
+        }
+      },
+      "obb:clear_w10_h3": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w10_h3"
+          ]
+        }
+      },
+      "obb:support_w10_h4": {
+        "add": {
+          "component_groups": [
+            "obb_support_w10_h4"
+          ]
+        }
+      },
+      "obb:clear_w10_h4": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w10_h4"
+          ]
+        }
+      },
+      "obb:support_w10_h5": {
+        "add": {
+          "component_groups": [
+            "obb_support_w10_h5"
+          ]
+        }
+      },
+      "obb:clear_w10_h5": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w10_h5"
+          ]
+        }
+      },
+      "obb:support_w10_h6": {
+        "add": {
+          "component_groups": [
+            "obb_support_w10_h6"
+          ]
+        }
+      },
+      "obb:clear_w10_h6": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w10_h6"
+          ]
+        }
+      },
+      "obb:support_w10_h7": {
+        "add": {
+          "component_groups": [
+            "obb_support_w10_h7"
+          ]
+        }
+      },
+      "obb:clear_w10_h7": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w10_h7"
+          ]
+        }
+      },
+      "obb:support_w10_h8": {
+        "add": {
+          "component_groups": [
+            "obb_support_w10_h8"
+          ]
+        }
+      },
+      "obb:clear_w10_h8": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w10_h8"
+          ]
+        }
+      },
+      "obb:support_w10_h9": {
+        "add": {
+          "component_groups": [
+            "obb_support_w10_h9"
+          ]
+        }
+      },
+      "obb:clear_w10_h9": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w10_h9"
+          ]
+        }
+      },
+      "obb:support_w10_h10": {
+        "add": {
+          "component_groups": [
+            "obb_support_w10_h10"
+          ]
+        }
+      },
+      "obb:clear_w10_h10": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w10_h10"
+          ]
+        }
+      },
+      "obb:support_w10_h11": {
+        "add": {
+          "component_groups": [
+            "obb_support_w10_h11"
+          ]
+        }
+      },
+      "obb:clear_w10_h11": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w10_h11"
+          ]
+        }
+      },
+      "obb:support_w10_h12": {
+        "add": {
+          "component_groups": [
+            "obb_support_w10_h12"
+          ]
+        }
+      },
+      "obb:clear_w10_h12": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w10_h12"
+          ]
+        }
+      },
+      "obb:support_w10_h13": {
+        "add": {
+          "component_groups": [
+            "obb_support_w10_h13"
+          ]
+        }
+      },
+      "obb:clear_w10_h13": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w10_h13"
+          ]
+        }
+      },
+      "obb:support_w10_h14": {
+        "add": {
+          "component_groups": [
+            "obb_support_w10_h14"
+          ]
+        }
+      },
+      "obb:clear_w10_h14": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w10_h14"
+          ]
+        }
+      },
+      "obb:support_w10_h15": {
+        "add": {
+          "component_groups": [
+            "obb_support_w10_h15"
+          ]
+        }
+      },
+      "obb:clear_w10_h15": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w10_h15"
+          ]
+        }
+      },
+      "obb:support_w10_h16": {
+        "add": {
+          "component_groups": [
+            "obb_support_w10_h16"
+          ]
+        }
+      },
+      "obb:clear_w10_h16": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w10_h16"
+          ]
+        }
+      },
+      "obb:support_w11_h2": {
+        "add": {
+          "component_groups": [
+            "obb_support_w11_h2"
+          ]
+        }
+      },
+      "obb:clear_w11_h2": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w11_h2"
+          ]
+        }
+      },
+      "obb:support_w11_h3": {
+        "add": {
+          "component_groups": [
+            "obb_support_w11_h3"
+          ]
+        }
+      },
+      "obb:clear_w11_h3": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w11_h3"
+          ]
+        }
+      },
+      "obb:support_w11_h4": {
+        "add": {
+          "component_groups": [
+            "obb_support_w11_h4"
+          ]
+        }
+      },
+      "obb:clear_w11_h4": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w11_h4"
+          ]
+        }
+      },
+      "obb:support_w11_h5": {
+        "add": {
+          "component_groups": [
+            "obb_support_w11_h5"
+          ]
+        }
+      },
+      "obb:clear_w11_h5": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w11_h5"
+          ]
+        }
+      },
+      "obb:support_w11_h6": {
+        "add": {
+          "component_groups": [
+            "obb_support_w11_h6"
+          ]
+        }
+      },
+      "obb:clear_w11_h6": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w11_h6"
+          ]
+        }
+      },
+      "obb:support_w11_h7": {
+        "add": {
+          "component_groups": [
+            "obb_support_w11_h7"
+          ]
+        }
+      },
+      "obb:clear_w11_h7": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w11_h7"
+          ]
+        }
+      },
+      "obb:support_w11_h8": {
+        "add": {
+          "component_groups": [
+            "obb_support_w11_h8"
+          ]
+        }
+      },
+      "obb:clear_w11_h8": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w11_h8"
+          ]
+        }
+      },
+      "obb:support_w11_h9": {
+        "add": {
+          "component_groups": [
+            "obb_support_w11_h9"
+          ]
+        }
+      },
+      "obb:clear_w11_h9": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w11_h9"
+          ]
+        }
+      },
+      "obb:support_w11_h10": {
+        "add": {
+          "component_groups": [
+            "obb_support_w11_h10"
+          ]
+        }
+      },
+      "obb:clear_w11_h10": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w11_h10"
+          ]
+        }
+      },
+      "obb:support_w11_h11": {
+        "add": {
+          "component_groups": [
+            "obb_support_w11_h11"
+          ]
+        }
+      },
+      "obb:clear_w11_h11": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w11_h11"
+          ]
+        }
+      },
+      "obb:support_w11_h12": {
+        "add": {
+          "component_groups": [
+            "obb_support_w11_h12"
+          ]
+        }
+      },
+      "obb:clear_w11_h12": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w11_h12"
+          ]
+        }
+      },
+      "obb:support_w11_h13": {
+        "add": {
+          "component_groups": [
+            "obb_support_w11_h13"
+          ]
+        }
+      },
+      "obb:clear_w11_h13": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w11_h13"
+          ]
+        }
+      },
+      "obb:support_w11_h14": {
+        "add": {
+          "component_groups": [
+            "obb_support_w11_h14"
+          ]
+        }
+      },
+      "obb:clear_w11_h14": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w11_h14"
+          ]
+        }
+      },
+      "obb:support_w11_h15": {
+        "add": {
+          "component_groups": [
+            "obb_support_w11_h15"
+          ]
+        }
+      },
+      "obb:clear_w11_h15": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w11_h15"
+          ]
+        }
+      },
+      "obb:support_w11_h16": {
+        "add": {
+          "component_groups": [
+            "obb_support_w11_h16"
+          ]
+        }
+      },
+      "obb:clear_w11_h16": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w11_h16"
+          ]
+        }
+      },
+      "obb:support_w12_h2": {
+        "add": {
+          "component_groups": [
+            "obb_support_w12_h2"
+          ]
+        }
+      },
+      "obb:clear_w12_h2": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w12_h2"
+          ]
+        }
+      },
+      "obb:support_w12_h3": {
+        "add": {
+          "component_groups": [
+            "obb_support_w12_h3"
+          ]
+        }
+      },
+      "obb:clear_w12_h3": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w12_h3"
+          ]
+        }
+      },
+      "obb:support_w12_h4": {
+        "add": {
+          "component_groups": [
+            "obb_support_w12_h4"
+          ]
+        }
+      },
+      "obb:clear_w12_h4": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w12_h4"
+          ]
+        }
+      },
+      "obb:support_w12_h5": {
+        "add": {
+          "component_groups": [
+            "obb_support_w12_h5"
+          ]
+        }
+      },
+      "obb:clear_w12_h5": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w12_h5"
+          ]
+        }
+      },
+      "obb:support_w12_h6": {
+        "add": {
+          "component_groups": [
+            "obb_support_w12_h6"
+          ]
+        }
+      },
+      "obb:clear_w12_h6": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w12_h6"
+          ]
+        }
+      },
+      "obb:support_w12_h7": {
+        "add": {
+          "component_groups": [
+            "obb_support_w12_h7"
+          ]
+        }
+      },
+      "obb:clear_w12_h7": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w12_h7"
+          ]
+        }
+      },
+      "obb:support_w12_h8": {
+        "add": {
+          "component_groups": [
+            "obb_support_w12_h8"
+          ]
+        }
+      },
+      "obb:clear_w12_h8": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w12_h8"
+          ]
+        }
+      },
+      "obb:support_w12_h9": {
+        "add": {
+          "component_groups": [
+            "obb_support_w12_h9"
+          ]
+        }
+      },
+      "obb:clear_w12_h9": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w12_h9"
+          ]
+        }
+      },
+      "obb:support_w12_h10": {
+        "add": {
+          "component_groups": [
+            "obb_support_w12_h10"
+          ]
+        }
+      },
+      "obb:clear_w12_h10": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w12_h10"
+          ]
+        }
+      },
+      "obb:support_w12_h11": {
+        "add": {
+          "component_groups": [
+            "obb_support_w12_h11"
+          ]
+        }
+      },
+      "obb:clear_w12_h11": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w12_h11"
+          ]
+        }
+      },
+      "obb:support_w12_h12": {
+        "add": {
+          "component_groups": [
+            "obb_support_w12_h12"
+          ]
+        }
+      },
+      "obb:clear_w12_h12": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w12_h12"
+          ]
+        }
+      },
+      "obb:support_w12_h13": {
+        "add": {
+          "component_groups": [
+            "obb_support_w12_h13"
+          ]
+        }
+      },
+      "obb:clear_w12_h13": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w12_h13"
+          ]
+        }
+      },
+      "obb:support_w12_h14": {
+        "add": {
+          "component_groups": [
+            "obb_support_w12_h14"
+          ]
+        }
+      },
+      "obb:clear_w12_h14": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w12_h14"
+          ]
+        }
+      },
+      "obb:support_w12_h15": {
+        "add": {
+          "component_groups": [
+            "obb_support_w12_h15"
+          ]
+        }
+      },
+      "obb:clear_w12_h15": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w12_h15"
+          ]
+        }
+      },
+      "obb:support_w12_h16": {
+        "add": {
+          "component_groups": [
+            "obb_support_w12_h16"
+          ]
+        }
+      },
+      "obb:clear_w12_h16": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w12_h16"
+          ]
+        }
+      },
+      "obb:support_w13_h2": {
+        "add": {
+          "component_groups": [
+            "obb_support_w13_h2"
+          ]
+        }
+      },
+      "obb:clear_w13_h2": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w13_h2"
+          ]
+        }
+      },
+      "obb:support_w13_h3": {
+        "add": {
+          "component_groups": [
+            "obb_support_w13_h3"
+          ]
+        }
+      },
+      "obb:clear_w13_h3": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w13_h3"
+          ]
+        }
+      },
+      "obb:support_w13_h4": {
+        "add": {
+          "component_groups": [
+            "obb_support_w13_h4"
+          ]
+        }
+      },
+      "obb:clear_w13_h4": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w13_h4"
+          ]
+        }
+      },
+      "obb:support_w13_h5": {
+        "add": {
+          "component_groups": [
+            "obb_support_w13_h5"
+          ]
+        }
+      },
+      "obb:clear_w13_h5": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w13_h5"
+          ]
+        }
+      },
+      "obb:support_w13_h6": {
+        "add": {
+          "component_groups": [
+            "obb_support_w13_h6"
+          ]
+        }
+      },
+      "obb:clear_w13_h6": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w13_h6"
+          ]
+        }
+      },
+      "obb:support_w13_h7": {
+        "add": {
+          "component_groups": [
+            "obb_support_w13_h7"
+          ]
+        }
+      },
+      "obb:clear_w13_h7": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w13_h7"
+          ]
+        }
+      },
+      "obb:support_w13_h8": {
+        "add": {
+          "component_groups": [
+            "obb_support_w13_h8"
+          ]
+        }
+      },
+      "obb:clear_w13_h8": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w13_h8"
+          ]
+        }
+      },
+      "obb:support_w13_h9": {
+        "add": {
+          "component_groups": [
+            "obb_support_w13_h9"
+          ]
+        }
+      },
+      "obb:clear_w13_h9": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w13_h9"
+          ]
+        }
+      },
+      "obb:support_w13_h10": {
+        "add": {
+          "component_groups": [
+            "obb_support_w13_h10"
+          ]
+        }
+      },
+      "obb:clear_w13_h10": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w13_h10"
+          ]
+        }
+      },
+      "obb:support_w13_h11": {
+        "add": {
+          "component_groups": [
+            "obb_support_w13_h11"
+          ]
+        }
+      },
+      "obb:clear_w13_h11": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w13_h11"
+          ]
+        }
+      },
+      "obb:support_w13_h12": {
+        "add": {
+          "component_groups": [
+            "obb_support_w13_h12"
+          ]
+        }
+      },
+      "obb:clear_w13_h12": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w13_h12"
+          ]
+        }
+      },
+      "obb:support_w13_h13": {
+        "add": {
+          "component_groups": [
+            "obb_support_w13_h13"
+          ]
+        }
+      },
+      "obb:clear_w13_h13": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w13_h13"
+          ]
+        }
+      },
+      "obb:support_w13_h14": {
+        "add": {
+          "component_groups": [
+            "obb_support_w13_h14"
+          ]
+        }
+      },
+      "obb:clear_w13_h14": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w13_h14"
+          ]
+        }
+      },
+      "obb:support_w13_h15": {
+        "add": {
+          "component_groups": [
+            "obb_support_w13_h15"
+          ]
+        }
+      },
+      "obb:clear_w13_h15": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w13_h15"
+          ]
+        }
+      },
+      "obb:support_w13_h16": {
+        "add": {
+          "component_groups": [
+            "obb_support_w13_h16"
+          ]
+        }
+      },
+      "obb:clear_w13_h16": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w13_h16"
+          ]
+        }
+      },
+      "obb:support_w14_h2": {
+        "add": {
+          "component_groups": [
+            "obb_support_w14_h2"
+          ]
+        }
+      },
+      "obb:clear_w14_h2": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w14_h2"
+          ]
+        }
+      },
+      "obb:support_w14_h3": {
+        "add": {
+          "component_groups": [
+            "obb_support_w14_h3"
+          ]
+        }
+      },
+      "obb:clear_w14_h3": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w14_h3"
+          ]
+        }
+      },
+      "obb:support_w14_h4": {
+        "add": {
+          "component_groups": [
+            "obb_support_w14_h4"
+          ]
+        }
+      },
+      "obb:clear_w14_h4": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w14_h4"
+          ]
+        }
+      },
+      "obb:support_w14_h5": {
+        "add": {
+          "component_groups": [
+            "obb_support_w14_h5"
+          ]
+        }
+      },
+      "obb:clear_w14_h5": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w14_h5"
+          ]
+        }
+      },
+      "obb:support_w14_h6": {
+        "add": {
+          "component_groups": [
+            "obb_support_w14_h6"
+          ]
+        }
+      },
+      "obb:clear_w14_h6": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w14_h6"
+          ]
+        }
+      },
+      "obb:support_w14_h7": {
+        "add": {
+          "component_groups": [
+            "obb_support_w14_h7"
+          ]
+        }
+      },
+      "obb:clear_w14_h7": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w14_h7"
+          ]
+        }
+      },
+      "obb:support_w14_h8": {
+        "add": {
+          "component_groups": [
+            "obb_support_w14_h8"
+          ]
+        }
+      },
+      "obb:clear_w14_h8": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w14_h8"
+          ]
+        }
+      },
+      "obb:support_w14_h9": {
+        "add": {
+          "component_groups": [
+            "obb_support_w14_h9"
+          ]
+        }
+      },
+      "obb:clear_w14_h9": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w14_h9"
+          ]
+        }
+      },
+      "obb:support_w14_h10": {
+        "add": {
+          "component_groups": [
+            "obb_support_w14_h10"
+          ]
+        }
+      },
+      "obb:clear_w14_h10": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w14_h10"
+          ]
+        }
+      },
+      "obb:support_w14_h11": {
+        "add": {
+          "component_groups": [
+            "obb_support_w14_h11"
+          ]
+        }
+      },
+      "obb:clear_w14_h11": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w14_h11"
+          ]
+        }
+      },
+      "obb:support_w14_h12": {
+        "add": {
+          "component_groups": [
+            "obb_support_w14_h12"
+          ]
+        }
+      },
+      "obb:clear_w14_h12": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w14_h12"
+          ]
+        }
+      },
+      "obb:support_w14_h13": {
+        "add": {
+          "component_groups": [
+            "obb_support_w14_h13"
+          ]
+        }
+      },
+      "obb:clear_w14_h13": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w14_h13"
+          ]
+        }
+      },
+      "obb:support_w14_h14": {
+        "add": {
+          "component_groups": [
+            "obb_support_w14_h14"
+          ]
+        }
+      },
+      "obb:clear_w14_h14": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w14_h14"
+          ]
+        }
+      },
+      "obb:support_w14_h15": {
+        "add": {
+          "component_groups": [
+            "obb_support_w14_h15"
+          ]
+        }
+      },
+      "obb:clear_w14_h15": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w14_h15"
+          ]
+        }
+      },
+      "obb:support_w14_h16": {
+        "add": {
+          "component_groups": [
+            "obb_support_w14_h16"
+          ]
+        }
+      },
+      "obb:clear_w14_h16": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w14_h16"
+          ]
+        }
+      },
+      "obb:support_w15_h2": {
+        "add": {
+          "component_groups": [
+            "obb_support_w15_h2"
+          ]
+        }
+      },
+      "obb:clear_w15_h2": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w15_h2"
+          ]
+        }
+      },
+      "obb:support_w15_h3": {
+        "add": {
+          "component_groups": [
+            "obb_support_w15_h3"
+          ]
+        }
+      },
+      "obb:clear_w15_h3": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w15_h3"
+          ]
+        }
+      },
+      "obb:support_w15_h4": {
+        "add": {
+          "component_groups": [
+            "obb_support_w15_h4"
+          ]
+        }
+      },
+      "obb:clear_w15_h4": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w15_h4"
+          ]
+        }
+      },
+      "obb:support_w15_h5": {
+        "add": {
+          "component_groups": [
+            "obb_support_w15_h5"
+          ]
+        }
+      },
+      "obb:clear_w15_h5": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w15_h5"
+          ]
+        }
+      },
+      "obb:support_w15_h6": {
+        "add": {
+          "component_groups": [
+            "obb_support_w15_h6"
+          ]
+        }
+      },
+      "obb:clear_w15_h6": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w15_h6"
+          ]
+        }
+      },
+      "obb:support_w15_h7": {
+        "add": {
+          "component_groups": [
+            "obb_support_w15_h7"
+          ]
+        }
+      },
+      "obb:clear_w15_h7": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w15_h7"
+          ]
+        }
+      },
+      "obb:support_w15_h8": {
+        "add": {
+          "component_groups": [
+            "obb_support_w15_h8"
+          ]
+        }
+      },
+      "obb:clear_w15_h8": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w15_h8"
+          ]
+        }
+      },
+      "obb:support_w15_h9": {
+        "add": {
+          "component_groups": [
+            "obb_support_w15_h9"
+          ]
+        }
+      },
+      "obb:clear_w15_h9": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w15_h9"
+          ]
+        }
+      },
+      "obb:support_w15_h10": {
+        "add": {
+          "component_groups": [
+            "obb_support_w15_h10"
+          ]
+        }
+      },
+      "obb:clear_w15_h10": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w15_h10"
+          ]
+        }
+      },
+      "obb:support_w15_h11": {
+        "add": {
+          "component_groups": [
+            "obb_support_w15_h11"
+          ]
+        }
+      },
+      "obb:clear_w15_h11": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w15_h11"
+          ]
+        }
+      },
+      "obb:support_w15_h12": {
+        "add": {
+          "component_groups": [
+            "obb_support_w15_h12"
+          ]
+        }
+      },
+      "obb:clear_w15_h12": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w15_h12"
+          ]
+        }
+      },
+      "obb:support_w15_h13": {
+        "add": {
+          "component_groups": [
+            "obb_support_w15_h13"
+          ]
+        }
+      },
+      "obb:clear_w15_h13": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w15_h13"
+          ]
+        }
+      },
+      "obb:support_w15_h14": {
+        "add": {
+          "component_groups": [
+            "obb_support_w15_h14"
+          ]
+        }
+      },
+      "obb:clear_w15_h14": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w15_h14"
+          ]
+        }
+      },
+      "obb:support_w15_h15": {
+        "add": {
+          "component_groups": [
+            "obb_support_w15_h15"
+          ]
+        }
+      },
+      "obb:clear_w15_h15": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w15_h15"
+          ]
+        }
+      },
+      "obb:support_w15_h16": {
+        "add": {
+          "component_groups": [
+            "obb_support_w15_h16"
+          ]
+        }
+      },
+      "obb:clear_w15_h16": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w15_h16"
+          ]
+        }
+      },
+      "obb:support_w16_h2": {
+        "add": {
+          "component_groups": [
+            "obb_support_w16_h2"
+          ]
+        }
+      },
+      "obb:clear_w16_h2": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w16_h2"
+          ]
+        }
+      },
+      "obb:support_w16_h3": {
+        "add": {
+          "component_groups": [
+            "obb_support_w16_h3"
+          ]
+        }
+      },
+      "obb:clear_w16_h3": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w16_h3"
+          ]
+        }
+      },
+      "obb:support_w16_h4": {
+        "add": {
+          "component_groups": [
+            "obb_support_w16_h4"
+          ]
+        }
+      },
+      "obb:clear_w16_h4": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w16_h4"
+          ]
+        }
+      },
+      "obb:support_w16_h5": {
+        "add": {
+          "component_groups": [
+            "obb_support_w16_h5"
+          ]
+        }
+      },
+      "obb:clear_w16_h5": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w16_h5"
+          ]
+        }
+      },
+      "obb:support_w16_h6": {
+        "add": {
+          "component_groups": [
+            "obb_support_w16_h6"
+          ]
+        }
+      },
+      "obb:clear_w16_h6": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w16_h6"
+          ]
+        }
+      },
+      "obb:support_w16_h7": {
+        "add": {
+          "component_groups": [
+            "obb_support_w16_h7"
+          ]
+        }
+      },
+      "obb:clear_w16_h7": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w16_h7"
+          ]
+        }
+      },
+      "obb:support_w16_h8": {
+        "add": {
+          "component_groups": [
+            "obb_support_w16_h8"
+          ]
+        }
+      },
+      "obb:clear_w16_h8": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w16_h8"
+          ]
+        }
+      },
+      "obb:support_w16_h9": {
+        "add": {
+          "component_groups": [
+            "obb_support_w16_h9"
+          ]
+        }
+      },
+      "obb:clear_w16_h9": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w16_h9"
+          ]
+        }
+      },
+      "obb:support_w16_h10": {
+        "add": {
+          "component_groups": [
+            "obb_support_w16_h10"
+          ]
+        }
+      },
+      "obb:clear_w16_h10": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w16_h10"
+          ]
+        }
+      },
+      "obb:support_w16_h11": {
+        "add": {
+          "component_groups": [
+            "obb_support_w16_h11"
+          ]
+        }
+      },
+      "obb:clear_w16_h11": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w16_h11"
+          ]
+        }
+      },
+      "obb:support_w16_h12": {
+        "add": {
+          "component_groups": [
+            "obb_support_w16_h12"
+          ]
+        }
+      },
+      "obb:clear_w16_h12": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w16_h12"
+          ]
+        }
+      },
+      "obb:support_w16_h13": {
+        "add": {
+          "component_groups": [
+            "obb_support_w16_h13"
+          ]
+        }
+      },
+      "obb:clear_w16_h13": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w16_h13"
+          ]
+        }
+      },
+      "obb:support_w16_h14": {
+        "add": {
+          "component_groups": [
+            "obb_support_w16_h14"
+          ]
+        }
+      },
+      "obb:clear_w16_h14": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w16_h14"
+          ]
+        }
+      },
+      "obb:support_w16_h15": {
+        "add": {
+          "component_groups": [
+            "obb_support_w16_h15"
+          ]
+        }
+      },
+      "obb:clear_w16_h15": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w16_h15"
+          ]
+        }
+      },
+      "obb:support_w16_h16": {
+        "add": {
+          "component_groups": [
+            "obb_support_w16_h16"
+          ]
+        }
+      },
+      "obb:clear_w16_h16": {
+        "remove": {
+          "component_groups": [
+            "obb_support_w16_h16"
+          ]
+        }
+      },
+      "obb:volume_w1_q1": {
+        "add": {
+          "component_groups": [
+            "obb_support_v_w1_q1"
+          ]
+        }
+      },
+      "obb:clear_v_w1_q1": {
+        "remove": {
+          "component_groups": [
+            "obb_support_v_w1_q1"
+          ]
+        }
+      },
+      "obb:volume_w1_q2": {
+        "add": {
+          "component_groups": [
+            "obb_support_v_w1_q2"
+          ]
+        }
+      },
+      "obb:clear_v_w1_q2": {
+        "remove": {
+          "component_groups": [
+            "obb_support_v_w1_q2"
+          ]
+        }
+      },
+      "obb:volume_w1_q3": {
+        "add": {
+          "component_groups": [
+            "obb_support_v_w1_q3"
+          ]
+        }
+      },
+      "obb:clear_v_w1_q3": {
+        "remove": {
+          "component_groups": [
+            "obb_support_v_w1_q3"
+          ]
+        }
+      },
+      "obb:volume_w1_q4": {
+        "add": {
+          "component_groups": [
+            "obb_support_v_w1_q4"
+          ]
+        }
+      },
+      "obb:clear_v_w1_q4": {
+        "remove": {
+          "component_groups": [
+            "obb_support_v_w1_q4"
+          ]
+        }
+      },
+      "obb:volume_w1_q5": {
+        "add": {
+          "component_groups": [
+            "obb_support_v_w1_q5"
+          ]
+        }
+      },
+      "obb:clear_v_w1_q5": {
+        "remove": {
+          "component_groups": [
+            "obb_support_v_w1_q5"
+          ]
+        }
+      },
+      "obb:volume_w1_q6": {
+        "add": {
+          "component_groups": [
+            "obb_support_v_w1_q6"
+          ]
+        }
+      },
+      "obb:clear_v_w1_q6": {
+        "remove": {
+          "component_groups": [
+            "obb_support_v_w1_q6"
+          ]
+        }
+      },
+      "obb:volume_w1_q7": {
+        "add": {
+          "component_groups": [
+            "obb_support_v_w1_q7"
+          ]
+        }
+      },
+      "obb:clear_v_w1_q7": {
+        "remove": {
+          "component_groups": [
+            "obb_support_v_w1_q7"
+          ]
+        }
+      },
+      "obb:volume_w1_q8": {
+        "add": {
+          "component_groups": [
+            "obb_support_v_w1_q8"
+          ]
+        }
+      },
+      "obb:clear_v_w1_q8": {
+        "remove": {
+          "component_groups": [
+            "obb_support_v_w1_q8"
+          ]
+        }
+      },
+      "obb:volume_w1_q9": {
+        "add": {
+          "component_groups": [
+            "obb_support_v_w1_q9"
+          ]
+        }
+      },
+      "obb:clear_v_w1_q9": {
+        "remove": {
+          "component_groups": [
+            "obb_support_v_w1_q9"
+          ]
+        }
+      },
+      "obb:volume_w1_q10": {
+        "add": {
+          "component_groups": [
+            "obb_support_v_w1_q10"
+          ]
+        }
+      },
+      "obb:clear_v_w1_q10": {
+        "remove": {
+          "component_groups": [
+            "obb_support_v_w1_q10"
+          ]
+        }
+      },
+      "obb:volume_w1_q11": {
+        "add": {
+          "component_groups": [
+            "obb_support_v_w1_q11"
+          ]
+        }
+      },
+      "obb:clear_v_w1_q11": {
+        "remove": {
+          "component_groups": [
+            "obb_support_v_w1_q11"
+          ]
+        }
+      },
+      "obb:volume_w1_q12": {
+        "add": {
+          "component_groups": [
+            "obb_support_v_w1_q12"
+          ]
+        }
+      },
+      "obb:clear_v_w1_q12": {
+        "remove": {
+          "component_groups": [
+            "obb_support_v_w1_q12"
+          ]
+        }
+      },
+      "obb:volume_w1_q13": {
+        "add": {
+          "component_groups": [
+            "obb_support_v_w1_q13"
+          ]
+        }
+      },
+      "obb:clear_v_w1_q13": {
+        "remove": {
+          "component_groups": [
+            "obb_support_v_w1_q13"
+          ]
+        }
+      },
+      "obb:volume_w1_q14": {
+        "add": {
+          "component_groups": [
+            "obb_support_v_w1_q14"
+          ]
+        }
+      },
+      "obb:clear_v_w1_q14": {
+        "remove": {
+          "component_groups": [
+            "obb_support_v_w1_q14"
+          ]
+        }
+      },
+      "obb:volume_w1_q15": {
+        "add": {
+          "component_groups": [
+            "obb_support_v_w1_q15"
+          ]
+        }
+      },
+      "obb:clear_v_w1_q15": {
+        "remove": {
+          "component_groups": [
+            "obb_support_v_w1_q15"
+          ]
+        }
+      },
+      "obb:volume_w1_q16": {
+        "add": {
+          "component_groups": [
+            "obb_support_v_w1_q16"
+          ]
+        }
+      },
+      "obb:clear_v_w1_q16": {
+        "remove": {
+          "component_groups": [
+            "obb_support_v_w1_q16"
+          ]
+        }
+      },
+      "obb:volume_w1_q17": {
+        "add": {
+          "component_groups": [
+            "obb_support_v_w1_q17"
+          ]
+        }
+      },
+      "obb:clear_v_w1_q17": {
+        "remove": {
+          "component_groups": [
+            "obb_support_v_w1_q17"
+          ]
+        }
+      },
+      "obb:volume_w1_q18": {
+        "add": {
+          "component_groups": [
+            "obb_support_v_w1_q18"
+          ]
+        }
+      },
+      "obb:clear_v_w1_q18": {
+        "remove": {
+          "component_groups": [
+            "obb_support_v_w1_q18"
+          ]
+        }
+      },
+      "obb:volume_w1_q19": {
+        "add": {
+          "component_groups": [
+            "obb_support_v_w1_q19"
+          ]
+        }
+      },
+      "obb:clear_v_w1_q19": {
+        "remove": {
+          "component_groups": [
+            "obb_support_v_w1_q19"
+          ]
+        }
+      },
+      "obb:volume_w1_q20": {
+        "add": {
+          "component_groups": [
+            "obb_support_v_w1_q20"
+          ]
+        }
+      },
+      "obb:clear_v_w1_q20": {
+        "remove": {
+          "component_groups": [
+            "obb_support_v_w1_q20"
+          ]
+        }
+      },
+      "obb:volume_w1_q21": {
+        "add": {
+          "component_groups": [
+            "obb_support_v_w1_q21"
+          ]
+        }
+      },
+      "obb:clear_v_w1_q21": {
+        "remove": {
+          "component_groups": [
+            "obb_support_v_w1_q21"
+          ]
+        }
+      },
+      "obb:volume_w1_q22": {
+        "add": {
+          "component_groups": [
+            "obb_support_v_w1_q22"
+          ]
+        }
+      },
+      "obb:clear_v_w1_q22": {
+        "remove": {
+          "component_groups": [
+            "obb_support_v_w1_q22"
+          ]
+        }
+      },
+      "obb:volume_w1_q23": {
+        "add": {
+          "component_groups": [
+            "obb_support_v_w1_q23"
+          ]
+        }
+      },
+      "obb:clear_v_w1_q23": {
+        "remove": {
+          "component_groups": [
+            "obb_support_v_w1_q23"
+          ]
+        }
+      },
+      "obb:volume_w1_q24": {
+        "add": {
+          "component_groups": [
+            "obb_support_v_w1_q24"
+          ]
+        }
+      },
+      "obb:clear_v_w1_q24": {
+        "remove": {
+          "component_groups": [
+            "obb_support_v_w1_q24"
+          ]
+        }
+      },
+      "obb:volume_w1_q26": {
+        "add": {
+          "component_groups": [
+            "obb_support_v_w1_q26"
+          ]
+        }
+      },
+      "obb:clear_v_w1_q26": {
+        "remove": {
+          "component_groups": [
+            "obb_support_v_w1_q26"
+          ]
+        }
+      },
+      "obb:volume_w1_q27": {
+        "add": {
+          "component_groups": [
+            "obb_support_v_w1_q27"
+          ]
+        }
+      },
+      "obb:clear_v_w1_q27": {
+        "remove": {
+          "component_groups": [
+            "obb_support_v_w1_q27"
+          ]
+        }
+      },
+      "obb:volume_w1_q28": {
+        "add": {
+          "component_groups": [
+            "obb_support_v_w1_q28"
+          ]
+        }
+      },
+      "obb:clear_v_w1_q28": {
+        "remove": {
+          "component_groups": [
+            "obb_support_v_w1_q28"
+          ]
+        }
+      },
+      "obb:volume_w1_q29": {
+        "add": {
+          "component_groups": [
+            "obb_support_v_w1_q29"
+          ]
+        }
+      },
+      "obb:clear_v_w1_q29": {
+        "remove": {
+          "component_groups": [
+            "obb_support_v_w1_q29"
+          ]
+        }
+      },
+      "obb:volume_w1_q30": {
+        "add": {
+          "component_groups": [
+            "obb_support_v_w1_q30"
+          ]
+        }
+      },
+      "obb:clear_v_w1_q30": {
+        "remove": {
+          "component_groups": [
+            "obb_support_v_w1_q30"
+          ]
+        }
+      },
+      "obb:volume_w1_q31": {
+        "add": {
+          "component_groups": [
+            "obb_support_v_w1_q31"
+          ]
+        }
+      },
+      "obb:clear_v_w1_q31": {
+        "remove": {
+          "component_groups": [
+            "obb_support_v_w1_q31"
+          ]
+        }
+      },
+      "obb:volume_w1_q32": {
+        "add": {
+          "component_groups": [
+            "obb_support_v_w1_q32"
+          ]
+        }
+      },
+      "obb:clear_v_w1_q32": {
+        "remove": {
+          "component_groups": [
+            "obb_support_v_w1_q32"
+          ]
+        }
+      },
+      "obb:volume_w1_q33": {
+        "add": {
+          "component_groups": [
+            "obb_support_v_w1_q33"
+          ]
+        }
+      },
+      "obb:clear_v_w1_q33": {
+        "remove": {
+          "component_groups": [
+            "obb_support_v_w1_q33"
+          ]
+        }
+      },
+      "obb:volume_w1_q34": {
+        "add": {
+          "component_groups": [
+            "obb_support_v_w1_q34"
+          ]
+        }
+      },
+      "obb:clear_v_w1_q34": {
+        "remove": {
+          "component_groups": [
+            "obb_support_v_w1_q34"
+          ]
+        }
+      },
+      "obb:volume_w1_q35": {
+        "add": {
+          "component_groups": [
+            "obb_support_v_w1_q35"
+          ]
+        }
+      },
+      "obb:clear_v_w1_q35": {
+        "remove": {
+          "component_groups": [
+            "obb_support_v_w1_q35"
+          ]
+        }
+      },
+      "obb:volume_w1_q36": {
+        "add": {
+          "component_groups": [
+            "obb_support_v_w1_q36"
+          ]
+        }
+      },
+      "obb:clear_v_w1_q36": {
+        "remove": {
+          "component_groups": [
+            "obb_support_v_w1_q36"
+          ]
+        }
+      },
+      "obb:volume_w1_q37": {
+        "add": {
+          "component_groups": [
+            "obb_support_v_w1_q37"
+          ]
+        }
+      },
+      "obb:clear_v_w1_q37": {
+        "remove": {
+          "component_groups": [
+            "obb_support_v_w1_q37"
+          ]
+        }
+      },
+      "obb:volume_w1_q38": {
+        "add": {
+          "component_groups": [
+            "obb_support_v_w1_q38"
+          ]
+        }
+      },
+      "obb:clear_v_w1_q38": {
+        "remove": {
+          "component_groups": [
+            "obb_support_v_w1_q38"
+          ]
+        }
+      },
+      "obb:volume_w1_q39": {
+        "add": {
+          "component_groups": [
+            "obb_support_v_w1_q39"
+          ]
+        }
+      },
+      "obb:clear_v_w1_q39": {
+        "remove": {
+          "component_groups": [
+            "obb_support_v_w1_q39"
+          ]
+        }
+      },
+      "obb:volume_w1_q40": {
+        "add": {
+          "component_groups": [
+            "obb_support_v_w1_q40"
+          ]
+        }
+      },
+      "obb:clear_v_w1_q40": {
+        "remove": {
+          "component_groups": [
+            "obb_support_v_w1_q40"
+          ]
+        }
+      },
+      "obb:volume_w1_q41": {
+        "add": {
+          "component_groups": [
+            "obb_support_v_w1_q41"
+          ]
+        }
+      },
+      "obb:clear_v_w1_q41": {
+        "remove": {
+          "component_groups": [
+            "obb_support_v_w1_q41"
+          ]
+        }
+      },
+      "obb:volume_w1_q42": {
+        "add": {
+          "component_groups": [
+            "obb_support_v_w1_q42"
+          ]
+        }
+      },
+      "obb:clear_v_w1_q42": {
+        "remove": {
+          "component_groups": [
+            "obb_support_v_w1_q42"
+          ]
+        }
+      },
+      "obb:volume_w1_q43": {
+        "add": {
+          "component_groups": [
+            "obb_support_v_w1_q43"
+          ]
+        }
+      },
+      "obb:clear_v_w1_q43": {
+        "remove": {
+          "component_groups": [
+            "obb_support_v_w1_q43"
+          ]
+        }
+      },
+      "obb:volume_w1_q44": {
+        "add": {
+          "component_groups": [
+            "obb_support_v_w1_q44"
+          ]
+        }
+      },
+      "obb:clear_v_w1_q44": {
+        "remove": {
+          "component_groups": [
+            "obb_support_v_w1_q44"
+          ]
+        }
+      },
+      "obb:volume_w1_q45": {
+        "add": {
+          "component_groups": [
+            "obb_support_v_w1_q45"
+          ]
+        }
+      },
+      "obb:clear_v_w1_q45": {
+        "remove": {
+          "component_groups": [
+            "obb_support_v_w1_q45"
+          ]
+        }
+      },
+      "obb:volume_w1_q46": {
+        "add": {
+          "component_groups": [
+            "obb_support_v_w1_q46"
+          ]
+        }
+      },
+      "obb:clear_v_w1_q46": {
+        "remove": {
+          "component_groups": [
+            "obb_support_v_w1_q46"
+          ]
+        }
+      },
+      "obb:volume_w1_q47": {
+        "add": {
+          "component_groups": [
+            "obb_support_v_w1_q47"
+          ]
+        }
+      },
+      "obb:clear_v_w1_q47": {
+        "remove": {
+          "component_groups": [
+            "obb_support_v_w1_q47"
+          ]
+        }
+      },
+      "obb:volume_w1_q48": {
+        "add": {
+          "component_groups": [
+            "obb_support_v_w1_q48"
+          ]
+        }
+      },
+      "obb:clear_v_w1_q48": {
+        "remove": {
+          "component_groups": [
+            "obb_support_v_w1_q48"
+          ]
+        }
+      },
+      "obb:volume_w1_q49": {
+        "add": {
+          "component_groups": [
+            "obb_support_v_w1_q49"
+          ]
+        }
+      },
+      "obb:clear_v_w1_q49": {
+        "remove": {
+          "component_groups": [
+            "obb_support_v_w1_q49"
+          ]
+        }
+      },
+      "obb:volume_w1_q51": {
+        "add": {
+          "component_groups": [
+            "obb_support_v_w1_q51"
+          ]
+        }
+      },
+      "obb:clear_v_w1_q51": {
+        "remove": {
+          "component_groups": [
+            "obb_support_v_w1_q51"
+          ]
+        }
+      },
+      "obb:volume_w1_q52": {
+        "add": {
+          "component_groups": [
+            "obb_support_v_w1_q52"
+          ]
+        }
+      },
+      "obb:clear_v_w1_q52": {
+        "remove": {
+          "component_groups": [
+            "obb_support_v_w1_q52"
+          ]
+        }
+      },
+      "obb:volume_w1_q53": {
+        "add": {
+          "component_groups": [
+            "obb_support_v_w1_q53"
+          ]
+        }
+      },
+      "obb:clear_v_w1_q53": {
+        "remove": {
+          "component_groups": [
+            "obb_support_v_w1_q53"
+          ]
+        }
+      },
+      "obb:volume_w1_q54": {
+        "add": {
+          "component_groups": [
+            "obb_support_v_w1_q54"
+          ]
+        }
+      },
+      "obb:clear_v_w1_q54": {
+        "remove": {
+          "component_groups": [
+            "obb_support_v_w1_q54"
+          ]
+        }
+      },
+      "obb:volume_w1_q55": {
+        "add": {
+          "component_groups": [
+            "obb_support_v_w1_q55"
+          ]
+        }
+      },
+      "obb:clear_v_w1_q55": {
+        "remove": {
+          "component_groups": [
+            "obb_support_v_w1_q55"
+          ]
+        }
+      },
+      "obb:volume_w1_q56": {
+        "add": {
+          "component_groups": [
+            "obb_support_v_w1_q56"
+          ]
+        }
+      },
+      "obb:clear_v_w1_q56": {
+        "remove": {
+          "component_groups": [
+            "obb_support_v_w1_q56"
+          ]
+        }
+      },
+      "obb:volume_w1_q57": {
+        "add": {
+          "component_groups": [
+            "obb_support_v_w1_q57"
+          ]
+        }
+      },
+      "obb:clear_v_w1_q57": {
+        "remove": {
+          "component_groups": [
+            "obb_support_v_w1_q57"
+          ]
+        }
+      },
+      "obb:volume_w1_q58": {
+        "add": {
+          "component_groups": [
+            "obb_support_v_w1_q58"
+          ]
+        }
+      },
+      "obb:clear_v_w1_q58": {
+        "remove": {
+          "component_groups": [
+            "obb_support_v_w1_q58"
+          ]
+        }
+      },
+      "obb:volume_w1_q59": {
+        "add": {
+          "component_groups": [
+            "obb_support_v_w1_q59"
+          ]
+        }
+      },
+      "obb:clear_v_w1_q59": {
+        "remove": {
+          "component_groups": [
+            "obb_support_v_w1_q59"
+          ]
+        }
+      },
+      "obb:volume_w1_q60": {
+        "add": {
+          "component_groups": [
+            "obb_support_v_w1_q60"
+          ]
+        }
+      },
+      "obb:clear_v_w1_q60": {
+        "remove": {
+          "component_groups": [
+            "obb_support_v_w1_q60"
+          ]
+        }
+      },
+      "obb:volume_w1_q61": {
+        "add": {
+          "component_groups": [
+            "obb_support_v_w1_q61"
+          ]
+        }
+      },
+      "obb:clear_v_w1_q61": {
+        "remove": {
+          "component_groups": [
+            "obb_support_v_w1_q61"
+          ]
+        }
+      },
+      "obb:volume_w1_q62": {
+        "add": {
+          "component_groups": [
+            "obb_support_v_w1_q62"
+          ]
+        }
+      },
+      "obb:clear_v_w1_q62": {
+        "remove": {
+          "component_groups": [
+            "obb_support_v_w1_q62"
+          ]
+        }
+      },
+      "obb:volume_w1_q63": {
+        "add": {
+          "component_groups": [
+            "obb_support_v_w1_q63"
+          ]
+        }
+      },
+      "obb:clear_v_w1_q63": {
+        "remove": {
+          "component_groups": [
+            "obb_support_v_w1_q63"
+          ]
+        }
+      },
+      "obb:volume_w1_q64": {
+        "add": {
+          "component_groups": [
+            "obb_support_v_w1_q64"
+          ]
+        }
+      },
+      "obb:clear_v_w1_q64": {
+        "remove": {
+          "component_groups": [
+            "obb_support_v_w1_q64"
+          ]
+        }
+      },
+      "obb:volume_w1_q65": {
+        "add": {
+          "component_groups": [
+            "obb_support_v_w1_q65"
+          ]
+        }
+      },
+      "obb:clear_v_w1_q65": {
+        "remove": {
+          "component_groups": [
+            "obb_support_v_w1_q65"
+          ]
+        }
+      },
+      "obb:volume_w1_q66": {
+        "add": {
+          "component_groups": [
+            "obb_support_v_w1_q66"
+          ]
+        }
+      },
+      "obb:clear_v_w1_q66": {
+        "remove": {
+          "component_groups": [
+            "obb_support_v_w1_q66"
+          ]
+        }
+      },
+      "obb:volume_w1_q67": {
+        "add": {
+          "component_groups": [
+            "obb_support_v_w1_q67"
+          ]
+        }
+      },
+      "obb:clear_v_w1_q67": {
+        "remove": {
+          "component_groups": [
+            "obb_support_v_w1_q67"
+          ]
+        }
+      },
+      "obb:volume_w1_q68": {
+        "add": {
+          "component_groups": [
+            "obb_support_v_w1_q68"
+          ]
+        }
+      },
+      "obb:clear_v_w1_q68": {
+        "remove": {
+          "component_groups": [
+            "obb_support_v_w1_q68"
+          ]
+        }
+      },
+      "obb:volume_w1_q69": {
+        "add": {
+          "component_groups": [
+            "obb_support_v_w1_q69"
+          ]
+        }
+      },
+      "obb:clear_v_w1_q69": {
+        "remove": {
+          "component_groups": [
+            "obb_support_v_w1_q69"
+          ]
+        }
+      },
+      "obb:volume_w1_q70": {
+        "add": {
+          "component_groups": [
+            "obb_support_v_w1_q70"
+          ]
+        }
+      },
+      "obb:clear_v_w1_q70": {
+        "remove": {
+          "component_groups": [
+            "obb_support_v_w1_q70"
+          ]
+        }
+      },
+      "obb:volume_w1_q71": {
+        "add": {
+          "component_groups": [
+            "obb_support_v_w1_q71"
+          ]
+        }
+      },
+      "obb:clear_v_w1_q71": {
+        "remove": {
+          "component_groups": [
+            "obb_support_v_w1_q71"
+          ]
+        }
+      },
+      "obb:volume_w1_q72": {
+        "add": {
+          "component_groups": [
+            "obb_support_v_w1_q72"
+          ]
+        }
+      },
+      "obb:clear_v_w1_q72": {
+        "remove": {
+          "component_groups": [
+            "obb_support_v_w1_q72"
+          ]
+        }
+      },
+      "obb:volume_w1_q73": {
+        "add": {
+          "component_groups": [
+            "obb_support_v_w1_q73"
+          ]
+        }
+      },
+      "obb:clear_v_w1_q73": {
+        "remove": {
+          "component_groups": [
+            "obb_support_v_w1_q73"
+          ]
+        }
+      },
+      "obb:volume_w1_q74": {
+        "add": {
+          "component_groups": [
+            "obb_support_v_w1_q74"
+          ]
+        }
+      },
+      "obb:clear_v_w1_q74": {
+        "remove": {
+          "component_groups": [
+            "obb_support_v_w1_q74"
+          ]
+        }
+      },
+      "obb:volume_w1_q76": {
+        "add": {
+          "component_groups": [
+            "obb_support_v_w1_q76"
+          ]
+        }
+      },
+      "obb:clear_v_w1_q76": {
+        "remove": {
+          "component_groups": [
+            "obb_support_v_w1_q76"
+          ]
+        }
+      },
+      "obb:volume_w1_q77": {
+        "add": {
+          "component_groups": [
+            "obb_support_v_w1_q77"
+          ]
+        }
+      },
+      "obb:clear_v_w1_q77": {
+        "remove": {
+          "component_groups": [
+            "obb_support_v_w1_q77"
+          ]
+        }
+      },
+      "obb:volume_w1_q78": {
+        "add": {
+          "component_groups": [
+            "obb_support_v_w1_q78"
+          ]
+        }
+      },
+      "obb:clear_v_w1_q78": {
+        "remove": {
+          "component_groups": [
+            "obb_support_v_w1_q78"
+          ]
+        }
+      },
+      "obb:volume_w1_q79": {
+        "add": {
+          "component_groups": [
+            "obb_support_v_w1_q79"
+          ]
+        }
+      },
+      "obb:clear_v_w1_q79": {
+        "remove": {
+          "component_groups": [
+            "obb_support_v_w1_q79"
+          ]
+        }
+      },
+      "obb:volume_w1_q80": {
+        "add": {
+          "component_groups": [
+            "obb_support_v_w1_q80"
+          ]
+        }
+      },
+      "obb:clear_v_w1_q80": {
+        "remove": {
+          "component_groups": [
+            "obb_support_v_w1_q80"
+          ]
+        }
+      },
+      "obb:volume_w1_q81": {
+        "add": {
+          "component_groups": [
+            "obb_support_v_w1_q81"
+          ]
+        }
+      },
+      "obb:clear_v_w1_q81": {
+        "remove": {
+          "component_groups": [
+            "obb_support_v_w1_q81"
+          ]
+        }
+      },
+      "obb:volume_w1_q82": {
+        "add": {
+          "component_groups": [
+            "obb_support_v_w1_q82"
+          ]
+        }
+      },
+      "obb:clear_v_w1_q82": {
+        "remove": {
+          "component_groups": [
+            "obb_support_v_w1_q82"
+          ]
+        }
+      },
+      "obb:volume_w1_q83": {
+        "add": {
+          "component_groups": [
+            "obb_support_v_w1_q83"
+          ]
+        }
+      },
+      "obb:clear_v_w1_q83": {
+        "remove": {
+          "component_groups": [
+            "obb_support_v_w1_q83"
+          ]
+        }
+      },
+      "obb:volume_w1_q84": {
+        "add": {
+          "component_groups": [
+            "obb_support_v_w1_q84"
+          ]
+        }
+      },
+      "obb:clear_v_w1_q84": {
+        "remove": {
+          "component_groups": [
+            "obb_support_v_w1_q84"
+          ]
+        }
+      },
+      "obb:volume_w1_q85": {
+        "add": {
+          "component_groups": [
+            "obb_support_v_w1_q85"
+          ]
+        }
+      },
+      "obb:clear_v_w1_q85": {
+        "remove": {
+          "component_groups": [
+            "obb_support_v_w1_q85"
+          ]
+        }
+      },
+      "obb:volume_w1_q86": {
+        "add": {
+          "component_groups": [
+            "obb_support_v_w1_q86"
+          ]
+        }
+      },
+      "obb:clear_v_w1_q86": {
+        "remove": {
+          "component_groups": [
+            "obb_support_v_w1_q86"
+          ]
+        }
+      },
+      "obb:volume_w1_q87": {
+        "add": {
+          "component_groups": [
+            "obb_support_v_w1_q87"
+          ]
+        }
+      },
+      "obb:clear_v_w1_q87": {
+        "remove": {
+          "component_groups": [
+            "obb_support_v_w1_q87"
+          ]
+        }
+      },
+      "obb:volume_w1_q88": {
+        "add": {
+          "component_groups": [
+            "obb_support_v_w1_q88"
+          ]
+        }
+      },
+      "obb:clear_v_w1_q88": {
+        "remove": {
+          "component_groups": [
+            "obb_support_v_w1_q88"
+          ]
+        }
+      },
+      "obb:volume_w1_q89": {
+        "add": {
+          "component_groups": [
+            "obb_support_v_w1_q89"
+          ]
+        }
+      },
+      "obb:clear_v_w1_q89": {
+        "remove": {
+          "component_groups": [
+            "obb_support_v_w1_q89"
+          ]
+        }
+      },
+      "obb:volume_w1_q90": {
+        "add": {
+          "component_groups": [
+            "obb_support_v_w1_q90"
+          ]
+        }
+      },
+      "obb:clear_v_w1_q90": {
+        "remove": {
+          "component_groups": [
+            "obb_support_v_w1_q90"
+          ]
+        }
+      },
+      "obb:volume_w1_q91": {
+        "add": {
+          "component_groups": [
+            "obb_support_v_w1_q91"
+          ]
+        }
+      },
+      "obb:clear_v_w1_q91": {
+        "remove": {
+          "component_groups": [
+            "obb_support_v_w1_q91"
+          ]
+        }
+      },
+      "obb:volume_w1_q92": {
+        "add": {
+          "component_groups": [
+            "obb_support_v_w1_q92"
+          ]
+        }
+      },
+      "obb:clear_v_w1_q92": {
+        "remove": {
+          "component_groups": [
+            "obb_support_v_w1_q92"
+          ]
+        }
+      },
+      "obb:volume_w1_q93": {
+        "add": {
+          "component_groups": [
+            "obb_support_v_w1_q93"
+          ]
+        }
+      },
+      "obb:clear_v_w1_q93": {
+        "remove": {
+          "component_groups": [
+            "obb_support_v_w1_q93"
+          ]
+        }
+      },
+      "obb:volume_w1_q94": {
+        "add": {
+          "component_groups": [
+            "obb_support_v_w1_q94"
+          ]
+        }
+      },
+      "obb:clear_v_w1_q94": {
+        "remove": {
+          "component_groups": [
+            "obb_support_v_w1_q94"
+          ]
+        }
+      },
+      "obb:volume_w1_q95": {
+        "add": {
+          "component_groups": [
+            "obb_support_v_w1_q95"
+          ]
+        }
+      },
+      "obb:clear_v_w1_q95": {
+        "remove": {
+          "component_groups": [
+            "obb_support_v_w1_q95"
+          ]
+        }
+      },
+      "obb:volume_w1_q96": {
+        "add": {
+          "component_groups": [
+            "obb_support_v_w1_q96"
+          ]
+        }
+      },
+      "obb:clear_v_w1_q96": {
+        "remove": {
+          "component_groups": [
+            "obb_support_v_w1_q96"
+          ]
+        }
+      },
+      "obb:volume_w1_q97": {
+        "add": {
+          "component_groups": [
+            "obb_support_v_w1_q97"
+          ]
+        }
+      },
+      "obb:clear_v_w1_q97": {
+        "remove": {
+          "component_groups": [
+            "obb_support_v_w1_q97"
+          ]
+        }
+      },
+      "obb:volume_w1_q98": {
+        "add": {
+          "component_groups": [
+            "obb_support_v_w1_q98"
+          ]
+        }
+      },
+      "obb:clear_v_w1_q98": {
+        "remove": {
+          "component_groups": [
+            "obb_support_v_w1_q98"
+          ]
+        }
+      },
+      "obb:volume_w1_q99": {
+        "add": {
+          "component_groups": [
+            "obb_support_v_w1_q99"
+          ]
+        }
+      },
+      "obb:clear_v_w1_q99": {
+        "remove": {
+          "component_groups": [
+            "obb_support_v_w1_q99"
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "format_version": 3,
+  "metadata": {
+    "authors": [
+      "MINECRAFT-SCPCB"
+    ],
+    "product_type": "addon"
+  },
+  "header": {
+    "name": "pack.name",
+    "description": "pack.description",
+    "uuid": "fc1bdad4-3b27-45b8-b288-90a47051256e",
+    "version": "0.2.1",
+    "min_engine_version": "1.26.30"
+  },
+  "modules": [
+    {
+      "type": "data",
+      "uuid": "2a1ac544-abbd-4a0a-92a8-6af24686f0a2",
+      "version": "0.2.1"
+    }
+  ],
+  "dependencies": [
+    {
+      "uuid": "b6228a4d-7118-4f75-9009-213fe0b8ef81",
+      "version": "0.2.1"
+    }
+  ]
+}

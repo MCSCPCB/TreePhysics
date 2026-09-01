@@ -1,0 +1,433 @@
+{
+  "format_version": "1.20.30",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "treephysics:attachment_fragment",
+      "materials": {
+        "cutout": "alpha_block",
+        "opaque": "opaque_block",
+        "foliage": "alpha_block_color",
+        "foliage_colormap": "foliage_colormap_multiply"
+      },
+      "textures": {
+        "colormap_foliage": "textures/colormap/foliage",
+        "colormap_swamp_foliage": "textures/colormap/swamp_foliage",
+        "colormap_mangrove_swamp_foliage": "textures/colormap/mangrove_swamp_foliage",
+        "colormap_birch": "textures/colormap/birch",
+        "colormap_evergreen": "textures/colormap/evergreen",
+        "colormap_foliage_fixed": "textures/colormap/foliage_fixed",
+        "texture_bee_nest_bottom": "textures/blocks/bee_nest_bottom",
+        "texture_bee_nest_top": "textures/blocks/bee_nest_top",
+        "texture_bee_nest_front": "textures/blocks/bee_nest_front",
+        "texture_bee_nest_side": "textures/blocks/bee_nest_side",
+        "texture_bee_nest_front_honey": "textures/blocks/bee_nest_front_honey",
+        "texture_cocoa_stage_0": "textures/blocks/cocoa_stage_0",
+        "texture_cocoa_stage_1": "textures/blocks/cocoa_stage_1",
+        "texture_cocoa_stage_2": "textures/blocks/cocoa_stage_2",
+        "texture_hanging_roots": "textures/blocks/hanging_roots",
+        "texture_mangrove_propagule_hanging": "textures/blocks/mangrove_propagule_hanging",
+        "texture_pale_hanging_moss_middle": "textures/blocks/pale_hanging_moss_middle",
+        "texture_pale_hanging_moss_tip": "textures/blocks/pale_hanging_moss_tip",
+        "texture_vine": "textures/blocks/vine",
+        "texture_mangrove_roots_side": "textures/blocks/mangrove_roots_side",
+        "texture_mangrove_roots_top": "textures/blocks/mangrove_roots_top",
+        "texture_muddy_mangrove_roots_top": "textures/blocks/muddy_mangrove_roots_top",
+        "texture_muddy_mangrove_roots_side": "textures/blocks/muddy_mangrove_roots_side",
+        "texture_creaking_heart_top_inactive": "textures/blocks/creaking_heart_top_inactive",
+        "texture_creaking_heart_side_inactive": "textures/blocks/creaking_heart_side_inactive",
+        "texture_creaking_heart_top_dormant": "textures/blocks/creaking_heart_top_dormant",
+        "texture_creaking_heart_side_dormant": "textures/blocks/creaking_heart_side_dormant",
+        "texture_creaking_heart_top_active": "textures/blocks/creaking_heart_top_active",
+        "texture_creaking_heart_side_active": "textures/blocks/creaking_heart_side_active"
+      },
+      "geometry": {
+        "geometry_bee_nest_empty_0": "geometry.treephysics.attachment_fragment.bee_nest_empty_0",
+        "geometry_bee_nest_empty_1": "geometry.treephysics.attachment_fragment.bee_nest_empty_1",
+        "geometry_bee_nest_empty_2": "geometry.treephysics.attachment_fragment.bee_nest_empty_2",
+        "geometry_bee_nest_empty_3": "geometry.treephysics.attachment_fragment.bee_nest_empty_3",
+        "geometry_bee_nest_honey_0": "geometry.treephysics.attachment_fragment.bee_nest_honey_0",
+        "geometry_bee_nest_honey_1": "geometry.treephysics.attachment_fragment.bee_nest_honey_1",
+        "geometry_bee_nest_honey_2": "geometry.treephysics.attachment_fragment.bee_nest_honey_2",
+        "geometry_bee_nest_honey_3": "geometry.treephysics.attachment_fragment.bee_nest_honey_3",
+        "geometry_cocoa_0_0": "geometry.treephysics.attachment_fragment.cocoa_0_0",
+        "geometry_cocoa_1_0": "geometry.treephysics.attachment_fragment.cocoa_1_0",
+        "geometry_cocoa_2_0": "geometry.treephysics.attachment_fragment.cocoa_2_0",
+        "geometry_hanging_roots_0": "geometry.treephysics.attachment_fragment.hanging_roots_0",
+        "geometry_mangrove_propagule_0_0": "geometry.treephysics.attachment_fragment.mangrove_propagule_0_0",
+        "geometry_mangrove_propagule_1_0": "geometry.treephysics.attachment_fragment.mangrove_propagule_1_0",
+        "geometry_mangrove_propagule_2_0": "geometry.treephysics.attachment_fragment.mangrove_propagule_2_0",
+        "geometry_mangrove_propagule_3_0": "geometry.treephysics.attachment_fragment.mangrove_propagule_3_0",
+        "geometry_mangrove_propagule_4_0": "geometry.treephysics.attachment_fragment.mangrove_propagule_4_0",
+        "geometry_pale_hanging_moss_0": "geometry.treephysics.attachment_fragment.pale_hanging_moss_0",
+        "geometry_pale_hanging_moss_tip_0": "geometry.treephysics.attachment_fragment.pale_hanging_moss_tip_0",
+        "geometry_vine_0": "geometry.treephysics.attachment_fragment.vine_0",
+        "geometry_mangrove_roots_0": "geometry.treephysics.attachment_fragment.mangrove_roots_0",
+        "geometry_mangrove_roots_1": "geometry.treephysics.attachment_fragment.mangrove_roots_1",
+        "geometry_muddy_mangrove_roots_0": "geometry.treephysics.attachment_fragment.muddy_mangrove_roots_0",
+        "geometry_muddy_mangrove_roots_1": "geometry.treephysics.attachment_fragment.muddy_mangrove_roots_1",
+        "geometry_creaking_heart_inactive_y_0": "geometry.treephysics.attachment_fragment.creaking_heart_inactive_y_0",
+        "geometry_creaking_heart_inactive_y_1": "geometry.treephysics.attachment_fragment.creaking_heart_inactive_y_1",
+        "geometry_creaking_heart_inactive_x_0": "geometry.treephysics.attachment_fragment.creaking_heart_inactive_x_0",
+        "geometry_creaking_heart_inactive_x_1": "geometry.treephysics.attachment_fragment.creaking_heart_inactive_x_1",
+        "geometry_creaking_heart_inactive_z_0": "geometry.treephysics.attachment_fragment.creaking_heart_inactive_z_0",
+        "geometry_creaking_heart_inactive_z_1": "geometry.treephysics.attachment_fragment.creaking_heart_inactive_z_1",
+        "geometry_creaking_heart_dormant_y_0": "geometry.treephysics.attachment_fragment.creaking_heart_dormant_y_0",
+        "geometry_creaking_heart_dormant_y_1": "geometry.treephysics.attachment_fragment.creaking_heart_dormant_y_1",
+        "geometry_creaking_heart_dormant_x_0": "geometry.treephysics.attachment_fragment.creaking_heart_dormant_x_0",
+        "geometry_creaking_heart_dormant_x_1": "geometry.treephysics.attachment_fragment.creaking_heart_dormant_x_1",
+        "geometry_creaking_heart_dormant_z_0": "geometry.treephysics.attachment_fragment.creaking_heart_dormant_z_0",
+        "geometry_creaking_heart_dormant_z_1": "geometry.treephysics.attachment_fragment.creaking_heart_dormant_z_1",
+        "geometry_creaking_heart_awake_y_0": "geometry.treephysics.attachment_fragment.creaking_heart_awake_y_0",
+        "geometry_creaking_heart_awake_y_1": "geometry.treephysics.attachment_fragment.creaking_heart_awake_y_1",
+        "geometry_creaking_heart_awake_x_0": "geometry.treephysics.attachment_fragment.creaking_heart_awake_x_0",
+        "geometry_creaking_heart_awake_x_1": "geometry.treephysics.attachment_fragment.creaking_heart_awake_x_1",
+        "geometry_creaking_heart_awake_z_0": "geometry.treephysics.attachment_fragment.creaking_heart_awake_z_0",
+        "geometry_creaking_heart_awake_z_1": "geometry.treephysics.attachment_fragment.creaking_heart_awake_z_1"
+      },
+      "render_controllers": [
+        {
+          "controller.render.treephysics.attachment_fragment.bee_nest_empty_0": "v.family_mask == 0 || math.mod(math.floor(v.family_mask / 1), 2) >= 1"
+        },
+        {
+          "controller.render.treephysics.attachment_fragment.bee_nest_empty_1": "v.family_mask == 0 || math.mod(math.floor(v.family_mask / 1), 2) >= 1"
+        },
+        {
+          "controller.render.treephysics.attachment_fragment.bee_nest_empty_2": "v.family_mask == 0 || math.mod(math.floor(v.family_mask / 1), 2) >= 1"
+        },
+        {
+          "controller.render.treephysics.attachment_fragment.bee_nest_empty_3": "v.family_mask == 0 || math.mod(math.floor(v.family_mask / 1), 2) >= 1"
+        },
+        {
+          "controller.render.treephysics.attachment_fragment.bee_nest_honey_0": "v.family_mask == 0 || math.mod(math.floor(v.family_mask / 1), 2) >= 1"
+        },
+        {
+          "controller.render.treephysics.attachment_fragment.bee_nest_honey_1": "v.family_mask == 0 || math.mod(math.floor(v.family_mask / 1), 2) >= 1"
+        },
+        {
+          "controller.render.treephysics.attachment_fragment.bee_nest_honey_2": "v.family_mask == 0 || math.mod(math.floor(v.family_mask / 1), 2) >= 1"
+        },
+        {
+          "controller.render.treephysics.attachment_fragment.bee_nest_honey_3": "v.family_mask == 0 || math.mod(math.floor(v.family_mask / 1), 2) >= 1"
+        },
+        {
+          "controller.render.treephysics.attachment_fragment.cocoa_0_0": "v.family_mask == 0 || math.mod(math.floor(v.family_mask / 2), 2) >= 1"
+        },
+        {
+          "controller.render.treephysics.attachment_fragment.cocoa_1_0": "v.family_mask == 0 || math.mod(math.floor(v.family_mask / 2), 2) >= 1"
+        },
+        {
+          "controller.render.treephysics.attachment_fragment.cocoa_2_0": "v.family_mask == 0 || math.mod(math.floor(v.family_mask / 2), 2) >= 1"
+        },
+        {
+          "controller.render.treephysics.attachment_fragment.hanging_roots_0": "v.family_mask == 0 || math.mod(math.floor(v.family_mask / 4), 2) >= 1"
+        },
+        {
+          "controller.render.treephysics.attachment_fragment.mangrove_propagule_0_0": "v.family_mask == 0 || math.mod(math.floor(v.family_mask / 8), 2) >= 1"
+        },
+        {
+          "controller.render.treephysics.attachment_fragment.mangrove_propagule_1_0": "v.family_mask == 0 || math.mod(math.floor(v.family_mask / 8), 2) >= 1"
+        },
+        {
+          "controller.render.treephysics.attachment_fragment.mangrove_propagule_2_0": "v.family_mask == 0 || math.mod(math.floor(v.family_mask / 8), 2) >= 1"
+        },
+        {
+          "controller.render.treephysics.attachment_fragment.mangrove_propagule_3_0": "v.family_mask == 0 || math.mod(math.floor(v.family_mask / 8), 2) >= 1"
+        },
+        {
+          "controller.render.treephysics.attachment_fragment.mangrove_propagule_4_0": "v.family_mask == 0 || math.mod(math.floor(v.family_mask / 8), 2) >= 1"
+        },
+        {
+          "controller.render.treephysics.attachment_fragment.pale_hanging_moss_0": "v.family_mask == 0 || math.mod(math.floor(v.family_mask / 16), 2) >= 1"
+        },
+        {
+          "controller.render.treephysics.attachment_fragment.pale_hanging_moss_tip_0": "v.family_mask == 0 || math.mod(math.floor(v.family_mask / 16), 2) >= 1"
+        },
+        {
+          "controller.render.treephysics.attachment_fragment.vine_0": "v.family_mask == 0 || math.mod(math.floor(v.family_mask / 32), 2) >= 1"
+        },
+        {
+          "controller.render.treephysics.attachment_fragment.vine_0_foliage_colormap_uniform": "(v.family_mask == 0 || math.mod(math.floor(v.family_mask / 32), 2) >= 1) && v.tint_uniform && v.tint_kind >= 1"
+        },
+        {
+          "controller.render.treephysics.attachment_fragment.vine_0_foliage_colormap_0": "(v.family_mask == 0 || math.mod(math.floor(v.family_mask / 32), 2) >= 1) && !v.tint_uniform && v.tint_kind >= 1"
+        },
+        {
+          "controller.render.treephysics.attachment_fragment.vine_0_foliage_colormap_1": "(v.family_mask == 0 || math.mod(math.floor(v.family_mask / 32), 2) >= 1) && !v.tint_uniform && v.tint_kind >= 1"
+        },
+        {
+          "controller.render.treephysics.attachment_fragment.vine_0_foliage_colormap_2": "(v.family_mask == 0 || math.mod(math.floor(v.family_mask / 32), 2) >= 1) && !v.tint_uniform && v.tint_kind >= 1"
+        },
+        {
+          "controller.render.treephysics.attachment_fragment.vine_0_foliage_colormap_3": "(v.family_mask == 0 || math.mod(math.floor(v.family_mask / 32), 2) >= 1) && !v.tint_uniform && v.tint_kind >= 1"
+        },
+        {
+          "controller.render.treephysics.attachment_fragment.vine_0_foliage_colormap_4": "(v.family_mask == 0 || math.mod(math.floor(v.family_mask / 32), 2) >= 1) && !v.tint_uniform && v.tint_kind >= 1"
+        },
+        {
+          "controller.render.treephysics.attachment_fragment.vine_0_foliage_colormap_5": "(v.family_mask == 0 || math.mod(math.floor(v.family_mask / 32), 2) >= 1) && !v.tint_uniform && v.tint_kind >= 1"
+        },
+        {
+          "controller.render.treephysics.attachment_fragment.vine_0_foliage_colormap_6": "(v.family_mask == 0 || math.mod(math.floor(v.family_mask / 32), 2) >= 1) && !v.tint_uniform && v.tint_kind >= 1"
+        },
+        {
+          "controller.render.treephysics.attachment_fragment.vine_0_foliage_colormap_7": "(v.family_mask == 0 || math.mod(math.floor(v.family_mask / 32), 2) >= 1) && !v.tint_uniform && v.tint_kind >= 1"
+        },
+        {
+          "controller.render.treephysics.attachment_fragment.vine_0_foliage_colormap_8": "(v.family_mask == 0 || math.mod(math.floor(v.family_mask / 32), 2) >= 1) && !v.tint_uniform && v.tint_kind >= 1"
+        },
+        {
+          "controller.render.treephysics.attachment_fragment.vine_0_foliage_colormap_9": "(v.family_mask == 0 || math.mod(math.floor(v.family_mask / 32), 2) >= 1) && !v.tint_uniform && v.tint_kind >= 1"
+        },
+        {
+          "controller.render.treephysics.attachment_fragment.vine_0_foliage_colormap_10": "(v.family_mask == 0 || math.mod(math.floor(v.family_mask / 32), 2) >= 1) && !v.tint_uniform && v.tint_kind >= 1"
+        },
+        {
+          "controller.render.treephysics.attachment_fragment.vine_0_foliage_colormap_11": "(v.family_mask == 0 || math.mod(math.floor(v.family_mask / 32), 2) >= 1) && !v.tint_uniform && v.tint_kind >= 1"
+        },
+        {
+          "controller.render.treephysics.attachment_fragment.vine_0_foliage_colormap_12": "(v.family_mask == 0 || math.mod(math.floor(v.family_mask / 32), 2) >= 1) && !v.tint_uniform && v.tint_kind >= 1"
+        },
+        {
+          "controller.render.treephysics.attachment_fragment.vine_0_foliage_colormap_13": "(v.family_mask == 0 || math.mod(math.floor(v.family_mask / 32), 2) >= 1) && !v.tint_uniform && v.tint_kind >= 1"
+        },
+        {
+          "controller.render.treephysics.attachment_fragment.vine_0_foliage_colormap_14": "(v.family_mask == 0 || math.mod(math.floor(v.family_mask / 32), 2) >= 1) && !v.tint_uniform && v.tint_kind >= 1"
+        },
+        {
+          "controller.render.treephysics.attachment_fragment.vine_0_foliage_colormap_15": "(v.family_mask == 0 || math.mod(math.floor(v.family_mask / 32), 2) >= 1) && !v.tint_uniform && v.tint_kind >= 1"
+        },
+        {
+          "controller.render.treephysics.attachment_fragment.vine_0_foliage_colormap_16": "(v.family_mask == 0 || math.mod(math.floor(v.family_mask / 32), 2) >= 1) && !v.tint_uniform && v.tint_kind >= 1"
+        },
+        {
+          "controller.render.treephysics.attachment_fragment.vine_0_foliage_colormap_17": "(v.family_mask == 0 || math.mod(math.floor(v.family_mask / 32), 2) >= 1) && !v.tint_uniform && v.tint_kind >= 1"
+        },
+        {
+          "controller.render.treephysics.attachment_fragment.vine_0_foliage_colormap_18": "(v.family_mask == 0 || math.mod(math.floor(v.family_mask / 32), 2) >= 1) && !v.tint_uniform && v.tint_kind >= 1"
+        },
+        {
+          "controller.render.treephysics.attachment_fragment.vine_0_foliage_colormap_19": "(v.family_mask == 0 || math.mod(math.floor(v.family_mask / 32), 2) >= 1) && !v.tint_uniform && v.tint_kind >= 1"
+        },
+        {
+          "controller.render.treephysics.attachment_fragment.vine_0_foliage_colormap_20": "(v.family_mask == 0 || math.mod(math.floor(v.family_mask / 32), 2) >= 1) && !v.tint_uniform && v.tint_kind >= 1"
+        },
+        {
+          "controller.render.treephysics.attachment_fragment.vine_0_foliage_colormap_21": "(v.family_mask == 0 || math.mod(math.floor(v.family_mask / 32), 2) >= 1) && !v.tint_uniform && v.tint_kind >= 1"
+        },
+        {
+          "controller.render.treephysics.attachment_fragment.vine_0_foliage_colormap_22": "(v.family_mask == 0 || math.mod(math.floor(v.family_mask / 32), 2) >= 1) && !v.tint_uniform && v.tint_kind >= 1"
+        },
+        {
+          "controller.render.treephysics.attachment_fragment.vine_0_foliage_colormap_23": "(v.family_mask == 0 || math.mod(math.floor(v.family_mask / 32), 2) >= 1) && !v.tint_uniform && v.tint_kind >= 1"
+        },
+        {
+          "controller.render.treephysics.attachment_fragment.vine_0_foliage_colormap_24": "(v.family_mask == 0 || math.mod(math.floor(v.family_mask / 32), 2) >= 1) && !v.tint_uniform && v.tint_kind >= 1"
+        },
+        {
+          "controller.render.treephysics.attachment_fragment.vine_0_foliage_colormap_25": "(v.family_mask == 0 || math.mod(math.floor(v.family_mask / 32), 2) >= 1) && !v.tint_uniform && v.tint_kind >= 1"
+        },
+        {
+          "controller.render.treephysics.attachment_fragment.mangrove_roots_0": "v.family_mask == 0 || math.mod(math.floor(v.family_mask / 64), 2) >= 1"
+        },
+        {
+          "controller.render.treephysics.attachment_fragment.mangrove_roots_1": "v.family_mask == 0 || math.mod(math.floor(v.family_mask / 64), 2) >= 1"
+        },
+        {
+          "controller.render.treephysics.attachment_fragment.muddy_mangrove_roots_0": "v.family_mask == 0 || math.mod(math.floor(v.family_mask / 128), 2) >= 1"
+        },
+        {
+          "controller.render.treephysics.attachment_fragment.muddy_mangrove_roots_1": "v.family_mask == 0 || math.mod(math.floor(v.family_mask / 128), 2) >= 1"
+        },
+        {
+          "controller.render.treephysics.attachment_fragment.creaking_heart_inactive_y_0": "v.family_mask == 0 || math.mod(math.floor(v.family_mask / 256), 2) >= 1"
+        },
+        {
+          "controller.render.treephysics.attachment_fragment.creaking_heart_inactive_y_1": "v.family_mask == 0 || math.mod(math.floor(v.family_mask / 256), 2) >= 1"
+        },
+        {
+          "controller.render.treephysics.attachment_fragment.creaking_heart_inactive_x_0": "v.family_mask == 0 || math.mod(math.floor(v.family_mask / 256), 2) >= 1"
+        },
+        {
+          "controller.render.treephysics.attachment_fragment.creaking_heart_inactive_x_1": "v.family_mask == 0 || math.mod(math.floor(v.family_mask / 256), 2) >= 1"
+        },
+        {
+          "controller.render.treephysics.attachment_fragment.creaking_heart_inactive_z_0": "v.family_mask == 0 || math.mod(math.floor(v.family_mask / 256), 2) >= 1"
+        },
+        {
+          "controller.render.treephysics.attachment_fragment.creaking_heart_inactive_z_1": "v.family_mask == 0 || math.mod(math.floor(v.family_mask / 256), 2) >= 1"
+        },
+        {
+          "controller.render.treephysics.attachment_fragment.creaking_heart_dormant_y_0": "v.family_mask == 0 || math.mod(math.floor(v.family_mask / 256), 2) >= 1"
+        },
+        {
+          "controller.render.treephysics.attachment_fragment.creaking_heart_dormant_y_1": "v.family_mask == 0 || math.mod(math.floor(v.family_mask / 256), 2) >= 1"
+        },
+        {
+          "controller.render.treephysics.attachment_fragment.creaking_heart_dormant_x_0": "v.family_mask == 0 || math.mod(math.floor(v.family_mask / 256), 2) >= 1"
+        },
+        {
+          "controller.render.treephysics.attachment_fragment.creaking_heart_dormant_x_1": "v.family_mask == 0 || math.mod(math.floor(v.family_mask / 256), 2) >= 1"
+        },
+        {
+          "controller.render.treephysics.attachment_fragment.creaking_heart_dormant_z_0": "v.family_mask == 0 || math.mod(math.floor(v.family_mask / 256), 2) >= 1"
+        },
+        {
+          "controller.render.treephysics.attachment_fragment.creaking_heart_dormant_z_1": "v.family_mask == 0 || math.mod(math.floor(v.family_mask / 256), 2) >= 1"
+        },
+        {
+          "controller.render.treephysics.attachment_fragment.creaking_heart_awake_y_0": "v.family_mask == 0 || math.mod(math.floor(v.family_mask / 256), 2) >= 1"
+        },
+        {
+          "controller.render.treephysics.attachment_fragment.creaking_heart_awake_y_1": "v.family_mask == 0 || math.mod(math.floor(v.family_mask / 256), 2) >= 1"
+        },
+        {
+          "controller.render.treephysics.attachment_fragment.creaking_heart_awake_x_0": "v.family_mask == 0 || math.mod(math.floor(v.family_mask / 256), 2) >= 1"
+        },
+        {
+          "controller.render.treephysics.attachment_fragment.creaking_heart_awake_x_1": "v.family_mask == 0 || math.mod(math.floor(v.family_mask / 256), 2) >= 1"
+        },
+        {
+          "controller.render.treephysics.attachment_fragment.creaking_heart_awake_z_0": "v.family_mask == 0 || math.mod(math.floor(v.family_mask / 256), 2) >= 1"
+        },
+        {
+          "controller.render.treephysics.attachment_fragment.creaking_heart_awake_z_1": "v.family_mask == 0 || math.mod(math.floor(v.family_mask / 256), 2) >= 1"
+        }
+      ],
+      "animations": {
+        "transform": "animation.treephysics.attachment_fragment.transform"
+      },
+      "scripts": {
+        "initialize": [
+          "v.pose_initialized = 0;",
+          "v.pose_ready = 0;"
+        ],
+        "animate": [
+          "transform"
+        ],
+        "pre_animation": [
+          "v.pose_ready = q.property('treephysics:origin_y') >= 1048576;",
+          "v.pitch = v.pose_ready ? (v.pose_initialized ? math.lerprotate(v.pitch, q.property('treephysics:pitch'), q.delta_time/0.05) : q.property('treephysics:pitch')) : 0;",
+          "v.yaw = v.pose_ready ? (v.pose_initialized ? math.lerprotate(v.yaw, q.property('treephysics:yaw'), q.delta_time/0.05) : q.property('treephysics:yaw')) : 0;",
+          "v.roll = v.pose_ready ? (v.pose_initialized ? math.lerprotate(v.roll, q.property('treephysics:roll'), q.delta_time/0.05) : q.property('treephysics:roll')) : 0;",
+          "v.pose_initialized = v.pose_ready;",
+          "v.family_mask = math.mod(math.floor(q.property('treephysics:origin_y') / 2048), 512);",
+          "v.tint = q.property('treephysics:tint');",
+          "v.tint_0 = math.mod(math.floor(v.tint / 1), 32);",
+          "v.tint_1 = math.mod(math.floor(v.tint / 32), 32);",
+          "v.tint_2 = math.mod(math.floor(v.tint / 1024), 32);",
+          "v.tint_3 = math.mod(math.floor(v.tint / 32768), 32);",
+          "v.tint_state = math.floor(v.tint / 1048576);",
+          "v.tint_uniform = v.tint_state == 7;",
+          "v.tint_axis_z = v.tint_state >= 8;",
+          "v.tint_kind = v.tint_uniform ? 1 : math.mod(v.tint_state, 8);",
+          "v.tint_pixel_u = math.mod(v.tint, 256);",
+          "v.tint_pixel_v = math.mod(math.floor(v.tint / 256), 256);",
+          "v.a0 = q.property('treephysics:a0');",
+          "v.ap0 = math.floor(v.a0 / 65536);",
+          "v.af0 = math.mod(math.floor(v.a0 / 256), 16);",
+          "v.as0 = math.mod(math.floor(v.a0 / 4096), 16);",
+          "v.a1 = q.property('treephysics:a1');",
+          "v.ap1 = math.floor(v.a1 / 65536);",
+          "v.af1 = math.mod(math.floor(v.a1 / 256), 16);",
+          "v.as1 = math.mod(math.floor(v.a1 / 4096), 16);",
+          "v.a2 = q.property('treephysics:a2');",
+          "v.ap2 = math.floor(v.a2 / 65536);",
+          "v.af2 = math.mod(math.floor(v.a2 / 256), 16);",
+          "v.as2 = math.mod(math.floor(v.a2 / 4096), 16);",
+          "v.a3 = q.property('treephysics:a3');",
+          "v.ap3 = math.floor(v.a3 / 65536);",
+          "v.af3 = math.mod(math.floor(v.a3 / 256), 16);",
+          "v.as3 = math.mod(math.floor(v.a3 / 4096), 16);",
+          "v.a4 = q.property('treephysics:a4');",
+          "v.ap4 = math.floor(v.a4 / 65536);",
+          "v.af4 = math.mod(math.floor(v.a4 / 256), 16);",
+          "v.as4 = math.mod(math.floor(v.a4 / 4096), 16);",
+          "v.a5 = q.property('treephysics:a5');",
+          "v.ap5 = math.floor(v.a5 / 65536);",
+          "v.af5 = math.mod(math.floor(v.a5 / 256), 16);",
+          "v.as5 = math.mod(math.floor(v.a5 / 4096), 16);",
+          "v.a6 = q.property('treephysics:a6');",
+          "v.ap6 = math.floor(v.a6 / 65536);",
+          "v.af6 = math.mod(math.floor(v.a6 / 256), 16);",
+          "v.as6 = math.mod(math.floor(v.a6 / 4096), 16);",
+          "v.a7 = q.property('treephysics:a7');",
+          "v.ap7 = math.floor(v.a7 / 65536);",
+          "v.af7 = math.mod(math.floor(v.a7 / 256), 16);",
+          "v.as7 = math.mod(math.floor(v.a7 / 4096), 16);",
+          "v.a8 = q.property('treephysics:a8');",
+          "v.ap8 = math.floor(v.a8 / 65536);",
+          "v.af8 = math.mod(math.floor(v.a8 / 256), 16);",
+          "v.as8 = math.mod(math.floor(v.a8 / 4096), 16);",
+          "v.a9 = q.property('treephysics:a9');",
+          "v.ap9 = math.floor(v.a9 / 65536);",
+          "v.af9 = math.mod(math.floor(v.a9 / 256), 16);",
+          "v.as9 = math.mod(math.floor(v.a9 / 4096), 16);",
+          "v.a10 = q.property('treephysics:a10');",
+          "v.ap10 = math.floor(v.a10 / 65536);",
+          "v.af10 = math.mod(math.floor(v.a10 / 256), 16);",
+          "v.as10 = math.mod(math.floor(v.a10 / 4096), 16);",
+          "v.a11 = q.property('treephysics:a11');",
+          "v.ap11 = math.floor(v.a11 / 65536);",
+          "v.af11 = math.mod(math.floor(v.a11 / 256), 16);",
+          "v.as11 = math.mod(math.floor(v.a11 / 4096), 16);",
+          "v.a12 = q.property('treephysics:a12');",
+          "v.ap12 = math.floor(v.a12 / 65536);",
+          "v.af12 = math.mod(math.floor(v.a12 / 256), 16);",
+          "v.as12 = math.mod(math.floor(v.a12 / 4096), 16);",
+          "v.a13 = q.property('treephysics:a13');",
+          "v.ap13 = math.floor(v.a13 / 65536);",
+          "v.af13 = math.mod(math.floor(v.a13 / 256), 16);",
+          "v.as13 = math.mod(math.floor(v.a13 / 4096), 16);",
+          "v.a14 = q.property('treephysics:a14');",
+          "v.ap14 = math.floor(v.a14 / 65536);",
+          "v.af14 = math.mod(math.floor(v.a14 / 256), 16);",
+          "v.as14 = math.mod(math.floor(v.a14 / 4096), 16);",
+          "v.a15 = q.property('treephysics:a15');",
+          "v.ap15 = math.floor(v.a15 / 65536);",
+          "v.af15 = math.mod(math.floor(v.a15 / 256), 16);",
+          "v.as15 = math.mod(math.floor(v.a15 / 4096), 16);",
+          "v.a16 = q.property('treephysics:a16');",
+          "v.ap16 = math.floor(v.a16 / 65536);",
+          "v.af16 = math.mod(math.floor(v.a16 / 256), 16);",
+          "v.as16 = math.mod(math.floor(v.a16 / 4096), 16);",
+          "v.a17 = q.property('treephysics:a17');",
+          "v.ap17 = math.floor(v.a17 / 65536);",
+          "v.af17 = math.mod(math.floor(v.a17 / 256), 16);",
+          "v.as17 = math.mod(math.floor(v.a17 / 4096), 16);",
+          "v.a18 = q.property('treephysics:a18');",
+          "v.ap18 = math.floor(v.a18 / 65536);",
+          "v.af18 = math.mod(math.floor(v.a18 / 256), 16);",
+          "v.as18 = math.mod(math.floor(v.a18 / 4096), 16);",
+          "v.a19 = q.property('treephysics:a19');",
+          "v.ap19 = math.floor(v.a19 / 65536);",
+          "v.af19 = math.mod(math.floor(v.a19 / 256), 16);",
+          "v.as19 = math.mod(math.floor(v.a19 / 4096), 16);",
+          "v.a20 = q.property('treephysics:a20');",
+          "v.ap20 = math.floor(v.a20 / 65536);",
+          "v.af20 = math.mod(math.floor(v.a20 / 256), 16);",
+          "v.as20 = math.mod(math.floor(v.a20 / 4096), 16);",
+          "v.a21 = q.property('treephysics:a21');",
+          "v.ap21 = math.floor(v.a21 / 65536);",
+          "v.af21 = math.mod(math.floor(v.a21 / 256), 16);",
+          "v.as21 = math.mod(math.floor(v.a21 / 4096), 16);",
+          "v.a22 = q.property('treephysics:a22');",
+          "v.ap22 = math.floor(v.a22 / 65536);",
+          "v.af22 = math.mod(math.floor(v.a22 / 256), 16);",
+          "v.as22 = math.mod(math.floor(v.a22 / 4096), 16);",
+          "v.a23 = q.property('treephysics:a23');",
+          "v.ap23 = math.floor(v.a23 / 65536);",
+          "v.af23 = math.mod(math.floor(v.a23 / 256), 16);",
+          "v.as23 = math.mod(math.floor(v.a23 / 4096), 16);",
+          "v.a24 = q.property('treephysics:a24');",
+          "v.ap24 = math.floor(v.a24 / 65536);",
+          "v.af24 = math.mod(math.floor(v.a24 / 256), 16);",
+          "v.as24 = math.mod(math.floor(v.a24 / 4096), 16);",
+          "v.a25 = q.property('treephysics:a25');",
+          "v.ap25 = math.floor(v.a25 / 65536);",
+          "v.af25 = math.mod(math.floor(v.a25 / 256), 16);",
+          "v.as25 = math.mod(math.floor(v.a25 / 4096), 16);"
+        ]
+      }
+    }
+  }
+}

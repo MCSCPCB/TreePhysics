@@ -1,0 +1,13 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:aggregate_feature": {
+    "description": {
+      "identifier": "treephysics:fancy_oak_root_feature"
+    },
+    "early_out": "first_success",
+    "features": [
+      "treephysics:natural_root_coarse_dirt",
+      "treephysics:natural_root_dirt"
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "pools": [
+    {
+      "entries": [
+        {
+          "name": "minecraft:end_stone",
+          "type": "item"
+        }
+      ],
+      "rolls": 1
+    }
+  ]
+}

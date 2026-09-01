@@ -1,0 +1,208 @@
+{
+
+  "chat_screen_content": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_back",
+        "value": [
+          {
+            "treephysics_settings_button@chat.treephysics_settings_button": {}
+          }
+        ]
+      }
+    ]
+  },
+  "treephysics_settings_button@common.empty_image": {
+    "texture": "textures/ui/treephysics/button_dark_default",
+    "size": [24, 24],
+    "offset": [-16, 24],
+    "anchor_from": "top_right",
+    "anchor_to": "top_right",
+    "layer": 7,
+    "controls": [
+      {
+        "button@common.button": {
+          "$pressed_button_name": "button.send",
+          "$focus_id": "treephysics_settings_button_focus_id",
+          "$button_tts_header": "ui.treephysics.settings.button",
+          "$default_button_texture": "textures/ui/treephysics/button_dark_default",
+          "$hover_button_texture": "textures/ui/treephysics/button_dark_hover",
+          "$pressed_button_texture": "textures/ui/treephysics/button_dark_pressed",
+          "size": [24, 24],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "controls": [
+            {
+              "default": {
+                "type": "image",
+                "texture": "$default_button_texture",
+                "controls": [
+                  {
+                    "icon@chat.treephysics_settings_icon": {}
+                  }
+                ]
+              }
+            },
+            {
+              "hover": {
+                "type": "image",
+                "texture": "$hover_button_texture",
+                "controls": [
+                  {
+                    "icon@chat.treephysics_settings_icon": {}
+                  }
+                ]
+              }
+            },
+            {
+              "pressed": {
+                "type": "image",
+                "texture": "$pressed_button_texture",
+                "controls": [
+                  {
+                    "icon@chat.treephysics_settings_icon": {}
+                  }
+                ]
+              }
+            },
+            {
+              "deselect_text_box": {
+                "type": "input_panel",
+                "size": ["100%sm", "100%sm"],
+                "consume_hover_events": false,
+                "layer": 5,
+                "button_mappings": [
+                  {
+                    "from_button_id": "button.menu_select",
+                    "to_button_id": "button.text_edit_box_deselected",
+                    "mapping_type": "pressed"
+                  },
+                  {
+                    "from_button_id": "button.menu_ok",
+                    "to_button_id": "button.text_edit_box_deselected",
+                    "mapping_type": "pressed"
+                  }
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#keyboard_being_used",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "command_injector@chat.treephysics_command_injector": {}
+            },
+            {
+              "tooltip@common.button": {
+                "hover_control": "hover",
+                "size": ["100%", "100%"],
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "allow_clipping": false,
+                "controls": [
+                  {
+                    "hover@common.empty_panel": {
+                      "size": ["100%", "100%"],
+                      "anchor_from": "center",
+                      "anchor_to": "center",
+                      "allow_clipping": false,
+                      "controls": [
+                        {
+                          "tooltip_panel@chat.treephysics_settings_tooltip": {}
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "consume_hover_events": false
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "treephysics_settings_tooltip": {
+    "type": "image",
+    "texture": "textures/ui/purpleBorder",
+    "size": ["100%cm + 12px", "100%cm + 10px"],
+    "anchor_from": "right_middle",
+    "anchor_to": "left_middle",
+    "offset": [-102, 0],
+    "layer": 200,
+    "allow_clipping": false,
+    "controls": [
+      {
+        "tooltip_text": {
+          "type": "label",
+          "layer": 1,
+          "localize": true,
+          "text": "ui.treephysics.settings.tooltip",
+          "color": "$item_hover_text_color",
+          "shadow": false,
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "text_alignment": "center",
+          "size": ["default", "default"],
+          "max_size": [160, 48]
+        }
+      }
+    ]
+  },
+  "treephysics_settings_icon": {
+    "type": "image",
+    "texture": "textures/ui/treephysics/tree_icon",
+    "size": [16, 16],
+    "anchor_from": "center",
+    "anchor_to": "center"
+  },
+  "treephysics_command_injector": {
+    "type": "edit_box",
+    "focus_enabled": true,
+    "enabled_newline": true,
+    "text_box_name": "#message_text_box",
+    "text_control": "command_text_control",
+    "max_length": 32500,
+    "size": ["100%sm", "100%sm"],
+    "consume_hover_events": false,
+    "layer": 4,
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.keyboard_toggle",
+        "mapping_type": "pressed",
+        "consume_event": false
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "button.keyboard_toggle",
+        "mapping_type": "pressed",
+        "consume_event": false
+      }
+    ],
+    "controls": [
+      {
+        "command_text_control": {
+          "type": "label",
+          "text": "#item_name",
+          "visible": false,
+          "localize": false,
+          "property_bag": {
+            "#command": "/treephysics:settings",
+            "#property_field": "#item_name"
+          },
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_property_name": "#command",
+              "target_property_name": "#item_name"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "pools": [
+    {
+      "entries": [
+        {
+          "name": "minecraft:mud",
+          "type": "item"
+        }
+      ],
+      "rolls": 1
+    }
+  ]
+}
