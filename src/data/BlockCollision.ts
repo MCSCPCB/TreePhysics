@@ -1,6 +1,6 @@
 // Generated from PrismarineJS/minecraft-data Bedrock 1.21.111.
 // Source commit: edfc78fe849b0203672a7fe1f533971ab56732d6
-// This file is generated; edit scripts/generators/bedrock-block-collision.mjs instead.
+// This file is generated from the upstream Bedrock collision data.
 
 export const VANILLA_COLLISION_DATA_VERSION = "bedrock-1.21.111" as const;
 export const VANILLA_COLLISION_BLOCK_COUNT = 1321 as const;

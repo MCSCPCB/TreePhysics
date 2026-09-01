@@ -94,7 +94,7 @@ function resolveSableDynamicBoxes(
 /**
  * Decodes one generated shape-table entry. Every row is a
  * [minX, minY, minZ, maxX, maxY, maxZ] 6-tuple by construction of the
- * generators (scripts/generators), so rows are converted without filtering.
+ * upstream data, so rows are converted without filtering.
  */
 function decodeShapeTableBoxes(
   rawBoxes: readonly (readonly number[])[]

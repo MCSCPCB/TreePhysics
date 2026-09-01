@@ -1,7 +1,7 @@
 // Generated from PrismarineJS/minecraft-data Java 1.21.4.
 // Source commit: d7c753a903c5cfee967db04b7f4b146ba8f8d375
 // Sable calls Java BlockState#getCollisionShape; this table contains only state-invariant shapes.
-// This file is generated; edit scripts/generators/sable-collision-reference.mjs instead.
+// This file is generated from the upstream Java collision data.
 
 export const SABLE_STATIC_COLLISION_DATA_VERSION = "java-1.21.4" as const;
 export const SABLE_COLLISION_BLOCK_COUNT = 1095 as const;
