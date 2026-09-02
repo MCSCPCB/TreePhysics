@@ -1,0 +1,89 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+    "animation.treephysics.player.contraption_mount.idle": {
+      "loop": true,
+      "bones": {
+        "body": {
+          "rotation": [0, 0, 0]
+        },
+        "leftarm": {
+          "rotation": [0, 0, 0]
+        },
+        "rightarm": {
+          "rotation": [0, 0, 0]
+        },
+        "leftleg": {
+          "rotation": [0, 0, 0]
+        },
+        "rightleg": {
+          "rotation": [0, 0, 0]
+        }
+      }
+    },
+    "animation.treephysics.player.contraption_mount.walk": {
+      "animation_length": 0.8,
+      "loop": true,
+      "bones": {
+        "body": {
+          "position": [0, "math.sin(query.life_time * 360.0) * 0.15", 0]
+        },
+        "leftarm": {
+          "rotation": ["math.cos(query.life_time * 450.0) * 25.0", 0, 0]
+        },
+        "rightarm": {
+          "rotation": ["-math.cos(query.life_time * 450.0) * 25.0", 0, 0]
+        },
+        "leftleg": {
+          "rotation": ["-math.cos(query.life_time * 450.0) * 32.0", 0, 0]
+        },
+        "rightleg": {
+          "rotation": ["math.cos(query.life_time * 450.0) * 32.0", 0, 0]
+        }
+      }
+    },
+    "animation.treephysics.player.contraption_mount.turn": {
+      "animation_length": 0.5,
+      "loop": true,
+      "bones": {
+        "body": {
+          "rotation": [0, "math.sin(query.life_time * 360.0) * 6.0", 0]
+        },
+        "leftarm": {
+          "rotation": ["math.cos(query.life_time * 360.0) * 5.0", 0, 0]
+        },
+        "rightarm": {
+          "rotation": ["-math.cos(query.life_time * 360.0) * 5.0", 0, 0]
+        },
+        "leftleg": {
+          "rotation": ["-math.cos(query.life_time * 360.0) * 8.0", 0, 0]
+        },
+        "rightleg": {
+          "rotation": ["math.cos(query.life_time * 360.0) * 8.0", 0, 0]
+        }
+      }
+    },
+    "animation.treephysics.player.contraption_mount.walk_turn": {
+      "animation_length": 0.8,
+      "loop": true,
+      "bones": {
+        "body": {
+          "position": [0, "math.sin(query.life_time * 360.0) * 0.15", 0],
+          "rotation": [0, "math.sin(query.life_time * 360.0) * 8.0", 0]
+        },
+        "leftarm": {
+          "rotation": ["math.cos(query.life_time * 450.0) * 25.0", 0, 0]
+        },
+        "rightarm": {
+          "rotation": ["-math.cos(query.life_time * 450.0) * 25.0", 0, 0]
+        },
+        "leftleg": {
+          "rotation": ["-math.cos(query.life_time * 450.0) * 32.0", 0, 0]
+        },
+        "rightleg": {
+          "rotation": ["math.cos(query.life_time * 450.0) * 32.0", 0, 0]
+        }
+      }
+    }
+  }
+}

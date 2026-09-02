@@ -7551,6 +7551,8 @@ var MOUNT_AIR_GRAVITY = 0.08;
 var MOUNT_AIR_DRAG = 0.98;
 var MOUNT_FLUID_GRAVITY = 0.02;
 var MOUNT_FLUID_VERTICAL_DRAG = 0.8;
+var MOUNT_ANIMATION_MOVE_THRESHOLD = 0.02;
+var MOUNT_ANIMATION_TURN_THRESHOLD = 2;
 var MOUNT_WORLD_SUPPORT_SAMPLE_OFFSETS = [
   { x: 0, z: 0 },
   { x: 0.25, z: 0 },
@@ -7575,6 +7577,12 @@ var MOUNT_BINDING_SAMPLE_OFFSETS = [MOUNT_SUPPORT_SAMPLE_OFFSETS[0]];
 var ZERO_VECTOR2 = Object.freeze({ x: 0, y: 0, z: 0 });
 var managedMountEntityIds = /* @__PURE__ */ new Set();
 var managedMountPlayerIds = /* @__PURE__ */ new Set();
+var MOUNT_ANIMATIONS = {
+  idle: "animation.treephysics.player.contraption_mount.idle",
+  walk: "animation.treephysics.player.contraption_mount.walk",
+  turn: "animation.treephysics.player.contraption_mount.turn",
+  walk_turn: "animation.treephysics.player.contraption_mount.walk_turn"
+};
 var _bindings, _dimension3, _getBlockProperties, _getCandidates, _getLandingApproachFeetY, _surfaceContactCallback, _MountObb_instances, tryCreateBinding_fn, createBinding_fn, updateBinding_fn, recordSurfaceContact_fn, findLandingSupport_fn, findNearestSupport_fn, findSupportAt_fn, release_fn, releaseAll_fn;
 var MountObb = class {
   constructor(dimension, getCandidates, getBlockProperties, getLandingApproachFeetY, surfaceContactCallback) {
@@ -7681,11 +7689,14 @@ createBinding_fn = function(player, contraption, sample) {
     throw new Error(`Mount entity ${seat.id} could not attach player ${player.id}.`);
   }
   const binding = {
+    animationState: void 0,
     candidateTicks: 0,
     contraption,
     forwardsDownTime: forwardPressed ? system2.currentTick : void 0,
     grounded: collision.grounded,
     horizontalVelocity,
+    lastAnimationLocation: { ...surfaceFeet },
+    lastAnimationYaw: player.getRotation().y,
     lastForwardPressed: forwardPressed,
     lastFeetY: surfaceFeet.y,
     lastJumpPressed: false,
@@ -7701,6 +7712,7 @@ createBinding_fn = function(player, contraption, sample) {
   try {
     setMountMovementEnabled(player, false);
     __privateGet(this, _bindings).set(player.id, binding);
+    updateMountAnimation(binding, surfaceFeet, horizontalVelocity, false);
     applyMountImpulse(seat, collision.movement);
     if (binding.grounded) {
       __privateMethod(this, _MountObb_instances, recordSurfaceContact_fn).call(this, binding, support, collision.movement, ZERO_VECTOR2);
@@ -7904,6 +7916,7 @@ updateBinding_fn = function(binding, carryingEnabled) {
     __privateMethod(this, _MountObb_instances, recordSurfaceContact_fn).call(this, binding, support, movement, transport, { landingDownwardSpeed });
   }
   applyMountImpulse(seat, movement);
+  updateMountAnimation(binding, mountFeet, binding.horizontalVelocity, true);
   binding.lastFeetY = mountFeet.y;
 };
 recordSurfaceContact_fn = function(binding, support, playerVelocity, surfaceVelocity, state) {
@@ -8060,6 +8073,28 @@ function setMountMovementEnabled(player, enabled) {
   if (enabled && player.hasTag(MOUNT_PLAYER_INPUT_TAG) && !player.removeTag(MOUNT_PLAYER_INPUT_TAG)) {
     throw new Error(`Could not remove Mount input tag from player ${player.id}.`);
   }
+}
+function updateMountAnimation(binding, location, velocity, detectTurn) {
+  const yaw = binding.player.getRotation().y;
+  const displacement = subtract(location, binding.lastAnimationLocation);
+  const moving = Math.hypot(velocity.x, velocity.z) > MOUNT_ANIMATION_MOVE_THRESHOLD && Math.hypot(displacement.x, displacement.z) > MOUNT_ANIMATION_MOVE_THRESHOLD;
+  const turning = detectTurn && Math.abs(shortestAngleDelta(yaw, binding.lastAnimationYaw)) > MOUNT_ANIMATION_TURN_THRESHOLD;
+  const state = moving ? turning ? "walk_turn" : "walk" : turning ? "turn" : "idle";
+  if (state !== binding.animationState) {
+    binding.player.playAnimation(MOUNT_ANIMATIONS[state], {
+      blendOutTime: 0.1,
+      stopExpression: "!query.is_riding_any_entity_of_type('treephysics:contraption_mount')"
+    });
+    binding.animationState = state;
+  }
+  binding.lastAnimationLocation = { ...location };
+  binding.lastAnimationYaw = yaw;
+}
+function shortestAngleDelta(current, previous) {
+  let delta = current - previous;
+  while (delta > 180) delta -= 360;
+  while (delta < -180) delta += 360;
+  return delta;
 }
 function getTopSurface(contraption, localFeet, box2, worldSample) {
   if (localFeet.x < box2.min.x - SUPPORT_EPSILON || localFeet.x > box2.max.x + SUPPORT_EPSILON || localFeet.z < box2.min.z - SUPPORT_EPSILON || localFeet.z > box2.max.z + SUPPORT_EPSILON) return void 0;

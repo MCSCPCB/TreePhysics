@@ -53,6 +53,8 @@ const MOUNT_AIR_GRAVITY = 0.08;
 const MOUNT_AIR_DRAG = 0.98;
 const MOUNT_FLUID_GRAVITY = 0.02;
 const MOUNT_FLUID_VERTICAL_DRAG = 0.8;
+const MOUNT_ANIMATION_MOVE_THRESHOLD = 0.02;
+const MOUNT_ANIMATION_TURN_THRESHOLD = 2;
 const MOUNT_WORLD_SUPPORT_SAMPLE_OFFSETS = [
   { x: 0, z: 0 },
   { x: 0.25, z: 0 },
@@ -78,6 +80,15 @@ const ZERO_VECTOR: Vector3 = Object.freeze({ x: 0, y: 0, z: 0 });
 const managedMountEntityIds = new Set<string>();
 const managedMountPlayerIds = new Set<string>();
 
+type MountAnimationState = "idle" | "walk" | "turn" | "walk_turn";
+
+const MOUNT_ANIMATIONS: Readonly<Record<MountAnimationState, string>> = {
+  idle: "animation.treephysics.player.contraption_mount.idle",
+  walk: "animation.treephysics.player.contraption_mount.walk",
+  turn: "animation.treephysics.player.contraption_mount.turn",
+  walk_turn: "animation.treephysics.player.contraption_mount.walk_turn"
+};
+
 interface MountBinding {
   readonly player: Player;
   readonly seat: Entity;
@@ -85,6 +96,9 @@ interface MountBinding {
   candidateSample?: MountSupport;
   candidateTicks: number;
   contraption: PhysicsContraption;
+  animationState?: MountAnimationState;
+  lastAnimationLocation: Vector3;
+  lastAnimationYaw: number;
   forwardsDownTime?: number;
   grounded: boolean;
   horizontalVelocity: Vector3;
@@ -267,11 +281,14 @@ export class MountObb {
     }
 
     const binding: MountBinding = {
+      animationState: undefined,
       candidateTicks: 0,
       contraption,
       forwardsDownTime: forwardPressed ? system.currentTick : undefined,
       grounded: collision.grounded,
       horizontalVelocity,
+      lastAnimationLocation: { ...surfaceFeet },
+      lastAnimationYaw: player.getRotation().y,
       lastForwardPressed: forwardPressed,
       lastFeetY: surfaceFeet.y,
       lastJumpPressed: false,
@@ -289,6 +306,7 @@ export class MountObb {
     try {
       setMountMovementEnabled(player, false);
       this.#bindings.set(player.id, binding);
+      updateMountAnimation(binding, surfaceFeet, horizontalVelocity, false);
       applyMountImpulse(seat, collision.movement);
       if (binding.grounded) {
         this.#recordSurfaceContact(binding, support, collision.movement, ZERO_VECTOR);
@@ -553,6 +571,7 @@ export class MountObb {
       );
     }
     applyMountImpulse(seat, movement);
+    updateMountAnimation(binding, mountFeet, binding.horizontalVelocity, true);
     binding.lastFeetY = mountFeet.y;
   }
 
@@ -801,6 +820,41 @@ function setMountMovementEnabled(player: Player, enabled: boolean): void {
     && !player.removeTag(MOUNT_PLAYER_INPUT_TAG)) {
     throw new Error(`Could not remove Mount input tag from player ${player.id}.`);
   }
+}
+
+// Selects a looping player animation from the mount's simulated movement.
+function updateMountAnimation(
+  binding: MountBinding,
+  location: Vector3,
+  velocity: Vector3,
+  detectTurn: boolean
+): void {
+  const yaw = binding.player.getRotation().y;
+  const displacement = subtract(location, binding.lastAnimationLocation);
+  const moving = Math.hypot(velocity.x, velocity.z) > MOUNT_ANIMATION_MOVE_THRESHOLD
+    && Math.hypot(displacement.x, displacement.z) > MOUNT_ANIMATION_MOVE_THRESHOLD;
+  const turning = detectTurn
+    && Math.abs(shortestAngleDelta(yaw, binding.lastAnimationYaw))
+      > MOUNT_ANIMATION_TURN_THRESHOLD;
+  const state: MountAnimationState = moving
+    ? turning ? "walk_turn" : "walk"
+    : turning ? "turn" : "idle";
+  if (state !== binding.animationState) {
+    binding.player.playAnimation(MOUNT_ANIMATIONS[state], {
+      blendOutTime: 0.1,
+      stopExpression: "!query.is_riding_any_entity_of_type('treephysics:contraption_mount')"
+    });
+    binding.animationState = state;
+  }
+  binding.lastAnimationLocation = { ...location };
+  binding.lastAnimationYaw = yaw;
+}
+
+function shortestAngleDelta(current: number, previous: number): number {
+  let delta = current - previous;
+  while (delta > 180) delta -= 360;
+  while (delta < -180) delta += 360;
+  return delta;
 }
 
 function getTopSurface(
