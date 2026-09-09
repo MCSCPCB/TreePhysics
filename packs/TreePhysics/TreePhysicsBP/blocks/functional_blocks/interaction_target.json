@@ -40,7 +40,7 @@
       "minecraft:material_instances": {
         "*": {
           "render_method": "blend",
-          "texture": "structure_void"
+          "texture": "empty"
         }
       },
       "minecraft:selection_box": true,

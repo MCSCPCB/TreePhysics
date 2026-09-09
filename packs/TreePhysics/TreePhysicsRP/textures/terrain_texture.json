@@ -1,0 +1,9 @@
+{
+  "resource_pack_name": "treephysics",
+  "texture_name": "atlas.terrain",
+  "texture_data": {
+    "empty": {
+      "textures": "textures/blocks/empty"
+    }
+  }
+}

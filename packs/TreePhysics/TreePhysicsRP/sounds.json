@@ -1,4 +1,67 @@
 {
+  "block_sounds": {
+    "empty": {
+      "volume": 0.0,
+      "pitch": 0.0,
+      "events": {
+        "default": "",
+        "item.use.on": {
+          "sound": "treephysics.empty",
+          "pitch": 0.0
+        },
+        "break": {
+          "sound": "treephysics.empty",
+          "volume": 0.0,
+          "pitch": 0.0
+        },
+        "hit": {
+          "sound": "treephysics.empty",
+          "volume": 0.0,
+          "pitch": 0.0
+        },
+        "place": {
+          "sound": "treephysics.empty",
+          "volume": 0.0,
+          "pitch": 0.0
+        },
+        "power.on": {
+          "sound": "treephysics.empty",
+          "pitch": 0.0
+        },
+        "power.off": {
+          "sound": "treephysics.empty",
+          "pitch": 0.0
+        }
+      }
+    }
+  },
+  "interactive_sounds": {
+    "block_sounds": {
+      "empty": {
+        "events": {
+          "default": "",
+          "fall": {
+            "sounds": "treephysics.empty",
+            "volume": 0.0
+          },
+          "step": {
+            "sound": "treephysics.empty",
+            "volume": 0.0
+          },
+          "jump": {
+            "sound": "treephysics.empty",
+            "volume": 0.0
+          },
+          "land": {
+            "sound": "treephysics.empty",
+            "volume": 0.0
+          }
+        },
+        "volume": 0.0,
+        "pitch": 0.0
+      }
+    }
+  },
   "entity_sounds": {
     "entities": {
       "treephysics:chest": {

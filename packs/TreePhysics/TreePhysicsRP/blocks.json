@@ -6,5 +6,8 @@
   ],
   "treephysics:natural_tree_root": {
     "sound": "gravel"
+  },
+  "treephysics:interaction_target": {
+    "sound": "empty"
   }
 }
