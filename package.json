@@ -3,7 +3,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "node scripts/build.mjs"
+    "build": "node scripts/build.mjs",
+    "test:physics": "node --test tests/physics/*.test.mjs"
   },
   "dependencies": {
     "@minecraft/server": "2.8.0",

@@ -1709,7 +1709,8 @@ export class PhysicsWorld {
       linearDamping: this.#linearDamping,
       tickSteps: highPerformance ? 3 : 1,
       worldMeshAuditCoordinator: this.#worldMeshAuditCoordinator,
-      worldMeshCache: !highPerformance
+      worldMeshCache: true,
+      worldMeshWaitForMissingChunks: !highPerformance
     };
   }
 
@@ -1864,7 +1865,6 @@ export class PhysicsWorld {
    * "worse" from "equal".
    */
   #selectWorldMeshAuditTarget(): CannonWorldMeshAuditCandidate | undefined {
-    if (this.#performanceLevel === TREE_PHYSICS_PERFORMANCE_HIGH) return undefined;
     if (
       this.#worldMeshAuditCoordinator.currentTick
         < this.#worldMeshAuditCoordinator.nextSelectionTick

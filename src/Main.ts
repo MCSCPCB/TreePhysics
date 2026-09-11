@@ -96,7 +96,7 @@ const contraptions = new ContraptionLifecycle({
   onContraptionReplaced: (source, replacements) => (
     playerInteraction.handleContraptionReplacement(source, replacements)
   ),
-  onWorldBlocksChanged: invalidateLowPerformanceWorldMeshBatch
+  onWorldBlocksChanged: invalidateWorldMeshBatch
 });
 containerInteraction.setNativeDeathHandler((ownerId, binding) => {
   contraptions.handleChestStorageNativeDeath(ownerId, binding);
@@ -174,7 +174,7 @@ world.beforeEvents.playerBreakBlock.subscribe(event => {
 world.afterEvents.playerPlaceBlock.subscribe(event => {
   artificialTrees.markBlock(event.block);
   treeBreakPlanner.invalidateNear(event.dimension, event.block.location);
-  invalidateLowPerformanceWorldMeshBatch(event.dimension, [event.block.location]);
+  invalidateWorldMeshBatch(event.dimension, [event.block.location]);
   wakeTreeAssembliesNear(event.dimension, event.block.location);
 });
 
@@ -195,7 +195,7 @@ world.afterEvents.playerBreakBlock.subscribe(event => {
   if (valid) pending.prepared.commit();
   else treeBreakPlanner.invalidateNear(event.dimension, location);
 
-  invalidateLowPerformanceWorldMeshBatch(event.dimension, [location]);
+  invalidateWorldMeshBatch(event.dimension, [location]);
   wakeTreeAssembliesNear(event.dimension, location);
   if (valid && pending.prepared.plan) {
     executeTreeBreak(pending.prepared.plan, event.player, pending.tool);
@@ -204,13 +204,14 @@ world.afterEvents.playerBreakBlock.subscribe(event => {
 
 world.afterEvents.blockExplode.subscribe(event => {
   treeBreakPlanner.invalidateNear(event.dimension, event.block.location);
+  invalidateWorldMeshBatch(event.dimension, [event.block.location]);
   if (isTreeStructuralBlock(event.explodedBlockPermutation.type.id)) {
     artificialTrees.delete(event.dimension, event.block.location);
   }
 });
 
 world.afterEvents.playerInteractWithBlock.subscribe(event => {
-  if (!event.isFirstEvent || !isLowPerformanceWorldMeshEnabled()) return;
+  if (!event.isFirstEvent || !isWorldMeshCacheEnabled()) return;
   const dimension = event.block.dimension;
   const locations: Vector3[] = [];
   if (isManuallyShapeChangingBlock(event.block.typeId)) {
@@ -228,17 +229,17 @@ world.afterEvents.playerInteractWithBlock.subscribe(event => {
       offsetByDirection(event.block.location, event.blockFace)
     );
   }
-  invalidateLowPerformanceWorldMeshBatch(dimension, locations);
+  invalidateWorldMeshBatch(dimension, locations);
 });
 
 world.afterEvents.pressurePlatePush.subscribe(event => {
-  if (!isLowPerformanceWorldMeshEnabled()) return;
-  invalidateLowPerformanceWorldMeshBatch(event.dimension, [event.block.location]);
+  if (!isWorldMeshCacheEnabled()) return;
+  invalidateWorldMeshBatch(event.dimension, [event.block.location]);
 });
 
 world.afterEvents.pressurePlatePop.subscribe(event => {
-  if (!isLowPerformanceWorldMeshEnabled()) return;
-  invalidateLowPerformanceWorldMeshBatch(event.dimension, [event.block.location]);
+  if (!isWorldMeshCacheEnabled()) return;
+  invalidateWorldMeshBatch(event.dimension, [event.block.location]);
 });
 
 physicsWorld.afterEvents.surfaceParticle.subscribe(event => {
@@ -329,7 +330,7 @@ function executeTreeBreak(
       const preparedRemoval = prepareTreeWorldRemoval(
         plan.dimension,
         sourceBlocks,
-        invalidateLowPerformanceWorldMeshBatch
+        invalidateWorldMeshBatch
       );
       const liveBlocks = preparedRemoval.snapshots;
       const lowPerformance = getTreePhysicsPerformanceLevel() === TREE_PHYSICS_PERFORMANCE_LOW;
@@ -445,7 +446,7 @@ function restoreSoil(dimension: Dimension, root: CapturedTreeBlock): void {
   const typeId = NATURAL_ROOT_SOIL_TYPE_IDS[variant];
   if (typeId) {
     block.setType(typeId);
-    invalidateLowPerformanceWorldMesh(dimension, root.location);
+    invalidateWorldMesh(dimension, root.location);
   }
 }
 
@@ -485,29 +486,21 @@ function createChopMotion(player: Player, breakLocation: Vector3): {
   };
 }
 
-function invalidateLowPerformanceWorldMesh(dimension: Dimension, location: Vector3): void {
-  if (!isLowPerformanceWorldMeshEnabled()) return;
+function invalidateWorldMesh(dimension: Dimension, location: Vector3): void {
+  if (!isWorldMeshCacheEnabled()) return;
   physicsWorld.invalidateWorldMesh(dimension, location, 0);
-}
-
-function invalidateLowPerformanceWorldMeshBatch(
-  dimension: Dimension,
-  locations: readonly Vector3[]
-): void {
-  if (locations.length === 0 || !isLowPerformanceWorldMeshEnabled()) return;
-  physicsWorld.invalidateWorldMeshBatch(dimension, locations);
 }
 
 function invalidateWorldMeshBatch(
   dimension: Dimension,
   locations: readonly Vector3[]
 ): void {
-  if (locations.length === 0) return;
+  if (locations.length === 0 || !isWorldMeshCacheEnabled()) return;
   physicsWorld.invalidateWorldMeshBatch(dimension, locations);
 }
 
-function isLowPerformanceWorldMeshEnabled(): boolean {
-  return getTreePhysicsPerformanceLevel() === TREE_PHYSICS_PERFORMANCE_LOW;
+function isWorldMeshCacheEnabled(): boolean {
+  return true;
 }
 
 function isDoorBlock(typeId: string): boolean {

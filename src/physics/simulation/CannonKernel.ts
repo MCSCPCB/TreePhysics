@@ -7,11 +7,12 @@ import {
   GSSolver,
   Material,
   type Quaternion,
-  SAPBroadphase,
   type Shape,
   Vec3,
   World
 } from "cannon-es";
+import { AabbSAPBroadphase } from "@src/physics/simulation/AabbSAPBroadphase";
+import { BoxNarrowphase } from "@src/physics/simulation/BoxNarrowphase";
 import type {
   PhysicsBodyAabb,
   PhysicsBodyBuoyancyPoint,
@@ -159,7 +160,10 @@ const WORLD_BLOCK_SHADOW_MAX_SHAPES = 4;
 const WORLD_BLOCK_SHADOW_MIN_SCAN_VOLUME = 256;
 const WORLD_MESH_CACHE_HIGH_PRIORITY_BUILDS_PER_TICK = 4;
 const WORLD_MESH_CACHE_NORMAL_PRIORITY_BUILDS_PER_TICK = 2;
-const WORLD_MESH_CACHE_AUDIT_MIN_AGE_TICKS = 200;
+// Unannounced script/command changes are allowed a short audit delay in the
+// cached high-quality path. Event invalidations still enter the high queue
+// immediately and do not wait for this age threshold.
+const WORLD_MESH_CACHE_AUDIT_MIN_AGE_TICKS = 40;
 const WORLD_MESH_CACHE_AUDIT_INTERVAL_TICKS = 20;
 const WORLD_MESH_CACHE_UNUSED_TICKS = 400;
 const WORLD_MESH_CACHE_NEIGHBOR_DEPENDENCY_MARGIN = 1;
@@ -173,6 +177,8 @@ export interface CannonKernelOptions {
   tickSteps?: number;
   worldMeshAuditCoordinator?: CannonWorldMeshAuditCoordinator;
   worldMeshCache?: boolean;
+  /** Pause dynamic bodies until their active world-mesh chunks are ready. */
+  worldMeshWaitForMissingChunks?: boolean;
 }
 
 export interface CannonWorldMeshAuditCoordinator {
@@ -235,6 +241,7 @@ interface CannonBodyRecord {
   worldFluidMeshRegionSignature?: string;
   worldMeshChunks?: ReadonlyMap<string, WorldMeshChunkRequest>;
   worldMeshChunksActive?: boolean;
+  worldMeshWaiting: boolean;
   worldMeshRegionSignature?: string;
   readonly worldSensorSweepStartAngularVelocity: Vec3;
   readonly worldSensorSweepStartPosition: Vec3;
@@ -282,7 +289,10 @@ export class CannonKernelBody {
   }
 
   get isSleeping(): boolean {
-    return this.#body.sleepState === Body.SLEEPING;
+    // A cache wait uses Cannon's sleeping state to stop integration, but it is
+    // still an active gameplay body and must not enter settlement logic.
+    return this.#body.sleepState === Body.SLEEPING
+      && !this.#runtime.isBodyWorldMeshWaiting(this.id);
   }
 
   get isDynamic(): boolean {
@@ -660,7 +670,7 @@ export class CannonKernelBody {
   }
 
   wakeUp(): void {
-    if (this.#body.type !== Body.STATIC) this.#body.wakeUp();
+    if (this.#body.type !== Body.STATIC) this.#runtime.wakeBody(this.id);
   }
 
   writeTransform(): boolean {
@@ -708,6 +718,7 @@ export class CannonKernelRuntime {
   #tickSteps = DEFAULT_TICK_STEPS;
   #worldMeshAuditScansThisTick = 0;
   #worldMeshCacheEnabled = false;
+  #worldMeshWaitForMissingChunks = false;
 
   constructor(options: CannonKernelOptions = {}) {
     this.configure(options);
@@ -729,6 +740,18 @@ export class CannonKernelRuntime {
       this.#worldMeshCache = worldMeshCacheEnabled ? new Map() : undefined;
     }
     this.#worldMeshCacheEnabled = worldMeshCacheEnabled;
+    if (!worldMeshCacheEnabled) {
+      // A cache wait cannot remain active after the cache is disabled (for
+      // example while switching to a diagnostic configuration). Release the
+      // synthetic sleep state so the uncached path can continue integrating.
+      for (const [id, record] of this.#bodyRecords) {
+        if (!record.worldMeshWaiting) continue;
+        record.worldMeshWaiting = false;
+        this.#cannonBodies.get(id)?.wakeUp();
+      }
+    }
+    this.#worldMeshWaitForMissingChunks = options.worldMeshWaitForMissingChunks
+      ?? this.#worldMeshWaitForMissingChunks;
     this.#worldMeshAuditCoordinator = options.worldMeshAuditCoordinator
       ?? this.#worldMeshAuditCoordinator;
     const gravity = options.gravity ?? DEFAULT_GRAVITY;
@@ -740,11 +763,17 @@ export class CannonKernelRuntime {
     this.#world.defaultContactMaterial.contactEquationRelaxation = DEFAULT_CONTACT_RELAXATION;
     this.#world.defaultContactMaterial.frictionEquationStiffness = DEFAULT_CONTACT_STIFFNESS;
     this.#world.defaultContactMaterial.frictionEquationRelaxation = DEFAULT_CONTACT_RELAXATION;
+    if (!(this.#world.narrowphase instanceof BoxNarrowphase)) {
+      this.#world.narrowphase = new BoxNarrowphase(this.#world);
+    }
     this.#world.narrowphase.enableFrictionReduction = false;
-    const broadphase = new SAPBroadphase(this.#world);
-    broadphase.useBoundingBoxes = true;
-    broadphase.autoDetectAxis();
-    this.#world.broadphase = broadphase;
+    // Reuse the SAP instance: replacing it on every quality change leaves its
+    // addBody/removeBody listeners registered on the world.
+    if (!(this.#world.broadphase instanceof AabbSAPBroadphase)) {
+      this.#world.broadphase = new AabbSAPBroadphase(this.#world);
+      this.#world.broadphase.useBoundingBoxes = true;
+    }
+    (this.#world.broadphase as AabbSAPBroadphase).autoDetectAxis();
     if (this.#world.solver instanceof GSSolver) {
       this.#world.solver.iterations = options.solverIterations ?? DEFAULT_SOLVER_ITERATIONS;
       this.#world.solver.tolerance = DEFAULT_SOLVER_TOLERANCE;
@@ -883,6 +912,7 @@ export class CannonKernelRuntime {
       lavaSubmersionRatio: 0,
       localCenterOfMass,
       materialId,
+      worldMeshWaiting: false,
       worldSensorSweepPending: false,
       worldSensorSweepStartAngularVelocity: new Vec3(),
       worldSensorSweepStartPosition: body.position.clone(),
@@ -919,7 +949,8 @@ export class CannonKernelRuntime {
     let sleepingBodyCount = 0;
     for (const body of this.#world.bodies) {
       if (body.type !== Body.DYNAMIC) continue;
-      if (body.sleepState === Body.SLEEPING) sleepingBodyCount++;
+      const waiting = this.#bodyRecords.get(body.id)?.worldMeshWaiting === true;
+      if (body.sleepState === Body.SLEEPING && !waiting) sleepingBodyCount++;
       else activeBodyCount++;
     }
     return {
@@ -934,6 +965,47 @@ export class CannonKernelRuntime {
 
   hasBody(id: number): boolean {
     return this.#bodies.has(id);
+  }
+
+  isBodyWorldMeshWaiting(id: number): boolean {
+    return this.#bodyRecords.get(id)?.worldMeshWaiting === true;
+  }
+
+  wakeBody(id: number): void {
+    const body = this.#cannonBodies.get(id);
+    const record = this.#bodyRecords.get(id);
+    if (!body || body.type === Body.STATIC || record?.worldMeshWaiting) return;
+    body.wakeUp();
+  }
+
+  private pauseBodyForWorldMesh(body: Body, record: CannonBodyRecord): void {
+    if (!record.worldMeshWaiting) {
+      // Body.sleep() clears velocities in Cannon. Restore them immediately so
+      // a cache wait does not turn into an artificial loss of momentum.
+      const velocity = body.velocity.clone();
+      const angularVelocity = body.angularVelocity.clone();
+      body.sleep();
+      body.velocity.copy(velocity);
+      body.angularVelocity.copy(angularVelocity);
+      record.worldMeshWaiting = true;
+    } else if (body.sleepState !== Body.SLEEPING) {
+      const velocity = body.velocity.clone();
+      const angularVelocity = body.angularVelocity.clone();
+      body.sleep();
+      body.velocity.copy(velocity);
+      body.angularVelocity.copy(angularVelocity);
+    }
+    // Forces applied by drag or another callback while paused must not pile up
+    // while the world has no integration step for this body.
+    body.force.setZero();
+    body.torque.setZero();
+  }
+
+  private resumeBodyFromWorldMeshWait(body: Body, record: CannonBodyRecord): void {
+    if (!record.worldMeshWaiting) return;
+    record.worldMeshWaiting = false;
+    body.aabbNeedsUpdate = true;
+    body.wakeUp();
   }
 
   addStaticBox(location: Vector3, size: Vector3, materialId = "default"): void {
@@ -1044,7 +1116,7 @@ export class CannonKernelRuntime {
     record.indexedWorldSensorShapes = getIndexedWorldSensorShapes(collider);
     updateDynamicBodyMassProperties(body);
     body.aabbNeedsUpdate = true;
-    body.wakeUp();
+    this.wakeBody(id);
   }
 
   setBodyColliderIncrementally(id: number, colliderDefinition: PhysicsBodyCollider): void {
@@ -1124,7 +1196,7 @@ export class CannonKernelRuntime {
     updateDynamicBodyMassProperties(body);
     body.updateBoundingRadius();
     body.aabbNeedsUpdate = true;
-    body.wakeUp();
+    this.wakeBody(id);
   }
 
   setBodyEnvironmentCollider(id: number, colliderDefinition: PhysicsBodyCollider): void {
@@ -1154,7 +1226,8 @@ export class CannonKernelRuntime {
         || location.z < bounds.min.z - margin
         || location.z > bounds.max.z + margin
       ) continue;
-      body.wakeUp();
+      if (record.worldMeshWaiting) continue;
+      this.wakeBody(id);
       count++;
     }
     return count;
@@ -1414,6 +1487,7 @@ export class CannonKernelRuntime {
       ) return true;
       for (const [id, body] of this.#cannonBodies) {
         if (body.type !== Body.DYNAMIC) continue;
+        if (this.#bodyRecords.get(id)?.worldMeshWaiting) return true;
         if (body.sleepState !== Body.SLEEPING) return true;
         if (this.#bodyRecords.get(id)?.worldMeshChunks === undefined) return true;
       }
@@ -2237,6 +2311,29 @@ export class CannonKernelRuntime {
     for (const [id, body] of this.#cannonBodies) {
       const record = this.#bodyRecords.get(id);
       if (!record || body.type !== Body.DYNAMIC) continue;
+      if (record.worldMeshWaiting) {
+        // Keep the paused body referenced to its active chunks so queued builds
+        // retain high priority. A body that was woken by an external callback
+        // is put back to sleep until the same readiness check succeeds.
+        body.force.setZero();
+        body.torque.setZero();
+        body.updateAABB();
+        const waitingBounds = getPredictedWorldMeshBounds(
+          body,
+          record,
+          this.#fixedTimeStep,
+          this.#tickSteps
+        );
+        this.updateBodyWorldMeshRegion(record, waitingBounds, true);
+        if (
+          this.bodyHasMissingWorldMeshChunks(record)
+          && this.#worldMeshWaitForMissingChunks
+        ) {
+          this.pauseBodyForWorldMesh(body, record);
+          continue;
+        }
+        this.resumeBodyFromWorldMeshWait(body, record);
+      }
       if (body.sleepState === Body.SLEEPING) {
         record.sleepEnvironmentSignature = undefined;
         this.updateBodyWorldFluidMeshRegion(record, EMPTY_WORLD_MESH_CHUNKS);
@@ -2282,6 +2379,38 @@ export class CannonKernelRuntime {
       this.auditWorldMeshCache();
     }
 
+    // A build or audit may have completed the last missing chunk during this
+    // sync. Resume those bodies before the physics substeps of this tick.
+    for (const [id, body] of this.#cannonBodies) {
+      const record = this.#bodyRecords.get(id);
+      if (
+        !record
+        || body.type !== Body.DYNAMIC
+        || !record.worldMeshWaiting
+      ) continue;
+      if (
+        this.bodyHasMissingWorldMeshChunks(record)
+        && this.#worldMeshWaitForMissingChunks
+      ) {
+        this.pauseBodyForWorldMesh(body, record);
+      } else {
+        this.resumeBodyFromWorldMeshWait(body, record);
+      }
+    }
+
+    if (this.#worldMeshWaitForMissingChunks) {
+      for (const [id, body] of this.#cannonBodies) {
+        const record = this.#bodyRecords.get(id);
+        if (
+          !record
+          || body.type !== Body.DYNAMIC
+          || record.worldMeshWaiting
+          || !this.bodyHasMissingWorldMeshChunks(record)
+        ) continue;
+        this.pauseBodyForWorldMesh(body, record);
+      }
+    }
+
     const fullyScannedCoverageByDimension = new Map<Dimension, WorldScanCoverage[]>();
     let shadowFilteredScansByDimension: Map<Dimension, AppliedShadowScan[]> | undefined;
     const nextColliderLayout: GreedyBox[] = [];
@@ -2290,6 +2419,7 @@ export class CannonKernelRuntime {
       const coverages: WorldScanCoverage[] = [];
       fullyScannedCoverageByDimension.set(dimension, coverages);
       const missingClusters = getMissingWorldMeshScanClusters(dimension, clusters, cache);
+      if (this.#worldMeshWaitForMissingChunks) continue;
       for (const cluster of missingClusters) {
         const scan = scanWorldSolidBlocks(
           dimension,
@@ -2873,7 +3003,9 @@ export class CannonKernelRuntime {
       ) continue;
       referenced = true;
       record.sleepEnvironmentSignature = undefined;
-      this.#cannonBodies.get(id)?.wakeUp();
+      // An invalidated chunk is queued again below; a waiting body must remain
+      // paused until every active chunk is ready.
+      if (!record.worldMeshWaiting) this.wakeBody(id);
     }
     return referenced;
   }

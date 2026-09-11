@@ -22841,7 +22841,7 @@ var contraptions = new ContraptionLifecycle({
   crossDomain: true,
   isDamageImmune: (contraption, entity) => entity.typeId === "minecraft:player" && playerInteraction.isDraggingContraption(entity.id, contraption),
   onContraptionReplaced: (source, replacements) => playerInteraction.handleContraptionReplacement(source, replacements),
-  onWorldBlocksChanged: invalidateLowPerformanceWorldMeshBatch
+  onWorldBlocksChanged: invalidateWorldMeshBatch
 });
 containerInteraction.setNativeDeathHandler((ownerId, binding) => {
   contraptions.handleChestStorageNativeDeath(ownerId, binding);
@@ -22898,7 +22898,7 @@ world12.beforeEvents.playerBreakBlock.subscribe((event) => {
 world12.afterEvents.playerPlaceBlock.subscribe((event) => {
   artificialTrees.markBlock(event.block);
   treeBreakPlanner.invalidateNear(event.dimension, event.block.location);
-  invalidateLowPerformanceWorldMeshBatch(event.dimension, [event.block.location]);
+  invalidateWorldMeshBatch(event.dimension, [event.block.location]);
   wakeTreeAssembliesNear(event.dimension, event.block.location);
 });
 world12.afterEvents.playerBreakBlock.subscribe((event) => {
@@ -22914,7 +22914,7 @@ world12.afterEvents.playerBreakBlock.subscribe((event) => {
   const valid = pending && age <= PENDING_BREAK_MAX_AGE_TICKS && pending.prepared.brokenTypeId === brokenTypeId;
   if (valid) pending.prepared.commit();
   else treeBreakPlanner.invalidateNear(event.dimension, location);
-  invalidateLowPerformanceWorldMeshBatch(event.dimension, [location]);
+  invalidateWorldMeshBatch(event.dimension, [location]);
   wakeTreeAssembliesNear(event.dimension, location);
   if (valid && pending.prepared.plan) {
     executeTreeBreak(pending.prepared.plan, event.player, pending.tool);
@@ -22922,12 +22922,13 @@ world12.afterEvents.playerBreakBlock.subscribe((event) => {
 });
 world12.afterEvents.blockExplode.subscribe((event) => {
   treeBreakPlanner.invalidateNear(event.dimension, event.block.location);
+  invalidateWorldMeshBatch(event.dimension, [event.block.location]);
   if (isTreeStructuralBlock(event.explodedBlockPermutation.type.id)) {
     artificialTrees.delete(event.dimension, event.block.location);
   }
 });
 world12.afterEvents.playerInteractWithBlock.subscribe((event) => {
-  if (!event.isFirstEvent || !isLowPerformanceWorldMeshEnabled()) return;
+  if (!event.isFirstEvent || !isWorldMeshCacheEnabled()) return;
   const dimension = event.block.dimension;
   const locations = [];
   if (isManuallyShapeChangingBlock(event.block.typeId)) {
@@ -22945,15 +22946,15 @@ world12.afterEvents.playerInteractWithBlock.subscribe((event) => {
       offsetByDirection(event.block.location, event.blockFace)
     );
   }
-  invalidateLowPerformanceWorldMeshBatch(dimension, locations);
+  invalidateWorldMeshBatch(dimension, locations);
 });
 world12.afterEvents.pressurePlatePush.subscribe((event) => {
-  if (!isLowPerformanceWorldMeshEnabled()) return;
-  invalidateLowPerformanceWorldMeshBatch(event.dimension, [event.block.location]);
+  if (!isWorldMeshCacheEnabled()) return;
+  invalidateWorldMeshBatch(event.dimension, [event.block.location]);
 });
 world12.afterEvents.pressurePlatePop.subscribe((event) => {
-  if (!isLowPerformanceWorldMeshEnabled()) return;
-  invalidateLowPerformanceWorldMeshBatch(event.dimension, [event.block.location]);
+  if (!isWorldMeshCacheEnabled()) return;
+  invalidateWorldMeshBatch(event.dimension, [event.block.location]);
 });
 physicsWorld.afterEvents.surfaceParticle.subscribe((event) => {
   contraptions.handleSurfaceParticle(event);
@@ -23019,7 +23020,7 @@ function executeTreeBreak(plan, player, tool) {
       const preparedRemoval = prepareTreeWorldRemoval(
         plan.dimension,
         sourceBlocks,
-        invalidateLowPerformanceWorldMeshBatch
+        invalidateWorldMeshBatch
       );
       const liveBlocks = preparedRemoval.snapshots;
       const lowPerformance = getTreePhysicsPerformanceLevel() === TREE_PHYSICS_PERFORMANCE_LOW;
@@ -23126,7 +23127,7 @@ function restoreSoil(dimension, root) {
   const typeId = NATURAL_ROOT_SOIL_TYPE_IDS[variant];
   if (typeId) {
     block.setType(typeId);
-    invalidateLowPerformanceWorldMesh(dimension, root.location);
+    invalidateWorldMesh(dimension, root.location);
   }
 }
 function createChopMotion(player, breakLocation) {
@@ -23161,20 +23162,16 @@ function createChopMotion(player, breakLocation) {
     }
   };
 }
-function invalidateLowPerformanceWorldMesh(dimension, location) {
-  if (!isLowPerformanceWorldMeshEnabled()) return;
+function invalidateWorldMesh(dimension, location) {
+  if (!isWorldMeshCacheEnabled()) return;
   physicsWorld.invalidateWorldMesh(dimension, location, 0);
 }
-function invalidateLowPerformanceWorldMeshBatch(dimension, locations) {
-  if (locations.length === 0 || !isLowPerformanceWorldMeshEnabled()) return;
-  physicsWorld.invalidateWorldMeshBatch(dimension, locations);
-}
 function invalidateWorldMeshBatch(dimension, locations) {
-  if (locations.length === 0) return;
+  if (locations.length === 0 || !isWorldMeshCacheEnabled()) return;
   physicsWorld.invalidateWorldMeshBatch(dimension, locations);
 }
-function isLowPerformanceWorldMeshEnabled() {
-  return getTreePhysicsPerformanceLevel() === TREE_PHYSICS_PERFORMANCE_LOW;
+function isWorldMeshCacheEnabled() {
+  return true;
 }
 function isDoorBlock(typeId) {
   return typeId.endsWith("_door") && !typeId.endsWith("_trapdoor");

@@ -17402,6 +17402,267 @@ var endShapeContactEvent = {
   shapeB: null
 };
 
+// src/physics/simulation/AabbSAPBroadphase.ts
+var AabbSAPBroadphase = class extends SAPBroadphase {
+  collisionPairs(world5, p1, p2) {
+    if (!this.useBoundingBoxes) {
+      super.collisionPairs(world5, p1, p2);
+      return;
+    }
+    if (this.dirty) {
+      this.sortList();
+      this.dirty = false;
+    }
+    const axis = this.axisIndex === 0 ? "x" : this.axisIndex === 1 ? "y" : "z";
+    const bodies = this.axisList;
+    for (let i = 0; i < bodies.length; i++) {
+      const a2 = bodies[i];
+      const upper = a2.aabb.upperBound[axis];
+      for (let j = i + 1; j < bodies.length; j++) {
+        const b2 = bodies[j];
+        if (b2.aabb.lowerBound[axis] > upper) break;
+        if (this.needBroadphaseCollision(a2, b2)) this.intersectionTest(a2, b2, p1, p2);
+      }
+    }
+  }
+};
+
+// src/physics/simulation/BoxNarrowphase.ts
+var AXES3 = [new Vec3(1, 0, 0), new Vec3(0, 1, 0), new Vec3(0, 0, 1)];
+var _inverseA, _inverseB, _originA, _originB, _localAxis, _axesA, _axesB, _cross, _separatingAxis, _contactOffset, _transforms, _fallbackA, _fallbackB, _generation;
+var BoxNarrowphase = class extends Narrowphase {
+  constructor() {
+    super(...arguments);
+    __privateAdd(this, _inverseA, new Quaternion());
+    __privateAdd(this, _inverseB, new Quaternion());
+    __privateAdd(this, _originA, new Vec3());
+    __privateAdd(this, _originB, new Vec3());
+    __privateAdd(this, _localAxis, new Vec3());
+    __privateAdd(this, _axesA, AXES3.map(() => new Vec3()));
+    __privateAdd(this, _axesB, AXES3.map(() => new Vec3()));
+    __privateAdd(this, _cross, new Vec3());
+    __privateAdd(this, _separatingAxis, new Vec3());
+    __privateAdd(this, _contactOffset, new Vec3());
+    __privateAdd(this, _transforms, /* @__PURE__ */ new WeakMap());
+    __privateAdd(this, _fallbackA, []);
+    __privateAdd(this, _fallbackB, []);
+    __privateAdd(this, _generation, 0);
+  }
+  getContacts(p1, p2, world5, result, oldcontacts, frictionResult, frictionPool) {
+    this.contactPointPool = oldcontacts;
+    this.frictionEquationPool = frictionPool;
+    this.result = result;
+    this.frictionResult = frictionResult;
+    __privateWrapper(this, _generation)._++;
+    for (let k = 0; k < p1.length; k++) {
+      const bi = p1[k];
+      const bj = p2[k];
+      if (bi.shapes.length === 1 && bj.shapes.length === 1) {
+        __privateGet(this, _fallbackA)[0] = bi;
+        __privateGet(this, _fallbackB)[0] = bj;
+        super.getContacts(
+          __privateGet(this, _fallbackA),
+          __privateGet(this, _fallbackB),
+          world5,
+          result,
+          oldcontacts,
+          frictionResult,
+          frictionPool
+        );
+        continue;
+      }
+      const boxesA = this.getBoxTransforms(bi);
+      const boxesB = this.getBoxTransforms(bj);
+      if (!boxesA || !boxesB) {
+        __privateGet(this, _fallbackA)[0] = bi;
+        __privateGet(this, _fallbackB)[0] = bj;
+        super.getContacts(
+          __privateGet(this, _fallbackA),
+          __privateGet(this, _fallbackB),
+          world5,
+          result,
+          oldcontacts,
+          frictionResult,
+          frictionPool
+        );
+        continue;
+      }
+      const bodyMaterial = bi.material && bj.material ? world5.getContactMaterial(bi.material, bj.material) : void 0;
+      const justTest = Boolean(
+        bi.type & Body.KINEMATIC && bj.type & Body.STATIC || bi.type & Body.STATIC && bj.type & Body.KINEMATIC || bi.type & Body.KINEMATIC && bj.type & Body.KINEMATIC
+      );
+      for (const a2 of boxesA) {
+        const si = a2.shape;
+        for (const b2 of boxesB) {
+          const sj = b2.shape;
+          if (!(si.collisionFilterMask & sj.collisionFilterGroup) || !(sj.collisionFilterMask & si.collisionFilterGroup)) continue;
+          if (a2.lower.x > b2.upper.x || a2.upper.x < b2.lower.x || a2.lower.y > b2.upper.y || a2.upper.y < b2.lower.y || a2.lower.z > b2.upper.z || a2.upper.z < b2.lower.z) continue;
+          if (a2.position.distanceTo(b2.position) > si.boundingSphereRadius + sj.boundingSphereRadius) continue;
+          const shapeMaterial = si.material && sj.material ? world5.getContactMaterial(si.material, sj.material) : void 0;
+          this.currentContactMaterial = shapeMaterial || bodyMaterial || world5.defaultContactMaterial;
+          const overlap = this.boxBox(
+            sj,
+            si,
+            b2.position,
+            a2.position,
+            b2.quaternion,
+            a2.quaternion,
+            bj,
+            bi,
+            si,
+            sj,
+            justTest
+          );
+          if (overlap && justTest) {
+            world5.shapeOverlapKeeper.set(si.id, sj.id);
+            world5.bodyOverlapKeeper.set(bi.id, bj.id);
+          }
+        }
+      }
+    }
+  }
+  getBoxTransforms(body) {
+    let entry = __privateGet(this, _transforms).get(body);
+    if (entry?.generation === __privateGet(this, _generation)) return entry.boxes;
+    if (!entry) {
+      entry = { generation: __privateGet(this, _generation) };
+      __privateGet(this, _transforms).set(body, entry);
+    }
+    entry.generation = __privateGet(this, _generation);
+    if (body.shapes.some((shape) => !(shape instanceof Box))) {
+      entry.boxes = void 0;
+      return void 0;
+    }
+    const boxes = entry.boxes ?? (entry.boxes = []);
+    boxes.length = body.shapes.length;
+    for (let i = 0; i < body.shapes.length; i++) {
+      const shape = body.shapes[i];
+      let transform = boxes[i];
+      if (!transform || transform.shape !== shape) {
+        transform = boxes[i] = {
+          shape,
+          position: new Vec3(),
+          quaternion: new Quaternion(),
+          lower: new Vec3(),
+          upper: new Vec3()
+        };
+      }
+      const { position, quaternion, lower, upper } = transform;
+      body.quaternion.mult(body.shapeOrientations[i], quaternion);
+      body.quaternion.vmult(body.shapeOffsets[i], position);
+      position.vadd(body.position, position);
+      const axes = __privateGet(this, _axesA);
+      for (let axis = 0; axis < 3; axis++) quaternion.vmult(AXES3[axis], axes[axis]);
+      const h = shape.halfExtents;
+      const x = Math.abs(axes[0].x * h.x) + Math.abs(axes[1].x * h.y) + Math.abs(axes[2].x * h.z);
+      const y = Math.abs(axes[0].y * h.x) + Math.abs(axes[1].y * h.y) + Math.abs(axes[2].y * h.z);
+      const z = Math.abs(axes[0].z * h.x) + Math.abs(axes[1].z * h.y) + Math.abs(axes[2].z * h.z);
+      const pad = 1e-7 + 16 * Number.EPSILON * (Math.max(Math.abs(position.x), Math.abs(position.y), Math.abs(position.z)) + x + y + z);
+      lower.set(position.x - x - pad, position.y - y - pad, position.z - z - pad);
+      upper.set(position.x + x + pad, position.y + y + pad, position.z + z + pad);
+    }
+    return boxes;
+  }
+  boxBox(si, sj, xi, xj, qi, qj, bi, bj, _rsi, _rsj, justTest) {
+    const hullA = si.convexPolyhedronRepresentation;
+    const hullB = sj.convexPolyhedronRepresentation;
+    hullA.material = si.material;
+    hullB.material = sj.material;
+    hullA.collisionResponse = si.collisionResponse;
+    hullB.collisionResponse = sj.collisionResponse;
+    if (xi.distanceTo(xj) > hullA.boundingSphereRadius + hullB.boundingSphereRadius) return;
+    if (!this.findBoxSeparatingAxis(si, sj, xi, xj, qi, qj)) return;
+    const contacts = [];
+    const axis = __privateGet(this, _separatingAxis);
+    hullA.clipAgainstHull(xi, qi, hullB, xj, qj, axis, -100, 100, contacts);
+    let count = 0;
+    for (const contact of contacts) {
+      if (justTest) return true;
+      const equation = this.createContactEquation(bi, bj, hullA, hullB, si, sj);
+      axis.negate(equation.ni);
+      contact.normal.negate(__privateGet(this, _contactOffset));
+      __privateGet(this, _contactOffset).scale(contact.depth, __privateGet(this, _contactOffset));
+      contact.point.vadd(__privateGet(this, _contactOffset), equation.ri);
+      equation.rj.copy(contact.point);
+      equation.ri.vsub(xi, equation.ri);
+      equation.rj.vsub(xj, equation.rj);
+      equation.ri.vadd(xi, equation.ri);
+      equation.ri.vsub(bi.position, equation.ri);
+      equation.rj.vadd(xj, equation.rj);
+      equation.rj.vsub(bj.position, equation.rj);
+      this.result.push(equation);
+      count++;
+      if (!this.enableFrictionReduction) this.createFrictionEquationsFromContact(equation, this.frictionResult);
+    }
+    if (this.enableFrictionReduction && count) this.createFrictionFromAverage(count);
+  }
+  findBoxSeparatingAxis(a2, b2, pa, pb, qa, qb) {
+    qa.conjugate(__privateGet(this, _inverseA));
+    qb.conjugate(__privateGet(this, _inverseB));
+    pa.negate(__privateGet(this, _originA));
+    pb.negate(__privateGet(this, _originB));
+    __privateGet(this, _inverseA).vmult(__privateGet(this, _originA), __privateGet(this, _originA));
+    __privateGet(this, _inverseB).vmult(__privateGet(this, _originB), __privateGet(this, _originB));
+    for (let i = 0; i < 3; i++) {
+      qa.vmult(AXES3[i], __privateGet(this, _axesA)[i]);
+      qb.vmult(AXES3[i], __privateGet(this, _axesB)[i]);
+    }
+    let minimum = Number.MAX_VALUE;
+    const test = (axis) => {
+      const depth = this.boxOverlap(axis, a2.halfExtents, b2.halfExtents);
+      if (depth === false) return false;
+      if (depth < minimum) {
+        minimum = depth;
+        __privateGet(this, _separatingAxis).copy(axis);
+      }
+      return true;
+    };
+    for (let i = 2; i >= 0; i--) if (!test(__privateGet(this, _axesA)[i])) return false;
+    for (let i = 2; i >= 0; i--) if (!test(__privateGet(this, _axesB)[i])) return false;
+    for (let i = 0; i < 3; i++) {
+      for (let j = 0; j < 3; j++) {
+        __privateGet(this, _axesA)[i].cross(__privateGet(this, _axesB)[j], __privateGet(this, _cross));
+        if (i === 0 !== (j === 0)) __privateGet(this, _cross).negate(__privateGet(this, _cross));
+        if (__privateGet(this, _cross).almostZero()) continue;
+        __privateGet(this, _cross).normalize();
+        if (!test(__privateGet(this, _cross))) return false;
+      }
+    }
+    pb.vsub(pa, __privateGet(this, _cross));
+    if (__privateGet(this, _cross).dot(__privateGet(this, _separatingAxis)) > 0) __privateGet(this, _separatingAxis).negate(__privateGet(this, _separatingAxis));
+    return true;
+  }
+  boxOverlap(axis, a2, b2) {
+    const local = __privateGet(this, _localAxis);
+    __privateGet(this, _inverseA).vmult(axis, local);
+    const radiusA = Math.abs(a2.x * local.x) + Math.abs(a2.y * local.y) + Math.abs(a2.z * local.z);
+    const originA = __privateGet(this, _originA).dot(local);
+    __privateGet(this, _inverseB).vmult(axis, local);
+    const radiusB = Math.abs(b2.x * local.x) + Math.abs(b2.y * local.y) + Math.abs(b2.z * local.z);
+    const originB = __privateGet(this, _originB).dot(local);
+    const maxA = radiusA - originA;
+    const minA = -radiusA - originA;
+    const maxB = radiusB - originB;
+    const minB = -radiusB - originB;
+    if (maxA < minB || maxB < minA) return false;
+    return Math.min(maxA - minB, maxB - minA);
+  }
+};
+_inverseA = new WeakMap();
+_inverseB = new WeakMap();
+_originA = new WeakMap();
+_originB = new WeakMap();
+_localAxis = new WeakMap();
+_axesA = new WeakMap();
+_axesB = new WeakMap();
+_cross = new WeakMap();
+_separatingAxis = new WeakMap();
+_contactOffset = new WeakMap();
+_transforms = new WeakMap();
+_fallbackA = new WeakMap();
+_fallbackB = new WeakMap();
+_generation = new WeakMap();
+
 // src/physics/world/sensor/ChunkIndex.ts
 var WORLD_MESH_CHUNK_SIZE = 8;
 function getIndexedWorldSensorCandidateChunkKeys(dimensionId, bounds, retainedKeys) {
@@ -19093,7 +19354,7 @@ var WORLD_BLOCK_SHADOW_MAX_SHAPES = 4;
 var WORLD_BLOCK_SHADOW_MIN_SCAN_VOLUME = 256;
 var WORLD_MESH_CACHE_HIGH_PRIORITY_BUILDS_PER_TICK = 4;
 var WORLD_MESH_CACHE_NORMAL_PRIORITY_BUILDS_PER_TICK = 2;
-var WORLD_MESH_CACHE_AUDIT_MIN_AGE_TICKS = 200;
+var WORLD_MESH_CACHE_AUDIT_MIN_AGE_TICKS = 40;
 var WORLD_MESH_CACHE_AUDIT_INTERVAL_TICKS = 20;
 var WORLD_MESH_CACHE_UNUSED_TICKS = 400;
 var WORLD_MESH_CACHE_NEIGHBOR_DEPENDENCY_MARGIN = 1;
@@ -19122,7 +19383,7 @@ var CannonKernelBody = class {
     this.name = name;
   }
   get isSleeping() {
-    return __privateGet(this, _body4).sleepState === Body.SLEEPING;
+    return __privateGet(this, _body4).sleepState === Body.SLEEPING && !__privateGet(this, _runtime).isBodyWorldMeshWaiting(this.id);
   }
   get isDynamic() {
     return __privateGet(this, _body4).type === Body.DYNAMIC;
@@ -19433,7 +19694,7 @@ var CannonKernelBody = class {
     if (__privateGet(this, _body4).type === Body.DYNAMIC) __privateGet(this, _body4).sleep();
   }
   wakeUp() {
-    if (__privateGet(this, _body4).type !== Body.STATIC) __privateGet(this, _body4).wakeUp();
+    if (__privateGet(this, _body4).type !== Body.STATIC) __privateGet(this, _runtime).wakeBody(this.id);
   }
   writeTransform() {
     return __privateGet(this, _runtime).writeBodyTransform(this.id);
@@ -19441,7 +19702,7 @@ var CannonKernelBody = class {
 };
 _body4 = new WeakMap();
 _runtime = new WeakMap();
-var _beforeSubstepCallbacks, _bodies, _collisionTagsByShape, _bodyRecords, _blockProperties, _buoyancyForce, _buoyancyPoint, _buoyancyPointVelocity, _buoyancyRelative, _cannonBodies, _handlesByCannonBody, _materialProperties, _materials, _contactMaterials, _contactMaterialIds, _fluidSurfacesByDimension, _activeWorldMeshChunkKeys, _activeWorldMeshChunkReferenceCounts, _worldMeshChunkReferenceCounts, _worldMeshHighPriorityQueue, _worldMeshNormalPriorityQueue, _worldColliderBodies, _indexedWorldSensorsEnabled, _indexedWorldSensorVisitMark, _worldMeshCache, _worldMeshAuditCoordinator, _worldBlockSensorPredicate, _worldColliderLayout, _world, _fixedTimeStep, _angularDamping, _linearDamping, _lastWorldMeshPruneTick, _nextBodyId, _stepCount, _tickSteps, _worldMeshAuditScansThisTick, _worldMeshCacheEnabled;
+var _beforeSubstepCallbacks, _bodies, _collisionTagsByShape, _bodyRecords, _blockProperties, _buoyancyForce, _buoyancyPoint, _buoyancyPointVelocity, _buoyancyRelative, _cannonBodies, _handlesByCannonBody, _materialProperties, _materials, _contactMaterials, _contactMaterialIds, _fluidSurfacesByDimension, _activeWorldMeshChunkKeys, _activeWorldMeshChunkReferenceCounts, _worldMeshChunkReferenceCounts, _worldMeshHighPriorityQueue, _worldMeshNormalPriorityQueue, _worldColliderBodies, _indexedWorldSensorsEnabled, _indexedWorldSensorVisitMark, _worldMeshCache, _worldMeshAuditCoordinator, _worldBlockSensorPredicate, _worldColliderLayout, _world, _fixedTimeStep, _angularDamping, _linearDamping, _lastWorldMeshPruneTick, _nextBodyId, _stepCount, _tickSteps, _worldMeshAuditScansThisTick, _worldMeshCacheEnabled, _worldMeshWaitForMissingChunks;
 var CannonKernelRuntime = class {
   constructor(options = {}) {
     this.afterEvents = new CannonKernelAfterEvents();
@@ -19483,6 +19744,7 @@ var CannonKernelRuntime = class {
     __privateAdd(this, _tickSteps, DEFAULT_TICK_STEPS);
     __privateAdd(this, _worldMeshAuditScansThisTick, 0);
     __privateAdd(this, _worldMeshCacheEnabled, false);
+    __privateAdd(this, _worldMeshWaitForMissingChunks, false);
     this.configure(options);
   }
   get fixedTimeStep() {
@@ -19500,6 +19762,14 @@ var CannonKernelRuntime = class {
       __privateSet(this, _worldMeshCache, worldMeshCacheEnabled ? /* @__PURE__ */ new Map() : void 0);
     }
     __privateSet(this, _worldMeshCacheEnabled, worldMeshCacheEnabled);
+    if (!worldMeshCacheEnabled) {
+      for (const [id, record] of __privateGet(this, _bodyRecords)) {
+        if (!record.worldMeshWaiting) continue;
+        record.worldMeshWaiting = false;
+        __privateGet(this, _cannonBodies).get(id)?.wakeUp();
+      }
+    }
+    __privateSet(this, _worldMeshWaitForMissingChunks, options.worldMeshWaitForMissingChunks ?? __privateGet(this, _worldMeshWaitForMissingChunks));
     __privateSet(this, _worldMeshAuditCoordinator, options.worldMeshAuditCoordinator ?? __privateGet(this, _worldMeshAuditCoordinator));
     const gravity = options.gravity ?? DEFAULT_GRAVITY;
     __privateGet(this, _world).gravity.set(gravity.x, gravity.y, gravity.z);
@@ -19510,11 +19780,15 @@ var CannonKernelRuntime = class {
     __privateGet(this, _world).defaultContactMaterial.contactEquationRelaxation = DEFAULT_CONTACT_RELAXATION;
     __privateGet(this, _world).defaultContactMaterial.frictionEquationStiffness = DEFAULT_CONTACT_STIFFNESS;
     __privateGet(this, _world).defaultContactMaterial.frictionEquationRelaxation = DEFAULT_CONTACT_RELAXATION;
+    if (!(__privateGet(this, _world).narrowphase instanceof BoxNarrowphase)) {
+      __privateGet(this, _world).narrowphase = new BoxNarrowphase(__privateGet(this, _world));
+    }
     __privateGet(this, _world).narrowphase.enableFrictionReduction = false;
-    const broadphase = new SAPBroadphase(__privateGet(this, _world));
-    broadphase.useBoundingBoxes = true;
-    broadphase.autoDetectAxis();
-    __privateGet(this, _world).broadphase = broadphase;
+    if (!(__privateGet(this, _world).broadphase instanceof AabbSAPBroadphase)) {
+      __privateGet(this, _world).broadphase = new AabbSAPBroadphase(__privateGet(this, _world));
+      __privateGet(this, _world).broadphase.useBoundingBoxes = true;
+    }
+    __privateGet(this, _world).broadphase.autoDetectAxis();
     if (__privateGet(this, _world).solver instanceof GSSolver) {
       __privateGet(this, _world).solver.iterations = options.solverIterations ?? DEFAULT_SOLVER_ITERATIONS;
       __privateGet(this, _world).solver.tolerance = DEFAULT_SOLVER_TOLERANCE;
@@ -19630,6 +19904,7 @@ var CannonKernelRuntime = class {
       lavaSubmersionRatio: 0,
       localCenterOfMass,
       materialId,
+      worldMeshWaiting: false,
       worldSensorSweepPending: false,
       worldSensorSweepStartAngularVelocity: new Vec3(),
       worldSensorSweepStartPosition: body.position.clone(),
@@ -19662,7 +19937,8 @@ var CannonKernelRuntime = class {
     let sleepingBodyCount = 0;
     for (const body of __privateGet(this, _world).bodies) {
       if (body.type !== Body.DYNAMIC) continue;
-      if (body.sleepState === Body.SLEEPING) sleepingBodyCount++;
+      const waiting = __privateGet(this, _bodyRecords).get(body.id)?.worldMeshWaiting === true;
+      if (body.sleepState === Body.SLEEPING && !waiting) sleepingBodyCount++;
       else activeBodyCount++;
     }
     return {
@@ -19676,6 +19952,39 @@ var CannonKernelRuntime = class {
   }
   hasBody(id) {
     return __privateGet(this, _bodies).has(id);
+  }
+  isBodyWorldMeshWaiting(id) {
+    return __privateGet(this, _bodyRecords).get(id)?.worldMeshWaiting === true;
+  }
+  wakeBody(id) {
+    const body = __privateGet(this, _cannonBodies).get(id);
+    const record = __privateGet(this, _bodyRecords).get(id);
+    if (!body || body.type === Body.STATIC || record?.worldMeshWaiting) return;
+    body.wakeUp();
+  }
+  pauseBodyForWorldMesh(body, record) {
+    if (!record.worldMeshWaiting) {
+      const velocity = body.velocity.clone();
+      const angularVelocity = body.angularVelocity.clone();
+      body.sleep();
+      body.velocity.copy(velocity);
+      body.angularVelocity.copy(angularVelocity);
+      record.worldMeshWaiting = true;
+    } else if (body.sleepState !== Body.SLEEPING) {
+      const velocity = body.velocity.clone();
+      const angularVelocity = body.angularVelocity.clone();
+      body.sleep();
+      body.velocity.copy(velocity);
+      body.angularVelocity.copy(angularVelocity);
+    }
+    body.force.setZero();
+    body.torque.setZero();
+  }
+  resumeBodyFromWorldMeshWait(body, record) {
+    if (!record.worldMeshWaiting) return;
+    record.worldMeshWaiting = false;
+    body.aabbNeedsUpdate = true;
+    body.wakeUp();
   }
   addStaticBox(location, size, materialId = "default") {
     const halfExtents = new Vec3(
@@ -19777,7 +20086,7 @@ var CannonKernelRuntime = class {
     record.indexedWorldSensorShapes = getIndexedWorldSensorShapes(collider);
     updateDynamicBodyMassProperties(body);
     body.aabbNeedsUpdate = true;
-    body.wakeUp();
+    this.wakeBody(id);
   }
   setBodyColliderIncrementally(id, colliderDefinition) {
     const body = __privateGet(this, _cannonBodies).get(id);
@@ -19848,7 +20157,7 @@ var CannonKernelRuntime = class {
     updateDynamicBodyMassProperties(body);
     body.updateBoundingRadius();
     body.aabbNeedsUpdate = true;
-    body.wakeUp();
+    this.wakeBody(id);
   }
   setBodyEnvironmentCollider(id, colliderDefinition) {
     const record = __privateGet(this, _bodyRecords).get(id);
@@ -19869,7 +20178,8 @@ var CannonKernelRuntime = class {
       }
       const bounds = getColliderWorldAabb(body, record, record.environmentCollider);
       if (location.x < bounds.min.x - margin || location.x > bounds.max.x + margin || location.y < bounds.min.y - margin || location.y > bounds.max.y + margin || location.z < bounds.min.z - margin || location.z > bounds.max.z + margin) continue;
-      body.wakeUp();
+      if (record.worldMeshWaiting) continue;
+      this.wakeBody(id);
       count++;
     }
     return count;
@@ -20091,6 +20401,7 @@ var CannonKernelRuntime = class {
       if (audit && audit.targetDimensionId !== void 0 && audit.targetChunkKey !== void 0 && audit.currentTick - audit.lastAuditTick >= WORLD_MESH_CACHE_AUDIT_INTERVAL_TICKS && __privateGet(this, _worldMeshCache)?.has(audit.targetChunkKey)) return true;
       for (const [id, body] of __privateGet(this, _cannonBodies)) {
         if (body.type !== Body.DYNAMIC) continue;
+        if (__privateGet(this, _bodyRecords).get(id)?.worldMeshWaiting) return true;
         if (body.sleepState !== Body.SLEEPING) return true;
         if (__privateGet(this, _bodyRecords).get(id)?.worldMeshChunks === void 0) return true;
       }
@@ -20818,6 +21129,23 @@ var CannonKernelRuntime = class {
     for (const [id, body] of __privateGet(this, _cannonBodies)) {
       const record = __privateGet(this, _bodyRecords).get(id);
       if (!record || body.type !== Body.DYNAMIC) continue;
+      if (record.worldMeshWaiting) {
+        body.force.setZero();
+        body.torque.setZero();
+        body.updateAABB();
+        const waitingBounds = getPredictedWorldMeshBounds(
+          body,
+          record,
+          __privateGet(this, _fixedTimeStep),
+          __privateGet(this, _tickSteps)
+        );
+        this.updateBodyWorldMeshRegion(record, waitingBounds, true);
+        if (this.bodyHasMissingWorldMeshChunks(record) && __privateGet(this, _worldMeshWaitForMissingChunks)) {
+          this.pauseBodyForWorldMesh(body, record);
+          continue;
+        }
+        this.resumeBodyFromWorldMeshWait(body, record);
+      }
       if (body.sleepState === Body.SLEEPING) {
         record.sleepEnvironmentSignature = void 0;
         this.updateBodyWorldFluidMeshRegion(record, EMPTY_WORLD_MESH_CHUNKS);
@@ -20860,6 +21188,22 @@ var CannonKernelRuntime = class {
     if (!this.hasPendingWorldMeshBuilds()) {
       this.auditWorldMeshCache();
     }
+    for (const [id, body] of __privateGet(this, _cannonBodies)) {
+      const record = __privateGet(this, _bodyRecords).get(id);
+      if (!record || body.type !== Body.DYNAMIC || !record.worldMeshWaiting) continue;
+      if (this.bodyHasMissingWorldMeshChunks(record) && __privateGet(this, _worldMeshWaitForMissingChunks)) {
+        this.pauseBodyForWorldMesh(body, record);
+      } else {
+        this.resumeBodyFromWorldMeshWait(body, record);
+      }
+    }
+    if (__privateGet(this, _worldMeshWaitForMissingChunks)) {
+      for (const [id, body] of __privateGet(this, _cannonBodies)) {
+        const record = __privateGet(this, _bodyRecords).get(id);
+        if (!record || body.type !== Body.DYNAMIC || record.worldMeshWaiting || !this.bodyHasMissingWorldMeshChunks(record)) continue;
+        this.pauseBodyForWorldMesh(body, record);
+      }
+    }
     const fullyScannedCoverageByDimension = /* @__PURE__ */ new Map();
     let shadowFilteredScansByDimension;
     const nextColliderLayout = [];
@@ -20868,6 +21212,7 @@ var CannonKernelRuntime = class {
       const coverages = [];
       fullyScannedCoverageByDimension.set(dimension, coverages);
       const missingClusters = getMissingWorldMeshScanClusters(dimension, clusters, cache);
+      if (__privateGet(this, _worldMeshWaitForMissingChunks)) continue;
       for (const cluster of missingClusters) {
         const scan = scanWorldSolidBlocks(
           dimension,
@@ -21359,7 +21704,7 @@ var CannonKernelRuntime = class {
       if (!record.worldMeshChunks?.has(key) && !record.worldFluidMeshChunks?.has(key)) continue;
       referenced = true;
       record.sleepEnvironmentSignature = void 0;
-      __privateGet(this, _cannonBodies).get(id)?.wakeUp();
+      if (!record.worldMeshWaiting) this.wakeBody(id);
     }
     return referenced;
   }
@@ -21413,6 +21758,7 @@ _stepCount = new WeakMap();
 _tickSteps = new WeakMap();
 _worldMeshAuditScansThisTick = new WeakMap();
 _worldMeshCacheEnabled = new WeakMap();
+_worldMeshWaitForMissingChunks = new WeakMap();
 function normalizeTickSteps(value) {
   return Number.isFinite(value) && value > 0 ? Math.max(1, Math.floor(value)) : DEFAULT_TICK_STEPS;
 }
@@ -23209,7 +23555,8 @@ var PhysicsWorld = class {
       linearDamping: __privateGet(this, _linearDamping2),
       tickSteps: highPerformance ? 3 : 1,
       worldMeshAuditCoordinator: __privateGet(this, _worldMeshAuditCoordinator2),
-      worldMeshCache: !highPerformance
+      worldMeshCache: true,
+      worldMeshWaitForMissingChunks: !highPerformance
     };
   }
   getDimension(dimension) {
@@ -23360,7 +23707,6 @@ _PhysicsWorld_instances = new WeakSet();
  * "worse" from "equal".
  */
 selectWorldMeshAuditTarget_fn = function() {
-  if (__privateGet(this, _performanceLevel) === TREE_PHYSICS_PERFORMANCE_HIGH) return void 0;
   if (__privateGet(this, _worldMeshAuditCoordinator2).currentTick < __privateGet(this, _worldMeshAuditCoordinator2).nextSelectionTick || __privateGet(this, _worldMeshAuditCoordinator2).currentTick - __privateGet(this, _worldMeshAuditCoordinator2).lastAuditTick < WORLD_MESH_AUDIT_INTERVAL_TICKS) return void 0;
   for (const dimension of __privateGet(this, _dimensions).values()) {
     if (dimension[HAS_PENDING_WORLD_MESH_BUILDS]()) return void 0;
