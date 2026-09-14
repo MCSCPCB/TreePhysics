@@ -1,7 +1,7 @@
 TreePhysics (树木物理)
 ======================
 
-Copyright (c) MINECRAFT-SCPCB
+Copyright (c) [MINECRAFT-SCPCB](https://www.curseforge.com/members/ms_frisk/projects)
 Original repository / 原始仓库: https://github.com/MCSCPCB/TreePhysics/
 
 This project is licensed under the GNU General Public License, version 3
@@ -15,14 +15,14 @@ distributes, communicates, deploys, makes available for download, or otherwise
 uses this work or a derivative work in any form must clearly and prominently
 credit at least one of the following:
 
-* Original author: MINECRAFT-SCPCB
+* Original author: [MINECRAFT-SCPCB](https://www.curseforge.com/members/ms_frisk/projects)
 * Original repository: https://github.com/MCSCPCB/TreePhysics/
 
 除 GNU GPL v3.0 的条款外，任何人在以任何形式复制、修改、分发、传播、部署、
 提供下载或以其他方式使用本作品或其衍生作品时，必须至少以清晰、显著的方式注明
 以下之一：
 
-* 原作者：MINECRAFT-SCPCB
+* 原作者：[MINECRAFT-SCPCB](https://www.curseforge.com/members/ms_frisk/projects)
 * 原仓库：https://github.com/MCSCPCB/TreePhysics/
 
 This attribution requirement is an additional term under section 7 of the GNU
@@ -100,7 +100,7 @@ modification follow.
 
                        TERMS AND CONDITIONS
 
-  0. Definitions.
+  1. Definitions.
 
   "This License" refers to version 3 of the GNU General Public License.
 
